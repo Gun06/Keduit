@@ -1,0 +1,42 @@
+<script>
+    /*
+        [문제]
+        다음 보기1의 값을 변수로 설정하고, 보기2의 계산식 결과를 출력하시오.
+
+        [보기1]
+        a = 5
+        b = 3
+        c = 9
+        d = 2
+        [보기2]
+        a + b * c - d
+        a - b * c + d
+        a + Math.floor(b / c) - d
+        a - Math.floor(b / c) + d
+        a + b % c - d
+        a - b % c + d
+    */
+
+    let a = 5;
+    let b = 3;
+    let c = 9;
+    let d = 2;
+
+    let e = a + b * c - d;
+    document.write(e, "<br>");
+
+    e = a - b * c + d;
+    document.write(e, "<br>");
+
+    e = a + Math.floor(b / c) - d;
+    document.write(e, "<br>");
+
+    e = a - Math.floor(b / c) + d;
+    document.write(e, "<br>");
+
+    e = a + b % c - d;
+    document.write(e, "<br>");
+
+    e = a + b % c + d;
+    document.write(e, "<br>");
+</script>
