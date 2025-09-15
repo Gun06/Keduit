@@ -1,3 +1,3 @@
 # Keduit
 한국정보교육원
-![920d10332db5652bb4880011e47799bf928c555a](https://github.com/user-attachments/assets/35e9c06c-f4b6-4907-83f9-2e3304cdb182)
+![13234_42552_2153](https://github.com/user-attachments/assets/2bf924c2-62a5-4971-afea-0200bf546bed)
