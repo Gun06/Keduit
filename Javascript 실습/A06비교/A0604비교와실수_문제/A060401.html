@@ -1,0 +1,27 @@
+<script>
+    /*
+        [문제]
+        넓이가 27인 사각형을 네 조각으로 나누었고, 넓이가 16인 삼각형을 두 조각으로 나누었습니다. 
+        각각의 한 조각의 넓이가 같은지 확인하고, true 또는 false로 출력하시오. 
+    */
+
+    /*
+        [출력예시]
+        6.75
+        8.00
+        false
+    */
+
+    let a = 27;
+    let b = a / 4;
+    b = b.toFixed(2);
+    document.write(b, "<br>");
+
+    let c = 16;
+    let d = c / 2;
+    d = d.toFixed(2);
+    document.write(d, "<br>");
+
+    let e = b == d;
+    document.write(e, "<br>");   
+</script>
