@@ -1,0 +1,23 @@
+<script>
+    /*
+        [문제]
+        let numberList = [13, 80, 90, 39, 59, 56, 53, 25, 46, 99];
+        numberList에서 일의 자리가 5보다 크고, 십의 자리가 8보다 작은 숫자를 찾아, 
+        해당 숫자들을 전부 음수로 변경한 후 리스트 전체를 출력하시오.
+    */
+    /*
+        [출력예시]
+        13,80,90,39,59,56,53,25,46,99
+        13,80,90,-39,-59,-56,53,25,-46,99
+    */
+    let numberList = [13, 80, 90, 39, 59, 56, 53, 25, 46, 99];
+    document.write(numberList + "<br/>");
+    for(let i = 0; i < numberList.length; i++){
+        let a = parseInt(numberList[i] / 10);
+        let b = numberList[i] % 10;
+        if(a < 8 && b > 5){
+            numberList[i] = -numberList[i];
+        }
+    }
+    document.write(numberList + "<br/>");
+</script>

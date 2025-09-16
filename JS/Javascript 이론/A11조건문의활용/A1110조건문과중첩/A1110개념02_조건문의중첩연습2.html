@@ -1,0 +1,82 @@
+<script>
+
+    /*
+        [조건문의 중첩 연습2]
+        이해를 돕기 위해 player1은 상대편을, player2는 자신을 뜻합니다.
+
+        player1와 player2는 1에서 3 사이의 숫자를 랜덤으로 저장합니다.
+        가위, 바위, 보를 1, 2, 3 숫자로 각각 표현합니다.
+        player1과 player2를 비교하여, player2를 기준으로 "비김", "승리", "패배"를 출력하시오.     
+    */
+    
+    /*
+        [출력예시]
+        player1 바위
+        player2 보
+        승리    
+    */
+
+    let player1 = Math.floor(Math.random() * 3) + 1;
+    let player2 = Math.floor(Math.random() * 3) + 1;
+    
+    if(player1 == 1) {
+        document.write("player1 가위<br>");
+    }
+    if(player1 == 2) {
+        document.write("player1 바위<br>");
+    }
+    if(player1 == 3) {
+        document.write("player1 보<br>");
+    }
+    
+    if(player2 == 1) {
+        document.write("player2 가위<br>");
+    }
+    if(player2 == 2) {
+        document.write("player2 바위<br>");
+    }
+    if(player2 == 3) {
+        document.write("player2 보<br>");
+    }    
+    
+    let win = 0;
+
+    if(player1 == player2) {
+        win = 1;
+    }
+
+    if(player1 == 1) {
+        if(player2 == 2) {
+            win = 2;
+        }
+        if(player2 == 3) {
+            win = 3;
+        }        
+    }
+    if(player1 == 2) {
+        if(player2 == 1) {
+            win = 3;
+        }        
+        if(player2 == 3) {
+            win = 2;
+        }
+    }
+    if(player1 == 3) {
+        if(player2 == 1) {
+            win = 2;
+        }
+        if(player2 == 2) {
+            win = 3;
+        }        
+    }
+
+    if(win == 1) {
+        document.write("비김");
+    }
+    if(win == 2) {
+        document.write("승리");
+    }
+    if(win == 3) {
+        document.write("패배");
+    }
+</script>

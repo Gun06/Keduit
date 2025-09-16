@@ -1,0 +1,38 @@
+<script>
+
+    /*
+        [조건문과 누적 연습]
+        100부터 999 사이의 랜덤 숫자를 저장한 후,
+        각 자리수가 5보다 큰 값들만 누적하시오.    
+    */
+    
+    /*
+        [출력예시]
+        406
+        6 
+
+        [출력예시]
+        846
+        14    
+    */
+
+    let r = Math.floor(Math.random() * 900) + 1;
+    document.write(r, "<br>");
+
+    let a = Math.floor(r / 100);
+    let b = Math.floor(r % 100 / 10);
+    let c = r % 10;
+
+    let total = 0;
+    if(a > 5) {
+        total = total + a;
+    }
+    if(b > 5) {
+        total = total + b;
+    }
+    if(c > 5) {
+        total = total + c;
+    }
+
+    document.write(total);
+</script>

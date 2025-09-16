@@ -1,0 +1,19 @@
+<script>
+    /*
+[리스트와 동시 삭제 문제점]
+numberList에서 num보다 큰 값을 삭제하려 할 때, 아래와 같은 오류가 발생합니다: IndexError: list index out of range
+이는 인덱스 번호가 범위를 벗어났다는 의미로, 리스트에서 값을 삭제하면 리스트의 길이가 줄어듭니다.
+그러나 for문은 리스트의 초기 길이를 기준으로 반복하기 때문에, 삭제된 후 리스트의 길이와 맞지 않아 오류가 발생합니다.
+다음 단원에서 이를 해결하는 방법을 학습합니다.
+    */ 
+    /*
+    */
+    let numberList = [10, 20, 30, 40, 50, 60];
+    let num = 40;
+    for(let i = 0; i < numberList.length; i++){
+        if(numberList[i] > num){
+            numberList.splice(i, 1);
+        }
+    }
+    document.write(numberList + "<br/>"); 
+</script>

@@ -1,0 +1,24 @@
+<script>
+    /*
+
+        [서술형 방정식과 나누기 연습]
+        철수는 과자 5봉지를 구입해 친구 10명과 똑같이 나누어 먹었습니다.
+        과자는 한 봉지에 30개씩 들어있습니다.
+        철수와 친구들이 각각 몇 개씩 나누어 먹었는지 구하시오.
+
+        [출력예시]
+        15
+
+    */
+    let x = 1;
+    let loop = true;
+    while(loop){
+        let check = 5 * 30 / x == 10;
+        if(check){
+            loop = false;
+        }else{
+            x += 1;
+        }
+    }
+    document.write(x);
+</script>

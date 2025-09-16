@@ -1,0 +1,45 @@
+<script>
+
+    /*
+        [조건문의 중첩 연습1]
+        조건문의 중첩이란, 하나의 조건문 안에 또 다른 조건문을 넣는 것을 의미합니다.
+
+        1부터 10 사이의 랜덤 숫자 두 개를 각각 a와 b에 저장합니다.
+        1부터 2 사이의 랜덤 숫자를 c에 저장합니다.
+
+        [조건]
+        (1) c의 값이 1이면 a와 b의 합을 출력합니다.
+        (2) c의 값이 2이면 a에서 b를 뺀 차이를 양수로 출력합니다.    
+    */
+    
+    /*
+        [출력예시]
+        4 2
+        1
+        6 
+
+        [출력예시]
+        8 2
+        2
+        6
+    */
+    
+    let a = Math.floor(Math.random() * 10) + 1;
+    let b = Math.floor(Math.random() * 10) + 1;
+    document.write(a, " ", b, "<br>");
+
+    let c = Math.floor(Math.random() * 2) + 1;
+    document.write(c, "<br>");
+
+    let d = 0;
+    if(c == 1) {
+        d = a + b;
+    }
+    if(c == 2) {
+        d = a - b;
+        if(d < 0) {
+            d = -d;
+        }
+    }
+    document.write(d);
+</script>

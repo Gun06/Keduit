@@ -1,0 +1,18 @@
+<script>
+    /*
+        [문제]
+        let numberList = [10, 43, 24, 12, 52];
+        numberList에서 모든 십의자리를 제거해서 수정하시오.
+    */
+    /*
+        [출력예시]
+        10,43,24,12,52
+        0,3,4,2,2
+    */
+    let numberList = [10, 43, 24, 12, 52];
+    document.write(numberList + "<br/>");
+    for(let i = 0; i < numberList.length; i++){
+        numberList[i] = numberList[i] % 10;
+    }
+    document.write(numberList + "<br/>");
+</script>

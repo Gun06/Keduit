@@ -1,0 +1,35 @@
+<script>
+    /*
+        [문제]
+        a가이기면 a저장
+        b가이기면 b저장
+        비기면 ab저장 
+    */ 
+    /* 
+        [출력예시]
+        가위,바위,가위,보
+        바위,바위,보,바위
+        b,ab,a,a
+    */
+    let aList = ["가위", "바위", "가위", "보"];
+    let bList = ["바위", "바위", "보", "바위"];
+    let cList = [];
+
+    for(let i = 0; i < aList.length; i++){
+        if(aList[i] == bList[i]){
+            cList.push("ab");
+        }else if(aList[i] == "가위" && bList[i] == "보"){
+            cList.push("a");
+        }else if(aList[i] == "바위" && bList[i] == "가위"){
+            cList.push("a");
+        }else if(aList[i] == "보" && bList[i] == "바위"){
+            cList.push("a");
+        }else{
+            cList.push("b");
+        }
+    }
+    document.write(aList + "<br/>");
+    document.write(bList + "<br/>");
+    document.write(cList + "<br/>");
+    
+</script>

@@ -1,0 +1,45 @@
+<script>
+
+    let arr = [
+        [1001, "김철수", 10, 20, 30],
+        [1002, "박민정", 40, 60, 10],
+        [1003, "이상아", 15, 10, 50],
+        [1004, "조민수", 16, 40, 20]
+    ]
+
+    /*
+        [문제]
+            클래스로 변경후 
+            모든학생의 전체 점수 합 출력 
+        [정답]
+            321
+    */
+
+    class Info{
+        num = 0;
+        name = '';
+        kor = 0;
+        eng = 0;
+        math = 0;
+    }
+
+    let infoList = [];
+
+    for(let i = 0; i < arr.length;  i++){
+        let info = new Info();
+        info.num = arr[i][0];
+        info.name = arr[i][1];
+        info.kor = arr[i][2];
+        info.eng = arr[i][3];
+        info.math = arr[i][4];
+        infoList.push(info);
+     }
+    
+     let totalAll = 0;
+     for(let i = 0; i < infoList.length; i++){
+        let total = infoList[i].kor + infoList[i].eng + infoList[i].math;
+        totalAll += total;
+     }
+     document.write(totalAll);
+
+</script>

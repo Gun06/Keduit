@@ -1,0 +1,27 @@
+<script>
+    /*
+        [문제]
+        let numberList = [131, 113, 128, 180, 134, 104];
+        십의 자리가 20의 약수인 숫자만 해당 숫자의 백의 자리와 십의 자리를 교체한 후 
+        리스트 전체를 출력하시오.
+    */
+    /*
+        [출력예시]
+        131,311,821,180,134,104
+    */
+    
+    let numberList = [131, 113, 128, 180, 134, 104];
+    for(let i = 0; i < numberList.length; i++){
+        let a = numberList[i];
+        let b = parseInt(a / 100);
+        let c = parseInt(a % 100 / 10);
+        let d = a % 10;
+    
+        let e = 20 % c == 0;
+        if(e){
+            numberList[i] = d * 100 + c * 10 + b;
+        }
+    }
+
+    document.write(numberList);
+</script>

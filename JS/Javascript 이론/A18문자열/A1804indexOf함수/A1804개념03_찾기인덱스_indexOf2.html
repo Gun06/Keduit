@@ -1,0 +1,20 @@
+<script>
+
+    
+    /*
+        [여러글자찾기]
+            여러글자의 인덱스중 첫번째 인덱스를 반환한다. 
+    */
+    
+    text = "Hello, JavaScript!";
+    word = "llo";
+    index = text.indexOf(word);
+    
+
+    if(index == -1) {
+        document.write("해당 문자는 존재하지 않습니다.");
+    } else {
+        document.write(word + "의 위치는= " + index);
+    }
+
+</script>

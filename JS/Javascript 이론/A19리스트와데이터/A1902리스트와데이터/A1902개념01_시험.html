@@ -1,0 +1,22 @@
+<script>
+    /*
+        [문제]
+        aList와 bList는 구구단의 앞의 숫자와 뒤의 숫자를 의미한다.
+        앞의 숫자와 뒤의 숫자의 곱과 결과를 화면에 출력하시오.
+    */
+    /*
+        [출력예시]
+        4 * 6 = 24
+        3 * 6 = 18
+        8 * 3 = 24
+        9 * 9 = 81
+        2 * 3 = 6
+        6 * 7 = 42
+    */
+    let aList = [4, 3, 8, 9, 2, 6];
+    let bList = [6, 6, 3, 9, 3, 7];
+    for(let i = 0; i < aList.length; i++){
+        let a = aList[i] * bList[i];
+        document.write(aList[i] +  " * " + bList[i] + " = " + a + "<br/>");
+    }
+</script>

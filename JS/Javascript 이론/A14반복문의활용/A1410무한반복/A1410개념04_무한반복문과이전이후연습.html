@@ -1,0 +1,28 @@
+<script>
+    /*
+        [무한 반복문과 이전 이후 연습]
+        처음 숫자는 1로 시작하며, 1부터 100 사이의 랜덤 숫자를 무한히 출력합니다. 
+        다음에 나오는 숫자가 이전 숫자보다 작거나 같으면 프로그램을 종료하시오.
+    */
+    /*
+        [출력예시]
+        1 23 32 80 1
+
+        [출력예시]
+        1 69 84 67
+    */
+    let a = 1;
+    document.write(a + " ");
+
+    let loop = true;
+    while(loop){
+        let r = Math.floor(Math.random() * 100) + 1;
+        document.write(r + " ");
+        if(a >= r){
+            loop = false;
+        }else{
+            a = r;
+        }
+    }
+    
+</script>

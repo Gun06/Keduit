@@ -1,0 +1,17 @@
+<script>
+    /*
+[리스트와 거꾸로]
+numberList의 값들을 거꾸로 출력해 보겠습니다. 
+    */
+    /*
+[출력예시]
+60 54 12 44 21
+    */
+    
+    let numberList = [21, 44, 12, 54, 60];
+    let last = numberList.length - 1;
+    for(let i = 0; i < numberList.length; i++){
+        document.write(numberList[last] + " ");
+        last -= 1;
+    }
+</script>

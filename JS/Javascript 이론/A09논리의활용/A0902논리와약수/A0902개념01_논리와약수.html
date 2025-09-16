@@ -1,0 +1,15 @@
+<script>
+
+    /*
+        [논리와 약수]
+        15가 30의 약수이면서 5의 배수인지 확인하는 식을 작성해보겠습니다.    
+    */
+    
+    let a = 15;
+
+    let b = 30 % a == 0
+    let c = a % 5 == 0
+    let d = b && c;
+    
+    document.write(d);      // true
+</script>

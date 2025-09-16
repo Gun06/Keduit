@@ -1,0 +1,29 @@
+<script>
+    /*
+        [문제]
+            a  = [3, 4, 2, 8, 6]
+            b  = [5, 3, 1, 7, 3]
+            op = [2, 1, 2, 2, 1]       
+            배열 a와 b의 각 자리의 곱을 출력하시오. 
+            난 op가 1이면 양수로 2이면 음수로 출력하시오.
+    */ 
+    /* 
+        [정답]
+        -15,12,-2,-56,18
+    */
+    let aList  = [3, 4, 2, 8, 6]
+    let bList  = [5, 3, 1, 7, 3]
+    let statusList = [2, 1, 2, 2, 1]
+    let cList =[];    
+
+    for(let i = 0; i < aList.length; i++){
+        let a = aList[i] * bList[i];
+        if(statusList[i] == 1){
+            cList.push(a);
+        }else{
+            cList.push(-a);
+        }
+    }
+
+    document.write(cList + "<br/>");
+</script>

@@ -1,0 +1,28 @@
+<script>
+    /*
+[리스트와 이전 이후]
+1부터 100 사이의 랜덤 숫자 10개를 numberList에 저장한 후, 리스트를 출력합니다.
+단, 처음부터 순서대로 출력하며, 다음 숫자가 이전 숫자보다 큰 경우 출력은 즉시 종료됩니다.
+    */
+    /*
+[출력예시]
+77,69,65,60,19,72,73,40,43,51
+77 69 65 60 19
+    */
+    let numList = [];
+    for(let i = 0; i < 10; i++){
+        let r = Math.floor(Math.random() * 100) + 1;
+        numList.push(r);
+    }
+    document.write(numList + "<br/>");
+
+    let a = numList[0];
+    for(let i = 1; i < numList.length; i++){
+        document.write(a + " ");
+        if(a < numList[i]){
+            break;
+        }else{
+            a = numList[i];
+        }
+    }
+</script>

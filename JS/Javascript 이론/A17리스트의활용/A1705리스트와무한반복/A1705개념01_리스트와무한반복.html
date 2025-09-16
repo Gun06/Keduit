@@ -1,0 +1,28 @@
+<script>
+    /*
+[리스트와 무한반복]
+1부터 100 사이의 랜덤 숫자 5개를 numberList에 추가합니다.
+단, 홀수만 저장해 보겠습니다.
+    */ 
+    /* 
+[출력예시]
+[67]
+[67, 71]
+[67, 71, 43]
+[67, 71, 43, 19]
+[67, 71, 43, 19, 9]
+    */
+    let numberList = [];
+    let count = 0;
+    while(true){
+        let r = Math.floor(Math.random() * 100) + 1;
+        if(r % 2 == 1){
+            numberList.push(r);
+            document.write(numberList);
+            count += 1;
+            if(count == 5){
+                break;
+            }
+        }
+    }
+</script>

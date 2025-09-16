@@ -1,0 +1,31 @@
+<script>
+
+    /*
+        [조건문 연습]
+        변수 a에 5를 저장합니다.
+        1부터 10 사이의 랜덤 숫자를 변수 b에 저장합니다.
+        b가 a보다 크면 "크다"를 출력합니다.
+        b가 a보다 작으면 "작다"를 출력합니다.
+        b가 a와 같으면 "같다"를 출력합니다.    
+    */
+    
+    /*
+        [출력예시]
+        5 5
+        같다    
+    */
+    
+    let a = 5;
+    let b = Math.floor(Math.random() * 10) + 1;
+    document.write(a, " ", b, "<br>");
+
+    if(b > a) {
+        document.write("크다");
+    }
+    if(b < a) {
+        document.write("작다");
+    }
+    if(b == a) {
+        document.write("같다");
+    }
+</script>

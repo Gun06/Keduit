@@ -1,0 +1,23 @@
+<script>
+    /*
+[리스트 추가 연습]
+aList 뒤에 bList의 값을 순차적으로 추가하시오.
+
+[보기]
+let aList = [10,32];
+let bList = [13,33,52,12,24,1]
+    */
+    /*
+[출력예시]
+10,32,13,33,52,12,24,1
+    */
+
+    let aList = [10,32];
+    let bList = [13,33,52,12,24,1]
+
+    for(let i = 0; i < bList.length; i++){
+        aList.push(bList[i]);
+    }
+    document.write(aList);
+    
+</script>

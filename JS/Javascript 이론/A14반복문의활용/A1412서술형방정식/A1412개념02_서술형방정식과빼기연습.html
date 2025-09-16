@@ -1,0 +1,23 @@
+<script>
+    /*
+        [서술형 방정식과 빼기 연습]
+        버스에 승객 20명이 타고 있습니다. 
+        이전 정류장에서 3명이 새로 탔습니다. 
+        이번 정류장에서 몇 명이 내렸고, 현재 버스에는 승객이 11명 있습니다.
+        이번 정류장에서 몇 명이 내렸는지 구하시오.
+
+        [출력예시]
+        12
+    */
+    let x = 0;
+    let loop = true;
+    while(loop){
+        let check = 20 + 3 - x == 11;
+        if(check){
+            loop = false;
+        }else{
+            x += 1;
+        }
+    }
+    document.write(x);
+</script>

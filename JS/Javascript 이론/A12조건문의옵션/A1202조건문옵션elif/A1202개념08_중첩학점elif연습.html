@@ -1,0 +1,43 @@
+<script>
+    /*
+        [중첩 학점 elif 연습]
+        0에서 100 사이의 랜덤 숫자를 시험 점수로 저장합니다.
+        시험 점수가 100~91이면 A학점, 90~81이면 B학점, 80 이하는 "재시험"입니다.
+        만점이거나, A학점과 B학점의 일의 자리가 8점 이상이면 + 기호를 추가하시오.
+        단, elif와 else를 사용하시오.
+    */
+    /*
+        [출력예시1]
+        84 4
+        B
+        [출력예시2]
+        69 9
+        재시험
+    */
+
+    //let a = Math.floor(Math.random() * 101);
+    let a = 100;
+    let b = a % 10;
+    document.write(a + " " + b + "<br/>");
+
+    if(a <= 80){
+        document.write("재시험");
+    }
+    else if(a <= 90){
+        if(b >= 8){
+            document.write("B+");
+        }else{
+            document.write("B");
+        }
+    }
+    else if(a <= 99){
+        if(b >= 8){
+            document.write("A+");
+        }else{
+            document.write("A");
+        }
+    }
+    else if(a == 100){
+        document.write("A+");
+    }
+</script>

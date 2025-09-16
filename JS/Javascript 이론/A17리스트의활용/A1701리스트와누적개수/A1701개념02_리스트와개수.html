@@ -1,0 +1,19 @@
+<script>
+    /*
+[리스트와개수]
+numberList의 홀수의 개수를 출력해 보겠습니다.
+    */
+    /*
+[출력예시]
+3
+    */
+
+    let numberList = [16, 24, 31, 45, 53];
+    let count = 0;
+    for(let i = 0; i < numberList.length; i++){
+        if(numberList[i] % 2 == 1){
+            count += 1;
+        }
+    }
+    document.write(count);
+</script>

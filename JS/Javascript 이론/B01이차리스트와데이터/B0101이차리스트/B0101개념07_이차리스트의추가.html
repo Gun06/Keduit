@@ -1,0 +1,31 @@
+<script>
+    /* 
+[문제]
+        aList 와 bList의 값을 이차원배열로 만드시오.
+        aList의 값은왼쪽에 bList의 값은 오른쪽에 저장하시오.
+    */ 
+    /* 
+[출력예시]
+    10,54
+    43,6
+    23,4
+    */
+    let aList = [10, 43, 23];
+    let bList = [54,  6,  4];
+
+    let aLists = [];
+
+    for(let i = 0; i < 3; i++){
+        let temp = [];
+        
+        temp.push(aList[i]);
+        temp.push(bList[i]);
+        aLists.push(temp);
+    }
+
+    for(let i = 0; i < aLists.length; i++){
+        document.write(aLists[i] + "<br/>");
+    }
+    
+   
+</script>

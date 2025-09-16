@@ -1,0 +1,27 @@
+<script>
+    /*
+        static 최종형태 : 함수가 많아질경우 전부 static을 붙여야한다.
+        불편하기도하고, 변경사항이 있을때 유지보수가힘들다 
+        클래스 전체에 static을 붙이면 좋으나 문법으로 지원하지않는다.
+        그래서 꼼수를 써서 
+        대표 변수를 하나설정해서 대표변수에만 static을 붙인다.
+        instance 변수에 new 를 하고 instance 변수를 사용해서 나머지 함수나 변수를 사용한다.
+        instance는 이름을 바꿔도 무방하나 일반적으로 static변수의 이름을 뜻한다.
+
+        결과적으로 Hello.instance 형태를 띄게된다. 
+
+    */
+    class Hello {
+        static instance = new Hello();      
+    }
+ 
+
+    let h1 = new Hello();
+    let h2 = new Hello();
+    document.write(h1 == h2, "<br>");
+    
+    let h3 = Hello.instance;
+    let h4 = Hello.instance;
+    document.write(h3 == h4, "<br>");
+
+</script>

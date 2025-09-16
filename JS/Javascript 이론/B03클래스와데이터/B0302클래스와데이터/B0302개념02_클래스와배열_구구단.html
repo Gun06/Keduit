@@ -1,0 +1,46 @@
+<script>
+
+    /*
+        [문제]
+            클래스로 변환하시오.
+        [정답]
+            4 6 24
+            3 6 18
+            8 3 24
+            9 9 81
+            2 3 6
+            6 7 42 
+    */
+
+    let arr = [
+        {"a" : 4 , "b" : 6},
+        {"a" : 3 , "b" : 6},
+        {"a" : 8 , "b" : 3},
+        {"a" : 9 , "b" : 9},
+        {"a" : 2 , "b" : 3},
+        {"a" : 6 , "b" : 7},
+    ];
+
+    class Game{
+        a = 0;
+        b = 0;
+        c = 0;
+    }
+    let gameList = [];
+
+    for(let i=0; i < arr.length; i++) {
+        let game = new Game();
+        game.a = arr[i]["a"];
+        game.b = arr[i]["b"];
+        game.c = game.a * game.b;
+        gameList.push(game);
+    }
+
+    for(let i = 0; i < gameList.length; i++){
+        document.write(gameList[i].a + " ");
+        document.write(gameList[i].b + " ");
+        document.write(gameList[i].c + " ");
+        document.write("<br/>");
+    }
+
+</script>

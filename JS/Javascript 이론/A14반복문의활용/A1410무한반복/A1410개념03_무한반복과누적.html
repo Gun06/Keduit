@@ -1,0 +1,25 @@
+<script>
+    /*
+        [무한 반복과 누적]
+        loop = True를 활용하여 무한 반복을 만들 수 있습니다.
+        특정 조건이 만족되면 loop = False로 설정하여 반복문을 종료시킬 수 있습니다.
+
+        배수는 약수와는 달리 개수가 무한대입니다.
+        무한 반복을 이용하여 7의 배수 중에서 작은 수부터 3개만 출력해보겠습니다.
+    */
+    /*
+        [출력예시]
+        7 14 21
+    */
+    let count = 0;
+    let loop = true;
+    let i = 7;
+    while(loop){
+        document.write(i + " ");
+        count += 1;
+        if(count == 3){
+            loop = false;
+        }
+        i += 7;
+    }
+</script>

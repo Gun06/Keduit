@@ -1,0 +1,29 @@
+<script>
+    /* 
+[문제]
+aList와 bList의 값을 각각 비교하여
+서로 다르면 모두 삭제하여 리스트 전체를 출력하시오.
+    */ 
+    /* 
+[출력예시]
+[1, 1, 1, 0, 0, 1]
+[1, 1, 1, 0, 0, 1]
+    */
+    let aList = [1, 1, 1, 1, 1, 0, 0, 0, 1, 0];
+    let bList = [1, 0, 1, 1, 0, 0, 1, 0, 1, 1];
+
+    let i = 0;
+    while(true){
+        if(i == aList.length){
+            break;
+        }
+        if(aList[i] != bList[i]){
+            aList.splice(i, 1);
+            bList.splice(i, 1);
+        }else{
+            i += 1;
+        }
+    }
+    document.write(aList + "<br/>");
+    document.write(bList + "<br/>");
+</script>

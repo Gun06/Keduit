@@ -1,0 +1,29 @@
+<script>
+
+    /*
+        [조건문 옵션 elif]
+        if의 두 번째 옵션으로 elif가 있습니다.
+        else는 경우의 수가 두 개일 때만 사용할 수 있는 반면, elif는 경우의 수가 세 개 이상일 때 사용할 수 있습니다.
+        elif는 항상 if와 함께 사용하며, 단독으로 사용할 수 없습니다.
+
+        elif를 여러 개 사용할 때는, 위에서부터 순차적으로 비교하며,
+        중간에 elif 조건이 참(True)인 경우, 아래에 있는 elif는 모두 무시됩니다.
+
+        [문법]
+        if 조건식1:
+            조건식1이 참(True)일 때, 실행할 문장
+        elif 조건식2:
+            조건식1이 거짓(False)이고, 조건식2가 참(True)일 때 실행할 문장  
+        elif 조건식3:
+            조건식1,2가 거짓(False)이고, 조건식3이 참(True)일 때 실행할 문장      
+    */
+    
+    let a = 10;
+    if (a == 10){
+        document.write("if(1)");
+    }else if(a == 10){
+        document.write("else if(2)");
+    }else if(a == 10){
+        document.write("else if(3)");
+    }
+</script>

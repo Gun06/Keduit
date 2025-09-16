@@ -1,0 +1,32 @@
+<script>
+    /*
+[리스트에서 특정값찾기]
+4부터 9 사이의 랜덤 숫자1개를 저장한후, 
+numberList 에  그값이 있으면 "o"  없으면 "x"를 출력하시오.
+    */
+    /*
+[출력예시]
+8
+x
+
+[출력예시]
+9
+o
+    */
+    let numberList = [5, 7, 9, 4, 7]
+    let r = Math.floor(Math.random() * 6) + 4;
+    document.write(r + "<br/>");
+    let count = 0;
+    for(let i = 0; i < numberList.length; i++){
+        if(numberList[i]  == r){
+            count += 1;
+        }
+    }
+    
+    if(count >= 1){
+        document.write("o")
+    }else{
+        document.write("x");
+    }
+
+</script>

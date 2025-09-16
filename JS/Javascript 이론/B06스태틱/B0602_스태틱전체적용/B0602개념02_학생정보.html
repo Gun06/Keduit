@@ -1,0 +1,88 @@
+<script>
+
+    /*
+        1001, 이만수, 10, 20
+        1002, 이영희, 70, 30
+        1003, 김민정, 64, 65
+        1004, 이철민, 13, 87
+        1005, 오만석, 49, 80
+        1006, 최이슬, 14, 90
+        -----------------------
+        1001, 이만수, 10, 20
+        1002, 이영희, 70, 30
+        1004, 이철민, 13, 87
+        1005, 오만석, 49, 80
+        1006, 최이슬, 14, 90
+    */
+    class Student{
+        num = 0;
+        name = "";
+        kor = 0;
+        math = 0;
+
+        setData(num, name, kor, math) {
+            this.num = num;
+            this.name = name;
+            this.kor = kor;
+            this.math = math;
+        };
+
+        printData(){
+            document.write(this.num + ", " + this.name + ", " + this.kor + ", " + this.math + "<br/>");
+        }
+    }
+    /*
+        static 최종형태 : 함수가 많아질경우 전부 static을 붙여야한다.
+        불편하기도하고, 변경사항이 있을때 유지보수가힘들다 
+        클래스 전체에 static을 붙이면 좋으나 문법으로 지원하지않는다.
+        그래서 꼼수를 써서 
+        대표 변수를 하나설정해서 대표변수에만 static을 붙인다.
+        instance 변수에 new 를 하고 instance 변수를 사용해서 나머지 함수나 변수를 사용한다.
+        instance는 이름을 바꿔도 무방하나 일반적으로 static변수의 이름을 뜻한다.
+
+        결과적으로 StudentDAO.instance 형태를 띄게된다. 
+
+    */
+    class StudentDAO{
+        static instance = new StudentDAO();
+        studentList = [];
+
+        printList(){
+            for(let i = 0; i < this.studentList.length; i++){
+                this.studentList[i].printData();
+            }
+        }
+
+        insertData(data){
+            this.studentList.push(data);
+        }
+
+        deleteData(index){
+            this.studentList.splice(index , 1);   
+        }
+
+    }
+
+    let arr = [
+		[1001, 	"이만수",     10,     20],
+		[1002,  "이영희",      70,     30],
+		[1003,  "김민정",      64,     65],
+		[1004,  "이철민",      13,     87],
+		[1005,  "오만석",      49,     80],
+		[1006,  "최이슬",      14,     90]
+	]
+
+    // static은 DAO클래스에 붙인다. 사용하기편하기때문이다. 
+    //let studentDAO = new StudentDAO();
+
+    for(let i = 0; i < arr.length; i++){
+        let st = new Student();
+        st.setData(arr[i][0] , arr[i][1] , arr[i][2] , arr[i][3]);
+        StudentDAO.instance.insertData(st);
+    }
+
+    StudentDAO.instance.printList();
+    document.write("<hr/>");
+    StudentDAO.instance.deleteData(2);
+    StudentDAO.instance.printList();
+</script>

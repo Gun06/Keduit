@@ -1,0 +1,47 @@
+<script>
+    
+     /*
+        클래스는 배열과 함께 사용한다.
+        arr의 값을 클래스로 변환하시오.
+    */
+
+    let arr = [
+        [1001, "김철수", 10, 20, 30],
+        [1002, "박민정", 40, 60, 10],
+        [1003, "이상아", 15, 10, 50],
+        [1004, "조민수", 16, 40, 20]
+    ]
+    
+
+    class Info{
+        num = 0;
+        name = '';
+        kor = 0;
+        eng = 0;
+        math = 0;
+    }
+
+    let infoList = [];
+
+    for(let i = 0; i < arr.length;  i++){
+        let info = new Info();
+        info.num = arr[i][0];
+        info.name = arr[i][1];
+        info.kor = arr[i][2];
+        info.eng = arr[i][3];
+        info.math = arr[i][4];
+        infoList.push(info);
+     }
+
+
+    for(let i = 0; i < infoList.length; i++){
+        document.write(infoList[i].num + " ");
+        document.write(infoList[i].name + " ");
+        document.write(infoList[i].kor + " ");
+        document.write(infoList[i].math + " ");
+        document.write(infoList[i].eng + " <br/>");
+        
+    }
+
+
+</script>

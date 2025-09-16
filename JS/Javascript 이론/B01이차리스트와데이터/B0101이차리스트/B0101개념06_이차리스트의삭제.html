@@ -1,0 +1,41 @@
+<script>
+    /* 
+[문제]
+aLists 값을 각각 비교하여
+서로 다르면 모두 삭제하여 리스트 전체를 출력하시오.
+    */ 
+    /* 
+[출력예시]
+1,1
+1,1
+0,0
+1,1
+1,1
+    */
+    let aLists = [
+        [1, 1],
+        [1, 0],
+        [0, 1],
+        [1, 1],
+        [0, 0],
+        [1, 1],
+        [1, 0],
+        [1, 1],
+    ];
+
+    let i = 0;
+    while(true){
+        if(i == aLists.length){
+            break;
+        }
+        if(aLists[i][0] != aLists[i][1]){
+            aLists.splice(i, 1);
+        }else{
+            i += 1;
+        }
+    }
+    for(let i = 0; i < aLists.length; i++){
+        document.write(aLists[i] + "<br/>");
+    }
+   
+</script>

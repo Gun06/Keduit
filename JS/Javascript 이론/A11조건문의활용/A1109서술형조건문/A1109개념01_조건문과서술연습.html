@@ -1,0 +1,31 @@
+<script>
+
+    /*
+        [조건문과 서술 연습]
+        동전의 앞과 뒤를 랜덤 숫자 1(앞) 또는 2(뒤)로 표현합니다.
+        동전 두 개를 던져서 결과를 확인합니다.
+
+        [조건]
+        (1) 두 동전이 모두 앞이면 "1등"을 출력합니다.
+        (2) 두 동전이 모두 뒤이면 "2등"을 출력합니다.
+        (3) 그 외의 경우에는 "꽝"을 출력합니다.    
+    */
+    
+    let r1 = Math.floor(Math.random() * 2) + 1;
+    let r2 = Math.floor(Math.random() * 2) + 1;
+    document.write(r1, " ", r2, "<br>");
+
+    let a = r1 == 1 && r2 == 1;
+    let b = r1 == 2 && r2 == 2;
+    let c = r1 != r2;
+
+    if(a) {
+        document.write("1등");
+    }
+    if(b) {
+        document.write("2등");
+    }
+    if(c) {
+        document.write("꽝");
+    }
+</script>

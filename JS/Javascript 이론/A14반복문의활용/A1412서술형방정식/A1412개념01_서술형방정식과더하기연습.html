@@ -1,0 +1,23 @@
+<script>
+    /*
+        [서술형 방정식과 더하기 연습]
+        철수네 반 학생은 총 31명 입니다. 
+        그중 남학생이 17명 입니다.
+        철수네 반에서 남학생을 제외한 여학생은 몇 명인지 구하시오.
+
+        [출력예시]
+        14
+    */
+    let x = 0;
+    let loop = true;
+    while(loop){
+        let check = 17 + x == 31;
+        if(check){
+            loop =false;
+        }else{
+            x += 1;
+        }
+    }
+    document.write(x);
+</script>
+

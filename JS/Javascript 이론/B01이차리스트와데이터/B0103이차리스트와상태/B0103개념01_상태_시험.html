@@ -1,0 +1,35 @@
+<script>
+    /*
+[문제]
+    a  = [3, 4, 2, 8, 6]
+    b  = [5, 3, 1, 7, 3]
+    op = [2, 1, 2, 2, 1]       
+    배열 a와 b의 각 자리의 곱을 출력하시오. 
+    난 op가 1이면 양수로 2이면 음수로 출력하시오.
+    */ 
+    /* 
+[정답]
+-15,12,-2,-56,18
+    */
+    let gugudan = [
+        [3, 5],
+        [4, 3],
+        [2, 1],
+        [8, 7],
+        [6, 3],
+    ];
+
+    let statusList = [2, 1, 2, 2, 1];
+    let cList =[];    
+
+    for(let i = 0; i < gugudan.length; i++){
+        let a = gugudan[i][0] * gugudan[i][1];
+        if(statusList[i] == 1){
+            cList.push(a);
+        }else{
+            cList.push(-a);
+        }
+    }
+
+    document.write(cList + "<br/>");
+</script>

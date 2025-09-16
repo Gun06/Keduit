@@ -1,0 +1,30 @@
+<script>
+
+    /*
+        [문제]
+            game배열의 가로 한 줄은 구구단 앞의 숫자와 뒤의 숫자를 의미한다.
+            앞의 숫자와 뒤의 숫자의 곱을 result배열에 추가하시오.
+    
+        [정답]
+            result = [24, 18, 24, 81, 6, 42]    
+    */
+
+    let game = [
+        {"a" : 4 , "b" : 6},
+        {"a" : 3 , "b" : 6},
+        {"a" : 8 , "b" : 3},
+        {"a" : 9 , "b" : 9},
+        {"a" : 2 , "b" : 3},
+        {"a" : 6 , "b" : 7},
+    ];
+
+    let result = [];
+
+    for(let i=0; i < game.length; i++) {
+        result.push(game[i]["a"] * game[i]["b"]);
+    }
+
+    document.write("result = " + result + "<br>");
+
+
+</script>

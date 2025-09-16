@@ -1,0 +1,20 @@
+<script>
+    /*
+        [미지수가 앞에 있는 곱하기와 나누기]
+        아래 방정식의 해를 구해보겠습니다.
+        나누기가 있는 경우는 변수 x에 1을 저장하고 시작합니다.
+        13 * x / 3 == 26
+    */
+    let x = 1;
+    let loop = true;
+    while(loop){
+        let check = 13 * x / 3 == 26;
+        if(check){
+            loop = false;
+        }else{
+            x += 1;
+        }
+    }
+    document.write(x);
+
+</script>

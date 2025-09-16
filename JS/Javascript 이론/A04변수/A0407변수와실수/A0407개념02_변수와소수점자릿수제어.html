@@ -1,0 +1,24 @@
+<script>
+    /*
+        [변수와 소수점 자릿수 제어]
+        자바스크립트에서 toFixed() 함수는 실수의 소수점 자릿수를 제어할 때 사용되며, 반올림을 통해 원하는 소수점 자릿수까지 값을 조정합니다.
+        toFixed() 함수의 결과는 문자열이 되며, 그 결과를 변수에 저장하여 사용할 수 있습니다.
+    */
+
+    let a = 1278.532;
+    let b = 532.703;
+    let c = 1110.455;
+
+    let d = a + b + c;
+
+    // 소수점이 길게 출력됩니다.
+    document.write(d, "<br>");
+
+    // toFixed() 함수를 사용하여 소수점을 정리합니다.
+    document.write(d.toFixed(2), "<br>");
+
+    // toFixed() 함수의 결과를 변수에 저장할 수 있습니다.
+    let e = d.toFixed(2);
+    document.write(e, "<br>");
+    document.write(typeof e, "<br>");
+</script>

@@ -1,0 +1,23 @@
+<script>
+    /*
+[리스트와 시작 인덱스]
+numberList = [0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0]
+numberList의 값들을 순서대로 검색하여, 처음으로 1이 나오는 인덱스를 찾고, 
+그 위치부터 리스트 끝까지의 값을 출력해 보겠습니다.
+    */
+    /*
+[출력예시]
+1 0 0 1 1 0 0 1 0 
+    */
+    let numberList = [0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0];
+    let start = 0;
+    for(let i = 0; i < numberList.length; i++){
+        if(numberList[i] == 1){
+            start = i;
+            break;
+        }
+    }
+    for(let i = start; i < numberList.length; i++){
+        document.write(numberList[i] + " ");
+    }
+</script>

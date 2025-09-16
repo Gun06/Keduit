@@ -1,0 +1,43 @@
+<script>
+
+    /*
+        [조건문과 최소값 연습]
+        최소값은 주어진 값들 중에서 가장 작은 값을 의미합니다.
+
+        숫자 다섯 개를 1부터 1000 사이에서 랜덤으로 생성하여 저장합니다.
+        다섯 개의 랜덤 숫자를 비교하여 그 중 가장 작은 수(MIN)를 출력하시오.    
+    */
+    
+    /*
+        [출력예시]
+        837 911 510 621 616
+        510    
+    */
+    
+    let r1 = Math.floor(Math.random() * 1000) + 1;
+    let r2 = Math.floor(Math.random() * 1000) + 1;
+    let r3 = Math.floor(Math.random() * 1000) + 1;
+    let r4 = Math.floor(Math.random() * 1000) + 1;
+    let r5 = Math.floor(Math.random() * 1000) + 1;
+    document.write(r1, " ", r2, " ", r3, " ", r4, " ", r5, "<br>");
+    
+    // 이 부분이 최소값 개념에서의 핵심입니다.
+    let min = 1000;         // max와 반대로 가장 큰 값을 저장한 후 시작합니다.
+
+    if(min > r1) {
+        min = r1;
+    }
+    if(min > r2) {
+        min = r2;
+    }
+    if(min > r3) {
+        min = r3;
+    }
+    if(min > r4) {
+        min = r4;
+    }
+    if(min > r5) {
+        min = r5;
+    }              
+    document.write(min);  
+</script>

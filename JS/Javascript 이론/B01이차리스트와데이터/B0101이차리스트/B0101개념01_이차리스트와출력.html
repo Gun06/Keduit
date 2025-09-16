@@ -1,0 +1,33 @@
+<script>
+    /*
+        기존의 aList와 bList를 2차원리스트로 표현이 가능하다. 
+
+        aList[0] 인 10 과 bList[0]인 54를 하나로묶어 [10, 54]로 만들고,
+        이를 다시 numberLists  에 넣어서 2차원배열로 만든다.  
+
+        마찬가지로 [43, 6] 그리고 [23, 4]를 각각 numberLists 에 넣어서 최종적으로는 
+
+        [[10, 54],[43, 6],[23, 4]] 이런형태로 표현하게된다. 
+
+        각각의 값출력은 아래와 같다. 
+
+    */
+    let aList = [10, 43, 23];
+    let bList = [54,  6,  4];
+
+    let numberLists = [[10, 54],[43, 6],[23, 4]];
+
+    document.write(numberLists);
+
+    document.write("<hr/>");
+
+    document.write(numberLists[0] + "<br/>");
+    document.write(numberLists[1] + "<br/>");
+    document.write(numberLists[2] + "<br/>");
+
+    document.write("<hr/>");
+    document.write(numberLists[0][0] + " " + numberLists[0][1] + "<br/>");
+    document.write(numberLists[1][0] + " " + numberLists[1][1] + "<br/>");
+    document.write(numberLists[2][0] + " " + numberLists[2][1] + "<br/>");
+
+</script>

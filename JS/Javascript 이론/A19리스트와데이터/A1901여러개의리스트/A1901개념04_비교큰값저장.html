@@ -1,0 +1,23 @@
+<script>
+    /*
+[문제]
+aList 와 bList 의 각각의 값의 합이 짝수이면 cList에 2를 저장한다 
+aList 와 bList 의 각각의 값의 합이 홀수이면 cList에 1를 저장한다.
+    */
+    /*
+[출력예시]
+[2,1,1,2,1]
+    */
+    let aList = [10, 43, 23, 12, 53];
+    let bList = [54,  6,  4, 12, 50];    
+    let cList = [];
+    for(let i = 0; i < aList.length; i++){
+        let a = aList[i] + bList[i];
+        if(a % 2 == 1){
+            cList.push(1);
+        }else{
+            cList.push(2);
+        }
+    }
+    document.write(cList);
+</script>

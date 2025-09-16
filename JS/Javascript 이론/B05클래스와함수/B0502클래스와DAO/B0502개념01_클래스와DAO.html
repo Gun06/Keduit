@@ -1,0 +1,64 @@
+<script>
+
+    /*
+        
+                
+    */
+    class Student{
+        num = 0;
+        name = "";
+        kor = 0;
+        math = 0;
+
+        setData(num, name, kor, math) {
+            this.num = num;
+            this.name = name;
+            this.kor = kor;
+            this.math = math;
+        };
+
+        printData(){
+            document.write(this.num + ", " + this.name + ", " + this.kor + ", " + this.math + "<br/>");
+        }
+    }
+
+    class StudentDAO{
+        // 위데이터의 배열을 가지고있다. 
+        studentList = [];
+
+        printList(){
+            for(let i = 0; i < this.studentList.length; i++){
+                this.studentList[i].printData();
+            }
+        }
+
+        insertData(data){
+            this.studentList.push(data);
+        }
+
+        deleteData(index){
+            this.studentList.splice(index , 1);
+           
+        }
+
+    }
+    let studentDAO = new StudentDAO();
+
+    let st1 = new Student();
+    st1.setData(1001 , '김철수' , 20 , 40);
+    studentDAO.insertData(st1);
+    st1 = new Student();
+    st1.setData(1002 , '이민정' , 10 , 60);
+    studentDAO.insertData(st1);
+    st1 = new Student();
+    st1.setData(1003 , '조주연' , 80 , 10);
+    studentDAO.insertData(st1);
+    st1 = new Student();
+    st1.setData(1004 , '송민정' , 50 , 40);
+    studentDAO.insertData(st1);
+
+    studentDAO.printList();
+    document.write("<hr/>");
+    studentDAO.deleteData(2);
+    studentDAO.printList();
+</script>

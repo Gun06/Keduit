@@ -1,0 +1,27 @@
+<script>
+    /*
+[리스트와 일이삼일이삼]
+2부터 10 사이의 랜덤 숫자를 한 개 저장하고, 
+그 숫자만큼 반복하면서 반복적으로 숫자를 저장해 보겠습니다.
+여기서 반복 숫자는 "1 2 3"을 계속 반복하는 것을 의미합니다.
+    */
+    /*
+[출력예시1]
+4
+[1, 2, 3, 1]
+[출력예시2]
+8
+[1, 2, 3, 1, 2, 3, 1, 2]
+    */
+    let numberList = [];
+    let r = Math.floor(Math.random() * 9) + 2;
+    document.write(r + "<br/>");
+    let num = 1;
+    for(let i = 0; i < r; i++){
+        numberList.push(num);
+        num += 1;
+        if(num == 4){
+            num = 1;
+        }
+    }
+    document.write(numberList + "<br/>");

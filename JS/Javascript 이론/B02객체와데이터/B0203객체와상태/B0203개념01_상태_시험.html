@@ -1,0 +1,53 @@
+<script>
+    /*
+        [문제]
+            let numberLists = [
+                {"a" : 3 , "b" : 5}, 
+                {"a" : 4 , "b" : 3}, 
+                {"a" : 2 , "b" : 1}, 
+                {"a" : 8 , "b" : 7}, 
+                {"a" : 6 , "b" : 3}, 
+            ];
+
+            let statusList = [2, 1, 2, 2, 1]
+            
+            numberLists 의 a 와 b 의 곱을 c 항목을 만들어서 추가하시오.
+            단 statusList 가 1이면 양수로 2이면음수로 저장하시오.
+    */ 
+    /* 
+        [정답]
+            3 5 -15
+            4 3 12
+            2 1 -2
+            8 7 -56
+            6 3 18
+    */
+
+    let numberLists = [
+        {"a" : 3 , "b" : 5}, 
+        {"a" : 4 , "b" : 3}, 
+        {"a" : 2 , "b" : 1}, 
+        {"a" : 8 , "b" : 7}, 
+        {"a" : 6 , "b" : 3}, 
+    ];
+
+    let statusList = [2, 1, 2, 2, 1]
+  
+
+    for(let i = 0; i < numberLists.length; i++){
+        let c = numberLists[i]["a"] * numberLists[i]["b"]
+        if(statusList[i] == 1){
+            numberLists[i]["c"] = c;
+        }else if(statusList[2]){
+            numberLists[i]["c"] = -c;
+        }
+    }
+
+    for(let i = 0; i < numberLists.length; i++){   
+            document.write(numberLists[i]["a"] + " ");
+            document.write(numberLists[i]["b"] + " ");
+            document.write(numberLists[i]["c"] + " ");
+            document.write("<br/>");  
+    }
+
+</script>
