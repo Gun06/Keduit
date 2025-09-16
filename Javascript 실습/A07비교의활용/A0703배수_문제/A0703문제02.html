@@ -1,0 +1,17 @@
+<script>
+
+    /*
+        [문제]
+        3640에서 백의 자리 숫자가 3의 배수인지 확인하고, true 또는 false로 출력하시오.    
+    */
+    
+    /*
+        [출력예시]
+        true    
+    */
+
+    let a = 3640;
+    let b = Math.floor(a % 1000 / 100) % 3 == 0;
+    
+    document.write(b);
+</script>

@@ -1,0 +1,18 @@
+<script>
+
+    /*
+        [문제]
+        3346에서 십의 자리 숫자가 45의 약수인지 확인하고, true 또는 false로 출력하시오.
+    */
+    
+    /*
+        [출력예시]
+        false    
+    */
+
+    let a = 3346;
+    let b = Math.floor(a % 100 / 10);
+    let c = 45 % b == 0;
+
+    document.write(c);
+</script>
