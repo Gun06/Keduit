@@ -1,0 +1,29 @@
+<script>
+
+    /*
+        [문제]
+        1부터 9 사이의 랜덤 숫자 3개를 저장합니다.
+        세 개의 랜덤 숫자를 출력합니다.
+        세 개의 랜덤 숫자가 모두 다른 수인지 확인하고, true 또는 false로 출력하시오.    
+    */
+    
+    /*
+        [출력예시]
+        2
+        9
+        4
+        true    
+    */
+
+    let a = Math.floor(Math.random() * 9) + 1;
+    let b = Math.floor(Math.random() * 9) + 1;
+    let c = Math.floor(Math.random() * 9) + 1;
+    document.write(a, "<br>");
+    document.write(b, "<br>");
+    document.write(c, "<br>");
+
+    let d = a != b && a != c && b != c;
+    // python 허용 - let d = a != b != c;
+    document.write(d, "<br>");
+
+</script>

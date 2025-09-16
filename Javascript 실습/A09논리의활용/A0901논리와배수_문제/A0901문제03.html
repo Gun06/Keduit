@@ -1,0 +1,30 @@
+<script>
+
+    /*
+        [문제]
+        7654의 각 자릿수의 합과 평균을 출력하고,
+        합이 짝수이거나, 평균이 5이상인지 확인하고, true 또는 false로 출력하시오.    
+    */
+    
+    /*
+        [출력예시]
+        22
+        5.5
+        true    
+    */
+
+    //자리
+    let a = 7654;
+    let b = Math.floor(a / 1000);
+    let c = Math.floor(a % 1000 / 100);
+    let d = Math.floor(a % 100 / 10);
+    let e = a % 10
+
+    let g = f / 4;
+    document.write(f, "<br>");
+    document.write(g, "<br>");
+    let h = f % 2 == 0;
+    let i = g >= 5;
+    let l = h || i;
+    document.write(l);  
+</script>

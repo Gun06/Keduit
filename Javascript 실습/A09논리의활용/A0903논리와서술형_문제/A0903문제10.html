@@ -1,0 +1,29 @@
+<script>
+
+    /*
+        [문제]
+        철수는 암호 숫자를 만들었습니다. 
+        이 암호의 규칙은 두 자리 숫자 중 하나는 짝수이고, 다른 하나는 홀수여야 통과됩니다. 
+        반대 순서도 상관없습니다.
+        10부터 99 사이의 랜덤 숫자를 생성한 후 출력합니다.
+        이 숫자가 암호 규칙을 통과하는지 확인하고, true 또는 false로 출력하시오.    
+    */
+    
+    /*
+        [출력예시]
+        27
+        true    
+    */
+
+    let a = Math.floor(Math.random() * 90) + 10;
+    document.write(a, "<br>");
+
+    let b = Math.floor(a / 10);
+    let c = a % 10;
+
+    let d = b % 2 == 0 && c % 2 == 1;
+    let e = b % 2 == 1 && c % 2 == 0;
+
+    let f = d || e;
+    document.write(f);
+</script>

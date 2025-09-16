@@ -1,0 +1,21 @@
+<script>
+
+    /*
+        [문제]
+        4567의 천의 자릿수가 짝수이고, 십의 자릿수가 홀수인지 확인하고, true 또는 false로 출력하시오.    
+    */
+    
+    /*
+        [출력예시]
+        false    
+    */
+
+    let a = 4567;
+    let b = Math.floor(a / 1000);
+    let c = Math.floor(a % 100 / 10);
+
+    let d = b % 2 == 0;
+    let e = c % 2 == 1;
+    let f = d && e;    
+    document.write(f);
+</script>
