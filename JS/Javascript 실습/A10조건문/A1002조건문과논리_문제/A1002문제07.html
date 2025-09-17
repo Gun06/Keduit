@@ -1,0 +1,40 @@
+<script>
+
+    /*
+        [문제]
+        철수는 암호 숫자의 규칙을 만들었습니다. 
+        암호 숫자는 세 자리의 숫자이면서 모든 자리의 숫자가 짝수여야 합니다. 
+        100부터 999 사이의 숫자를 랜덤으로 저장한 후, 
+        그 숫자가 철수의 암호 규칙을 통과하면 "o"를 출력하고, 
+        통과하지 못하면 "x"를 출력하는 프로그램을 작성하시오.    
+    */
+    
+    /*
+        [출력예시]
+        573
+        x  
+        
+        [출력예시]
+        680
+        o        
+    */
+
+    let r = Math.floor(Math.random() * 900) + 100;
+    document.write(r, "<br>");
+
+    let a = Math.floor(r / 100);
+    let b = Math.floor(r % 100 / 10);
+    let c = r % 10;
+    
+    let d = a % 2 == 0;
+    let e = b % 2 == 0;
+    let f = c % 2 == 0;
+    let g = d && e && f;
+
+    if(g) {
+        document.write("o");
+    }
+    if(!g) {
+        document.write("x");
+    }
+</script>

@@ -1,0 +1,35 @@
+<script>
+
+    /*
+        [문제]
+        철수는 암호 숫자를 만들었습니다. 
+        암호 숫자의 규칙은 숫자 5가 하나라도 포함되어 있으면 통과하는 것입니다. 
+        100부터 999 사이의 랜덤 숫자를 저장한 후, 해당 숫자가 암호를 통과하면 "o"를 출력하고, 
+        통과하지 못하면 "x"를 출력하는 프로그램을 작성하시오.    
+    */
+    
+    /*
+        [출력예시]
+        251
+        o  
+        
+        [출력예시]
+        380
+        x        
+    */
+    let r = Math.floor(Math.random() * 900) + 100;
+    document.write(r, "<br>");
+
+    let a = Math.floor(r / 100);
+    let b = Math.floor(r % 100 / 10);
+    let c = r % 10; 
+
+    let e = a == 5 || b == 5 || c == 5;
+    
+    if(e) {
+        document.write("o");
+    }
+    if(!e) {
+        document.write("x");
+    }
+</script>

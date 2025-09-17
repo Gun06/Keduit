@@ -1,0 +1,35 @@
+<script>
+
+    /*
+        [문제]
+        1부터 9 사이의 랜덤 숫자 3개를 저장한 후, 이 3개의 숫자를 출력하고, 
+        세 숫자가 모두 같은지 여부를 확인하는 프로그램을 작성하시오.
+        같으면 "o", 틀리면 "x"를 출력하시오.    
+    */
+    
+    /*
+        [출력예시]
+        9 5 4
+        x    
+
+        [출력예시]
+        3 3 3 
+        o
+    */
+    
+    let first = Math.floor(Math.random()*9)+1;
+    let second = Math.floor(Math.random()*9)+1;
+    let third = Math.floor(Math.random()*9)+1;
+
+    document.write(first, "<br>");
+    document.write(second, "<br>");
+    document.write(third, "<br>");
+    
+    let c = first ==second && first==third;
+    if(c){
+        document.write("O");
+    }
+    if(!c){
+        document.write("x");
+    }
+</script>

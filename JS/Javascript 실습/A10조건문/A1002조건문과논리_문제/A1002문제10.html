@@ -1,0 +1,37 @@
+<script>
+
+    /*
+        [문제]
+        철수는 암호 숫자를 만들었습니다. 
+        암호 숫자의 규칙은 모든 자리의 숫자가 짝수이거나, 모든 자리의 숫자가 홀수이면 통과입니다. 
+        10부터 99 사이의 랜덤 숫자를 저장한 후, 그 숫자가 암호를 통과하면 "o"를 출력하고, 
+        통과하지 못하면 "x"를 출력하는 프로그램을 작성하시오.    
+    */
+    
+    /*
+        [출력예시]
+        64
+        o   
+        
+        [출력예시]
+        47
+        x        
+    */
+    
+    let r = Math.floor(Math.random() * 90) + 10;
+    document.write(r, "<br>");
+
+    let a = Math.floor(r / 10);
+    let b = r % 10;
+
+    let c = a % 2 == 0 && b % 2 == 0;
+    let d = a % 2 == 1 && b % 2 == 1;
+    let e = c || d;
+
+    if(e) {
+        document.write("o");
+    }
+    if(!e) {
+        document.write("x");
+    }
+</script>
