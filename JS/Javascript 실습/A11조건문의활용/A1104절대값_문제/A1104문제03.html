@@ -1,0 +1,50 @@
+<script>
+
+    /*
+        [문제]
+        a는 1에서 9 사이의 랜덤 숫자를 저장합니다.
+        b 변수에 5를 저장합니다.
+        c는 1에서 9 사이의 랜덤 숫자를 저장합니다.
+        a와 c 중에서 어떤 숫자가 b와 더 가까운지 비교하여 다음을 출력하시오.
+
+        [조건]
+        (1) a가 c보다 가까우면 "a가 가깝다"
+        (2) c가 a보다 가까우면 "c가 가깝다"
+        (3) a와 c의 거리가 같으면 "서로 같다"     
+    */
+    
+    /*
+        [출력예시]
+        5
+        7 5
+        2 0
+        c가 가깝다
+    */
+    
+    let a = Math.floor(Math.random()*9)+1;
+    let b = 5;
+    let c = Math.floor(Math.random()*9)+1;
+
+    document.writeln("a:", a,"/","b:", b,"/","c:", c,"/","<br>");
+    
+    let d = a-b;
+    if(d<0){
+        d = -d
+    }
+
+    let e = c-b;
+    if(e<0){
+        e = -e
+    }
+
+    if (d>e){
+        document.writeln("c가 가깝다")
+    }
+    if (e>d){
+        document.writeln("a가 가깝다")
+    }
+    if (e==d){
+        document.writeln("서로 같다")
+    }
+    
+</script>

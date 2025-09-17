@@ -1,0 +1,40 @@
+<script>
+
+    /*
+        [문제]
+        철수는 주사위 2개를 가지고 있습니다.
+        주사위는 각각 1부터 6까지의 눈금을 가지고 있습니다.
+        철수가 두 개의 주사위를 던졌을 때, 두 눈의 합을 출력하시오.
+        단, 두 주사위의 눈금이 같으면 그 합에 6을 추가로 더하시오.    
+    */
+    
+    /*
+        [출력예시]
+        3 2
+        5
+        
+        [출력예시]
+        2 2
+        10   
+    */
+    
+    let a = Math.floor(Math.random()*6)+1;
+    let b = Math.floor(Math.random()*6)+1;
+    
+    document.write(a, " ", b, "<br>");
+    document.write(a+b, "<br>");
+
+    // c=0
+    // if(a==b){
+    //     c = (a+b) +6
+    // }
+    // document.write(c);
+
+    let c = a+b;
+    if(a==b){
+        c = c+6;
+    }
+    document.write(c);
+
+
+</script>

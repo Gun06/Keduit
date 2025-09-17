@@ -1,0 +1,35 @@
+<script>
+
+    /*
+        [문제]
+        1부터 5 사이의 랜덤 숫자를 저장합니다.
+        1이면 "아메리카노", 2이면 "카페라떼", 3이면 "모카라떼",
+        그 외 숫자는 "주문취소"를 출력하시오.
+    */
+
+    /*
+        [출력예시]
+        2
+        까페라떼
+
+        [출력예시]
+        5
+        주문취소
+    */
+
+    let r = Math.floor(Math.random() * 5) + 1;
+    document.write(r, "<br>");
+
+    if (r == 1) {
+        document.write("아메리카노");
+    }
+    if (r == 2) {
+        document.write("카페라떼");
+    }
+    if (r == 3) {
+        document.write("모카라떼");
+    }
+    if (r != 1 && r != 2 && r != 3) {
+        document.write("주문취소");
+    }
+</script>

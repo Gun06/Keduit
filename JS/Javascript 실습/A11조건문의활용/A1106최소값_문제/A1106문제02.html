@@ -1,0 +1,46 @@
+<script>
+
+    /*
+        [문제]
+        10부터 99 사이의 랜덤 숫자 세 개를 생성하여 저장합니다.
+        각각의 숫자의 자릿를 더한 값을 구합니다.
+        자릿수의 합 중 최소값을 출력하시오.   
+    */
+    
+    /*
+        [출력예시]
+        57 80 19
+        12 8 10
+        8    
+    */
+    
+    let r1 = Math.floor(Math.random() * 90) + 10;
+    let r2 = Math.floor(Math.random() * 90) + 10;
+    let r3 = Math.floor(Math.random() * 90) + 10;
+    document.write(r1, " ", r2, " ", r3, "<br>");
+
+    let a1 = Math.floor(r1 / 10);
+    let a2 = r1 % 10;
+    let a3 = a1 + a2;
+
+    let b1 = Math.floor(r2 / 10);
+    let b2 = r2 % 10;
+    let b3 = b1 + b2;
+
+    let c1 = Math.floor(r3 / 10);
+    let c2 = r3 % 10;
+    let c3 = c1 + c2;
+    document.write(a3, " ", b3, " ", c3, "<br>");
+
+    let min = 99;
+    if(min > a3) {
+        min = a3;
+    }
+    if(min > b3) {
+        min = b3;
+    }
+    if(min > c3) {
+        min = c3;
+    }
+    document.write(min); 
+</script>

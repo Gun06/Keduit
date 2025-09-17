@@ -1,0 +1,48 @@
+<script>
+
+    /*
+        [문제]
+        철수는 김밥을 만들기 위해 재료를 사러 마트에 왔습니다.
+        철수가 필요한 재료는 오이 14개와 당근 12개입니다.
+        오이는 한 번에 4개씩 묶어서 1500원에 판매되고,
+        당근은 한 번에 5개씩 묶어서 1600원에 판매됩니다.
+        철수가 재료를 구입하는 데 필요한 총 금액을 구하여 출력하시오.    
+    */
+    
+    /*
+        [출력예시]
+        10800    
+    */
+    
+    let o = 14;
+    let k = 12;
+
+    let op = 1500;
+    let kp = 1600;
+
+    //오이
+    let a = Math.floor(o/4);
+    let aa = o%4;
+    if (aa>0){
+        a=a+1;
+    }
+    document.write(a,"<br>");
+    
+    let toper = op*a;
+    document.write(toper,"<br>");
+
+    //당근
+    let b = Math.floor(k/4);
+    let bb = k%4;
+    if (bb>0){
+        b=b+1;
+    }
+    document.write(b,"<br>");
+    let tkpwe = kp*b;
+    document.write(tkpwe,"<br>");
+
+
+    //총가격
+    let tt = toper+tkpwe;
+    document.writeln(tt);
+</script>

@@ -1,0 +1,45 @@
+<script>
+
+    /*
+        [문제]
+        숫자 다섯 개를 1부터 1000 사이에서 랜덤으로 생성하여 저장합니다.
+        각 숫자의 일의 자리를 비교하여 가장 작은 일의 자리 숫자를 출력하시오.    
+    */
+    
+    /*
+        [출력예시]
+        467 988 972 66 925
+        2    
+    */
+
+    let r1 = Math.floor(Math.random() * 1000) + 1;
+    let r2 = Math.floor(Math.random() * 1000) + 1;
+    let r3 = Math.floor(Math.random() * 1000) + 1;
+    let r4 = Math.floor(Math.random() * 1000) + 1;
+    let r5 = Math.floor(Math.random() * 1000) + 1;
+    document.write(r1, " ", r2, " ", r3, " ", r4, " ", r5, "<br>");
+
+    let a = r1 % 10;
+    let b = r2 % 10;
+    let c = r3 % 10;
+    let d = r4 % 10;
+    let e = r5 % 10;
+
+    let min = 1000;
+    if(min > a) {
+        min = a;
+    }
+    if(min > b) {
+        min = b;
+    }
+    if(min > c) {
+        min = c;
+    }
+    if(min > d) {
+        min = d;
+    }
+    if(min > e) {
+        min = e;
+    }    
+    document.write(min);
+</script>

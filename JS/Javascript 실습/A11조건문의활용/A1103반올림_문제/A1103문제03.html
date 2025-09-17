@@ -1,0 +1,29 @@
+<script>
+
+    /*
+        [문제]
+        10.72를 소수점 두 자리에서 반올림하시오.    
+    */
+    
+    /*
+        [출력예시]
+        10.72
+        10.7    
+    */
+    
+    let a = 10.72;
+    document.write(a, "<br>");
+
+    a = a * 100;                    // 1072
+    
+    let b = Math.floor(a / 10);     // 107
+    let c = a % 10;                 // 2
+
+    if(c >= 5) {
+        b = b + 1;
+    }
+
+    let d = b * 10;                 // 1070
+    d = d / 100;                    // 10.7
+    document.write(d);
+</script>

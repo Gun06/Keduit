@@ -17,4 +17,16 @@
         x        
     */
 
+    let r1 = Math.floor(Math.random() * 9) + 1;
+    let r2 = Math.floor(Math.random() * 9) + 1;
+    let r3 = Math.floor(Math.random() * 9) + 1;
+    document.write(r1, " ", r2, " ",  r3, "<br>");
+
+    let a = r1 != r2 && r2 != r3 && r3 != r1;
+    if(a) {
+        document.write("o");
+    }
+    if(!a) {
+        document.write("x");
+    }
 </script>

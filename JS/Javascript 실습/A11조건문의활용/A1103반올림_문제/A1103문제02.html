@@ -1,0 +1,29 @@
+<script>
+
+    /*
+        [문제]
+        12.3을 소수점 한 자리에서 반올림하시오.    
+    */
+    
+    /*
+        [출력예시]
+        12.3
+        12
+    */
+    
+    let a = 12.3;
+    document.write(a, "<br>");
+
+    a = a * 10;                     // 123
+
+    let b = Math.floor(a / 10);     // 12
+    let c = a % 10;                 // 3
+
+    if(c >= 5) {
+        b = b + 1;                  
+    }
+
+    let d = b * 10;
+    d = d / 10;
+    document.write(d);
+</script>

@@ -1,0 +1,30 @@
+<script>
+
+    /*
+        [문제]
+        민수와 철수의 시험 점수를 0에서 100 사이 랜덤 숫자로 5점 단위로 저장합니다.
+        민수의 점수와 철수의 점수 차이를 계산하시오.
+        차이를 절대값(양수)으로 구하시오.    
+    */
+    
+    /*
+        [출력예시]
+        45 90
+        -45
+        45    
+    */
+
+    let r1 = Math.floor(Math.random() * 21);
+    r1 = r1 * 5;
+    let r2 = Math.floor(Math.random() * 21);
+    r2 = r2 * 5;
+    document.write(r1, " ", r2, "<br>");
+
+    let a = r1 - r2;
+    document.write(a, "<br>");
+    if(a < 0) {
+        a = -a;
+        document.write(a);
+    }
+    
+</script>

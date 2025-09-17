@@ -1,0 +1,31 @@
+<script>
+
+    /*
+        [문제]
+        랜덤으로 숫자 2 또는 4 또는 6을 출력하시오.    
+    */
+    
+    /*
+        [출력예시]
+        3
+        6
+
+        [출력예시]
+        1
+        2    
+    */
+    
+    
+    let state = Math.floor(Math.random() * 3) + 1;
+    document.write(state, "<br>");
+
+    if(state == 1) {
+        document.write(2);
+    }
+    if(state == 2) {
+        document.write(4);
+    }
+    if(state == 3) {
+        document.write(6);
+    }
+</script>

@@ -1,0 +1,33 @@
+<script>
+
+    /*
+        [문제]
+        10에서 99 사이의 랜덤 숫자를 저장한 후 일의 자리에서 반올림을 하시오.
+    */
+    
+    /*
+        [출력예시]
+        73
+        70
+
+        [출력예시]
+        37
+        40  
+    */
+    
+    let a = Math.floor(Math.random()*90)+10;
+    document.write(a,"<br>");
+
+    let aa = Math.floor(a/10);
+    let b = a%10;
+
+    let d = 0;
+    if(b>=5){
+        d = (aa+1)*10
+    }
+    if(b<5){
+        d = aa*10
+    }
+    document.write(d);
+
+</script>
