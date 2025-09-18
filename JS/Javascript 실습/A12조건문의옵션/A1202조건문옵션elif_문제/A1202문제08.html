@@ -44,11 +44,42 @@
         1600
     */
 
-    document.write("커피 메뉴" + "<br/>");
-    document.write("1번 아메리카노 1000원" + "<br/>");
-    document.write("2번 까페라떼 1500원" + "<br/>");
-    document.write("3번 모카라떼 2000원" + "<br/>");
+    document.write("커피 메뉴<br/>");
+    document.write("1번 아메리카노 1000원<br/>");
+    document.write("2번 까페라떼 1500원<br/>");
+    document.write("3번 모카라떼 2000원<br/>");
 
-    
+    let a = Math.floor(Math.random() * 4) + 1;
+    let b = Math.floor(Math.random() * 17) + 8
+    b = b * 100;
+    document.write(a + "<br/>");
+    document.write(b + "<br/>");
 
+    if (a == 1) {
+        if (b < 1000) {
+            document.write("금액이 부족합니다<br/>");
+        } else if (b >= 1000) {
+            document.write("아메리카노를 주문합니다<br/>");
+            b = b - 1000;
+        }
+
+    } else if (a == 2) {
+        if (b < 1500) {
+            document.write("금액이 부족합니다<br/>");
+        } else if (b >= 1500) {
+            document.write("까페라떼를 주문합니다<br/>");
+            b = b - 1500;
+        }
+
+    } else if (a == 3) {
+        if (b < 2000) {
+            document.write("금액이 부족합니다<br/>");
+        } else if (b >= 2000) {
+            document.write("모카라떼를 주문합니다<br/>");
+            b = b - 2000;
+        }
+    } else {
+        document.write("잘못된 번호입니다<br/>");
+    }
+    document.write(b);
 </script>
