@@ -1,0 +1,26 @@
+<script>
+    /*
+        [문제]
+        1부터 9사이의 랜덤숫자 3개를 저장합니다.
+        3개의 랜덤숫자를 저장하고 모두 같은지 비교하여
+        같으면 "o"를 출력하고, 틀리면 "x"를 출력하시오.
+        단, else를 사용하시오.
+    */
+    /*
+        [출력예시]
+        3 3 3
+        o
+    */
+
+    let a = Math.floor(Math.random() * 9) + 1;
+    let b = Math.floor(Math.random() * 9) + 1;
+    let c = Math.floor(Math.random() * 9) + 1;
+    document.writeln(a, "", b, "", c, "<br>");
+
+    let d = a == b && b == c;
+    if (d) {
+        document.writeln(true)
+    } else {
+        document.writeln(false)
+    }
+</script>

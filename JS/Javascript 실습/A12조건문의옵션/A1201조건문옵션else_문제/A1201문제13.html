@@ -1,0 +1,32 @@
+<script>
+/*
+    [문제]
+    철수는 암호 숫자를 만들었습니다. 
+    암호 숫자의 규칙은 모든 자리의 숫자가 짝수이어야 합니다.
+    100부터 999 사이의 랜덤 숫자를 저장한 후, 해당 숫자가 암호를 통과하는지 확인해
+    모두 짝수이면 "통과", 그렇지 않으면 "실패"를 출력하시오.
+    단, else를 사용하시오.
+*/
+/*
+    [출력예시]
+    640
+    통과
+
+    [출력예시]
+    733
+    실패
+*/
+   
+    let a = Math.floor(Math.random() * 900) + 100;
+    document.write(a + "<br/>");
+    let b = parseInt(a / 100);
+    let c = parseInt(a % 100 / 10);
+    let d = a % 10;
+    let e = b % 2 == 0 && c % 2 == 0 && d % 2 == 0;
+
+    if(e){
+        document.write("통과");
+    }else{
+        document.write("실패");
+    }
+</script>

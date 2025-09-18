@@ -1,0 +1,46 @@
+<script>
+    /*
+        [문제]
+        1부터 10 사이의 랜덤 숫자 두 개를 저장한 후, 두 숫자를 비교합니다.
+        두 숫자 중에 더 큰 숫자를 출력합니다.
+        만약 서로 같으면 "같다"를 출력하시오.
+        단, elif와 else를 사용하시오.
+    */
+    /*
+        [출력예시]
+        2 9
+        9
+
+        [출력예시]
+        5 5
+        같다
+    */
+
+    let r1 = Math.floor(Math.random() * 10) + 1;
+    let r2 = Math.floor(Math.random() * 10) + 1;
+    document.writeln(r1, "/", r2, "<br>");
+
+    let big = 0
+    if (r1 > r2) {
+        big = r1
+    } else if (r1 < r2) {
+        big = r2
+    } else if (r1 = r2) {
+        big = r1
+    }
+
+    document.writeln(big);
+
+    /*
+    let a = Math.floor(Math.random() * 10) + 1;
+    let b = Math.floor(Math.random() * 10) + 1;
+    document.write(a + " " + b + "<br/>");
+    if(a > b){
+        document.write(a);
+    }else if(a == b){
+        document.write("같다");
+    }else{
+        document.write(b);
+    }
+    */
+</script>

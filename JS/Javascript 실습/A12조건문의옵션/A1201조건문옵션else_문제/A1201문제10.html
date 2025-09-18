@@ -1,0 +1,25 @@
+<script>
+    /*
+    [문제]
+    시험 점수가 60점 이상이고 100점 이하이면 합격입니다.
+    0에서 100 사이의 랜덤 숫자 중 5점 단위의 점수를 저장한 후,
+    철수가 합격이면 "합격"을, 불합격이면 "불합격"을 출력하세요.
+    단, else를 사용하시오.
+*/
+    /*
+    [출력예시]
+    50
+    불합격
+*/
+    let a = Math.floor(Math.random() * 20) + 1;
+    a = a * 5;
+    document.write(a);
+    document.write("<br/>");
+    if (a >= 60 && a <= 100) {
+        document.write("합격");
+        document.write("<br/>");
+    } else {
+        document.write("불합격");
+        document.write("<br/>");
+    }
+</script>

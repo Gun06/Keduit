@@ -1,0 +1,31 @@
+<script>
+/*
+    [문제]
+    철수는 경품 행사에 참가했습니다. 
+    경품을 받기 위해 100부터 999 사이의 랜덤 숫자를 하나 뽑고, 각 자리의 숫자를 확인합니다.
+    각 자리의 숫자가 전부 같으면 "당첨", 아니면 "꽝"을 출력하시오.
+    단, else를 사용하시오.
+*/
+/*
+    [출력예시]
+    333
+    당첨
+
+    [출력예시]
+    803
+    꽝
+*/
+
+    let a = Math.floor(Math.random() * 900) + 100; 
+    document.write(a + "<br/>");
+    let b = parseInt(a / 100);
+    let c = parseInt(a % 100 / 10);
+    let d = a % 10;
+
+    let check = b == c && c == d;
+    if(check){
+        document.write("당첨");
+    }else{
+        document.write("꽝");
+    }
+</script>

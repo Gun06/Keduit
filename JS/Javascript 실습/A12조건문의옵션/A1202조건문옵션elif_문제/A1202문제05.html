@@ -1,0 +1,38 @@
+<script>
+    /*
+        [문제]
+        동전의 앞과 뒤를 랜덤 숫자 1 또는 2로 표현합니다.
+        동전 두 개를 던져서, 두 동전이 모두 홀수(1)이면 "1등"을 출력하고,
+        두 동전이 모두 짝수(2)이면 "2등"을 출력합니다.
+        그 외의 경우는 "꽝"을 출력합니다.
+        단, elif와 else를 사용하시오.
+    */
+    /*
+        [출력예시]
+        1 1
+        1등
+
+        [출력예시]
+        2 2
+        2등
+
+        [출력예시]
+        1 2
+        꽝
+    */
+
+    let a = Math.floor(Math.random() * 2) + 1;
+    let b = Math.floor(Math.random() * 2) + 1;
+    document.write(a + " " + b + "<br/>");
+
+    let check1 = a % 2 == 1;
+    let check2 = b % 2 == 1;
+
+    if (check1 && check2) {
+        document.writeln("1등");
+    } else if (!check1 && !check2) {
+        document.writeln("2등")
+    } else {
+        document.writeln("꽝");
+    }
+</script>
