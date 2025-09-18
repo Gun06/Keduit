@@ -20,5 +20,20 @@
     */
     
 
+    let r1 = Math.floor(Math.random()*101);
+    let r2 = Math.floor(Math.random()*101);
+    document.writeln("r1:", r1,"<br>", "r2:", r2,"<br>");
+
+    let ag = (r1+r2)/2;
+    document.writeln(ag,"<br>");
     
+    let f = r1<50 && r2<50
+
+    let score = ag && f
+    if(score){
+        document.writeln("합격");
+    }
+    if(!score){
+        document.writeln("불합격");
+    }
 </script>

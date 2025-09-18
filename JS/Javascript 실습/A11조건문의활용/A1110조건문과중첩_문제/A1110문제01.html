@@ -28,5 +28,21 @@
         0    
     */
     
-    
+    //철수의 위치
+    let a = 3;
+    let b = Math.floor(Math.random()*11);
+    document.writeln(b,"<br>");
+
+    let c = Math.floor(Math.random()*2)+1;
+    document.writeln(c,"<br>");
+
+    if(c==1){
+        document.writeln(a=a+b);
+    }
+    if(c==2){
+        document.writeln(a=a-b);
+        if(a<0){
+            document.writeln(a=0);
+        }
+    }
 </script>
