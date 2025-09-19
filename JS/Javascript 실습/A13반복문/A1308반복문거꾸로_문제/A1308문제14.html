@@ -12,8 +12,8 @@
 
     let num = 15
     for (let i = 15; i >= 1; i--) {
-        let check1 = 30 / num == 0;
-        let check2 = 20 / num == 0;
+        let check1 = 30 % num == 0;
+        let check2 = 20 % num == 0;
         let result = num
 
         if (check1) {
@@ -26,7 +26,7 @@
 			result="X"
 		}
 
-        document.writeln(num, " ");
+        document.writeln(result, " ");
         num -= 1;
     }
 </script>
