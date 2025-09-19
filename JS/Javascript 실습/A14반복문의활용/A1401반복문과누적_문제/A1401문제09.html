@@ -1,0 +1,27 @@
+<script>
+    /*
+        [문제]
+        반복문을 사용하여 10부터 99까지의 숫자 중,
+        일의 자리가 5보다 크고 십의 자리가 8보다 큰 숫자들만을 찾아
+        그 중에서 짝수인 숫자들을 누적하여 합을 출력하시오.
+    */
+    /*
+        [출력예시]
+        96 98 
+        194
+    */
+    let total = 0;
+    for(let i = 10; i < 100; i++){
+        let a = parseInt(i / 10);
+        let b = i % 10;
+        let check1 = a > 8 && b > 5;
+        let check2 = i % 2 == 0;
+        if(check1 && check2){
+            document.write(i + " ");
+            total += i;1
+        }
+    }
+    document.write("<br/>");
+    document.write(total);
+
+</script>

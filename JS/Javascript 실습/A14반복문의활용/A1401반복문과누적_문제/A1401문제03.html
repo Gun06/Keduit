@@ -1,0 +1,26 @@
+<script>
+    /*
+        [문제]
+        반복문을 사용하여 2000의 약수를 구한 뒤,
+        그 중 백의 자리가 4인 약수만을 누적하여 합을 출력하시오.
+    */
+    /*
+        [출력예시]
+        400 
+        400
+    */
+    let total = 0;
+    for(let i = 1; i < 2001; i++){
+        let check1 = 2000 % i == 0;
+        if(check1){
+            let a = parseInt(i % 1000 / 100);
+            if(a == 4){
+                total += i;
+                document.write(i + " ");
+            }
+        }
+    }
+    document.write("<br/>");
+    document.write(total);
+    
+</script>
