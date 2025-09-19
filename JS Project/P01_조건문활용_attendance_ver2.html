@@ -1,0 +1,225 @@
+<script>
+    /*
+        [문제]
+        총 7일 동안 출석 일수에 따라 수강생이 수료 및 재수강을 할 수 있게 하려 한다.
+        매일 오전 9시 30분까지는 출석 인정이 되며
+        출석 인정 시간 이후 55분까지는 지각 처리된다.
+        그 외에 나머지는 모두 결석 처리가 진행된다.
+
+        [시간 조건]
+        01. 24시간제를 기준으로 한다.
+        02. "시"는 8~9까지 랜덤값으로 출력된다.
+        03. "분"은 0~59까지 랜덤값으로 출력된다.
+
+        [알 조건]
+        01. 수료는 출석 7일 중 5일 이상이여야 수료 가능하다
+        02. 지각은 2번 이상일 시 1번 결석이 된다.
+        03. 결석 2번 이상일 시 무조건 재수강 처리가 된다.
+    */
+    /*
+        [출력예시]
+        [금일 출석 시간] : 8시 00분
+        [금일 출석 상태] : 지각
+        [출석 일 수] : 30일 중 N일 진행
+        수료
+    */
+
+    // 7일 출석 관리 시스템 (조건문만 사용) 각 날짜별 랜덤 시간 생성 및 출석 상태 판정 1일차
+    let h1 = Math.floor(Math.random() * 2) + 8;
+    let m1 = Math.floor(Math.random() * 60);
+    let s1 = "";
+    if (h1 < 9 || (h1 == 9 && m1 <= 30)) {
+        s1 = "출석";
+    } else if (h1 == 9 && m1 > 30 && m1 <= 55) {
+        s1 = "지각";
+    } else {
+        s1 = "결석";
+    }
+
+    // 2일차
+    let h2 = Math.floor(Math.random() * 2) + 8;
+    let m2 = Math.floor(Math.random() * 60);
+    let s2 = "";
+    if (h2 < 9 || (h2 == 9 && m2 <= 30)) {
+        s2 = "출석";
+    } else if (h2 == 9 && m2 > 30 && m2 <= 55) {
+        s2 = "지각";
+    } else {
+        s2 = "결석";
+    }
+
+    // 3일차
+    let h3 = Math.floor(Math.random() * 2) + 8;
+    let m3 = Math.floor(Math.random() * 60);
+    let s3 = "";
+    if (h3 < 9 || (h3 == 9 && m3 <= 30)) {
+        s3 = "출석";
+    } else if (h3 == 9 && m3 > 30 && m3 <= 55) {
+        s3 = "지각";
+    } else {
+        s3 = "결석";
+    }
+
+    // 4일차
+    let h4 = Math.floor(Math.random() * 2) + 8;
+    let m4 = Math.floor(Math.random() * 60);
+    let s4 = "";
+    if (h4 < 9 || (h4 == 9 && m4 <= 30)) {
+        s4 = "출석";
+    } else if (h4 == 9 && m4 > 30 && m4 <= 55) {
+        s4 = "지각";
+    } else {
+        s4 = "결석";
+    }
+
+    // 5일차
+    let h5 = Math.floor(Math.random() * 2) + 8;
+    let m5 = Math.floor(Math.random() * 60);
+    let s5 = "";
+    if (h5 < 9 || (h5 == 9 && m5 <= 30)) {
+        s5 = "출석";
+    } else if (h5 == 9 && m5 > 30 && m5 <= 55) {
+        s5 = "지각";
+    } else {
+        s5 = "결석";
+    }
+
+    // 6일차
+    let h6 = Math.floor(Math.random() * 2) + 8;
+    let m6 = Math.floor(Math.random() * 60);
+    let s6 = "";
+    if (h6 < 9 || (h6 == 9 && m6 <= 30)) {
+        s6 = "출석";
+    } else if (h6 == 9 && m6 > 30 && m6 <= 55) {
+        s6 = "지각";
+    } else {
+        s6 = "결석";
+    }
+
+    // 7일차
+    let h7 = Math.floor(Math.random() * 2) + 8;
+    let m7 = Math.floor(Math.random() * 60);
+    let s7 = "";
+    if (h7 < 9 || (h7 == 9 && m7 <= 30)) {
+        s7 = "출석";
+    } else if (h7 == 9 && m7 > 30 && m7 <= 55) {
+        s7 = "지각";
+    } else {
+        s7 = "결석";
+    }
+
+    // 출석 통계 계산 (수동으로)
+    let attendanceCount = 0;
+    let lateCount = 0;
+    let absenceCount = 0;
+
+    // 각 날짜별 출석 상태 카운팅
+    if (s1 == "출석") 
+        attendanceCount = attendanceCount + 1;
+    else if (s1 == "지각") 
+        lateCount = lateCount + 1;
+    else 
+        absenceCount = absenceCount + 1;
+    
+    if (s2 == "출석") 
+        attendanceCount = attendanceCount + 1;
+    else if (s2 == "지각") 
+        lateCount = lateCount + 1;
+    else 
+        absenceCount = absenceCount + 1;
+    
+    if (s3 == "출석") 
+        attendanceCount = attendanceCount + 1;
+    else if (s3 == "지각") 
+        lateCount = lateCount + 1;
+    else 
+        absenceCount = absenceCount + 1;
+    
+    if (s4 == "출석") 
+        attendanceCount = attendanceCount + 1;
+    else if (s4 == "지각") 
+        lateCount = lateCount + 1;
+    else 
+        absenceCount = absenceCount + 1;
+    
+    if (s5 == "출석") 
+        attendanceCount = attendanceCount + 1;
+    else if (s5 == "지각") 
+        lateCount = lateCount + 1;
+    else 
+        absenceCount = absenceCount + 1;
+    
+    if (s6 == "출석") 
+        attendanceCount = attendanceCount + 1;
+    else if (s6 == "지각") 
+        lateCount = lateCount + 1;
+    else 
+        absenceCount = absenceCount + 1;
+    
+    if (s7 == "출석") 
+        attendanceCount = attendanceCount + 1;
+    else if (s7 == "지각") 
+        lateCount = lateCount + 1;
+    else 
+        absenceCount = absenceCount + 1;
+    
+    // 지각 2번 이상일 시 결석 1번으로 변환
+    let twoLate = 0;
+    if (lateCount >= 2) {
+        twoLate = Math.floor(lateCount / 2);
+    }
+    let finalAbsenceCount = absenceCount + twoLate;
+    let finalAttendanceCount = attendanceCount;
+
+    // 수료/재수강 판정 (5일 이상 출석)
+    let result = "";
+    if (finalAbsenceCount >= 2) {
+        result = "재수강";
+    } else if (finalAttendanceCount >= 5) {
+        result = "수료";
+    } else {
+        result = "재수강";
+    }
+
+    // 결과 출력
+    document.write("<h2> 출석 관리 시스템</h2>");
+    document.write("<hr>");
+
+    // 일별 출석 기록 출력
+    document.write("<h3>일별 출석 기록</h3>");
+    document.write("[1일차] " + h1 + "시 " + m1 + "분 - " + s1 + "<br>");
+    document.write("[2일차] " + h2 + "시 " + m2 + "분 - " + s2 + "<br>");
+    document.write("[3일차] " + h3 + "시 " + m3 + "분 - " + s3 + "<br>");
+    document.write("[4일차] " + h4 + "시 " + m4 + "분 - " + s4 + "<br>");
+    document.write("[5일차] " + h5 + "시 " + m5 + "분 - " + s5 + "<br>");
+    document.write("[6일차] " + h6 + "시 " + m6 + "분 - " + s6 + "<br>");
+    document.write("[7일차] " + h7 + "시 " + m7 + "분 - " + s7 + "<br>");
+
+    document.write("<hr>");
+
+    // 통계 출력
+    document.write("<h3>출석 통계</h3>");
+    document.write("총 출석일: " + attendanceCount + "일<br>");
+    document.write("총 지각일: " + lateCount + "일<br>");
+    document.write("총 결석일: " + absenceCount + "일<br>");
+    document.write("지각 2번 이상으로 인한 추가 결석: " + twoLate + "일<br>");
+    document.write("최종 결석일: " + finalAbsenceCount + "일<br>");
+    document.write("최종 출석일: " + finalAttendanceCount + "일<br>");
+
+    document.write("<hr>");
+
+    // 최종 결과
+    document.write("<h3>최종 결과</h3>");
+    document.write("<strong>" + result + "</strong><br>");
+
+    if (result == "수료") {
+        document.write("축하합니다! 5일 이상 출석하여 수료하셨습니다.<br>");
+    } else {
+        document.write("재수강이 필요합니다.<br>");
+        if (finalAbsenceCount >= 2) {
+            document.write("이유: 결석 2번 이상<br>");
+        } else {
+            document.write("이유: 출석일 부족 (5일 미만)<br>");
+        }
+    }
+</script>
