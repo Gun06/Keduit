@@ -14,5 +14,12 @@
         7 14 21 28 35 42 49 56 64 72 80 88 96 105 112 119 126 133 140 147 
     */
 
-
+    for(let i = 1; i < 151; i++){
+        let check1 = i >= 50 && i <= 100 && i % 8 == 0;
+        let check2 = i < 50 && i % 7 == 0;
+        let check3 = i > 100 && i % 7 == 0;
+        if(check1 || check2 || check3){
+            document.write(i + " ");
+        }
+    }
 </script>

@@ -9,6 +9,14 @@
         [출력예시]
         x 2 x 4 x x x x x 10 x x x x x
     */
-  
+    for(let i = 1; i < 16;  i++){
+        let check = i % 2 == 0 && 20 % i == 0;
+        if(check){
+            document.write(i + " ");
+        }
+        if(!check){
+            document.write("x ");
+        }
+    }
     
 </script> 

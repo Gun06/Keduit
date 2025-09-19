@@ -10,5 +10,13 @@
         [출력예시]
         1 2 3 4 x 6 x x 9 11 12 13 14 15 
     */
-   
+    for(let i = 1; i < 16; i++){
+        let check = i < 5 || i > 10 || i % 3 == 0;
+        if(check){
+            document.write(i + " ");
+        }
+        if(!check){
+            document.write("x" + " ");
+        }
+    }
 </script>
