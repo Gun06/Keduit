@@ -10,5 +10,15 @@
         x x x x x x 9 x x 6 x x x x x
     */
   
-    
+    let num = 15;
+    for(let i = 1; i  < 16; i++){
+        let check = num <= 5 || num >= 10 || num % 3 != 0;
+        if(check){
+            document.write("x" + " ");
+        }
+        if(!check){
+            document.write(num + " ");
+        }
+        num -= 1;
+    }
 </script>

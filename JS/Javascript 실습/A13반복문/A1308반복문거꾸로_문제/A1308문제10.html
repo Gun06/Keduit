@@ -20,5 +20,16 @@
         10 30
     */
     
-    
+    let num = 20;
+    for(let i = 10; i < 21; i++){
+        let check1 = num < 12;
+        let check2 = num > 18;
+        if(check1 || check2){
+            document.write(num + " " + num * 3 + "<br/>");
+        }
+        if(!check1 && !check2){
+            document.write(num + " " + num + "<br/>");
+        }
+        num -= 1;
+    }
 </script>

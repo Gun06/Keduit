@@ -19,6 +19,18 @@
         11 11
         10 10
     */
-   
 
+
+    let num = 20;
+    for (let i = 20; i >= 10; i--) {
+
+        let twice = num;
+        let check1 = i <= 15 && i >= 12;
+        if (check1) {
+            twice = 2 * num;
+        }
+
+        document.writeln(num, " ", twice, "<br>")
+        num -= 1;
+    }
 </script>

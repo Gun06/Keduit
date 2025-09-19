@@ -9,5 +9,24 @@
 		[출력예시]
 		15 x x x x 10 x x x 6 5 4 3 2 1
 	*/
-	
+
+    let num = 15
+    for (let i = 15; i >= 1; i--) {
+        let check1 = 30 / num == 0;
+        let check2 = 20 / num == 0;
+        let result = num
+
+        if (check1) {
+            result = num;
+        }
+        if (check2) {
+            result = num;
+        }
+		if(!check1&&!check2){
+			result="X"
+		}
+
+        document.writeln(num, " ");
+        num -= 1;
+    }
 </script>

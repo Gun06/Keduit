@@ -19,5 +19,20 @@
         11 33
         10 30
     */
-   
+
+    let num = 20;
+    for (let i = 20; i >= 10; i--) {
+        let thrid = num;
+        let check = 12 > i || 18 < i
+
+        if (check) {
+            thrid = 3 * num;
+        }
+
+        document.write(num, " ", thrid, "<br>");
+        num -= 1;//출력문 뒤에 배치 앞으로 배치하면 -1하고 시작됨.
+    }
+
+
+
 </script>

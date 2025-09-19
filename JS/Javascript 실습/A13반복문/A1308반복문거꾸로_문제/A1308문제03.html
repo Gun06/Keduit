@@ -20,6 +20,32 @@
         11 x
         10 x
     */
-   
+    
+    num = 20;
+    for(let i =10; i<=20; i++){
+        let check = " "
+        if(num<=20 && num>=15){
+            check = "O"
+        }
+        if (num<=14 && num>=10){
+            check= "X"
+        }
+        document.writeln(num + " ",check,"<br>");
+        num -=1
+    }
 
+    /*
+    let i = 20;
+    while(i >= 10){
+        let check1 = i >= 15 && i <= 20;
+        let check2 = i >= 10 && i <= 14;
+        if(check1){
+            document.write(i + " o" + "<br/>");
+        }
+        if(check2){
+            document.write(i + " x" + "<br/>");
+        }
+        i -= 1;
+    }
+    */
 </script>

@@ -21,5 +21,16 @@
         10 x  
     */
     
-    
+    let num = 20;
+    for(let i = 10; i < 21; i++){
+        let check1 = num >= 15 && num <= 20;
+        let check2 = num >= 10 && num <= 14;
+        if(check1){
+            document.write(num + " o" + "<br/>");
+        }
+        if(check2){
+            document.write(num + " x" + "<br/>");
+        }
+        num -= 1;
+    }
 </script>
