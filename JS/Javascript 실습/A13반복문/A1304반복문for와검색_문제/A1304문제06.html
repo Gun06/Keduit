@@ -17,5 +17,13 @@
         4 번 30 점 [불합격]
         5 번 65 점 [합격]
     */
-   
+    for(let i = 1; i < 6; i++){
+        let r = Math.floor(Math.random() * 101);
+        if(r >= 60){
+            document.write(i + "번" + r + "점" + "[합격]" + "<br/>");
+        }else{
+            document.write(i + "번" + r + "점" + "[불합격]" + "<br/>");
+        }
+    }
+    
 </script>
