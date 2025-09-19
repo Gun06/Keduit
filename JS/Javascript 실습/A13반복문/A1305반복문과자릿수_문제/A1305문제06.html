@@ -8,6 +8,13 @@
         [출력예시]
         137 237
     */
-   
+    for(let i = 100; i < 301; i++){
+        let a = parseInt(i % 100 / 10);
+        let b = parseInt(i % 10);
+        let check = a == 3 && b == 7;
+        if(check){
+            document.write(i + " ");
+        }
+    }
     
 </script>  
