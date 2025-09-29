@@ -1,0 +1,76 @@
+<script>
+
+    /*
+1001, 이만수, 10, 20
+1002, 이영희, 70, 30
+1003, 김민정, 64, 65
+1004, 이철민, 13, 87
+1005, 오만석, 49, 80
+1006, 최이슬, 14, 90
+-----------------------
+1001, 이만수, 10, 20
+1002, 이영희, 70, 30
+1004, 이철민, 13, 87
+1005, 오만석, 49, 80
+1006, 최이슬, 14, 90
+    */
+    class Student{
+        num = 0;
+        name = "";
+        kor = 0;
+        math = 0;
+
+        setData(num, name, kor, math) {
+            this.num = num;
+            this.name = name;
+            this.kor = kor;
+            this.math = math;
+        };
+
+        printData(){
+            document.write(this.num + ", " + this.name + ", " + this.kor + ", " + this.math + "<br/>");
+        }
+    }
+
+    class StudentDAO{
+        studentList = [];
+
+        printList(){
+            for(let i = 0; i < this.studentList.length; i++){
+                this.studentList[i].printData();
+            }
+        }
+
+        insertData(data){
+            this.studentList.push(data);
+        }
+
+        deleteData(index){
+            this.studentList.splice(index , 1);
+           
+        }
+
+    }
+
+    let arr = [
+		[1001, 	"이만수",     10,     20],
+		[1002,  "이영희",      70,     30],
+		[1003,  "김민정",      64,     65],
+		[1004,  "이철민",      13,     87],
+		[1005,  "오만석",      49,     80],
+		[1006,  "최이슬",      14,     90]
+	]
+
+    let studentDAO = new StudentDAO();
+
+    for(let i = 0; i < arr.length; i++){
+        let st = new Student();
+        st.setData(arr[i][0] , arr[i][1] , arr[i][2] , arr[i][3]);
+        studentDAO.insertData(st);
+    }
+
+    studentDAO.printList();
+    document.write("<hr/>");
+    studentDAO.deleteData(2);
+    studentDAO.printList();
+</script>

@@ -1,0 +1,59 @@
+<script>
+    /*
+[문제]
+전체 회원 정보를 출력하시오.
+[출력예시]
+19700327 1111-1111 1234 8700 김고객 12
+20010512 2222-2222 2345 0 이고객 0
+19850623 3333-3333 3456 0 박고객 0
+20200101 4444-4444 4567 2800 정고객 5
+19991224 5555-5555 5678 9000 류고객 9
+    */
+    let arr = [
+                    ['19700327', '1111-1111', 1234, 8700, '김고객', 12],
+                    ['20010512', '2222-2222', 2345,    0, '이고객',  0],
+                    ['19850623', '3333-3333', 3456,    0, '박고객',  0],
+                    ['20200101', '4444-4444', 4567, 2800, '정고객',  5],
+                    ['19991224', '5555-5555', 5678, 9000, '류고객',  9]
+                ];
+    
+    class ATM{
+        birth = "";
+        account = "";
+        password = 0;
+        balance = 0;
+        name = "";
+        count = 0;
+
+        setData(birth, account, password, balance, name, count){
+            this.birth = birth;
+            this.account = account;
+            this.password = password;
+            this.balance = balance;
+            this.name = name;
+            this.count= count;
+        }
+        printData(){
+            document.write(this.birth + " ");
+            document.write(this.account + " ");
+            document.write(this.password + " ");
+            document.write(this.balance + " ");
+            document.write(this.name + " ");
+            document.write(this.count + " ");
+            document.write("<br/>");
+        }
+    }
+
+    let atmList = [];
+
+    for(let i = 0; i < arr.length; i++){
+        let atm = new ATM();
+        atm.setData(arr[i][0],arr[i][1],arr[i][2],arr[i][3],arr[i][4],arr[i][5],);
+        atmList.push(atm);
+    }
+    for(let i = 0; i < atmList.length; i++){
+        atmList[i].printData();
+    }
+
+
+</script>
