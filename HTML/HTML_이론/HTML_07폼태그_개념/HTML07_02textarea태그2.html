@@ -1,0 +1,32 @@
+<!--
+    [textarea 태그2]
+    (1) 태그 형식
+        - <textarea></textarea>
+    (2) 의미
+        - textarea 텍스트 영역 이라는 의미입니다.
+    (3) 기능
+        - <input> 태그는 한 줄의 텍스트만 입력할 수 있는 반면,
+          <textarea> 태그는 사용자가 여러 줄의 텍스트를 입력할 수 있습니다.
+        - <textarea> 요소는 오른쪽 하단 모서리를 드래그하여 크기를 조정할 수 있습니다.
+        - <textarea>의 기본 값은 value 속성이 아닌, 태그의 내용으로 직접 설정됩니다.
+        - <textarea> 태그 내에서는 <br> 태그를 사용할 수 없으며, 줄바꿈은 특수 문자(&#13;)로 처리됩니다.   
+    (4) rows와 cols 속성
+        - <textarea>의 rows 속성은 텍스트 영역의 줄 수를 설정합니다.
+        - <textarea>의 cols 속성은 텍스트 영역의 가로 길이를 문자 단위로 설정합니다.
+        - rows와 cols 속성을 사용하여 초기 크기를 설정할 수 있지만,
+          사용자는 크기를 자유롭게 조정할 수 있습니다.    
+
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>여러 줄로 쓸 수 있습니다.</h3>
+    <textarea rows="4" cols="10"></textarea>
+</body>
+</html>

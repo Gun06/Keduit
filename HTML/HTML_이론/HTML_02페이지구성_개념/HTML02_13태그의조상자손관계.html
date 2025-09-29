@@ -1,0 +1,30 @@
+<!--
+    [태그의 조상-자손 관계]
+    (1) 구조 예시
+        <A>
+            <B>
+                <C></C>
+            </B>
+        </A>
+    (2) 설명
+        - <A> 태그 안에 <B> 태그가 있고, <B> 태그 안에 <C> 태그가 있습니다.
+        - 따라서 <B>는 <A>의 자식이고, <C>는 <B>의 자식입니다.
+        - 이처럼 <C>는 <A>의 자식의 자식, 즉 자손(descendant)이라고 합니다.
+        - 반대로 <A>는 <C>의 조상(ancestor)입니다.
+--> 
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <A>
+        <B>
+            <C></C>
+        </B>
+    </A>
+</body>
+</html>

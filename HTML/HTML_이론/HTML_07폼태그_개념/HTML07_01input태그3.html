@@ -1,0 +1,34 @@
+<!--
+    [input 태그3]
+    (1) 태그 형식
+        - <input>
+    (2) 의미
+        - input은 입력하다라는 의미입니다.
+    (3) 기능
+        - 사용자가 데이터를 입력할 수 있도록 하는 태그 입니다.
+        - 단일 태그이며, 닫는 태그 없이 사용합니다.
+    (4) type="checkbox"
+        - 체크박스를 생성합니다.
+        - 사용자가 하나 이상의 항목을 선택할 수 있도록 합니다.
+        - 단일 항목에도 사용 가능하며, 다수 항목 중 복수 선택도 가능합니다.
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 단일 체크박스 예: 약관 동의 등 하나의 항목에 대한 동의 여부 확인 -->
+    <input type="checkbox">약관에 동의합니다.
+    <br>
+    
+    <!-- 다중 체크박스 예: 여러 개 중 복수 항목 선택 가능 -->
+    <h3>수강 과목을 선택하세요.</h3>
+    <input type="checkbox">HTML
+    <input type="checkbox">CSS
+    <input type="checkbox">JavaScript    
+</body>
+</html>
