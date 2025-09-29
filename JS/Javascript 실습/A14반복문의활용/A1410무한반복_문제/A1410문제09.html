@@ -21,5 +21,22 @@
         17 6 작다
         17 17 정답
     */
-   
+
+    let com =Math.floor(Math.random() * 20) + 1;
+    let loop = true;
+    while(loop){
+        let me = Math.floor(Math.random() * 20) + 1;
+        document.write(com + " " + me + " ");
+        if(me > com){
+            document.write("크다" + "<br/>");
+        }
+        if(me < com){
+            document.write("작다" + "<br/>");
+        }
+        if(me == com){
+            document.write("정답" + "<br/>");
+            loop = false;
+        }
+    }
+    
 </script>

@@ -5,5 +5,16 @@
         [출력예시]
         40
     */
-   
+    let x = 1;
+    let loop = true;
+    while(loop){
+        let check = 8 * x / 20 == 16;
+        if(check){
+            loop = false;
+        }else{
+            x += 1;
+        }
+    }
+    document.write(x);
+
 </script>

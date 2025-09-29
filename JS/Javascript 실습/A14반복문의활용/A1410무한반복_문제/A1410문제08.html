@@ -12,6 +12,19 @@
         6 4
     */
 
-   
-
+    let loop = true;
+    let count = 0;
+    while(loop){
+        let a = Math.floor(Math.random() * 9) + 1;
+        let b = Math.floor(Math.random() * 9) + 1;
+        let total = a + b;
+        if(total == 10){
+            document.write(a + " " + b + "<br/>");
+            count += 1;
+            if(count == 3){
+                loop = false;
+            }
+        }
+    }
+    
 </script>

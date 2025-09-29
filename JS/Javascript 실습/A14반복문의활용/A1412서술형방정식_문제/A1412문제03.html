@@ -11,6 +11,17 @@
         [출력예시]
         2600
     */
+    let x = 0;
+    let loop = true;
+    while(loop){
+        let check = 10000 - 1200 * 3 - 1900 * 2 == x;
+        if(check){
+            loop = false;
+        }else{
+            x += 1;
+        }
+    }
+    document.write(x);
    
 
 </script>

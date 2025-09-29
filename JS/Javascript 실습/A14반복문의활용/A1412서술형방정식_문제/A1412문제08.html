@@ -12,7 +12,17 @@
             46
 	*/
 
-	
+	let x = 0;
+    let loop = true;
+    while(loop){
+        let check = 45 + 89 + x  == 180;
+        if(check){
+            loop = false;
+        }else{
+            x += 1;
+        }
+    }
+    document.write(x);
 
 
 </script>

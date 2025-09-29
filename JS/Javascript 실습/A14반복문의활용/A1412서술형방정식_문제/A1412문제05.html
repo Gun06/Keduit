@@ -9,5 +9,15 @@
         [출력예시]
         170
     */
-   
+    let x = 0;
+    let loop = true;
+    while(loop){
+        let check = x - (150 - 4) == 24;
+        if(check){
+            loop = false;
+        }else{
+            x += 1;
+        }
+    }
+    document.write(x);
 </script>

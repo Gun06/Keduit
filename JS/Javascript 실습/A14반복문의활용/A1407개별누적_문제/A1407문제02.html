@@ -15,6 +15,19 @@
         68 x
     */
 
-    
+    for(let i = 10; i < 91; i++){
+        let a = parseInt(i / 10);
+        let b = i % 10;
+        let check1 = a % 3 == 0 && b % 4 == 0;
+        let check2 = a != 0 && b != 0;
+        let total = a + b;
+        let check3 = total % 2 == 0;
+        if(check1 && check2 && !check3){
+            document.write(i + " o" + "<br/>");
+        }
+        if(check1 && check2 && check3){
+            document.write(i + " x" + "<br/>");
+        }
+    }
 
 </script>

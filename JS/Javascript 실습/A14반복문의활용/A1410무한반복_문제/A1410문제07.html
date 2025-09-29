@@ -8,7 +8,16 @@
         [출력예시]
         4 6
     */
-
-  
+   
+    let loop = true;
+    while(loop){
+        let a = Math.floor(Math.random() * 9) + 1;
+        let b = Math.floor(Math.random() * 9) + 1;
+        let total = a + b;
+        if(total == 10){
+            document.write(a + " " + b + "<br/>");
+            loop = false;
+        }
+    }
 
 </script>

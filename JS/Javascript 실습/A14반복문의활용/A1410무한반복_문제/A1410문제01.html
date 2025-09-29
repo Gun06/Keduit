@@ -8,4 +8,18 @@
         504
     */
    
+    let num = 28;
+    let count = 0;
+    let i = num;
+    let loop = true;
+    while(loop){
+        if(i >= 500){
+            count += 1;
+            if(count == 1){
+                document.write(i + "<br/>");
+                loop = false;
+            }
+        }
+        i += num;
+    }
 </script>

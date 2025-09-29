@@ -16,5 +16,15 @@
         [출력예시]
         1000
     */
-   
+    let x = 0;
+    let loop = true;
+    while(loop){
+        let check = 5000 - 500 - 600 - x == 2900;
+        if(check){
+            loop = false;
+        }else{
+            x += 1;
+        }
+    }
+    document.write(x);
 </script>

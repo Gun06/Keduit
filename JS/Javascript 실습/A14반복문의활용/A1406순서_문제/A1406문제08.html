@@ -10,4 +10,23 @@
         5
     */
    
+    let num1 = 75;
+    let num2 = 20;
+    let count = 0;
+    let i2 = num1;
+    let find = 0;
+    for(let i = 1; i < num1 + 1; i++){
+        if(num1 % i2 == 0){
+            document.write(i2 + " ");
+            if(i2 < num2){
+                count += 1;
+                if(count == 2){
+                    find = i2;
+                }
+            }
+        }
+        i2 -= 1;
+    }
+    document.write("<br/>");
+    document.write(find);
 </script>

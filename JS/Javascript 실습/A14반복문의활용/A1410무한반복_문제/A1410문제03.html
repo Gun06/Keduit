@@ -7,5 +7,23 @@
         [출력예시]
         26
     */
-    
+   
+    let num = 13;
+    let count = 0;
+    let a = 0;
+    let b = 0;
+    let i = num;
+    let loop = true;
+    while(loop){
+        count += 1;
+        if(count == 4){
+            a = i;
+        }
+        if(count == 6){
+            b = i;
+            loop = false;
+        }
+        i += num;
+    }
+    document.write(b- a);
 </script>

@@ -9,5 +9,22 @@
         852 426 284 213 142 71 12 6 4 3 2 1 
         142
     */
+   
+    let num = 852;
+    let count = 0;
+    let i2 = num;
+    let find = 0;
+    for(let i = 1; i < num + 1; i++){
+        if(num % i2 == 0){
+            document.write(i2 + " ");
+            count += 1;
+            if(count == 5){
+                find = i2;
+            }
+        }
+        i2 -= 1;
+    }
+    document.write("<br/>");
+    document.write(find);
     
 </script>

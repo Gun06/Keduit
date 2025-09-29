@@ -10,6 +10,18 @@
         9 6 5
     */
 
-    
+    let loop = true;
+    while(loop){
+        let r1 = Math.floor(Math.random() * 10) + 1;
+        let r2 = Math.floor(Math.random() * 10) + 1;
+        let r3 = Math.floor(Math.random() * 10) + 1;
+        //document.write(r1 + " " + r2 + " " + r3 + "<br/>");
+        let total = r1 + r2 + r3;
+        let check = r1 != r2 && r1 != r3;
+        if(total == 20 && check){
+            document.write(r1 + " " + r2 + " " + r3 + "<br/>");
+            loop = false;
+        }
+    }
     
 </script>

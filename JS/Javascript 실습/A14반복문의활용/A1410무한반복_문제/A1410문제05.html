@@ -8,5 +8,24 @@
         [출력예시]
         536 576 616 656 
     */
-   
+
+    let num1 = 8;
+    let num2 = 500;
+    let i = num1;
+    let count = 0;
+    let loop = true;
+    while(loop){
+        if(i > num2){
+            let a = i % 10;
+            if(a == 6){
+                document.write(i + " ");
+                count += 1;
+                if(count == 4){
+                    loop = false;
+                }
+            }
+        }
+        i += num1;
+    }
+    
 </script>

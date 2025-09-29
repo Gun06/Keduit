@@ -8,4 +8,20 @@
         63
     */
    
+    let num = 9;
+    let count = 0;
+    let i = num;
+    let loop = true;
+    while(loop){
+        let a = parseInt(i % 100 / 10);
+        if(a == 6){
+            count += 1;
+            if(count == 1){
+                document.write(i + "<br/>");
+                loop = false;
+            }
+        }
+        i += num;
+    }
+    
 </script>

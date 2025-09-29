@@ -10,5 +10,25 @@
         75
     */
    
+    let num1 = 100;
+    let num2 = 20;
+    let count = 0;
+    let total = 0;
+    for(let i = 1; i < 101; i++){
+        if(num1 % i == 0){
+            document.write(i + " ");
+            if(i > num2){
+                count += 1;
+                if(count == 1){
+                    total += i;
+                }
+                if(count == 2){
+                    total += i;
+                }
+            }
+        }
+    }
+    document.write("<br/>");
+    document.write(total);
     
 </script>

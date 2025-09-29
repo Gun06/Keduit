@@ -8,5 +8,19 @@
         135
     */
 
-    
+    let num1 = 9;
+    let num2 = 100;
+    let i = num1;
+    let count = 0;
+    let loop = true;
+    while(loop){
+        if(i > num2){
+            count += 1;
+            if(count == 4){
+                document.write(i + "<br/>");
+                loop = false;
+            }
+        }
+        i += num1;
+    }
 </script>

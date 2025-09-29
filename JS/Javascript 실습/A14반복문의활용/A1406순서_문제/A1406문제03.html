@@ -8,5 +8,17 @@
         60 40 30 
     */
    
+    let num = 120;
+    let count = 0;
+    let j = num;
+    for(let i = 1; i < num + 1; i++){
+        if(num % j == 0){
+            count += 1;
+            if(2 <= count && count < 5){
+                document.write(j + " ");
+            }
+        }
+        j -= 1;
+    }
     
 </script>

@@ -34,4 +34,24 @@
         40
     */
    
+    for(let i = 20; i < 41; i++){
+        let a = parseInt(i / 10);
+        let b = i % 10;
+        let count = 0;
+        if(a == 3 || a == 6 || a == 9){
+            count += 1;
+        }
+        if(b == 3 || b == 6 || b == 9){
+            count += 1;
+        }
+        if(count == 2){
+            document.write("짝짝" + "<br/>");
+        }
+        else if(count == 1){
+            document.write("짝" + "<br/>");
+        }
+        else if(count == 0){
+            document.write(i + "<br/>");
+        }
+    }
 </script>
