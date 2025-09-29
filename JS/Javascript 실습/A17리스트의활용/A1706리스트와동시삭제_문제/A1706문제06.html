@@ -1,0 +1,33 @@
+<script>
+    /*
+1.연습문제
+    lineList1 = [33,34,35,36,37,38,39,40]
+    lineList2 = []
+    대기열이 길게 늘어선가운데 직원이 충원되어 짝수번호는 lineList2로 옮기졌다.
+    lineList1 에서 짝수를 삭제하고 lineList2에 추가하시오.
+    */ 
+    /*
+2.실행화면
+33,34,35,36,37,38,39,40
+33,35,37,39
+34,36,38,40
+    */
+    lineList1 = [33,34,35,36,37,38,39,40]
+    lineList2 = []
+
+    document.write(lineList1 + "<br/>");
+    let i = 0;
+    while(true){
+        if(i == lineList1.length){
+            break;
+        }
+        if(lineList1[i] % 2 == 0){
+            lineList2.push(lineList1[i]);
+            lineList1.splice(i, 1);
+        }else{
+            i += 1;
+        }
+    }
+    document.write(lineList1 + "<br/>");
+    document.write(lineList2 + "<br/>");
+</script>

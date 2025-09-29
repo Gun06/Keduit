@@ -1,0 +1,29 @@
+<script>
+    /*
+        [문제]
+        let numberList = [10, 20, 30, 40, 50];
+        numberList의 평균을 구한 후, 이 평균 값보다 큰 숫자의 개수를 구하고 출력하시오.
+    */
+    /*
+        [출력예시]
+        150
+        30
+        2
+    */
+    let numberList = [10, 20, 30, 40, 50];
+    let total = 0;
+    for(let i = 0; i < numberList.length; i++){
+        total += numberList[i];
+    }
+    let avg = total / numberList.length;
+
+    let count = 0;
+    for(let i = 0; i < numberList.length; i++){
+        if(numberList[i] > avg){
+            count += 1;
+        }
+    }
+    document.write(total + "<br/>");
+    document.write(avg + "<br/>");
+    document.write(count + "<br/>");
+</script>

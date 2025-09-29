@@ -1,0 +1,27 @@
+<script>
+    /*
+        [문제]
+        let numberList = [];
+        1부터 100 사이의 랜덤 숫자 10개를 저장한 후, 3의 배수를 제외하고 가장 큰 수를 구하시오.
+    */
+    /*
+        [출력예시]
+        16,2,39,6,49,8,40,7,11,20
+        39
+    */
+    let numberList = [];
+    for(let i = 0; i < 10; i++){
+        let r = Math.floor(Math.random() * 100) + 1;
+        numberList.push(r);
+    }
+    document.write(numberList + "<br/>");
+    let max = numberList[0];
+
+    for(let i = 1; i < numberList.length; i++){
+        let check = numberList[i] % 3 == 0;
+        if(check && max < numberList[i]){
+            max = numberList[i];
+        }
+    }
+    document.write(max)
+</script>

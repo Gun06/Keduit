@@ -1,0 +1,28 @@
+<script>
+    /*
+        [문제]
+            let numberList = [];
+        11부터 99 사이의 랜덤 숫자 중, 각 숫자의 십의 자리와 일의 자리가 짝수인 숫자만 numberList에 저장하시오.
+        numberList에는 총 3개의 숫자를 저장한 후, 리스트 전체를 출력하시오.
+    */ 
+    /* 
+        [출력예시]
+        86,82,64
+    */
+    let numberList = [];
+    let count = 0;
+    while(true){
+        let r = Math.floor(Math.random() * 90) + 10;
+        let a = parseInt(r / 10);
+        let b = r % 10;
+        let check = a % 2 == 0 && b % 2 == 0;
+        if(check){
+            numberList.push(r);
+            count += 1;
+            if(count == 3){
+                break;
+            }
+        }
+    }
+    document.write(numberList);
+</script>

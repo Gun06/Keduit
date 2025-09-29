@@ -1,0 +1,21 @@
+<script>
+    /*
+    [문제]
+        let  numberList1 = [10, 20, 30, 40];
+        let numberList2 = [];
+        numberList1의 값을 numberList2에 추가하시오.
+        단, 값을 거꾸로 추가하시오.
+    */
+    /*
+    [출력예시]
+        [40, 30, 20, 10]
+    */
+    let  numberList1 = [10, 20, 30, 40];
+    let numberList2 = [];
+    let last = numberList1.length - 1;
+    for(let i = 0; i < numberList1.length; i++){
+        numberList2.push(numberList1[last]);
+        last -= 1;
+    }
+    document.write(numberList2);
+</script>

@@ -1,0 +1,21 @@
+<script>
+    /*
+        [문제]
+        let numberList = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+        numberList의 값을 세로 3칸, 가로 4칸의 사각형 모양으로 출력하시오.
+    */
+    /*
+        [출력예시]
+        1 1 1 1 
+        1 1 1 1 
+        1 1 1 1 
+    */
+    let numberList = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+
+    for(let i = 0; i < numberList.length; i++){
+        document.write(numberList[i] + " ");
+        if(i % 4 == 3){
+            document.write("<br/>");
+        }
+    }
+</script>

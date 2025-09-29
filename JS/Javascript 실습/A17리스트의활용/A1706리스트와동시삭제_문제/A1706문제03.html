@@ -1,0 +1,40 @@
+<script>
+    /*
+[문제]
+ let numberList = [87, 11, 45, 98, 23, 34, 56];
+numberList의 모든 값을 더해 총합을 구한 후,
+리스트의 길이로 나누어 평균을 계산합니다. 
+계산된 평균은 소수점 두 자리에서 반올림하고, 
+그 평균보다 작은 값들을 모두 삭제한 후, 리스트 전체를 출력하시오.
+    */ 
+    /*
+[출력예시]
+87,11,45,98,23,34,56
+354
+50.57
+87,98,56
+    */
+    let numberList = [87, 11, 45, 98, 23, 34, 56];
+    document.write(numberList + "<br/>");
+    let total = 0;
+    for(let i = 0; i < numberList.length; i++){
+        total += numberList[i];
+    }
+    document.write(total + "<br/>");
+    let avg = total / numberList.length;
+    avg = avg.toFixed(2);
+    document.write(avg + "<br/>");
+    let i = 0;
+    while(true){
+        if(i == numberList.length){
+            break;
+        }
+        if(numberList[i] < avg){
+            numberList.splice(i, 1);
+        }else{
+            i += 1;
+        }
+    }
+    document.write(numberList + "<br/>");
+
+</script>

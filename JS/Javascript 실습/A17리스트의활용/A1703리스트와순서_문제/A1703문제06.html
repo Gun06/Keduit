@@ -1,0 +1,29 @@
+<script>
+    /*
+        [문제]
+            let aList = [];
+        0부터 99 사이의 랜덤 숫자 10개를 numberList에 저장한 후,
+        일의 자리가 가장 작은 마지막 수를 출력하시오.
+    */ 
+    /*
+        [출력예시]
+        27,57,57,34,14,2,29,33,92,37
+        92
+    */
+    let aList = [];
+    for(let i = 0; i < 10; i++){
+        let r = Math.floor(Math.random() * 100);
+        aList.push(r);
+    }
+    document.write(aList + "<br/>");
+    let min = aList[0];
+    let reuslt = 0;
+    for(let i = 1; i < aList.length; i++){
+        let a = aList[i] % 10;
+        if(min >= a){
+            min = a;
+            result = aList[i];
+        }
+    }
+    document.write(result);
+</script>

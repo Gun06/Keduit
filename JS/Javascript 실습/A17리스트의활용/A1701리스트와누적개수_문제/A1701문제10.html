@@ -1,0 +1,32 @@
+<script>
+    /*
+        [문제]
+        let numberList = [];
+        반복문을 활용해 1000부터 1500까지 반복하면서,
+        16의 배수이면서 일의 자리가 십의 자리의 두 배인 수만 numberList에 저장한 후,
+        그 개수와 합을 구하여 출력하시오.
+    */ 
+    /*
+        [출력예시]
+        [1024, 1136, 1200, 1248, 1312, 1424]
+        6
+        7344
+    */
+    let numberList = [];
+    let total = 0;
+    let count = 0;
+    for(let i = 1000; i <= 1500; i++){
+        if(i % 16 == 0){
+            let a = parseInt(i % 100 / 10);
+            let b = i % 10;
+            if(a * 2 == b){
+                numberList.push(i);
+                count += 1;
+                total += i;
+            }
+        }
+    }
+    document.write(numberList + "<br/>");
+    document.write(count + "<br/>");
+    document.write(total + "<br/>");
+</script>

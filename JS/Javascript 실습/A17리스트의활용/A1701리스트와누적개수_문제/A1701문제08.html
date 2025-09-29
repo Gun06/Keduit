@@ -1,0 +1,24 @@
+<script>
+    /*
+        [문제]
+            let numberList = [10, 33, 23, 13, 52];
+        numberList에서 각 자리수별로 숫자를 분리하여 그 곱을 구한 후, 
+        그 곱이 홀수인 숫자의 개수를 구하시오.
+    */ 
+    /*
+        [출력예시]
+        2
+    */
+    let numberList = [10, 33, 23, 13, 52];
+    let count = 0;
+
+    for(let i = 0; i < numberList.length; i++){
+        let a = parseInt(numberList[i] % 100 / 10);
+        let b = numberList[i] % 10;
+        let c = a * b;
+        if(c % 2 == 1){
+            count += 1;
+        }
+    }
+    document.write(count);
+</script>

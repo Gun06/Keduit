@@ -1,0 +1,30 @@
+<script>
+    /*
+1. 연습문제
+ let numList = [0, 0, 0, 1, 2, 3, 0, 5, 0, 7, 0, 0];
+numberList의 값들중 0을 전부 삭제하시오.
+    */ 
+    /*
+2. 실행화면
+0,0,0,1,2,3,0,5,0,7,0,0
+1,2,3,5,7
+    */
+    let numList = [0, 0, 0, 1, 2, 3, 0, 5, 0, 7, 0, 0];
+    document.write(numList + "<br/>");
+    let i = 0;
+    while(true){
+        if(i == numList.length){
+            break;
+        }
+        if(numList[i] == 0){
+            numList.splice(i, 1);
+        }else{
+            i += 1;
+        }
+    }
+    document.write(numList + "<br/>");
+</script>
+
+
+
+

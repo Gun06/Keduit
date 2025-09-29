@@ -1,0 +1,28 @@
+<script>
+    /*
+        [문제]
+        let = aList = [];
+        11에서 99사이의 랜덤 숫자 10개를 저장 후,
+        십의 자리와 일의 자리의 차이가 1차이 나는 숫자를 모두 출력하시오.
+    */ 
+    /*
+        [출력예시]
+        65,97,66,37,89,84,56,62,88,85
+        65 89 56
+    */
+    let = aList = [];
+    for(let i =0; i < 10; i++){
+        let r = Math.floor(Math.random() * 89) + 11;
+        aList.push(r);
+    }
+    document.write(aList + "<br/>");
+
+    for(let i = 0; i < aList.length; i++){
+        let a = parseInt(aList[i] / 10);
+        let b = aList[i] % 10;
+        let c = a - b;
+        if(c == 1 || c == -1){
+            document.write(aList[i] + " ");
+        }
+    }
+</script>

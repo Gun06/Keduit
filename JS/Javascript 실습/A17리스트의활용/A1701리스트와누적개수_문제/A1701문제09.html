@@ -1,0 +1,40 @@
+<script>
+    /*
+        [문제]
+        let numberList = [];
+        반복문을 활용해 10부터 50까지 반복하면서,
+        3의 배수이면서 십의 자리가 짝수이고 일의 자리가 홀수인 숫자만 numberList에 추가하고,
+        그 개수와 합을 구하여 출력하시오.
+    */ 
+    /*
+        [출력예시]
+        [21, 27, 45]
+        3
+        93
+    */
+    let numberList = [];
+
+    let count = 0;
+    let total = 0;
+    let i = 0;
+    for(let i = 0; i <= 50; i++){
+        if(i % 3 == 0){
+            if(i >= 10){
+                let a = parseInt(i / 10);
+                let b = i % 10;
+                let check1 = a % 2 == 0;
+                let check2 = b % 2 == 1;
+                if(check1 && check2){
+                    numberList.push(i);
+                    count += 1;
+                    total += i;
+                }
+            }
+        }
+    }
+    document.write(numberList + "<br/>");
+    document.write(count + "<br/>");
+    document.write(total + "<br/>");
+
+
+</script>

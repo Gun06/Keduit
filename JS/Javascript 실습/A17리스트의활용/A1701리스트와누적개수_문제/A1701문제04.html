@@ -1,0 +1,19 @@
+<script>
+    /*
+        [문제]
+        let numberList = [14, 13, 36, 41, 22];
+        numberList의 짝수의 합을 구하시오.
+    */ 
+    /*
+        [출력예시]
+        72
+    */
+    let numberList = [14, 13, 36, 41, 22];
+    let total = 0;
+    for(let i = 0 ; i < numberList.length; i++){
+        if(numberList[i] % 2 == 0){
+            total += numberList[i];
+        }
+    }
+    document.write(total);
+</script>

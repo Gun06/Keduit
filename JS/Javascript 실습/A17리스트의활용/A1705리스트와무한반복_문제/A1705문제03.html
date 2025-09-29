@@ -1,0 +1,29 @@
+<script>
+    /*
+        [문제]
+        let numberList = [];
+        8의 배수 중에서 100보다 큰 수를 찾고, 그 수의 일의 자리가 4인 경우만 numberList에 저장합니다.
+        위 조건에 맞는 숫자 5개를 리스트에 저장한 후, 리스트 전체를 출력하시오.
+    */ 
+    /* 
+        [출력예시]
+        104,144,184,224,264
+    */
+    let numberList = [];
+    let count = 0;
+    let i = 0;
+    while(true){
+        if (i > 100){
+            let a = i % 10;
+            if(a == 4){
+                numberList.push(i);
+                count += 1;
+                if(count == 5){
+                    break;
+                }
+            }
+        }
+        i += 8;
+    }
+    document.write(numberList);
+</script>

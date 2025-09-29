@@ -1,0 +1,29 @@
+<script>
+    /*
+        [문제]
+            let numberList = [];
+        11부터 99 사이의 랜덤 숫자 10개를 numberList에 저장한 후,
+        일의 자리가 가장 작은 첫 번째 수를 출력하시오.
+    */ 
+    /*
+        [출력예시]
+        65,47,15,37,47,72,54,42,62,76
+        72
+    */
+    let numberList = [];
+    for(let i = 0; i < 10; i++){
+        let r = Math.floor(Math.random() * 89) + 11;
+        numberList.push(r);
+    }
+    document.write(numberList + "<br/>");
+    let min = numberList[0];
+    let result = 0;
+    for(let i = 1; i < numberList.length; i++){
+        let a = numberList[i] % 10;
+        if(min > a){
+            min = a;
+            result = numberList[i];
+        }
+    }
+    document.write(result);
+</script>

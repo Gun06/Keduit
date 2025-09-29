@@ -1,0 +1,39 @@
+<script>
+    /*
+        [문제]
+        let numberList = [];
+        0부터 9 사이의 랜덤 숫자 4개를 numberList에 저장 후,
+        모두 짝수이면 "1등", 모두 홀수이면 "2등", 그 이외에는 "꽝"을 출력하시오.
+        단, 0은 짝수로 간주합니다.
+    */ 
+    /*
+        [출력예시1]
+        [0, 8, 0, 8]
+        1등
+        [출력예시2]
+        [3, 3, 3, 9]
+        2등
+        [출력예시3]
+        [8, 1, 0, 3]
+        꽝
+    */
+    let numberList = [];
+    for(let i = 0; i < 4; i++){
+        let r = Math.floor(Math.random() * 10);
+        numberList.push(r);
+    }
+    document.write(numberList + "<br/>");
+    let count = 0;
+    for(let i = 0; i < numberList.length; i++){
+        if(numberList[i] % 2 == 0){
+            count += 1;
+        }
+    }
+    if(count == numberList.length){
+        document.write("1등");
+    }else if(count == 0){
+        document.write("2등");
+    }else{
+        document.write("꽝");
+    }
+</script>

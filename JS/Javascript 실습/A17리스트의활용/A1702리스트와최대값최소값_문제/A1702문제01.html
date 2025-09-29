@@ -1,0 +1,26 @@
+<script>
+    /*
+        [문제]
+        let scoreList = [10, 32, 65, 90, 89];
+        scoreList는 수학 점수입니다. 
+        이 중에서 가장 높은 점수인 1등과 가장 낮은 점수인 꼴지를 각각 출력하시오.
+    */
+    /*
+        [출력예시]
+        90
+        10
+    */
+    let scoreList = [10, 32, 65, 90, 89];
+    let max = scoreList[0];
+    let min = scoreList[0];
+    for(let i = 1; i < scoreList.length; i++){
+        if(max < scoreList[i]){
+            max = scoreList[i];
+        }
+        if(min > scoreList[i]){
+            min = scoreList[i];
+        }
+    }
+    document.write(max + "<br/>");
+    document.write(min);
+</script>

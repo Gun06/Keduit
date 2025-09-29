@@ -1,0 +1,32 @@
+<script>
+    /*
+[문제]
+    let numList = [];
+numList에 랜덤숫자1~100을 5개 저장한후, 출력한다. 
+각각의 숫자가 시험점수이다. 
+60점미만은 전부 삭제후 출력하시오.
+    */ 
+    /*
+[출력예시]
+18,93,88,17,75
+93,88,75
+    */
+    let numList = [];
+    for(let i = 0; i < 5; i++){
+        let r = Math.floor(Math.random() * 100) + 1;
+        numList.push(r);
+    }
+    document.write(numList + "<br/>");
+    let i = 0;
+    while(true){
+        if(i == numList.length){
+            break;
+        }
+        if(numList[i] < 60){
+            numList.splice(i, 1);
+        }else{
+            i += 1;
+        }
+    }
+    document.write(numList + "<br/>");
+</script>
