@@ -1,0 +1,28 @@
+<script>
+    /*
+[문제]
+aList에 100부터 300 사이의 랜덤 숫자 10개를 추가합니다.
+aList의 값들 중에서 일의 자리가 십의 자리보다 큰 수만 bList에 저장하시오.
+    */
+    /*
+[출력예시]
+261,177,235,131,120,271,152,112,286,118
+235,112,118
+    */
+    let aList = [];
+    let bList = [];
+    for(let i = 0; i < 10; i++){
+        let r = Math.floor(Math.random() * 201) + 100;
+        aList.push(r);
+    }
+    document.write(aList + "<br/>");
+    for(let i = 0; i < aList.length; i++){
+        let a = parseInt(aList[i] % 100 / 10);
+        let b = aList[i] % 10;
+        let c = b > a;
+        if(c){
+            bList.push(aList[i]);
+        }
+    }
+    document.write(bList + "<br/>");
+</script>

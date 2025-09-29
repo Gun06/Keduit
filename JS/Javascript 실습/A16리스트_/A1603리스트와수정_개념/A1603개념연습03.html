@@ -1,0 +1,24 @@
+<script>
+    /*
+        [문제]
+        let numberList = [10, 43, 24, 12, 52];
+        numberList에서 랜덤으로 하나의 인덱스를 저장한 후, 
+        해당 인덱스의 값의 일의자리를 0으로 변경한후 리스트 전체를 출력하시오.
+    */
+
+    /*
+        [출력예시]
+        10,43,24,12,52
+        1
+        10,40,24,12,52
+    */
+    let numberList = [10, 43, 24, 12, 52];
+
+    let r = Math.floor(Math.random() * numberList.length);
+    document.write(numberList + "<br/>");
+    document.write(r + "<br/>");
+    let a = parseInt(numberList[r] / 10);
+    numberList[r] = a * 10;
+    document.write(numberList);
+
+</script>

@@ -1,0 +1,27 @@
+<script>
+    /*
+        [문제]
+        let numberList = [10, 43, 24, 22, 52];
+        numberList에서 각 값을 자릿수별로 분리한 후, 
+        자릿수값의 왼쪽과 오른쪽 자릿수를 비교하여 더 큰값으로 변경한 한다.
+        왼쪽 오른쪽 자릿수가 서로같으면 변경하지않는다.  
+        리스트 전체를 출력하시오.
+    */
+    /*
+        [출력예시]
+        10,43,24,22,52
+        1,4,4,22,5
+    */
+    let numberList = [10, 43, 24, 22, 52];
+    document.write(numberList + "<br/>");
+    for(let i = 0; i < numberList.length; i++){
+        let a = parseInt(numberList[i] / 10);
+        let b = numberList[i] % 10;
+        if(a > b){
+            numberList[i] = a;
+        }else if(b > a){
+            numberList[i] = b;
+        }
+    }
+    document.write(numberList + "<br/>");
+</script>

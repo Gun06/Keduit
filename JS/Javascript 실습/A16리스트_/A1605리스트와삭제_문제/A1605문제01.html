@@ -1,0 +1,27 @@
+<script>
+    /*
+        [문제]
+        let aList = [];
+        aList 에 랜덤숫자(1~100) 5개를 추가한다.
+        aList의 값들 중 랜덤으로 한개만 삭제 후 출력하시오.
+    */
+    /*
+        [출력예시]
+        20,71,64,21,14
+        3
+        20,71,64,14
+    */
+    let aList = [];
+    for(let i = 0; i < 5; i++){
+        let r = Math.floor(Math.random() * 100) + 1;
+        aList.push(r);
+    }
+    document.write(aList);
+    document.write("<br/>");
+
+    let r2 = Math.floor(Math.random() * aList.length);
+    aList.splice(r2, 1);
+    document.write(r2 + "<br>");
+    document.write(aList);
+    
+</script>

@@ -1,0 +1,23 @@
+<script>
+    /*
+        [문제]
+         let numberList = [153, 151, 143, 160, 134, 130, 154, 146, 164, 135];
+        numberList의 각 요소 중, 십의 자리 또는 일의 자리에 
+        숫자 5가 포함된 숫자를 출력하시오.
+    */
+    /*
+        [출력예시]
+        153 151 154 135
+    */
+    let numberList = [153, 151, 143, 160, 134, 130, 154, 146, 164, 135];
+    for(let i = 0; i < numberList.length; i++){
+        let a = numberList[i];
+        let a1 = parseInt(a / 100);
+        let a2 = parseInt(a % 100 / 10);
+        let a3 = a % 10;
+        let check = a1 == 5 || a2 == 5 || a3 == 5;
+        if(check){
+            document.write(a + " ");
+        }
+    }
+</script>

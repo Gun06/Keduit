@@ -1,0 +1,29 @@
+<script>
+    /*
+[문제]
+aList에 10부터 99 사이의 랜덤 숫자 10개를 추가합니다.
+aList의 값들 중에서 일의자리에서 반올림한수를 bList에 추가하시오.
+    */
+    /*
+[출력예시]
+80,51,79,36,65,29,43,55,39,79
+80,50,80,40,70,30,40,60,40,80
+    */
+    let aList = [];
+    let bList = [];
+    for(let i = 0; i < 10; i++){
+        let r = Math.floor(Math.random() * 90) + 10;
+        aList.push(r);
+    }
+
+    for(let i = 0; i < aList.length; i++){
+        let a = parseInt(aList[i] / 10);
+        let b = aList[i] % 10;
+        if(b >= 5){
+            a += 1;
+        }
+        bList.push(a * 10);
+    }
+    document.write(aList + "<br/>");
+    document.write(bList + "<br/>");
+</script>

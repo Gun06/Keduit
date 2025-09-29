@@ -1,0 +1,22 @@
+<script>
+    /*
+        [문제]
+         let numberList = [115, 278, 237, 159, 171, 267, 137, 123, 192, 119];
+        numberList에서 각 숫자의 십의 자리가 3이고 일의 자리가 7인 숫자만 출력하시오.
+    */
+    /*
+        [출력예시]
+        237 137
+    */
+    let numberList = [115, 278, 237, 159, 171, 267, 137, 123, 192, 119];
+    for(let i = 0; i < numberList.length;  i++){
+        let a = numberList[i];
+        let a1 = parseInt(a % 100 / 10);
+        let a2 = a % 10;
+        let check = a1 == 3 && a2 == 7;
+        if(check){
+            document.write(a + " ");
+        }
+    }
+    
+</script>

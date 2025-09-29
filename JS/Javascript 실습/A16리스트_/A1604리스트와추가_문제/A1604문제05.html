@@ -1,0 +1,29 @@
+<script>
+    /*
+[문제]
+aList에 10부터 99 사이의 랜덤 숫자 10개를 추가합니다.
+aList의 값들 중에서 일의 자리가 십의 자리의 두 배인 숫자만 bList에 추가한 후, 
+리스트 전체를 출력하시오.
+    */
+    /*
+[출력예시]
+[48, 77, 36, 55, 32, 65, 85, 83, 43, 49]
+[48, 36]
+    */
+    let aList = [];
+    let bList = [];
+    for(let i = 0; i < 10; i++){
+        let r = Math.floor(Math.random() * 90) + 10;
+        aList.push(r);
+    }
+    for(let i = 0; i < 10; i++){
+        let a = parseInt(aList[i] / 10);
+        let b = aList[i] % 10;
+        let c = b == a * 2;
+        if(c){
+            bList.push(aList[i]);
+        }
+    }
+    document.write(aList + "<br/>");
+    document.write(bList);
+</script>

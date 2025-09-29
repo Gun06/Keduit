@@ -1,0 +1,26 @@
+<script>
+    /*
+[리스트 추가 연습]
+aList에 1에서 100 사이의 랜덤 숫자 5개를 추가합니다.
+bList에 aList의 값들 중 홀수만 추가한 후, 두 리스트 전체를 출력하시오.
+    */
+    /*
+[출력예시]
+78,18,40,68,35
+35
+    */
+    let aList = [];
+    let bList = [];
+    for(let i = 0; i < 5; i++){
+        let r = Math.floor(Math.random() * 100) + 1;
+        aList.push(r);
+    }
+
+    for(let i = 0; i < aList.length; i++){
+        if(aList[i] % 2 == 1){
+            bList.push(aList[i]);
+        }
+    }
+    document.write(aList + "<br/>");
+    document.write(bList + "<br/>");
+</script>

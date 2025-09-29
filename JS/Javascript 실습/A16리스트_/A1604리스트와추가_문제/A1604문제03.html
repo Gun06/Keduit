@@ -1,0 +1,27 @@
+<script>
+    /*
+[문제]
+aList에 1부터 10 사이의 랜덤 숫자 10개를 추가합니다.
+aList의 값들 중 짝수만 bList에 추가하고, aList와 bList 모두 출력하시오.
+    */
+    /*
+[출력예시]
+5,8,7,2,5,7,4,8,2,1
+8,2,4,8,2
+    */
+    let aList = [];
+    let bList = [];
+    for(let i = 0; i < 10; i++){
+        let r = Math.floor(Math.random() * 10) + 1;
+        aList.push(r);
+    }
+
+    for(let i = 0; i < aList.length; i++){
+        if(aList[i] % 2 == 0){
+            bList.push(aList[i]);
+        }
+    }
+
+    document.write(aList + "<br/>");
+    document.write(bList + "<br/>");
+</script>

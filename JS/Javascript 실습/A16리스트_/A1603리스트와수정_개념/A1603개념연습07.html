@@ -1,0 +1,20 @@
+<script>
+    /*
+        [문제]
+        let numberList = [10, 43, 24, 12, 52];
+        numberList에서 각 값을 검사하여, 짝수인 경우 해당 값에 1을 더하시오.
+    */
+    /*
+        [출력예시]
+        10,43,24,12,52
+        11,43,25,13,53
+    */
+    let numberList = [10, 43, 24, 12, 52];
+    document.write(numberList + "<br/>");
+    for(let i = 0; i < numberList.length; i++){
+        if(numberList[i] % 2 == 0){
+            numberList[i] += 1;
+        }
+    }
+    document.write(numberList + "<br/>");
+</script>

@@ -1,0 +1,29 @@
+<script>
+    /*
+        [문제]
+          let  numberList = [34, 24, 23, 11, 45, 77, 54, 1, 50, 2];
+        numberList에서 십의 자리는 15의 약수이고, 
+        일의 자리는 20의 약수인 수만 출력하시오.
+    */
+    /*
+        [출력예시]
+        34 11 54
+    */
+    let  numberList = [34, 24, 23, 11, 45, 77, 54, 1, 50, 2];
+
+    for(let i = 0; i < numberList.length; i++){
+        let a = numberList[i];
+        let a1 = parseInt(a / 10);
+        let a2 = a % 10;
+        if(a1 == 0 || a2 == 0){
+            continue;
+        }
+        let check1 = 15 % a1 == 0;
+        let check2 = 20 % a2 == 0;
+        let check3 = check1 && check2;
+        if(check3){
+            document.write(a + " ");
+        }
+    }
+    
+</script>

@@ -1,0 +1,22 @@
+<script>
+    /*
+        [문제]
+        let numberList = [9, 42, 24, 11, 51];
+        numberList에서 랜덤으로 하나의 인덱스를 저장한 후, 
+        해당 인덱스의 값이 홀수이면 1 증가시키고 리스트 전체를 출력하시오.
+    */
+
+    /*
+        [출력예시]
+        3
+        9,42,24,12,51
+    */
+
+    let numberList = [9, 42, 24, 11, 51];
+    let r = Math.floor(Math.random() * numberList.length);
+    document.write(r + "<br/>");
+    if(numberList[r] % 2 == 1){
+        numberList[r] += 1;
+    }
+    document.write(numberList)
+</script>

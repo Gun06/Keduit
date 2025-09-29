@@ -1,0 +1,23 @@
+<script>
+    /*
+        [문제]
+         let numberList = [10, 43, 24, 12, 52];
+        numberList의 각 요소가 3의 배수일 경우 해당 숫자를 출력하고, 
+        3의 배수가 아닐 경우에는 "x"를 출력하시오.
+    */
+    /*
+        [출력예시]
+        x x 24 12 x
+    */
+    let numberList = [10, 43, 24, 12, 52];
+    for(let i = 0; i < numberList.length; i++){
+        let check1 = numberList[i] % 3 == 0;
+        let check2 = numberList[i] % 3 == 1;
+        if(check1){
+            document.write(numberList[i] + " ");
+        }else{
+            document.write("x" + " ");
+        }
+    }
+    
+</script>

@@ -1,0 +1,26 @@
+<script>
+    /*
+        [문제]
+          let  numberList = [17, 43, 34, 10, 52];
+        numberList의 값들 중, 모든 자릿수가 짝수이거나 모든 자릿수가 홀수인 숫자만 출력하시오.
+    */
+    /*
+        [출력예시]
+        17
+    */
+    let  numberList = [17, 43, 34, 10, 52];
+    for(let i = 0; i < numberList.length; i++){
+        let a = numberList[i];
+        let a1 = parseInt(a / 10);
+        let a2 = a % 10;
+        if(a1 == 0 || a2 == 0){
+            continue;
+        }
+        let check1 = a1 % 2 == 0 && a2 % 2 == 0;
+        let check2 = a1 % 2 == 1 && a2 % 2 == 1;
+        let check3 = check1 || check2;
+        if(check3){
+            document.write(a + " ");
+        }
+    }
+</script>

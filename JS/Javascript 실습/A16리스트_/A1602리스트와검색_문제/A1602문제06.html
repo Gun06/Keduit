@@ -1,0 +1,28 @@
+<script>
+    /*
+        [문제]
+         let numberList = [35, 101, 42, 58, 98, 92, 72, 31, 3, 8];
+        numberList의 각 요소에 대해 다음 조건을 만족하는 값을 출력하시오.
+
+        [조건]
+        (1) 요소가 50에서 100 사이의 값이면, 8의 배수만 출력합니다.
+        (2) 요소가 50에서 100 사이에 있지 않을 경우, 7의 배수만 출력합니다.
+        (3) 그외는 x를 출력합니다.
+    */
+    /*
+        [출력예시]
+        35 x 42 x x x 72 x x x 
+    */
+    let numberList = [35, 101, 42, 58, 98, 92, 72, 31, 3, 8];
+    for(let i = 0; i < numberList.length; i++){
+        let a = numberList[i];
+        let check1 = a >= 50 && a <= 100 && a % 8 == 0;
+        let check2 = a < 50 && a % 7 == 0;
+        let  check3 = a > 100 && a % 7 == 0;
+        if(check1 || check2 || check3){
+            document.write(a + " ");
+        }else{
+            document.write("x" + " ");
+        }
+    }
+</script>

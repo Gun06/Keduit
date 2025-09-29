@@ -1,0 +1,30 @@
+<script>
+    /*
+[문제]
+aList에 130부터 170 사이의 랜덤 숫자 10개를 추가합니다.
+aList의 값들 중에서 각 자리 숫자 중에서 숫자 5가 포함된 숫자만 bList에 추가한 후, 
+리스트 전체를 출력하시오.
+    */
+    /*
+[출력예시]
+[143, 166, 133, 153, 139, 167, 168, 148, 165, 150]
+[153, 165, 150]
+    */
+    let aList = [];
+    let bList = [];
+    for(let i = 0; i < 10; i++){
+        let r = Math.floor(Math.random() * 41) + 130;
+        aList.push(r);
+    }
+    for(let i = 0; i < aList.length; i++){
+        let a = parseInt(aList[i] / 100);
+        let b = parseInt(aList[i] % 100 / 10);
+        let c = aList[i] % 10;
+        let d = a == 5 || b == 5 || c == 5;
+        if(d){
+            bList.push(aList[i]);
+        }
+    }
+    document.write(aList + "<br/>");
+    document.write(bList);
+</script>

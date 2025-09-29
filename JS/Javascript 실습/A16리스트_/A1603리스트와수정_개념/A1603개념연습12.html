@@ -1,0 +1,24 @@
+<script>
+    /*
+        [문제]
+        let numberList = [153, 151, 143, 160, 134, 130, 154, 146, 164, 135];
+        numberList에서 각 자리 중 숫자 5가 포함된 숫자를 찾아, 
+        해당 숫자들을 모두 'x'으로 변경한 후 리스트 전체를 출력하시오.
+    */
+    /*
+        [출력예시]
+        153,151,143,160,134,130,154,146,164,135
+        x,x,143,160,134,130,x,146,164,x
+    */
+    let numberList = [153, 151, 143, 160, 134, 130, 154, 146, 164, 135];
+    document.write(numberList + "<br/>");
+    for(let i = 0; i < numberList.length; i++){
+        let a = parseInt(numberList[i] / 10);
+        let b = parseInt(numberList[i] % 100 / 10);
+        let c = numberList[i] % 10;
+        if(a == 5 || b == 5 || c == 5){
+            numberList[i] = "x";
+        }
+    }
+    document.write(numberList + "<br/>");
+</script>

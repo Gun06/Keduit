@@ -1,0 +1,21 @@
+<script>
+    /*
+[문제]
+랜덤으로 10부터 100 사이의 숫자를 저장합니다.
+그 수의 약수를 전부 aList에 추가하시오.
+    */
+    /*
+        [출력예시]
+        74
+        1,2,37,74
+    */
+    let r = Math.floor(Math.random() * 91) + 10;
+    document.write(r + "<br/>");
+    let aList = [];
+    for(let i = 1; i < r + 1; i++){
+        if(r % i == 0){
+            aList.push(i);
+        }
+    }
+    document.write(aList + "<br/>");
+</script>

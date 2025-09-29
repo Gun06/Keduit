@@ -1,0 +1,26 @@
+<script>
+    /*
+        [문제]
+         let aList = [];
+        1부터 8 사이의 랜덤 숫자를 한 개 저장한 후, 
+        10번 반복하여 랜덤 숫자만큼 랜덤 값을 저장하고, 
+        나머지 자리는 0으로 채운 후 리스트 전체를 출력하시오.
+    */
+    /*
+        [출력예시]
+        7
+        [7, 7, 7, 7, 7, 7, 7, 0, 0, 0]
+    */
+    let r = Math.floor(Math.random() * 8) + 1;
+    document.write(r + "<br/>");
+
+    let aList = [];
+    for(let i = 0; i < 10; i++){
+        if(i < r){
+            aList.push(r);
+        }else{
+            aList.push(0);
+        }
+    }
+    document.write(aList + "<br/>");
+</script>

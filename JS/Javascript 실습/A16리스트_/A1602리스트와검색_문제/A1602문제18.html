@@ -1,0 +1,26 @@
+<script>
+    /*
+        [문제]
+        let  numberList = [645, 229, 345, 314, 508, 385, 852, 641, 685, 435];
+        numberList에서 백의 자리는 3의 배수, 십의 자리는 4의 배수, 일의 자리는 5의 배수인 숫자만 선택하되, 
+        각 자릿수에 0이 포함되지 않은 숫자만 출력하시오.
+    */
+    /*
+        [출력예시]
+        645 345 385 685 
+    */
+    let  numberList = [645, 229, 345, 314, 508, 385, 852, 641, 685, 435];
+
+    for(let i = 0; i < numberList.length; i++){
+        let a = numberList[i];
+        let a1 = parseInt(a / 100);
+        let a2 = parseInt(a % 100 / 10);
+        let a3 = a % 10;
+        let check1 = a1 != 0 && a2 != 0 && a3 != 0;
+        let check2 = a1 % 3 == 0 && a2 % 4 == 0 && a3 % 5 == 0;
+        if(check1 && check2){
+            document.write(a + " ");
+        }
+    }
+
+</script>

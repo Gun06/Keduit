@@ -1,0 +1,23 @@
+<script>
+    /*
+        [문제]
+         let numberList = [40, 34, 38, 30, 36, 24, 39, 21, 22, 32];
+        numberList의 각 요소 중, 각 자리에 3, 6, 9가 포함되지 않은 숫자만 출력하시오.
+    */
+    /*
+        [출력예시]
+        40 24 21 22
+    */
+    
+    let numberList = [40, 34, 38, 30, 36, 24, 39, 21, 22, 32];
+    for(let i = 0; i < numberList.length; i++){
+        let a = numberList[i];
+        let a1 = parseInt(a / 10);
+        let a2 = a % 10;
+        let check1 = a1 != 3 && a1 != 6 && a1 != 9;
+        let check2 = a2 != 3 && a2 != 6 && a2 != 9;
+        if(check1 && check2){
+            document.write(a + " ") ;
+        }
+    }
+</script>

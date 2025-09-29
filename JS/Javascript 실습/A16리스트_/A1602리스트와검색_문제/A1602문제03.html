@@ -1,0 +1,21 @@
+<script>
+    /*
+        [문제]
+         let numberList = [9, 2, 3, 5, 10, 8, 4, 7, 6, 1];
+        numberList의 각 요소가 홀수일 경우 해당 숫자를 출력하고, 
+        짝수일 경우에는 "x"를 출력하시오.
+    */
+    /*
+        [출력예시]
+        9 x 3 5 x x x 7 x 1 
+    */
+    let numberList = [9, 2, 3, 5, 10, 8, 4, 7, 6, 1];
+    for(let i = 0; i < numberList.length; i++){
+        let check = numberList[i] % 2 == 1;
+        if(check){
+            document.write(numberList[i] + " ");
+        }else{
+            document.write("x ");
+        }
+    }
+</script>
