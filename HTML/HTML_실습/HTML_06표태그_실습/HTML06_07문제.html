@@ -5,7 +5,6 @@
     [결과 화면]
     HTML06_07문제화면.html
 -->
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -15,6 +14,34 @@
 </head>
 <body>
     <h3>학원 수업 요금표</h3>
-   
+    <table border="1">
+        <tr>
+            <th>수강 유형</th>
+            <th>대상 학년</th>
+            <th>월 수강료</th>
+        </tr>
+        <tr>
+            <td rowspan="3">정규반</td>
+            <td>초등학생</td>
+            <td>150,000원</td>
+        </tr>          
+        <tr>
+            <td>중학생</td>
+            <td>180,000원</td>
+        </tr>    
+        <tr>
+            <td>고등학생</td>
+            <td>200,000원</td>
+        </tr>         
+        <tr>
+            <td rowspan="2">집중반</td>
+            <td>중학생</td>
+            <td>220,000원</td>
+        </tr>          
+        <tr>
+            <td>고등학생</td>
+            <td>240,000원</td>
+        </tr>           
+    </table>
 </body>
 </html>
