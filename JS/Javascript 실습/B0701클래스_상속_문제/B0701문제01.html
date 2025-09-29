@@ -1,0 +1,50 @@
+<script>
+
+   
+    class Unit {
+        health = 0;         // 체력
+        power = 0;          // 공격력
+        level = 0;          // 레벨
+        name = "";          // 이름
+        status = "play";    // play, dead (Unit의 상태를 나타냄)
+
+        setData(health, power, level, name) {
+            this.health = health;
+            this.power = power;
+            this.level = level;
+            this.name = name;
+        }
+
+        printData() {
+            document.write("이름=" + this.name + " ");
+            document.write(" 레벨=" + this.level + " ");
+            document.write(" 체력=" + this.health + " ");
+            document.write(" 공격력=" + this.power + " ");
+            document.write("<br>");
+        }
+    }
+    
+    class Player extends Unit {}
+    class Wolf extends Unit {}
+    class Bat extends Unit {}
+    class Tiger extends Unit {}
+
+    let player = new Player();
+    player.setData(100, 10, 1, "용사");
+    player.printData();
+
+    let wolf = new Wolf();
+    wolf.setData(40, 5, 1, "늑대");
+    wolf.printData();
+
+    let bat = new Bat();
+    bat.setData(20, 3, 4, "박쥐");
+    bat.printData();
+
+
+    let tiger = new Tiger();
+    tiger.setData(60, 9, 3, "호랑이");
+    tiger.printData();
+
+
+</script>
