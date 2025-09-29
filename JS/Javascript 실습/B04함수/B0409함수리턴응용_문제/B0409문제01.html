@@ -1,0 +1,43 @@
+<script>
+    /*
+[문제]
+2000년 이전에 계좌를 개설한 회원 정보를 모두 저장한후 리턴하는 함수를 만드시오.
+[출력예시]
+19700327,1111-1111,1234,8700,김고객,12
+19850623,3333-3333,3456,0,박고객,0
+19991224,5555-5555,5678,9000,류고객,9
+    */
+    let customerList = 
+    [
+        ['19700327', '1111-1111', 1234, 8700, '김고객', 12],
+        ['20010512', '2222-2222', 2345,    0, '이고객',  0],
+        ['19850623', '3333-3333', 3456,    0, '박고객',  0],
+        ['20200101', '4444-4444', 4567, 2800, '정고객',  5],
+        ['19991224', '5555-5555', 5678, 9000, '류고객',  9]
+    ];
+        
+    function getSolution(customerList){
+        let re = [];
+        for(let i = 0; i < customerList.length; i++){
+            if(customerList[i][0] < '20000101'){
+                let temp = [];
+                temp.push(customerList[i][0]);
+                temp.push(customerList[i][1]);
+                temp.push(customerList[i][2]);
+                temp.push(customerList[i][3]);
+                temp.push(customerList[i][4]);
+                temp.push(customerList[i][5]);
+                re.push(temp);
+            }
+        }
+        return re;
+    }
+   
+   
+    let re = getSolution(customerList);
+
+    for(let i = 0; i < re.length; i++){
+        document.write(re[i] + "<br/>");
+    }
+    
+</script>

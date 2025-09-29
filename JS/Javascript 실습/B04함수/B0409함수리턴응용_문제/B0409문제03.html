@@ -1,0 +1,46 @@
+<script>
+ let courseList = [
+                [10001, 'html',       '김강사', 1, '0900', 'a'],
+                [10002, 'css',        '최강사', 5, '1300', 'd'],
+                [10003, 'javascript', '박강사', 3, '1100', 'b'],
+                [10004, 'react',      '이강사', 2, '1500', 'a'],
+                [20001, 'java',       '노강사', 4, '0900', 'b'],
+                [20002, 'jsp',        '박강사', 3, '1100', 'c'],
+                [20004, 'spring',     '최강사', 2, '1300', 'a'],
+                [30001, 'python',     '이강사', 5, '0900', 'b'],
+                [30002, 'c',          '김강사', 1, '1500', 'a'],
+                [40001, 'c++',        '김강사', 4, '1100', 'c']
+            ];
+
+
+      function getSolution(customerList){
+        let re = [];
+        for(let i = 0; i < courseList.length; i++){
+            if(courseList[i][3] == 5){
+                let temp = [];
+                temp.push(courseList[i][0]);
+                temp.push(courseList[i][1]);
+                temp.push(courseList[i][2]);
+                temp.push(courseList[i][3]);
+                temp.push(courseList[i][4]);
+                temp.push(courseList[i][5]);
+                re.push(temp);
+            }
+        }
+        return re;
+    }
+   
+    /*
+[문제]
+수업이 금요일인 수업 정보를 출력하시오
+[출력예시]
+10002,css,최강사,5,1300,d
+30001,python,이강사,5,0900,b
+    */
+
+   let re = getSolution(courseList);
+
+    for(let i = 0; i < re.length; i++){
+        document.write(re[i] + "<br/>");
+    }
+</script>

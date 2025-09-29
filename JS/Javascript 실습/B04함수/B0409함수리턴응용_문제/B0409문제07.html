@@ -1,0 +1,77 @@
+<script>
+    /*
+         [지역 정보]
+         10 (서울) 20 (경기) 30 (대전) 40 (대구)
+     */
+ 
+ 
+     let arr = [
+                 [1001, '김환자', '19900115', '010', '1234', '0001', 10],
+                 [1002, '이환자', '19871224', '010', '4328', '0002', 40],
+                 [1003, '박환자', '19650311', '010', '1215', '0003', 20],
+                 [1004, '신환자', '19741115', '010', '8329', '0004', 10],
+                 [1005, '정환자', '19580623', '010', '0947', '0005', 30],
+                 [1006, '최환자', '19820514', '010', '5728', '0006', 40],
+                 [1007, '허환자', '19480821', '010', '6288', '0007', 20]
+             ];
+    
+            /*
+[문제]
+이번 달은 6월 입니다. 출생월이 6월인 환자는 이벤트 대상자입니다. 
+이벤트 대상자인 환자 정보를 출력하시오. 
+[출력예시]
+1005 정환자 19580623 010 0947 0005 30
+            */
+
+
+     class Patient{
+         num = 0;
+         name = "";
+         birth = "";
+         phone1 = "";
+         phone2 = "";
+         phone3 = "";
+         location = 0;
+     }
+
+     function getSolution(arr){
+        let patientList = [];
+        
+        for(let i = 0; i < arr.length; i++){
+            let patient = new Patient();
+            patient.num = arr[i][0];
+            patient.name = arr[i][1];
+            patient.birth = arr[i][2];
+            patient.phone1 = arr[i][3];
+            patient.phone2 = arr[i][4];
+            patient.phone3 = arr[i][5];
+            patient.location = arr[i][6];
+            patientList.push(patient);
+        }
+        let re = [];
+
+        for(let i = 0; i < patientList.length; i++){
+            let birth = patientList[i].birth;
+            let mon = birth.substring(4, 6);
+            if(mon == "06"){
+                re.push(patientList[i]);
+              
+            }
+        }
+        return re;
+     }
+ 
+    
+     let re = getSolution(arr);
+     for(let i = 0; i < re.length; i++){
+        document.write(re[i].num + " ");
+        document.write(re[i].name + " ");
+        document.write(re[i].birth + " ");
+        document.write(re[i].phone1 + " ");
+        document.write(re[i].phone2 + " ");
+        document.write(re[i].phone3 + " ");
+        document.write(re[i].location + " ");
+        document.write("<br/>");
+    }
+ 
+ </script>
