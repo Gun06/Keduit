@@ -1,0 +1,27 @@
+<script>
+    /*
+        [문제]
+        거래횟수가 가장 많은 회원은 최우수 회원으로 선정되어 계좌 잔액이 100원 증가됩니다. 
+        정보를 수정하시오.
+        [출력예시]
+        19700327,1111-1111,1234,8800,김고객,12
+    */
+    let customerList = 
+    [
+        ['19700327', '1111-1111', 1234, 8700, '김고객', 12],
+        ['20010512', '2222-2222', 2345,    0, '이고객',  0],
+        ['19850623', '3333-3333', 3456,    0, '박고객',  0],
+        ['20200101', '4444-4444', 4567, 2800, '정고객',  5],
+        ['19991224', '5555-5555', 5678, 9000, '류고객',  9]
+    ];
+    let max = customerList[0][5];
+    let maxIndex = 0;
+    for(let i = 0; i < customerList.length; i++){
+        if(max < customerList[i][5]){
+            max = customerList[i][5];
+            maxIndex = i;
+        }
+    }
+    customerList[maxIndex][3] += 100;
+    document.write(customerList[maxIndex]);
+</script>

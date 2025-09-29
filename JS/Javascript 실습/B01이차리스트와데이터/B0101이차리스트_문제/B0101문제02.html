@@ -1,0 +1,28 @@
+<script>
+    /*
+        [문제]
+        aLists 의 첫번째 값이서 두번째 값을 뺀 결과가 음수일 경우 "o"를 출력하고,
+        그렇지 않으면, "x"를 출력하시오.
+    */ 
+    /* 
+        [출력예시]
+        x o x o x o
+    */
+    let aLists = [
+        [15, 13],
+        [9, 23],
+        [5, 2],
+        [7, 13],
+        [100, 43],
+        [1, 63],
+    ];
+ 
+    for(let i = 0; i < aLists.length; i++){
+        let a = aLists[i][0] - aLists[i][1];
+        if(a < 0){
+            document.write("o ");
+        }else{
+            document.write("x ");
+        }
+    }
+</script>

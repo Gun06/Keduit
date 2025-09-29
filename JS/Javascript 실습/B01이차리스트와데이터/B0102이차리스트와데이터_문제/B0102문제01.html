@@ -1,0 +1,26 @@
+<script>
+    /*
+        [문제]
+        aList와 bList는 구구단의 앞의 숫자와 뒤의 숫자를 의미한다.
+        앞의 숫자와 뒤의 숫자의 곱을 cList에 추가하시오.
+    */ 
+    /*
+        [출력예시]
+        24,18,24,81,2
+    */
+
+    let gugudan = [
+        [4, 6],
+        [3, 6],
+        [8, 3],
+        [9, 9],
+        [2, 1],
+    ];
+    
+    let cList = [];
+    for(let i = 0; i < gugudan.length; i++){
+        let a = gugudan[i][0] * gugudan[i][1];
+        cList.push(a);
+    }
+    document.write(cList + "<br/>");
+</script>

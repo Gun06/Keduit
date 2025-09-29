@@ -1,0 +1,54 @@
+<script>
+    /* 
+        [문제]
+        aLists 에 1~10사이의 랜덤값 10개를 저장한다. 
+        단, 이차원으로 저장한다. 세로5개 가로2개로 저장한다.
+        출력한다.
+
+        왼쪽값과 오른쪽값을 비교하여 서로같은값을 삭제한다.
+    */ 
+    /* 
+        [출력예시]
+        7,8
+        4,3
+        2,2
+        3,3
+        3,6
+
+        7,8
+        4,3
+        3,6
+    */
+    
+    let aLists = [];
+
+    for(let i = 0; i < 5; i++){
+        let temp = [];
+        let r1 = Math.floor(Math.random() * 10) + 1;
+        let r2 = Math.floor(Math.random() * 10) + 1;
+        temp.push(r1);
+        temp.push(r2);
+        aLists.push(temp);
+    }
+
+    for(let i = 0; i < aLists.length; i++){
+        document.write(aLists[i] + "<br/>");
+    }
+    document.write("<br/>");
+
+    let i = 0;
+    while(true){
+        if (i == aLists.length){
+            break;
+        }
+        if(aLists[i][0] == aLists[i][1]){
+            aLists.splice(i, 1);
+        }else{
+            i += 1;
+        }
+    }
+  
+    for(let i = 0; i < aLists.length; i++){
+        document.write(aLists[i] + "<br/>");
+    }
+</script>

@@ -1,0 +1,30 @@
+<script>
+    /*
+        [문제]
+        aList와 bList의 값을 각각 검색해 둘 다 홀수일 경우 해당 숫자를 출력하고,
+        그렇지 않으면, "x"를 출력하시오.
+    */ 
+    /* 
+        [출력예시]
+        x
+        x
+        x
+        23,11
+    */
+    let aLists = [
+        [99, 70],
+        [90, 71],
+        [5, 2],
+        [23, 11],
+    ];
+   
+    for(let i = 0; i < aLists.length; i++){
+        let a = aLists[i][0] % 2 == 1;
+        let b = aLists[i][1] % 2 == 1;
+        if(a && b){
+            document.write(aLists[i] + "<br/>");
+        }else{
+            document.write("x" + "<br/>");
+        }
+    }
+</script>

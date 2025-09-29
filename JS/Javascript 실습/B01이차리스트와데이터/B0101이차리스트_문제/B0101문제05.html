@@ -1,0 +1,27 @@
+<script>
+    /* 
+        [이차리스트와 수정 연습]
+        aList 와 bList 을aList는 1씩 증가 bbList는 2씩 증가하시오.
+    */ 
+    /* 
+        [출력예시]
+        11,56
+        55,3
+        14,25
+        13,26
+    */
+    aLists = [
+        [10, 54],
+        [54, 1],
+        [13, 23],
+        [12, 24],
+    ];
+
+    for(let i = 0; i < aLists.length; i++){
+        aLists[i][0] += 1;
+        aLists[i][1] += 2;
+    }
+    for(let i = 0; i < aLists.length; i++){
+        document.write(aLists[i] + "<br/>");
+    }
+</script>

@@ -1,0 +1,46 @@
+<script>
+    /*
+        [문제]
+        철수와 민수는 가위바위보 게임을 다섯 번 진행하였습니다.
+        aList 는 철수의 가위바위보 순서입니다.
+        bList 는 민수의 가위바위보 순서입니다.
+        cList 의 승리자의 이름을 저장합니다. 비긴경우는 x를 저장합니다.
+        철수가 몇 번 승리했는지 출력하시오.
+    */ 
+    /* 
+        [출력예시]
+        철수,민수,x,x
+        1
+    */
+
+    let game = [
+        ["가위" , "보"],
+        ["가위" , "바위"],
+        ["보" , "보"],
+        ["바위" , "바위"],
+    ];
+
+  
+    cList = [];
+    let count = 0;
+
+    for(let i = 0; i < game.length; i++){
+        if(game[i][0] == game[i][1]){
+            cList.push("x");
+        }else if(game[i][0] == "가위" && game[i][1] == "보"){
+            cList.push("철수");
+            count += 1;
+        }else if(game[i][0] == "바위" && game[i][1] == "가위"){
+            cList.push("철수");
+            count += 1;
+        }else if(game[i][0] == "보" && game[i][1] == "바위"){
+            cList.push("철수");
+            count += 1;
+        }else{
+            cList.push("민수");
+        }
+    }
+    document.write(cList + "<br/>");
+    document.write(count + "<br/>");
+
+</script>

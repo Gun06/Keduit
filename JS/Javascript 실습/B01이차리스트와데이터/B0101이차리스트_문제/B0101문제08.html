@@ -1,0 +1,51 @@
+<script>
+    /* 
+        [문제]
+        aLists 에 1~10사이의 랜덤값 10개를 저장한다. 
+        단, 이차원으로 저장한다. 세로5개 가로2개로 저장한다.
+        출력한다.
+
+        왼쪽값들중에서 5보다 작은수의 갯수는 count1에저장한다.
+        오른쪽값들중에서 5보다 작은수의 개수는 count2에 저장한다.
+                
+    */ 
+    /* 
+        [출력예시]
+        2,2
+        3,7
+        3,10
+        1,2
+        3,4
+
+        5,3
+    */
+    let aLists = [];
+
+    for(let i = 0; i < 5; i++){
+        let temp = [];
+        let r1 = Math.floor(Math.random() * 10) + 1;
+        let r2 = Math.floor(Math.random() * 10) + 1;
+        temp.push(r1);
+        temp.push(r2);
+        aLists.push(temp);
+    }
+    for(let i = 0; i < aLists.length; i++){
+        document.write(aLists[i] + "<br/>");
+    }
+    document.write("<br/>");
+
+    let countList = [0, 0];
+    
+    for(let i = 0; i < aLists.length; i++){
+        let a = aLists[i][0];
+        let b = aLists[i][1];
+        if(a < 5){
+            countList[0] += 1;
+        }
+        if(b < 5){
+            countList[1] += 1;
+        }
+    }
+    document.write(countList + "<br/>");
+    
+</script>

@@ -1,0 +1,30 @@
+<script>
+    /*
+        [문제]
+        평균 계좌 잔액보다 큰 계좌 잔액을 보유한 회원 정보를 출력하시오.
+        [출력예시]
+        4100.00
+        19700327,1111-1111,1234,8700,김고객,12
+        19991224,5555-5555,5678,9000,류고객,9
+    */
+    let customerList = 
+    [
+        ['19700327', '1111-1111', 1234, 8700, '김고객', 12],
+        ['20010512', '2222-2222', 2345,    0, '이고객',  0],
+        ['19850623', '3333-3333', 3456,    0, '박고객',  0],
+        ['20200101', '4444-4444', 4567, 2800, '정고객',  5],
+        ['19991224', '5555-5555', 5678, 9000, '류고객',  9]
+    ];
+    let total = 0;
+    for(let i = 0; i < customerList.length; i++){
+        total += customerList[i][3];
+    }
+    let avg = total / customerList.length;
+    avg = avg.toFixed(2);
+    document.write(avg + "<br/>");
+    for(let i = 0; i < customerList.length; i++){
+        if(avg < customerList[i][3]){
+            document.write(customerList[i] + "<br/>");
+        }
+    }
+</script>

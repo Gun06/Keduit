@@ -1,0 +1,35 @@
+<script>
+    /*
+        [문제]
+        let member = [
+                [1001, "김철수" , true],
+                [1002, "이민수" , true],
+                [1003, "이영희" , false],
+                [1004, "신해민" , false],
+                [1005, "이준수" , true],
+            ];   
+        true 이면 현재 가입되어있는상태, false 이면 탈퇴한 상태이다.     
+        현재 가입되어있는 회원의 번호들을 aList에 저장하시오. 
+    */ 
+    /* 
+        [출력예시]
+        1001,1002,1005
+    */
+
+    let member = [
+        [1001, "김철수" , true],
+        [1002, "이민수" , true],
+        [1003, "이영희" , false],
+        [1004, "신해민" , false],
+        [1005, "이준수" , true],
+    ];
+
+    aList = [];
+
+    for(let i = 0; i < member.length; i++){
+        if(member[i][2] == true){
+            aList.push(member[i][0]);
+        }
+    }
+    document.write(aList);
+</script>
