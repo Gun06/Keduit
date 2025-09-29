@@ -1,0 +1,92 @@
+<script>
+
+/*
+1001 김환자 19900115 010 1234 0001 10
+1002 이환자 19871224 010 4328 0002 40
+1003 박환자 19650311 010 1215 0003 20
+1004 신환자 19741115 010 8329 0004 10
+1005 정환자 19580623 010 0947 0005 30
+1006 최환자 19820514 010 5728 0006 40
+1007 허환자 19480821 010 6288 0007 20
+---------------------------------------
+1001 김환자 19900115 010 1234 0001 10
+1002 이환자 19871224 010 4328 0002 40
+1004 신환자 19741115 010 8329 0004 10
+1005 정환자 19580623 010 0947 0005 30
+1006 최환자 19820514 010 5728 0006 40
+1007 허환자 19480821 010 6288 0007 20
+*/
+    class Patient{
+        num = 0;
+        name = "";
+        birth = "";
+        phone1 = "";
+        phone2 = "";
+        phone3 = "";
+        location = 0;
+
+        setData(num, name, birth, phone1, phone2, phone3, location) {
+            this.num = num;
+            this.name = name;
+            this.birth = birth;
+            this.phone1 =phone1;
+            this.phone2 =phone2;
+            this.phone3 =phone3;
+            this.location =location;
+        }
+        printData(){
+            document.write(this.num + " ");
+            document.write(this.name + " ");
+            document.write(this.birth + " ");
+            document.write(this.phone1 + " ");
+            document.write(this.phone2 + " ");
+            document.write(this.phone3 + " ");
+            document.write(this.location + " ");
+            document.write("<br/>");
+        }
+    }
+
+    class PatientDAO{
+        static instance = new PatientDAO();
+          patientList = [];
+
+             printList(){
+                for(let i = 0; i < this.patientList.length; i++){
+                    this.patientList[i].printData();
+                }
+            }
+
+             insertData(data){
+                this.patientList.push(data);
+            }
+
+             deleteData(index){
+                this.patientList.splice(index , 1);
+            
+            }
+    }
+
+    let arr = [
+                [1001, '김환자', '19900115', '010', '1234', '0001', 10],
+                [1002, '이환자', '19871224', '010', '4328', '0002', 40],
+                [1003, '박환자', '19650311', '010', '1215', '0003', 20],
+                [1004, '신환자', '19741115', '010', '8329', '0004', 10],
+                [1005, '정환자', '19580623', '010', '0947', '0005', 30],
+                [1006, '최환자', '19820514', '010', '5728', '0006', 40],
+                [1007, '허환자', '19480821', '010', '6288', '0007', 20]
+            ];
+
+ //   let patientDAO = new PatientDAO();
+
+
+    for(let i = 0; i < arr.length; i++){
+        let patient = new Patient();
+        patient.setData(arr[i][0],arr[i][1],arr[i][2],arr[i][3],arr[i][4],arr[i][5],arr[i][6] );
+        PatientDAO.instance.insertData(patient);
+    }
+    PatientDAO.instance.printList();
+  
+    document.write("<hr/>");
+    PatientDAO.instance.deleteData(2);
+    PatientDAO.instance.printList();
+</script>
