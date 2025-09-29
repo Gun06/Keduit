@@ -1,0 +1,41 @@
+<!--
+    [중첩 리스트]
+    - 리스트 항목 내에 또 다른 리스트를 포함하여 계층 구조를 표현할 수 있습니다.
+    - 이는 예를 들어 상위 항목과 하위 항목이 존재하는 경우(예: 카테고리, 조직도, 분류 등)에 유용합니다.
+    - 중첩 리스트는 ul 또는 ol 태그 안에 또 다른 ul 또는 ol을 넣어 구성합니다.
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>회사 조직도</h3>
+    <ul>
+        <li>
+            경영부
+            <ul>
+                <li>총무팀</li>
+                <li>회계팀</li>
+            </ul>
+        </li>
+        <li>
+            개발부
+            <ul>
+                <li>
+                    웹개발팀
+                    <ul>
+                        <li>프론트엔드</li>
+                        <li>백엔드</li>
+                    </ul>
+                </li>
+                <li>앱개발팀</li>
+            </ul>
+        </li>
+        <li>마케팅부</li>
+    </ul>
+</body>
+</html>

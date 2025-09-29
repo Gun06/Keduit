@@ -1,0 +1,67 @@
+<!--
+    [문제]
+     HTML06_08문제화면.html 을 참고하여 테이블을 출력하세요.
+
+    [결과 화면]
+    HTML06_08문제화면.html
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>병원 진료 일정표</h3>
+    <table border="1">
+        <tr>
+            <th rowspan="2">진료과</th>
+            <th rowspan="2">의사명</th>
+            <th colspan="3">진료시간</th>
+        </tr>
+        <tr>
+            <th>오전</th>
+            <th>오후</th>
+            <th>야간</th>
+        </tr>
+        <tr>
+            <td rowspan="3">내과</td>
+            <td>김내과</td>
+            <td>09:00</td>
+            <td>14:00</td>
+            <td rowspan="3">휴진</td>
+        </tr>
+        <tr>
+            <td>이내과</td>
+            <td>09:30</td>
+            <td>17:00</td>
+        </tr>
+        <tr>
+            <td>소아과</td>
+            <td>09:00</td>
+            <td>15:00</td>
+        </tr>
+        <tr>
+            <td>소아과</td>
+            <td>박소아</td>
+            <td colspan="3">
+                09:00 - 15:00
+                (점심시간 없음)
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2">정형외과</td>
+            <td>정정형</td>
+            <td>08:30</td>
+            <td>11:30</td>
+            <td>18:00</td>
+        </tr>
+        <tr>
+            <td>신정형</td>
+            <td colspan="3">수술일정에 따라 유동적</td>
+        </tr>
+    </table>
+</body>
+</html>

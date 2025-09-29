@@ -1,0 +1,48 @@
+<!--
+    [문제]
+     HTML06_05문제화면.html 을 참고하여 테이블을 출력하세요.
+
+    [결과 화면]
+    HTML06_05문제화면.html
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>강의실 배정표</h3>
+    <table border="1">
+        <tr>
+            <th>강의실</td>
+            <th>시간</td>
+            <th>과목</td>
+        </tr>
+        <tr>
+            <td rowspan="2">101호</td>
+            <td>09:00 ~ 10:30</td>
+            <td>수학</td>
+        </tr>
+        <tr>
+            <td>10:40 ~ 12:10</td>
+            <td>영어</td>
+        </tr>          
+        <tr>
+            <td rowspan="3">202호</td>
+            <td>09:00 ~ 10:30</td>
+            <td>국어</td>
+        </tr>
+        <tr>
+            <td>10:40 ~ 12:10</td>
+            <td>사회</td>
+        </tr>          
+        <tr>
+            <td>13:00 ~ 14:30</td>
+            <td>과학</td>
+        </tr>       
+    </table>
+</body>
+</html>

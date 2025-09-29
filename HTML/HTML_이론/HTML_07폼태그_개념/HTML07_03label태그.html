@@ -1,0 +1,43 @@
+<!--
+    [label 태그]
+    (1) 태그 형식
+        - <label></label>
+    (2) 의미
+        - label 은 이름표, 설명 이라는 의미입니다.
+    (3) 기능
+        - <label> 태그는 웹 접근성을 향상시키는 데 중요한 역할을 합니다.
+        - 웹 접근성은 장애인과 비장애인 모두가 동등하게 웹 사이트를 이용할 수 있도록 하는 것을 의미합니다.
+        - <input> 태그에는 고유한 id 속성을 부여하고, <label> 태그의 for 속성에 해당 id를 연결하여 사용합니다.
+        - 이를 통해 사용자가 <label> 태그의 텍스트를 클릭해도 <input> 태그가 포커스됩니다.
+        - 이러한 연결은 <input> 태그의 radio 및 checkbox 타입에서도 유효하며, 사용자 경험을 개선합니다.
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>이름과 나이</h3>
+    <input type="text" id="name"> 
+    <label for="name">이름</label><br>
+    <input type="text" id="age"> 
+    <label for="age">나이</label>
+
+    <h3>성별을 선택하세요.</h3>
+    <input type="radio" id="men" name="gender" checked>
+    <label for="men">남성</label>
+    <input type="radio" id="women" name="gender">
+    <label for="women">여성</label>
+
+    <h3>수강 과목을 선택하세요.</h3>
+    <input type="checkbox" id="html">
+    <label for="html">HTML</label>
+    <input type="checkbox" id="css" checked>
+    <label for="css">CSS</label>
+    <input type="checkbox" id="javascript">
+    <label for="javascript">JavaScript</label>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!--
+    [표 태그의 행 병합 rowspan]
+    - td 태그의 rowspan 속성을 이용해 tr 태그를 하나로 병합할 수 있습니다.
+    - rowspan="3" 처럼 값을 지정하면, 아래로 3개의 tr 태그를 하나로 병합합니다.
+    - 다음 예제에서 중복되는 한식 항목을 rowspan을 이용해 하나로 병합합니다.
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>음식 메뉴판</h3>
+    <table border="1">
+        <tr>
+            <td>분류</td>
+            <td>메뉴</td>
+            <td>가격</td>
+        </tr>
+        <tr>
+            <td>한식</td>
+            <td>비빔밥</td>
+            <td>8,000원</td>
+        </tr>
+        <tr>
+            <td>한식</td>
+            <td>김치찌개</td>
+            <td>7,000원</td>
+        </tr>        
+        <tr>
+            <td>한식</td>
+            <td>불고기</td>
+            <td>9,000원</td>
+        </tr> 
+        <tr>
+            <td>중식</td>
+            <td>짜장면</td>
+            <td>6,000원</td>
+        </tr>       
+    </table>
+</body>
+</html>
