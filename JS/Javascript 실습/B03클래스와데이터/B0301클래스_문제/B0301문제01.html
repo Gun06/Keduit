@@ -1,0 +1,40 @@
+<script>
+
+   
+
+    let stObj1 =  {"num":1001, "name":"김철수", "kor":100, "math":20};
+    let stObj2 =  {"num":1002, "name":"이만수", "kor":40, "math":60};
+
+   /*
+        [문제]
+            위 데이터를 클래스로 변환하고 출력하시오.
+    */
+
+    class Student {
+        num = 0;
+        name = "";
+        kor = 0;
+        math = 0;
+    }
+
+    let st1 = new Student();
+
+    st1.num = 1001;
+    st1.name = "김철수";
+    st1.kor = 100;
+    st1.math = 20;
+
+  
+    document.write(st1.num + ", " + st1.name + ", " + st1.kor + ", " + st1.math + "<br>");
+   
+    let st2 = new Student();
+
+    st2.num = 1002;
+    st2.name = "이만수";
+    st2.kor = 40;
+    st2.math = 60;   
+    
+ 
+    document.write(st2.num + ", " + st2.name + ", " + st2.kor + ", " + st2.math + "<br>");
+
+</script>

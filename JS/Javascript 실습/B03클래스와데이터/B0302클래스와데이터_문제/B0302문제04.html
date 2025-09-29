@@ -1,0 +1,81 @@
+<script>
+
+   
+    
+    let arr = [
+        {"num" : 1001, "name" : "김철수", "math" : 10, "eng" : 20, "kor" : 30},
+        {"num" : 1002, "name" : "박민정", "math" : 40, "eng" : 60, "kor" : 10},
+        {"num" : 1003, "name" : "이상아", "math" : 15, "eng" : 10, "kor" : 50},
+        {"num" : 1004, "name" : "조민수", "math" : 16, "eng" : 40, "kor" : 20}
+    ];
+
+    /*
+        [문제]
+            student 의 배열을 검사하여 총점이 1등인 학생의 정보를 출력하시오.
+        [정답]
+          1002 박민정 10 60 40 110 36.67 true
+
+    */
+    class Student{
+        num = 0;
+        name = "";
+        kor = 0;
+        eng = 0;
+        math = 0;
+        total = 0;
+        avg = 0;
+        pass = false;
+    }
+    let studentList = [];
+
+    for(let i=0; i<arr.length; i++) {
+        let student = new Student();
+        student.num = arr[i]["num"];
+        student.name = arr[i]["name"];
+        student.kor = arr[i]["kor"];
+        student.eng = arr[i]["eng"];
+        student.math = arr[i]["math"];
+        
+        let total = arr[i]["math"] + arr[i]["eng"] + arr[i]["kor"];
+        let avg = total / 3;
+
+
+        student.total  = total;
+        student.avg = avg.toFixed(2);
+        if(student.avg >= 30) {
+            student.pass = true;
+        } else {
+            student.pass = false;
+        }
+
+        studentList.push(student);
+    }
+
+
+    let mx = 0;
+    let mxi = 0;
+    for(let i=0; i<studentList.length; i++) {
+       
+        if(mx < studentList[i].total){
+            mx = studentList[i].total;
+          
+        }
+    }
+
+
+
+    for(let i = 0; i < studentList.length; i++){
+        if(studentList[i].total == mx){
+            document.write(studentList[i].num + " ");
+            document.write(studentList[i].name + " ");
+            document.write(studentList[i].kor + " ");
+            document.write(studentList[i].eng + " ");
+            document.write(studentList[i].math + " ");
+            document.write(studentList[i].total + " ");
+            document.write(studentList[i].avg + " ");
+            document.write(studentList[i].pass + "<br/> ");
+        }
+    }
+
+    
+</script>

@@ -1,0 +1,69 @@
+<script>
+
+   
+    
+    let arr = [
+        {"num" : 1001, "name" : "김철수", "math" : 10, "eng" : 20, "kor" : 30},
+        {"num" : 1002, "name" : "박민정", "math" : 40, "eng" : 60, "kor" : 10},
+        {"num" : 1003, "name" : "이상아", "math" : 15, "eng" : 10, "kor" : 50},
+        {"num" : 1004, "name" : "조민수", "math" : 16, "eng" : 40, "kor" : 20}
+    ];
+
+    /*
+        [문제] 
+            수학점수가 국어점수 보다 높은 학생번호를 출력하시오.
+            클래스로 변환하시오.
+        [정답]
+            1001
+            1003
+            1004 
+    */   
+    
+
+    class Student{
+        num = 0;
+        name = "";
+        kor = 0;
+        eng = 0;
+        math = 0;
+        total = 0;
+        avg = 0;
+        pass = false;
+    }
+    let studentList = [];
+
+    for(let i=0; i<arr.length; i++) {
+        let student = new Student();
+        student.num = arr[i]["num"];
+        student.name = arr[i]["name"];
+        student.kor = arr[i]["kor"];
+        student.eng = arr[i]["eng"];
+        student.math = arr[i]["math"];
+        
+        let total = arr[i]["math"] + arr[i]["eng"] + arr[i]["kor"];
+        let avg = total / 3;
+
+
+        student.total  = total;
+        student.avg = avg.toFixed(2);
+        if(student.avg >= 30) {
+            student.pass = true;
+        } else {
+            student.pass = false;
+        }
+
+        studentList.push(student);
+    }
+
+
+
+    for(let i=0; i<studentList.length; i++) {
+        if(studentList[i].kor > studentList[i].math){
+            document.write(studentList[i].num);
+            document.write("<br/>");
+        }
+    }
+    
+
+    
+</script>

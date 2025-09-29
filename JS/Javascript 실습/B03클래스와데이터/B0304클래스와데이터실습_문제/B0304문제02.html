@@ -1,0 +1,61 @@
+<script>
+ 
+    let arr = [
+                [1001, '김환자', '19900115', '010', '1234', '0001', 10],
+                [1002, '이환자', '19871224', '010', '4328', '0002', 40],
+                [1003, '박환자', '19650311', '010', '1215', '0003', 20],
+                [1004, '신환자', '19741115', '010', '8329', '0004', 10],
+                [1005, '정환자', '19580623', '010', '0947', '0005', 30],
+                [1006, '최환자', '19820514', '010', '5728', '0006', 40],
+                [1007, '허환자', '19480821', '010', '6288', '0007', 20]
+            ];
+
+        /*
+            [문제]
+            거주지가 서울인 환자 정보를 출력하시오.
+            [출력예시]
+            1001 김환자 19900115 010 1234 0001 10
+            1004 신환자 19741115 010 8329 0004 10
+    */
+    class Patient{
+        num = 0;
+        name = "";
+        birth = "";
+        phone1 = "";
+        phone2 = "";
+        phone3 = "";
+        location = 0;
+    }
+
+    let patientList = [];
+
+    for(let i = 0; i < arr.length; i++){
+        let patient = new Patient();
+        patient.num = arr[i][0];
+        patient.name = arr[i][1];
+        patient.birth = arr[i][2];
+        patient.phone1 = arr[i][3];
+        patient.phone2 = arr[i][4];
+        patient.phone3 = arr[i][5];
+        patient.location = arr[i][6];
+        patientList.push(patient);
+    }
+
+    for(let i = 0; i < patientList.length; i++){
+        if(patientList[i].location == 10){
+            document.write(patientList[i].num + " ");
+            document.write(patientList[i].name + " ");
+            document.write(patientList[i].birth + " ");
+            document.write(patientList[i].phone1 + " ");
+            document.write(patientList[i].phone2 + " ");
+            document.write(patientList[i].phone3 + " ");
+            document.write(patientList[i].location + " ");
+            document.write("<br/>");
+
+        }
+    }
+
+
+
+
+</script>
