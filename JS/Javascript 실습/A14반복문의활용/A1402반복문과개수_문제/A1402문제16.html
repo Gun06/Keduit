@@ -19,5 +19,15 @@
         6 4 2 
         2등
     */
-    
+    let r1 = Math.floor(Math.random()*9)+1;
+    let r2 = Math.floor(Math.random()*9)+1;
+    let r3 = Math.floor(Math.random()*9)+1;
+    document.write(r1 + " " + r2 + " " + r3 + "<br/>");
+    if(r1 % 2 == 1 && r2 % 2 == 1 && r3 % 2 == 1){
+        document.write("1등");
+    }else if(r1 % 2 == 0 && r2 % 2 == 0 && r3 % 2 == 0){
+        document.write("2등");
+    }else{
+        document.write("꽝");
+    }
 </script>

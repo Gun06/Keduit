@@ -11,5 +11,30 @@
         1
     */
     
-   
+    let total = 0;
+    for(let i = 1; i<2001; i++){
+        if(2000 % i == 0){
+            let a = parseInt(i % 1000/100);
+            if(a == 4){
+                document.write(i + " ");
+                total += 1;
+            }
+        }
+    }
+    document.write("<br/>");
+    document.write(total);
+
+    document.write("<br/>");
+
+    let total2 = 0;
+    for(let j = 1; j<2001; j++){
+        let check1 = 2000 % j == 0;
+        let check2 = parseInt(j % 1000/100) == 4;
+        if(check1 && check2){
+            document.write(j + " ");
+            total2 += 1;
+        }
+    }
+    document.write("<br/>");
+    document.write(total2);
 </script>

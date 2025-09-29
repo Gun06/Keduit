@@ -9,5 +9,16 @@
         84 85 82 32 46 77 83 99 59 49 
         46
     */
-    
+    let min = 100;
+    for(let i = 0; i<10; i++){
+        let r = Math.floor(Math.random()*100)+1;
+        document.write(r + " ");
+        let check = r % 4 != 0;
+        if(check&&min > r){
+            min = r;
+        }
+    }
+    document.write("<br/>");
+    document.write(min);
+        
 </script>

@@ -9,5 +9,14 @@
         76 99 56 32 66 55 80 93 74 33 
         80
     */
-   
+    
+    for(let i = 0; i<10; i++){
+        let r = Math.floor(Math.random()*20)+1;
+        document.write(r + " ");
+        if(max < r){
+            max = r;
+        }
+    }
+    document.write("<br/>");
+    document.write(max);
 </script>

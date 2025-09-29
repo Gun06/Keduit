@@ -20,5 +20,15 @@
         2 2
         4
     */
-
+    let total = 0;
+    for(let i = 0; i<10; i++){
+        let r1 = Math.floor(Math.random()*6)+1;
+        let r2 = Math.floor(Math.random()*6)+1;
+        document.write(r1 + " " + r2 + "<br/>");
+        if(r1 == r2){
+            total += 1;
+        }
+    }
+    document.write("<br/>");
+    document.write(total);
 </script>

@@ -10,5 +10,13 @@
         108 126 144 162 180 198 216 234 252 270 288 
         11 
     */
-    
+    let total = 0;
+    for(let i = 100; i<201; i++){
+        if(i % 9 == 0 && i % 2 == 1){
+            document.write(i + " ");
+            total += 1;
+        }
+    }
+    document.write("<br/>");
+    document.write(total);
 </script>

@@ -6,15 +6,15 @@
     */
     /*
         [출력예시]
-        1712 1728 1744 1760 1776 1792 
+        1712 1728 1744 1760 1776 1792
         10512
     */
+
     let total = 0;
-    for(let i = 1000; i < 2001; i++){
-        let a = parseInt(i % 1000 / 100);
-        let check1 = i % 16 == 0;
-        let check2 = a == 7;
-        if(check1 && check2){
+    for (let i = 1000; i < 2001; i++) {
+        let check = i % 16 == 0;
+        let check2 = parseInt(i % 1000 / 100) == 7;
+        if (check && check2) {
             document.write(i + " ");
             total += i;
         }

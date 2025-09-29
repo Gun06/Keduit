@@ -11,5 +11,28 @@
         6
     */
 
-   
+    let total = 0;
+    for(let i = 1000; i<2001; i++){
+        if(i % 16 == 0){
+            let a = parseInt(i % 1000/100);
+            if(a == 7){
+                document.write(i + " ");
+                total += 1;
+            }
+        }
+    }
+    document.write("<br/>");
+    document.write(total);
+
+    let total2 = 0;
+    for(let j = 1000; j<2001; j++){
+        let check1 = j % 16 == 0;
+        let check2 = parseInt(j % 1000/100) == 7;
+        if(check1 && check2){
+            document.write(j + " ");
+            total2 += 1;
+        }
+    }
+    document.write("<br/>");
+    document.write(total2);
 </script>

@@ -19,20 +19,6 @@
         5 번 2 점 [불합격]
         평균: 26.6
     */
+
     let total = 0;
-    for(let i = 1; i < 6; i++){
-        let r = Math.floor(Math.random() * 101);
-        if(r >= 60){
-            document.write(i + "번" + r + "점" + "[합격]" + "<br/>");
-        }else{
-            document.write(i + "번" + r + "점" + "[불합격]" + "<br/>");
-        }
-        total += r;
-    }
-    
-    document.write(total + "<br/>");
-    let avg = total / 5;
-    document.write(avg);
-
-
 </script>

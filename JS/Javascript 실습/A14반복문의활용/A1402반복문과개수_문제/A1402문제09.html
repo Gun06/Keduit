@@ -11,5 +11,13 @@
         3
     */
    
-    
+    let total = 0;
+    for(let i = 10; i<51; i++){
+        if(i % 100/10 == 2 && i % 2 == 0 && i % 3 == 0){
+            document.write(i + " ");
+            total += 1;
+        }
+    }
+    document.write("<br/>");
+    document.write(total);
 </script>

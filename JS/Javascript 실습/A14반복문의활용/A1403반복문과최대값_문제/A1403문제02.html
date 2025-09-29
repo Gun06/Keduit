@@ -22,5 +22,18 @@
         평균: 26.1
         1등: 3 번 67 점
     */
-   
+    
+    for(let i = 0; i<5; i++){
+        let r = Math.floor(Math.random()*101);
+        document.write(i + " 번 " + r + " 점 " + "[불합격]" + "<br/>");
+        if(r >= 60){
+            document.write(i + " 번 " + r + " 점 " + "[합격]" + "<br/>");
+        }
+    }
+    document.write("<br/>");
+    document.write(total);
+    document.write("<br/>");
+    document.write(avg);
+    document.write("<br/>");
+    document.write(max);
 </script>

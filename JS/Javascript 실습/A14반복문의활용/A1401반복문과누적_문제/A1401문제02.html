@@ -6,12 +6,24 @@
     */
     /*
         [출력예시]
-        2 6 18 
+        2 6 18
         26
     */
+
+    let total = 0;
+    for (let i = 1; i < 19; i++) {
+        if (18 % i == 0 && i % 2 == 0) {
+            document.write(i + " ");
+            total += i;
+        }
+    }
+    document.write("<br/>");
+    document.write(total);
+
+    /*
     let total = 0;
     for(let i = 1; i < 19; i++){
-        let check = 18 % i == 0 && i % 2 == 0;   
+        let check = 18 % i == 0 && i % 2 == 0;
         if(check){
             document.write(i + " ");
             total += i;
@@ -19,4 +31,5 @@
     }
     document.write("<br/>");
     document.write(total);
+  */
 </script>

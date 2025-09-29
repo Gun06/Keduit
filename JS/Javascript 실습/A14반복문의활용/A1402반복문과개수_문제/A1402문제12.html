@@ -11,5 +11,13 @@
         345 385 645 685 
         4
     */
-    
+    let total = 0;
+    for(let i = 100; i<901; i++){
+        if(i % 1000/100 == 3 && i % 100/10 == 4 && i % 10 == 5){
+            document.write(i + " ");
+            total += 1;
+        }
+    }
+    document.write("<br/>");
+    document.write(total);
 </script>

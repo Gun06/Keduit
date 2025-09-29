@@ -9,18 +9,18 @@
         400 
         400
     */
+
     let total = 0;
-    for(let i = 1; i < 2001; i++){
-        let check1 = 2000 % i == 0;
-        if(check1){
-            let a = parseInt(i % 1000 / 100);
-            if(a == 4){
+    for(let i=1; i<2001; i++){
+        let check = 2000%i == 0;
+        if(check){
+            let a = parseInt(i%1000/100);
+            if(a==4){
+                document.write(i+" ");
                 total += i;
-                document.write(i + " ");
             }
         }
     }
     document.write("<br/>");
     document.write(total);
-    
 </script>

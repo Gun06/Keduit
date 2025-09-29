@@ -9,12 +9,12 @@
         153 171 189 
         513
     */
+
     let total = 0;
-    for(let i = 150; i < 201; i++){
-        let check1 = i % 9 == 0;
-        let check2 = i % 2 == 1;
-        if(check1 && check2){
-            document.write(i + " ");
+    for (let i = 150; i<201; i++){
+        let check = i%9==0 && i%2==1;
+        if(check){
+            document.write(i+" ");
             total += i;
         }
     }
