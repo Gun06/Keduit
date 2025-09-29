@@ -1,0 +1,15 @@
+<script>
+    /*
+    [문제]
+        text에서 뒤에 4글자를 **** 으로 변경하시오.
+        let text = "010-1234-5678";
+    [결과]
+        010-1234-****
+    */
+    let text = "010-1234-5678";
+    let index = text.length - 4;
+    let temp = text.substring(index);
+    document.write(temp + "<br/>");
+    let result = text.replace(temp , "****");
+    document.write(result + "<br/>");
+</script>

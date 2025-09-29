@@ -1,0 +1,22 @@
+<script>
+    /*
+        [문제]
+        let str = "aBcDeFgHi";
+        str 문자열에서 소문자의 개수를 출력하시오.
+    */
+    /*
+        [출력예시]
+        5
+    */
+    let str = "aBcDeFgHi";
+
+    let count = 0;
+    let sample = "abcdefghijklmnopqrstuvwxyz";
+    for(let i = 0; i < str.length; i++){
+        let index = sample.indexOf(str[i]);
+        if(index >= 0){
+            count += 1;
+        }
+    }
+    document.write(count);
+</script>

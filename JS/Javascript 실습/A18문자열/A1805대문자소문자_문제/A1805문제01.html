@@ -1,0 +1,26 @@
+
+    
+<script>
+
+    /*
+       [개념]
+        let text = "aBcDeFg";
+        text 에서 a를 대문자로 변경하시오.
+    */
+    /*
+        aBcDeFg
+        ABcDeFg
+    */
+
+    let text = "aBcDeFg";
+    document.write(text +"<br/>");
+    let temp = "";
+    for(let i = 0; i < text.length; i++){
+        if(text[i] == "a"){
+            temp += text[i].toUpperCase();
+        }else{
+            temp += text[i];
+        }
+    }
+    document.write(temp +"<br/>");
+</script>

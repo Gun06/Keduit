@@ -1,0 +1,29 @@
+<script>
+    /*
+        [문제]
+        let textNumber = "1001,1002,1003";
+        let textName = "김철수/이민수/박영희";
+        let textScore = "80:3:23";
+
+        문자열들은 학생들의 데이터이다 각각의 문자열을 배열에 담아서 출력하시오.
+    */
+    /*
+        [출력예시]
+        ['1001', '1002', '1003']
+        ['김철수', '이민수', '박영희']
+        ['80', '3', '23']
+    */
+    
+    let textNumber = "1001,1002,1003";
+    let textName = "김철수/이민수/박영희";
+    let textScore = "80:3:23";
+
+    let arr1 = textNumber.split(",");
+    let arr2 = textName.split("/");
+    let arr3 = textScore.split(":");
+
+    document.write(arr1 + "<br/>")
+    document.write(arr2 + "<br/>")
+    document.write(arr3 + "<br/>")
+
+</script>

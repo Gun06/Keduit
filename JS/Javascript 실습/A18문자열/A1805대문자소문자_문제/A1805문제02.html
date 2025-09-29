@@ -1,0 +1,52 @@
+<script>
+    /*
+        [문제]
+        let joinId = "qwEr1234";
+        let joinPw = "aBcd1234";
+
+        let idList = ["QWER1234", "Wer1234", "Qwer1234"];
+        let pwList = ["abc1234", "abcD1234", "ABCD1234"];
+        철수는 웹사이트에 로그인을 하려고한다.
+        이 웹사이트는 대소문자를 구분하지않고, 로그인을 할수있다.       
+
+        joinId 와 joinPw 는 철수가 이전에 가입한 아이디와 비밀번호이다.
+        아래 배열은 철수가 로그인을 시도한 아이디와 비밀번호 배열이다.
+
+        철수가 로그인에 성공하면 "로그인성공" 
+        실패하면 "로그인실패" 를 출력하시오.
+    */
+    /*
+        [출력예시]
+        로그인실패
+        로그인실패
+        로그인성공
+    */
+    let joinId = "qwEr1234";
+    let joinPw = "aBcd1234";
+
+    let idList = ["QWER1234", "Wer1234", "Qwer1234"];
+    let pwList = ["abc1234", "abcD1234", "ABCD1234"];
+
+    for(let i = 0; i < idList.length; i++){
+        let a = idList[i];
+        a = a.toUpperCase();
+
+        let b = pwList[i];
+        b = b.toUpperCase();
+
+        let c = joinId.toUpperCase();
+        let d = joinPw.toUpperCase();
+
+        let win = 0;
+        if(a == c && b == d){
+            win = 1;
+        }else{
+            win = 2;
+        }
+        if(win == 1){
+            document.write("로그인성공" + "<br/>");
+        }else if(win == 2){
+            document.write("로그인실패" + "<br/>");
+        }
+    }
+</script>

@@ -1,0 +1,26 @@
+<script>
+    /*
+        [문제]
+        let a = "pyt";
+        let text = "java,python,spring";
+        text에서 a의 단어가 포함되어있다면, 그 뒷부분만 출력하시오.
+        포함되어있지않으면 "단어없음" 을 출력하시오.
+    */
+    /*
+        [출력예시]
+        hon,spring
+    */
+    let a = "pyt";
+    let text = "java,python,spring";
+    let index = text.indexOf(a);
+    let temp = "";
+    if(index >= 0){
+        let start = index + a.length;
+        temp += text.substring(start);
+    }
+    if(temp == ""){
+        document.write("단어없음")
+    }else{
+        document.write(temp);
+    }
+</script>

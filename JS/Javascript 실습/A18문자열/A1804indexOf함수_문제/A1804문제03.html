@@ -1,0 +1,24 @@
+<script>
+    /*
+        let arr = ["school", "teacher", "child","father", "love"];
+        let word = "ch";
+        let result = [];
+        arr배열은 단어들이 모여있는 배열이다.
+        ch는 검색하고 싶은 단어의 일부분이다.
+        arr배열에서 ch의 부분이 일치하는 단어들을 result에 저장후 출력하시오.
+    */
+    /*
+        school,teacher,child
+    */
+    let arr = ["school", "teacher", "child","father", "love"];
+    let word = "ch";
+    let result = [];
+
+    for(let i = 0; i < arr.length;  i++){
+        let index = arr[i].indexOf(word);
+        if(index >= 0){
+            result.push(arr[i]);
+        }
+    }
+    document.write(result + "<br/>");
+</script>

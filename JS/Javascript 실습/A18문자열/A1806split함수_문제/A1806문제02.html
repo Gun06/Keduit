@@ -1,0 +1,22 @@
+
+<script>
+    /*
+        [문제]
+        let textScore = "80,3,23";
+        textScore은 학생들의 점수데이터이다. 전체 합을 출력하시오.
+    */
+    /*
+        [출력예시]
+        106
+    */
+    let textScore = "80,3,23";
+    let arr = textScore.split(",");
+    document.write(arr +"<br/>");
+
+    let total = 0;
+    for(let i = 0; i < arr.length; i++){
+        let a = Number(arr[i]);
+        total += a;
+    }
+    document.write(total);
+</script>

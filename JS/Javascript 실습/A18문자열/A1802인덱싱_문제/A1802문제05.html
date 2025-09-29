@@ -1,0 +1,24 @@
+<script>
+    /*
+        [문제]
+            let text = "abcde";
+            let text2 = "abdde";
+            문자열두개를 서로 한글자씩 비교하여, 같은글자수와 틀린글자수를 출력하시오.
+    */
+    /*
+            [출력예시]
+            4
+            1
+    */
+    let text = "abcde";
+    let text2 = "abdde";
+    let count = 0;
+    for(let i = 0; i < text.length; i++){
+        if(text[i] == text2[i]){
+            count += 1;
+        }
+    }
+    let count2 = text.length - count;
+    document.write(count + "<br/>");
+    document.write(count2);
+</script>

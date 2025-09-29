@@ -1,0 +1,29 @@
+<script>
+    /*
+        [문제]
+        let textScore = "80,3,23";
+        textScore은 학생들의 점수데이터이다. 
+        학생의 점수는 0~100 사이이다.
+        가장낮은점수를 제외한 총점을 구하시오.
+    */
+    /*
+        80,3,23
+        103
+    */
+
+    let textScore = "80,3,23";
+    let arr = textScore.split(",");
+    document.write(arr +"<br/>");
+
+    let min = 100;
+    let total = 0;
+    for(let i = 0; i < arr.length; i++){
+        let a = Number(arr[i]);
+        if(min > a){
+            min = a;
+        }
+        total += a;
+    }
+    total -= min;
+    document.write(total);
+</script>

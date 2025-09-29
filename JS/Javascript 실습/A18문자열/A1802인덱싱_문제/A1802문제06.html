@@ -1,0 +1,21 @@
+<script>
+    /*
+            [문제]
+             let text = "number is 010-1234-5678";
+            text의 뒷자리를 **** 으로 출력하시오.
+    */
+    /*
+            [출력예시]
+            number is 010-1234-****
+    */
+    let text = "number is 010-1234-5678";
+    let temp = "";
+    for(let i = 0; i < text.length;  i++){
+        if(i < text.length - 4){
+            temp += text[i];
+        }else{
+            temp += "*";
+        }
+    }
+    document.write(temp);
+</script>

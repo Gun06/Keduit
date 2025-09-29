@@ -1,0 +1,25 @@
+<script>
+/*
+
+[문제]
+      let arr = [11, 100, 89];
+        arr배열의 각 점수를 ,(슬러시)를 구분자로 
+        하나의 문자열로 연결하고 출력하시오.
+        단 마지막은 , 를 붙이지않는다
+*/
+/*
+        [출력예시]
+        str = 11,100,89
+*/
+    let arr = [11, 100, 89];
+    text = "";
+    for(let i = 0; i < arr.length; i++){
+        text += arr[i];
+        text += ",";
+    }
+    document.write(text +"<br/>");
+    //마지막,를삭제한다.
+    text = text.substring(0, text.length - 1); 
+    document.write(text +"<br/>"); 
+
+</script>

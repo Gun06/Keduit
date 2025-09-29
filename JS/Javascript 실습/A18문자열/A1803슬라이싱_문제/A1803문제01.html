@@ -1,0 +1,19 @@
+<script>
+
+/*
+    [문제]
+        let phoneNum = "010-1234-5678";
+        phoneNum에서 5678 대신 ****로 표현하시오.
+*/ 
+/*
+    [정답]
+        010-1234-****
+*/
+    
+ 
+    let phoneNum = "010-1234-5678";
+    phoneNum = phoneNum.substring(0, phoneNum.length - 4);
+    phoneNum += "****";
+    document.write(phoneNum + "<br>");
+
+</script>
