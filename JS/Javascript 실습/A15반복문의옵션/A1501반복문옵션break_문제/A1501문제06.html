@@ -1,0 +1,31 @@
+<script>
+    /*
+        [문제]
+        100보다 큰 9의 배수 중에서 
+        십의 자리가 5인 네 번째 숫자를 출력하시오.
+        단, break를 사용하시오.
+    */
+    /*
+        [출력예시]
+        450
+    */
+    let num1 = 9;
+    let num2 = 100;
+    let i = num1;
+    let count = 0;
+    let loop = true;
+    while(loop){
+        if(i > num2){
+            let a = parseInt(i % 100 / 10);
+            if(a == 5){
+                count += 1;
+                if(count == 4){
+                    document.write(i);
+                    break;
+                }
+            }
+        }
+        i += num1;
+    }
+    
+</script>

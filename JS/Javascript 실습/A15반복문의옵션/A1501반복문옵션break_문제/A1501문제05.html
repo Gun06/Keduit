@@ -1,0 +1,30 @@
+<script>
+    /*
+        [문제]
+        500보다 큰 8의 배수 중에서 
+        일의 자리가 6인 숫자를 4개만 출력하시오.
+        단, break를 사용하시오.
+    */
+    /*
+        [출력예시]
+        536 576 616 656 
+    */
+    let num1 = 8;
+    let num2 = 500;
+    let i = num1;
+    let count = 0;
+    while(true){
+        if(i > num2){
+            let a = i % 10;
+            if(a == 6){
+                document.write(i + " ");
+                count += 1;
+                if(count == 4){
+                    break;
+                }
+            }
+        }
+        i += num1;
+    }
+    
+</script>

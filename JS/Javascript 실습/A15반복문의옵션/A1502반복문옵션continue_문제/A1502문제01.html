@@ -1,0 +1,32 @@
+<script>
+    /*
+        [문제]
+        10부터 99 사이의 랜덤 숫자 중, 
+        일의 자리와 십의 자리가 같은 숫자를 5개 출력한 후 
+        종료하는 프로그램을 작성하시오.
+        단, continue와 break를 사용하시오.
+    */
+    /*
+        [출력예시]
+        11
+        33
+        77
+        77
+        11
+    */
+    let count = 0;
+    while(true){
+        let r = Math.floor(Math.random() * 90) + 10;
+        let a = parseInt(r / 10);
+        let b = r % 10;
+        if(a != b){
+            continue;
+        }
+        document.write(r + "<br/>");
+        count += 1;
+        if(count == 5){
+            break;
+        }
+    }
+
+</script>

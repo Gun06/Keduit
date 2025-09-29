@@ -1,0 +1,28 @@
+<script>
+    /*
+        [문제]
+        10부터 99 사이의 랜덤 숫자 중,
+        짝수만 5개 출력한 후 종료하는 프로그램을 작성하시오.
+        단, continue와 break를 사용하시오.
+    */
+    /*
+        [출력예시]
+        44
+        64
+        38
+        90
+        32
+    */
+    let count = 0;
+    while(true){
+        let r = Math.floor(Math.random() * 90) + 10;
+        if(r % 2 != 0){
+            continue;
+        }
+        document.write(r + "<br/>");
+        count += 1;
+        if(count == 5){
+            break;
+        }
+    }
+</script>

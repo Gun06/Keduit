@@ -1,0 +1,27 @@
+<script>
+    /*
+        [문제]
+        1부터 10 사이의 서로 다른 랜덤 숫자 3개를 각각의 변수에 저장하고, 
+        숫자 3개의 합이 20이 되면  종료합니다.
+        단, 각각의 숫자들은 서로 다른숫자여아합니다.
+        단, break를 사용하시오.
+    */
+    /*
+        [출력예시]
+        9 6 5
+    */
+    
+    while(true){
+        let r1 = Math.floor(Math.random() * 10) + 1;
+        let r2 = Math.floor(Math.random() * 10) + 1;
+        let r3 = Math.floor(Math.random() * 10) + 1;
+        //document.write(r1 + " " + r2 + " " + r3 + "<br/>");
+        let total = r1 + r2 + r3;
+        let check = r1 != r2 && r2 != r3 && r3 != r1;
+        if(total == 20 && check){
+            document.write(r1 + " " + r2 + " " + r3 + "<br/>");
+            break;
+        }
+    }
+
+</script>
