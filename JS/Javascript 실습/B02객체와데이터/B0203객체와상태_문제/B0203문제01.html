@@ -1,0 +1,50 @@
+<script>
+    /*
+    [문제]
+        
+        배열 aList와 bList의 값을 객체로 만들어 numberLists에 추가하시오.
+        aList는 a로 bList는 b로 추가하시오.
+
+        이후 statusList 의 값이 1이면 더하기 , 2면a에서b를 빼기 , 3이면 곱하기의값을 
+        c항목을 만들어 추가하시오.
+    */ 
+    /* 
+    [정답]
+
+        3 5 -2
+        4 3 7
+        2 1 2
+        8 7 1
+        6 3 9
+    */
+    let aList  = [3, 4, 2, 8, 6];
+    let bList  = [5, 3, 1, 7, 3];
+    let numberLists = [];
+    let statusList = [2, 1, 3, 2, 1];
+
+    for(let i = 0; i < aList.length; i++){
+        let temp = {};
+        temp["a"] = aList[i];
+        temp["b"] = bList[i];
+        numberLists.push(temp);
+    }
+    for(let i = 0; i < numberLists.length; i++){
+        if(statusList[i] == 1){
+            numberLists[i]["c"] = numberLists[i]["a"] + numberLists[i]["b"]
+        }else if(statusList[i]== 2){
+            numberLists[i]["c"] = numberLists[i]["a"] - numberLists[i]["b"]
+        }else if(statusList[i] == 3){
+            numberLists[i]["c"] = numberLists[i]["a"] * numberLists[i]["b"];
+        }
+    }
+
+    for(let i = 0; i < numberLists.length; i++){   
+            document.write(numberLists[i]["a"] + " ");
+            document.write(numberLists[i]["b"] + " ");
+            document.write(numberLists[i]["c"] + " ");
+            document.write("<br/>");  
+    }
+
+
+</script>
+</script>

@@ -1,0 +1,43 @@
+<script>
+
+    /*
+        [문제]
+            total 이라는 항목을 만들고 시험점수 3개의 합을 저장하시오.
+            avg 라는 항목을 만들고 평균을 저장하시오.
+            단, 평균은 소수점 2자리까지 저장하시오.
+            평균이 30점이상이면 합격이다.
+            pass 라는 항목을 만들고 합격이면 true , 불합격이면 false 를 저장하시오.
+            
+        [예시]
+            num : 1001
+            name : 김철수
+            math : 10
+            eng : 20
+            kor : 30
+            total : 60
+            avg : 20.00
+            pass : false
+            
+    */
+
+    let info = {"num" : 1001, "name" : "김철수", "math" : 10, "eng" : 20, "kor" : 30};
+    let total = info["math"] + info["eng"] + info["kor"];
+    let avg = total / 3;
+    avg = avg.toFixed(2);
+    info["avg"] = avg;
+    if(avg >= 30){
+        info["pass"] = true;
+    }else{
+        info["pass"] = false;
+    }
+
+    document.write(info["num"] + " ");
+    document.write(info["name"] + " ");
+    document.write(info["math"] + " ");
+    document.write(info["eng"] + " ");
+    document.write(info["kor"] + " ");
+    document.write(info["avg"] + " ");
+    document.write(info["pass"] + " ");
+
+
+</script>

@@ -1,0 +1,44 @@
+<script>
+
+    /*
+            itemData는 이번달 과일판매목록이다. 
+            데이터 순서는 번호,이름,가격,판매개수 이다.
+    */
+
+    let itemData = [
+        {"no" : 1001 , "name" : "사과" , "price" : 3000 , "count" : 32},
+        {"no" : 1002 , "name" : "배" , "price" : 2000 , "count" : 12},
+        {"no" : 1003 , "name" : "딸기" , "price" : 4000 , "count" : 42},
+        {"no" : 1004 , "name" : "바나나" , "price" : 1500 , "count" : 55},
+       
+    ];
+    /*
+        [문제] 
+            전체 각상품의 매출 1등의 상품 정보 출력 
+        [정답] 
+            1003 딸기 4000 42
+    */
+   let mx = 0;
+   for(let i = 0; i < itemData.length; i++){
+       
+        let total = itemData[i]["price"] * itemData[i]["count"];
+        if(mx <total){
+            mx = total;
+        }
+    }
+      
+    for(let i = 0; i < itemData.length; i++){
+        let total = itemData[i]["price"] * itemData[i]["count"];
+        if(mx  == total){
+            document.write(itemData[i]["no"] + " ");
+            document.write(itemData[i]["name"] + " ");
+            document.write(itemData[i]["price"] + " ");
+            document.write(itemData[i]["count"] + " ");
+
+            document.write("<br/>");
+            
+        }
+    }
+
+
+</script>

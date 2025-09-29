@@ -1,0 +1,55 @@
+
+    
+<script>
+    /*
+[문제]
+a강의장 수업을 수업 시작시간 순으로 오름차순 정렬 후 출력하시오.
+[출력예시]
+10004 react 이강사 2 0500 a
+10001 html 김강사 1 0900 a
+20003 spring 최강사 2 1300 a
+30002 c 김강사 1 1500 a
+    */
+
+    let courseList = [
+        {'number' : 10001, 'subject' : 'html'       , 'name' : '김강사' , 'week' : 1 , 'startTime' : '0900' , 'hall' : 'a'},
+        {'number' : 10002, 'subject' : 'css'        , 'name' : '촤강사' , 'week' : 5 , 'startTime' : '1300' , 'hall' : 'd'},
+        {'number' : 10003, 'subject' : 'javascript' , 'name' : '박강사' , 'week' : 3 , 'startTime' : '1100' , 'hall' : 'b'},
+        {'number' : 10004, 'subject' : 'react'      , 'name' : '이강사' , 'week' : 2 , 'startTime' : '1500' , 'hall' : 'a'},
+        {'number' : 20001, 'subject' : 'java'       , 'name' : '노강사' , 'week' : 4 , 'startTime' : '0900' , 'hall' : 'b'},
+        {'number' : 20002, 'subject' : 'jsp'        , 'name' : '박강사' , 'week' : 3 , 'startTime' : '1100' , 'hall' : 'c'},
+        {'number' : 20003, 'subject' : 'spring'     , 'name' : '최강사' , 'week' : 2 , 'startTime' : '1300' , 'hall' : 'a'},
+        {'number' : 30001, 'subject' : 'python'     , 'name' : '이강사' , 'week' : 5 , 'startTime' : '0900' , 'hall' : 'b'},
+        {'number' : 30002, 'subject' : 'c'          , 'name' : '김강사' , 'week' : 1 , 'startTime' : '1500' , 'hall' : 'a'},
+        {'number' : 40001, 'subject' : 'c++'        , 'name' : '김강사' , 'week' : 4 , 'startTime' : '1100' , 'hall' : 'c'},
+    ];
+    
+
+ 
+    courseList.sort(
+        (a , b) =>{
+            if(a["startTime"] < b["startTime"]){
+                return -1;
+            }else if(a["grade"] > b["grade"]){
+                return 1;
+            }else{
+                return 0;
+            }
+
+        });
+
+
+    for(let i = 0; i < courseList.length; i++){
+
+        if(courseList[i]['hall'] == "a"){
+            document.write(courseList[i]['number'] + " ");
+            document.write(courseList[i]['subject'] + " ");
+            document.write(courseList[i]['name'] + " ");
+            document.write(courseList[i]['week'] + " ");
+            document.write(courseList[i]['startTime'] + " ");
+            document.write(courseList[i]['hall'] + " ");
+            document.write("<br/>")
+        }
+    }
+
+</script>

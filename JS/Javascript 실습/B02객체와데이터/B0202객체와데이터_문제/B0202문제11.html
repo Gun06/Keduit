@@ -1,0 +1,40 @@
+<script>
+    /*
+[문제]
+     let aList  = [3, 4, 2, 8, 6];
+    let bList  = [5, 3, 1, 7, 3];
+
+   let numberLists = [];
+
+   aList 와 bList 의 값들을 객체로 만들어서 numberLists에 추가하시오.
+   aList 는 a로 bList 는 b로 저장하시오.
+
+    */ 
+    /* 
+[정답]
+    3 5
+    4 3
+    2 1
+    8 7
+    6 3
+    */
+    let aList  = [3, 4, 2, 8, 6];
+    let bList  = [5, 3, 1, 7, 3];
+    let numberLists = [];
+
+  
+
+    for(let i = 0; i < aList.length; i++){
+        let temp = {};
+        temp["a"] = aList[i];
+        temp["b"] = bList[i];
+        numberLists.push(temp);
+    }
+
+    for(let i = 0; i < numberLists.length; i++){   
+            document.write(numberLists[i]["a"] + " ");
+            document.write(numberLists[i]["b"] + " ");
+            document.write("<br/>");  
+    }
+
+</script>

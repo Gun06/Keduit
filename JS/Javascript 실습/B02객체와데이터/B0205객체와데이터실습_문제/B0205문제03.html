@@ -1,0 +1,37 @@
+
+<script>
+    /*
+[문제]
+수업이 금요일인 수업 정보를 출력하시오.(1~5 => 월~금)
+[출력예시]
+10002 css 최강사 5 1300 d
+30001 python 이강사 5 0900 b
+    */
+
+    let courseList = [
+        {'number' : 10001, 'subject' : 'html'       , 'name' : '김강사' , 'week' : 1 , 'startTime' : '0900' , 'hall' : 'a'},
+        {'number' : 10002, 'subject' : 'css'        , 'name' : '촤강사' , 'week' : 5 , 'startTime' : '1300' , 'hall' : 'd'},
+        {'number' : 10003, 'subject' : 'javascript' , 'name' : '박강사' , 'week' : 3 , 'startTime' : '1100' , 'hall' : 'b'},
+        {'number' : 10004, 'subject' : 'react'      , 'name' : '이강사' , 'week' : 2 , 'startTime' : '1500' , 'hall' : 'a'},
+        {'number' : 20001, 'subject' : 'java'       , 'name' : '노강사' , 'week' : 4 , 'startTime' : '0900' , 'hall' : 'b'},
+        {'number' : 20002, 'subject' : 'jsp'        , 'name' : '박강사' , 'week' : 3 , 'startTime' : '1100' , 'hall' : 'c'},
+        {'number' : 20003, 'subject' : 'spring'     , 'name' : '최강사' , 'week' : 2 , 'startTime' : '1300' , 'hall' : 'a'},
+        {'number' : 30001, 'subject' : 'python'     , 'name' : '이강사' , 'week' : 5 , 'startTime' : '0900' , 'hall' : 'b'},
+        {'number' : 30002, 'subject' : 'c'          , 'name' : '김강사' , 'week' : 1 , 'startTime' : '1500' , 'hall' : 'a'},
+        {'number' : 40001, 'subject' : 'c++'        , 'name' : '김강사' , 'week' : 4 , 'startTime' : '1100' , 'hall' : 'c'},
+    ];
+
+    for(let i = 0; i < courseList.length; i++){
+        if(courseList[i]['week'] == 5){
+            document.write(courseList[i]['number'] + " ");
+            document.write(courseList[i]['subject'] + " ");
+            document.write(courseList[i]['name'] + " ");
+            document.write(courseList[i]['week'] + " ");
+            document.write(courseList[i]['startTime'] + " ");
+            document.write(courseList[i]['hall'] + " ");
+            document.write("<br/>")
+
+        }
+    }
+
+</script>

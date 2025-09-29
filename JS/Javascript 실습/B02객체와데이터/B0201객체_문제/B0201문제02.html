@@ -1,0 +1,25 @@
+<script>
+
+    /*
+        [문제]
+            철수네 시험을 치루고 다음과 같이 점수를 받았다. 
+            국어점수에 이상이 생겨 항목 kor 를 지우고 출력하시오.
+            
+        [예시]
+            num : 1001
+            name : 김철수
+            math : 10
+            eng : 20
+            
+    */
+
+    let info = {"num" : 1001, "name" : "김철수", "math" : 10, "eng" : 20, "kor" : 30};
+
+    delete info["kor"];
+
+    document.write(info["num"] + " ");
+    document.write(info["name"] + " ");
+    document.write(info["math"] + " ");
+    document.write(info["eng"] + " ");
+
+</script>

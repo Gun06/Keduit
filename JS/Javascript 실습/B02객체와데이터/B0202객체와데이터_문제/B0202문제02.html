@@ -1,0 +1,39 @@
+<script>
+
+   
+    
+    let student = [
+        {"num" : 1001, "name" : "김철수", "math" : 10, "eng" : 20, "kor" : 30},
+        {"num" : 1002, "name" : "박민정", "math" : 40, "eng" : 60, "kor" : 10},
+        {"num" : 1003, "name" : "이상아", "math" : 15, "eng" : 10, "kor" : 50},
+        {"num" : 1004, "name" : "조민수", "math" : 16, "eng" : 40, "kor" : 20}
+    ];
+
+    /*
+        [문제] 
+            국어 1등 의 학생정보를 출력하시오.
+        [정답]         	
+            1003 이상아 15 10 50
+    */
+
+
+
+    let mx = 0;
+    for(let i=0; i<student.length; i++) {
+        if( student[i]["kor"] > mx){
+            mx =  student[i]["kor"];
+        }
+    }
+    for(let i = 0; i < student.length; i++){
+        let total = student[i]["kor"] ;
+        if(total == mx){
+            document.write(student[i]["num"] + " ");
+            document.write(student[i]["name"] + " ");
+            document.write(student[i]["math"] + " ");
+            document.write(student[i]["eng"] + " ");
+            document.write(student[i]["kor"] + " ");
+        }
+    }
+
+    
+</script>
