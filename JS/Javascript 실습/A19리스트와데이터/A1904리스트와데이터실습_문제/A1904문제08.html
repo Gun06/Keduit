@@ -1,0 +1,50 @@
+<script>
+    /*
+        [문제] 
+        오늘은 영어 시험을 보는 날이다.
+        0부터 100사이의 랜덤 숫자를 engScoreList에 저장한 후,
+        국어 성적이 영어 성적보다 낮은 학생의 정보를 삭제하시오.
+    */ 
+    /*
+        [출력예시]
+        10,70,64,13,49,14
+        23,27,19,69,52,12
+        1002 이영희 70 30 23
+        1003 김민정 64 65 27
+        1005 오만석 49 80 19
+    */ 
+    let numberList      = [    1001,     1002,     1003,     1004,    1005,      1006];
+    let nameList        = ["이민수", "이영희",  "김민정", "이철민", "오만석", "최이슬"];
+    let genderList		= [		"남",    "여",      "여",     "남",    "남",     "여"];
+    let korScoreList    = [      10,      70,       64,         13,      49,       14];
+    let mathScoreList   = [      20,      30,       65,         87,      80,       90];
+
+    let engScoreList = [];
+
+    for(let i = 0; i < numberList.length; i++){
+        let eng = Math.floor(Math.random() * 101);
+        engScoreList.push(eng);
+    }
+    document.write(korScoreList + "<br/>");
+    document.write(engScoreList + "<br/>");
+    let i = 0;
+    while(true){
+        if(i == numberList.length){
+            break;
+        }
+        if(korScoreList[i] < engScoreList[i]){
+            numberList.splice(i, 1);
+            nameList.splice(i, 1);
+            genderList.splice(i, 1);
+            korScoreList.splice(i, 1);
+            mathScoreList.splice(i, 1);
+        }else{
+            i += 1;
+        }
+    }
+
+    for(let i = 0; i < numberList.length; i++){
+        document.write(numberList[i] + " " + nameList[i] + " " + korScoreList[i] + " " + mathScoreList[i] + " " + engScoreList[i] + "<br/>");
+        
+    }
+</script>

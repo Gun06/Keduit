@@ -1,0 +1,45 @@
+<script>
+    /*
+        [문제]
+            let item 	  = [1001, 1002, 1003, 1004];
+            let price 	  = [ 500, 1200, 4300, 2300];
+            let count 	  = [   3,    1,    2,    1];
+            let totalList = [1500, 1200, 8600, 2300];
+
+            let cancelList = [2, 1, 1, 0];
+
+        item 리스트는 상품의 번호이다.
+        price 리스트는 상품의 가격이다.
+        count 리스트는 상품의 판매 개수이다.
+        item과 price와 count 는 한 세트이다.
+        cancelList는 주문이 취소된 내역으로 
+        판매 개수와 상품 가격을 업데이트 하시오.
+    */ 
+    /* 
+        [출력예시]
+        1001,1002,1003,1004
+        500,1200,4300,2300
+        1,0,1,1
+        500,0,4300,2300
+    */
+    let item 	  = [1001, 1002, 1003, 1004];
+    let price 	  = [ 500, 1200, 4300, 2300];
+    let count 	  = [   3,    1,    2,    1];
+    let totalList = [1500, 1200, 8600, 2300];
+
+    let cancelList = [2, 1, 1, 0];
+
+
+
+    for(let i = 0; i < item.length; i++){
+        count[i] -= cancelList[i];
+        let a = cancelList[i] * price[i];
+        totalList[i] -= a;
+    }
+    document.write(item + "<br/>");
+    document.write(price + "<br/>");
+
+    document.write(count + "<br/>");
+    document.write(totalList);
+
+</script>

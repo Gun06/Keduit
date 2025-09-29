@@ -1,0 +1,29 @@
+<script>
+    /*
+        [문제]
+        랜덤으로 학생한명의 정보를 출력하시오.
+    */
+    /*
+        [출력예시]
+        3
+        1004 이철민 남 13 87
+    */
+    let numberList      = [    1001,     1002,     1003,     1004,    1005,      1006];
+    let nameList        = [  "이민수", "이영희",  "김민정", "이철민", "오만석", "최이슬"];
+    let genderList		= [		"남",    "여",      "여",     "남",    "남",     "여"];
+    let korScoreList    = [      10,      70,       64,         13,      49,       14];
+    let mathScoreList   = [      20,      30,       65,         87,      80,       90];
+
+    let r = Math.floor(Math.random() * numberList.length);
+    document.write(r + "<br/>");
+
+    document.write(numberList[r] + " ");
+    document.write(nameList[r] + " ");
+    document.write(genderList[r] + " ");
+    document.write(korScoreList[r] + " ");
+    document.write(mathScoreList[r] + "<br/>");
+
+  
+</script>
+
+

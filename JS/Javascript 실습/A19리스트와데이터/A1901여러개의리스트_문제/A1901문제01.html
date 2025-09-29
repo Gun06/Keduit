@@ -1,0 +1,24 @@
+<script>
+    /*
+        [문제]
+            let aList = [56,  99, 20, 91, 27];
+            let bList = [32, 100, 32, 73, 77];
+        aList와 bList의 값을 각각 검색해 둘 다 35보다 작은 수이면 "o"를 출력하고,
+        그렇지 않으면 "x"를 출력하시오.
+    */ 
+    /* 
+        [출력예시]
+        x x o x x 
+    */
+    let aList = [56,  99, 20, 91, 27];
+    let bList = [32, 100, 32, 73, 77];
+    for(let i = 0; i < 5; i++){
+        let a = aList[i] < 35;
+        let b = bList[i] < 35;
+        if(a && b){
+            document.write("o ");
+        }else{
+            document.write("x ")
+        }
+    }
+</script>

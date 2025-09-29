@@ -1,0 +1,43 @@
+<script>
+    /* 
+        [문제]
+            let aList = [];
+            let bList = [];
+        aList에 1부터 50 사이의 랜덤 숫자 5개를 추가하고,
+        bList에 51부터 100 사이의 랜덤 숫자 5개를 추가합니다.
+        aList와 bList의 각 요소의 합이 85 이하인 숫자만 삭제하고, 남은 리스트 전체를 출력하시오.
+    */ 
+    /* 
+        [출력예시]
+        27,17,41,18,19
+        51,51,69,68,55
+        41,18
+        69,68
+    */
+    let aList = [];
+    let bList = [];
+
+    for(let i = 0; i < 5; i++){
+        let r1 = Math.floor(Math.random() * 51) + 1;
+        let r2 = Math.floor(Math.random() * 51) + 51;
+        aList.push(r1);
+        bList.push(r2);
+    }
+    document.write(aList + "<br/>");
+    document.write(bList + "<br/>");
+    let i = 0;
+    while(true){
+        if (i == aList.length){
+            break;
+        }
+        let a = aList[i] + bList[i];
+        if(a <= 85){
+            aList.splice(i, 1);
+            bList.splice(i ,1);
+        }else{
+            i += 1;
+        }
+    }
+    document.write(aList + "<br/>");
+    document.write(bList + "<br/>");
+</script>

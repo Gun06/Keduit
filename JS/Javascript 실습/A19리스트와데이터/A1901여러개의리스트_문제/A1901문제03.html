@@ -1,0 +1,28 @@
+<script>
+    /*
+        [문제]
+            let aList = [99, 51, 39, 45, 55];
+            let bList = [70, 69, 18, 58, 73];
+        aList와 bList의 값을 각각 검색해 둘 다 홀수일 경우 해당 숫자를 출력하고,
+        그렇지 않으면, "x"를 출력하시오.
+    */ 
+    /* 
+        [출력예시]
+        x
+        51 69
+        x
+        x
+        55 73
+    */
+    let aList = [99, 51, 39, 45, 55];
+    let bList = [70, 69, 18, 58, 73];
+    for(let i = 0; i < aList.length; i++){
+        let a = aList[i] % 2 == 1;
+        let b = bList[i] % 2 == 1;
+        if(a && b){
+            document.write(aList[i] + " " + bList[i] + "<br/>");
+        }else{
+            document.write("x" + "<br/>");
+        }
+    }
+</script>

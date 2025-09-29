@@ -1,0 +1,45 @@
+<script>
+    /* 
+    [문제]
+        let aList = [];
+        let bList = [];
+        let cList = [];
+
+        aList, bList, cList 에 100~999 사이의 랜덤숫자 5개를 저장한다.
+        aList의 백의자리수
+        bList의 십의자리수
+        cList의 일의자리수를 모두 더하여 total 에  저장한후 출력하시오.
+    */ 
+    /* 
+        713,396,416,335,552
+        548,338,579,250,282
+        932,406,785,471,536
+        69
+    */
+    let aList = [];
+    let bList = [];
+    let cList = [];
+
+    for(let i = 0; i < 5; i++){
+        let r1 = Math.floor(Math.random() * 900) + 100;
+        let r2 = Math.floor(Math.random() * 900) + 100;
+        let r3 = Math.floor(Math.random() * 900) + 100;
+        aList.push(r1);
+        bList.push(r2);
+        cList.push(r3);
+    }
+    document.write(aList + "<br/>");
+    document.write(bList + "<br/>");
+    document.write(cList + "<br/>");
+
+    let total = 0;
+    for(let i = 0; i < aList.length; i++){
+        let a = parseInt(aList[i] / 100);
+        let b = parseInt(bList[i] % 100 / 10);
+        let c = parseInt(cList[i] % 10);
+        let d = a + b + c;
+        total += d;
+    }
+    document.write(total);
+
+</script>

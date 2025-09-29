@@ -1,0 +1,43 @@
+<script>
+    /* 
+        [문제]
+            let aList = [];
+            let bList = [];
+        aList에는 50부터 100 사이의 랜덤 숫자를, 
+        bList에는 1부터 50 사이의 랜덤 숫자를각각 5개씩 추가합니다. 
+        aList에서 bList의 합을값을 구해 그 값이 홀수이면 삭제 후 남은 리스트 전체를 출력하시오.
+    */ 
+    /* 
+        [출력예시]
+        1,30,5,20,14
+        85,63,60,55,92
+        1,14
+        85,92
+    */
+    let aList = [];
+    let bList = [];
+
+    for(let i = 0; i < 5; i++){
+        let r1 = Math.floor(Math.random() * 51) + 1;
+        let r2 = Math.floor(Math.random() * 51) + 51;
+        aList.push(r1);
+        bList.push(r2);
+    }
+    document.write(aList + "<br/>");
+    document.write(bList + "<br/>");
+    let i = 0;
+    while(true){
+        if (i == aList.length){
+            break;
+        }
+        let a = aList[i] + bList[i];
+        if(a % 2 == 1){
+            aList.splice(i, 1);
+            bList.splice(i ,1);
+        }else{
+            i += 1;
+        }
+    }
+    document.write(aList + "<br/>");
+    document.write(bList + "<br/>");
+</script>

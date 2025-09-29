@@ -1,0 +1,32 @@
+<script>
+    /*
+        [문제]
+            let aList = [3, 2, 1, 0];
+            let bList = [5, 3, 11, 22];
+            let candyList = [];
+        사탕 나눠주기 행사하고 있다. 
+        병은 총 4병이고, 각 사탕의 개수는 각기 다르다.
+        사탕은 한 사람당 25개씩 나눠주고 있다.
+        aList 배열은 오늘 사탕을 나눠준 사람 수다.
+        bList 배열은 사탕을 나눠주고 난 나머지이다.
+        오늘 처음 가져온 사탕 수를 구하시오.
+
+    */ 
+    /* 
+        [출력예시]
+        80,53,36,22
+    */
+    let aList = [3, 2, 1, 0];
+    let bList = [5, 3, 11, 22];
+    let candyList = [];
+
+    for(let i = 0; i < aList.length; i++){
+        let a = aList[i] * 25;
+        let b = bList[i];
+        let c = a + b;
+        candyList.push(c);
+    }
+
+    document.write(candyList + "<br/>");
+
+</script>

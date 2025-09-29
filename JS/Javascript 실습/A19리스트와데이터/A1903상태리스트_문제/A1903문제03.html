@@ -1,0 +1,25 @@
+<script>
+    /*
+        [문제]
+        numberList = [1001, 1002, 1003, 1004, 1005]
+        statusList  = [true, true, false, false, true]
+        numberList 배열은 회원 번호 목록이다.
+        statusList 배열은 회원의 탈퇴 여부 목록이다.   
+        true 이면 현재 가입되어있는상태, false 이면 탈퇴한 상태이다.     
+        현재 가입되어있는 회원의 번호들을 aList에 저장하시오. 
+    */ 
+    /* 
+        [출력예시]
+        1001,1002,1005
+    */
+    let numberList = [1001, 1002, 1003, 1004, 1005];
+    let statusList  = [true, true, false, false, true];
+    let aList = [];
+
+    for(let i = 0; i < numberList.length; i++){
+        if(statusList[i] == true){
+            aList.push(numberList[i]);
+        }
+    }
+    document.write(aList);
+</script>

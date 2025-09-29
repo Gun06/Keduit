@@ -1,0 +1,22 @@
+<script>
+    /*
+        [문제] 
+        각 학생들의 국어점수와 수학점수의 합을 totalList에 저장하시오.
+    */ 
+    /*
+        [정답]
+        30,100,129,100,129,104
+    */ 
+    let numberList      = [    1001,     1002,     1003,     1004,    1005,      1006];
+    let nameList        = ["이민수", "이영희",  "김민정", "이철민", "오만석", "최이슬"];
+    let genderList		= [		"남",    "여",      "여",     "남",    "남",     "여"];
+    let korScoreList    = [      10,      70,       64,         13,      49,       14];
+    let mathScoreList   = [      20,      30,       65,         87,      80,       90];
+    let totalList = [];
+
+    for(let i = 0; i < numberList.length; i++){
+        let total = korScoreList[i] + mathScoreList[i];
+        totalList.push(total);
+    }
+    document.write(totalList + "<br/>");
+</script>

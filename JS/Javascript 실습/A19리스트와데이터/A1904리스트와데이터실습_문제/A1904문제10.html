@@ -1,0 +1,36 @@
+<script>
+    /*
+        [문제] 
+        아래 정보는 2학기 국어, 수학 성적이다.
+        1학기와 2학기 성점을 합해 평균을 구한 후,
+        korScoreList와 mathScoreList에 각각 평균 점수로 데이터를 수정하시오.
+    */ 
+    /*
+        [정답]
+        1001 이민수 25 53.5
+        1002 이영희 80 20.5
+        1003 김민정 48 55
+        1004 이철민 39 92.5
+        1005 오만석 63.5 51.5
+        1006 최이슬 13 95
+    */ 
+    let numberList      = [    1001,     1002,     1003,     1004,    1005,      1006];
+    let nameList        = ["이민수", "이영희",  "김민정", "이철민", "오만석", "최이슬"];
+    let genderList		= [		"남",    "여",      "여",     "남",    "남",     "여"];
+    let korScoreList    = [      10,      70,       64,         13,      49,       14];
+    let mathScoreList   = [      20,      30,       65,         87,      80,       90];
+
+    let korScoreList2  = [40, 90, 32, 65, 78,  12];
+    let mathScoreList2 = [87, 11, 45, 98, 23, 100];
+
+    for(let i = 0; i < numberList.length; i++){
+        let a = korScoreList[i] + korScoreList2[i];
+        let b = mathScoreList[i] + mathScoreList2[i];
+        korScoreList[i] = a / 2;
+        mathScoreList[i] = b / 2;
+    }
+
+    for(let i = 0; i < numberList.length; i++){
+        document.write(numberList[i] + " " + nameList[i] + " " + korScoreList[i] + " " + mathScoreList[i] + "<br/>");    
+    }
+</script>

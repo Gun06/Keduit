@@ -1,0 +1,28 @@
+<script>
+    /*
+        [문제] 
+        평균 점수가 60점 이상이면 합격이다.
+        몇 명이 합격했는지 구하시오.
+    */ 
+    /*
+            [출력예시]
+            2
+    */ 
+    let numberList      = [    1001,     1002,     1003,     1004,    1005,      1006];
+    let nameList        = ["이민수", "이영희",  "김민정", "이철민", "오만석", "최이슬"];
+    let genderList		= [		"남",    "여",      "여",     "남",    "남",     "여"];
+    let korScoreList    = [      10,      70,       64,         13,      49,       14];
+    let mathScoreList   = [      20,      30,       65,         87,      80,       90];
+
+    let count = 0;
+    for(let i = 0; i < numberList.length; i++){
+        let total = korScoreList[i] + mathScoreList[i];
+        let avg = Math.round(total / 2);
+        if(avg >= 60){
+            count += 1;
+        }
+    }
+
+    document.write(count);
+</script>
+     

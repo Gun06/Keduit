@@ -1,0 +1,44 @@
+<script>
+    /*
+        [문제]
+            let aList  = [3, 4, 2, 8, 6]
+            let bList  = [5, 3, 1, 7, 3]
+            let cList = [];
+            let chulsuList = [15, 10, 3, 56, 18]
+            let oxList = [];
+        aList와 bList는 구구단의 앞의 숫자와 뒤의 숫자를 의미하며 시험문제이다.
+        cList 에 두수의 곱을 저장한다.
+        chulsuList는 철수의 정답으로 cList 비교해 
+        정답이면 o를 오답이면 x를 oxList 추가하시오.
+        한문제당 점수는 20점이다 철수의 정답을 출력하시오.
+    */ 
+    /* 
+        [출력예시]
+        15,12,2,56,18
+        15,10,3,56,18
+        o,x,x,o,o
+        60
+    */
+    let aList  = [3, 4, 2, 8, 6]
+    let bList  = [5, 3, 1, 7, 3]
+    let cList = [];
+    let chulsuList = [15, 10, 3, 56, 18]
+    let oxList = [];
+    let count = 0;
+
+    for(let i = 0; i < aList.length; i++){
+        let a = aList[i] * bList[i];
+        cList.push(a);
+        if(a == chulsuList[i]){
+            oxList.push("o");
+            count += 1;
+        }else{
+            oxList.push("x");
+        }
+    }
+    document.write(cList + "<br/>");
+    document.write(chulsuList + "<br/>");
+    document.write(oxList + "<br/>");
+    document.write(count * 20);
+
+</script>

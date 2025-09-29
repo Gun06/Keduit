@@ -1,0 +1,35 @@
+<script>
+    /* 
+        [문제]
+            let aList = [5, 3, 7, 3, 8];
+            let bList = [3, 2, 4, 9, 7];
+            let cList = [];
+            aList와 bList의 값을 각각 비교해 5보다 작은 숫자의 개수를 각각 cList 에저장후 출력하시오.
+    */ 
+    /* 
+        [출력예시]
+        5,3,7,3,8
+        3,2,4,9,7
+        1,2,1,1,0
+    */
+    let aList = [5, 3, 7, 3, 8];
+    let bList = [3, 2, 4, 9, 7];
+    let cList = [];
+    
+    for(let i = 0; i < aList.length; i++){
+        let a = aList[i];
+        let b = bList[i];
+        let count = 0;
+        if(a < 5){
+            count += 1;
+        }
+        if(b < 5){
+            count += 1;
+        }
+        cList.push(count);
+    }
+
+    document.write(aList + "<br/>");
+    document.write(bList + "<br/>");
+    document.write(cList + "<br/>");
+</script>

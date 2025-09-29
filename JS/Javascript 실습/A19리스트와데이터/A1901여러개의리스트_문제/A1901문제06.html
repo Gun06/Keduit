@@ -1,0 +1,40 @@
+<script>
+    /* 
+        [이차리스트와 수정 연습]
+            let aList = [212, 171, 185, 408, 691];
+            let bList = [719, 480, 252, 168, 537];
+            let cList = [];
+            let dList = [];
+        a 와 b의 합을 cList에 저장하시오.
+        그리고 a 와 b의 합을한값에서 반올림한값을 dList에 추가하시오.
+    */ 
+    /* 
+        [출력예시]
+        212,171,185,408,691
+        719,480,252,168,537
+        931,651,437,576,1228
+        930,650,440,580,1230
+    */
+    let aList = [212, 171, 185, 408, 691];
+    let bList = [719, 480, 252, 168, 537];
+    let cList = [];
+    let dList = [];
+
+    document.write(aList + "<br/>");
+    document.write(bList + "<br/>");
+
+    for(let i = 0; i < aList.length; i++){
+        let c = aList[i] + bList[i];
+        cList.push(c);
+        let _10 = parseInt(c / 10);
+        let _1 = c % 10;
+        if( _1 >= 5){
+            _10 += 1;
+        }
+        let d = _10 * 10;
+        dList.push(d);
+    }
+    document.write(cList + "<br/>");
+    document.write(dList + "<br/>");
+
+</script>

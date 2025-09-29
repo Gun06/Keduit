@@ -1,0 +1,31 @@
+<script>
+    /*
+        [문제]
+            let candyList = [80, 53, 36, 22];
+            let aList = [];
+            let bList = [];
+        아래 배열 candyList 각 병에 들어있는 사탕의 양이다. 
+        한 사람당 한 병에서 25개씩 나눠주려 한다. 
+        나눠줄 수 있는 사람 수를aList에 저장하시오.
+        나눠주고 남은 사탕은 bList에 순차적으로 저장하시오.
+    */ 
+    /* 
+        [출력예시]
+        80,53,36,22
+        3,2,1,0
+        5,3,11,22
+    */
+    let candyList = [80, 53, 36, 22];
+    let aList = [];
+    let bList = [];
+    for(let i = 0; i < candyList.length; i++){
+        let a = parseInt(candyList[i] / 25);
+        let b = candyList[i] % 25;
+        aList.push(a);
+        bList.push(b);
+    }
+    document.write(candyList + "<br/>");
+    document.write(aList + "<br/>");
+    document.write(bList + "<br/>");
+
+</script>

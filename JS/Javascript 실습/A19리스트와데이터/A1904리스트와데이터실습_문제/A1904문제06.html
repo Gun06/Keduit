@@ -1,0 +1,24 @@
+<script>
+    /*
+        [문제] 
+        국어와 수학 점수가 모두 60점 이상인 학생 정보를 출력하시오
+    */ 
+    /*
+        [정답]
+        1003 김민정 여 64 65
+    */ 
+    let numberList      = [    1001,     1002,     1003,     1004,    1005,      1006];
+    let nameList        = ["이민수", "이영희",  "김민정", "이철민", "오만석", "최이슬"];
+    let genderList		= [		"남",    "여",      "여",     "남",    "남",     "여"];
+    let korScoreList    = [      10,      70,       64,         13,      49,       14];
+    let mathScoreList   = [      20,      30,       65,         87,      80,       90];
+
+    for(let i = 0; i < numberList.length; i++){
+        let a = korScoreList[i];
+        let b = mathScoreList[i];
+        if(a >= 60 && b >= 60){
+            document.write(numberList[i] + " " + nameList[i] + " " + korScoreList[i] + " " + mathScoreList[i] + "<br/>");
+        }
+    }
+
+</script>

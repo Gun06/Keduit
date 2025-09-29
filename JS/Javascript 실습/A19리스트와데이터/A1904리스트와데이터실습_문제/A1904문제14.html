@@ -1,0 +1,36 @@
+<script>
+    /*
+        [문제] 
+            1등의 번호, 이름을 출력하시오.
+            만약 여러 명이면 전부 출력하시오.
+    */ 
+    /*
+        [정답]
+            129
+            1003 김민정 64 65
+            1005 오만석 49 80
+    */ 
+    let numberList      = [    1001,     1002,     1003,     1004,    1005,      1006];
+    let nameList        = ["이민수", "이영희",  "김민정", "이철민", "오만석", "최이슬"];
+    let genderList		= [		"남",    "여",      "여",     "남",    "남",     "여"];
+    let korScoreList    = [      10,      70,       64,         13,      49,       14];
+    let mathScoreList   = [      20,      30,       65,         87,      80,       90];
+
+    let max = korScoreList[0] + mathScoreList[0];
+
+    for(let i = 1; i < numberList.length; i++){
+        let total = korScoreList[i] + mathScoreList[i];
+        if(max < total){
+            max = total;
+        }
+    }
+    document.write(max + "<br/>");
+
+    for(let i = 0; i < numberList.length; i++){
+        let total = korScoreList[i] + mathScoreList[i];
+        if(max == total){
+            document.write(numberList[i] + " " + nameList[i] + " " + korScoreList[i] + " " + mathScoreList[i] + "<br/>");    
+        }
+    }
+
+</script>

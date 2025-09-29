@@ -1,0 +1,55 @@
+<script>
+    /* 
+        [문제]
+            let aList = [];
+            let bList = [];
+            let cList = [];
+            let dList = [];
+        aList, bList, cList 에 100~999 사이의 랜덤숫자 5개를 저장한다.
+        aList의 백의자리수
+        bList의 십의자리수
+        cList의 일의자리수를 모두 더하여 dList에 저장후 출력한다.
+        dList에서 가장큰수를 출력하시오.
+    */ 
+    /* 
+        [출력예시]
+        876,853,106,418,221
+        168,764,914,453,391
+        240,243,342,772,673
+        14,17,4,11,14
+        17
+    */
+    let aList = [];
+    let bList = [];
+    let cList = [];
+    let dList = [];
+
+    for(let i = 0; i < 5; i++){
+        let r1 = Math.floor(Math.random() * 900) + 100;
+        let r2 = Math.floor(Math.random() * 900) + 100;
+        let r3 = Math.floor(Math.random() * 900) + 100;
+        aList.push(r1);
+        bList.push(r2);
+        cList.push(r3);
+    }
+    document.write(aList + "<br/>");
+    document.write(bList + "<br/>");
+    document.write(cList + "<br/>");
+
+    for(let i = 0; i < aList.length; i++){
+        let a = parseInt(aList[i] / 100);
+        let b = parseInt(bList[i] % 100 / 10);
+        let c = parseInt(cList[i] % 10);
+        let d = a + b + c;
+        dList.push(d);
+    }
+    document.write(dList + "<br/>");
+    let max = dList[0];
+    for(let i = 1; i < dList.length; i++){
+        if(max < dList[i]){
+            max = dList[i];
+        }
+    }
+    document.write(max);
+
+</script>

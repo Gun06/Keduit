@@ -1,0 +1,26 @@
+<script>
+    /*
+        [문제]
+            let aList = [4, 3, 8, 9, 2, 6];
+            let bList = [6, 6, 3, 9, 3, 7];
+            let cList = [];
+        aList와 bList는 구구단의 앞의 숫자와 뒤의 숫자를 의미한다.
+        앞의 숫자와 뒤의 숫자의 곱을 cList에 추가하시오.
+    */ 
+    /*
+        [출력예시]
+        4,3,8,9,2,6
+        6,6,3,9,3,7
+        24,18,24,81,6,42
+    */
+    let aList = [4, 3, 8, 9, 2, 6];
+    let bList = [6, 6, 3, 9, 3, 7];
+    let cList = [];
+    for(let i = 0; i < aList.length; i++){
+        let a = aList[i] * bList[i];
+        cList.push(a);
+    }
+    document.write(aList + "<br/>");
+    document.write(bList + "<br/>");
+    document.write(cList + "<br/>");
+</script>

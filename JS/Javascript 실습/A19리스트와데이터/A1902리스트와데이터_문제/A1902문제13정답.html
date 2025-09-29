@@ -1,0 +1,42 @@
+<script>
+    /*
+        [문제]
+            let item 	  = [1001, 1002, 1003, 1004, 1005];
+            let price 	  = [ 500, 1200, 4000, 2300, 2000];
+            let count 	  = [   3,    1,    2,    1,    4];
+
+        item 리스트는 상품의 번호이다.
+        price 리스트는 상품의 가격이다.
+        count 리스트는 상품의 재고 개수이다.
+
+        가장 매출이 높은 상품의 번호와 가격을 출력하시오.
+        단, 매출이 같은 경우 모두 출력하시오.
+    */
+    /*
+        [출력예시]
+        8000
+        1003 8000
+        1005 8000
+    */
+    let item 	  = [1001, 1002, 1003, 1004, 1005];
+    let price 	  = [ 500, 1200, 4000, 2300, 2000];
+    let count 	  = [   3,    1,    2,    1,    4];
+
+    let max = price[0] * count[0];
+    for(let i = 1; i < item.length; i++){
+        let total = price[i] * count[i];
+        if(max < total){
+            max = total;
+        }
+    }
+
+    document.write(max + "<br/>");
+
+    for(let i = 0; i < item.length; i++){
+        let total = price[i] * count[i];
+        if(total == max){
+            document.write(item[i] + " " + total + "<br/>");
+        }
+    }
+
+</script>

@@ -1,0 +1,26 @@
+<script>
+    /*
+        [문제] 
+        전교생의 총점과 평균을 구하시오.
+    */ 
+    /*
+        [출력예시]
+        592
+        98.67
+    */ 
+    let numberList      = [    1001,     1002,     1003,     1004,    1005,      1006];
+    let nameList        = ["이민수", "이영희",  "김민정", "이철민", "오만석", "최이슬"];
+    let genderList		= [		"남",    "여",      "여",     "남",    "남",     "여"];
+    let korScoreList    = [      10,      70,       64,         13,      49,       14];
+    let mathScoreList   = [      20,      30,       65,         87,      80,       90];
+
+    let totalAll = 0;
+    for(let i = 0; i < numberList.length; i++){
+        let total = korScoreList[i] + mathScoreList[i];
+        totalAll += total;
+    }
+    let avgAll = totalAll / 6;
+    avgAll = avgAll.toFixed(2);
+    document.write(totalAll + "<br/>");
+    document.write(avgAll + "<br/>");
+</script>

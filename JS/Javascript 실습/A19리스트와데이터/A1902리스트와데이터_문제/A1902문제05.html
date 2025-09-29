@@ -1,0 +1,81 @@
+<script>
+    /*
+        [문제]
+            let sample1 = [
+                    "양념치킨", 
+                    "짬뽕",
+                    "평생 겨울",
+                    "무없이 치킨먹기",
+                    "평생 컴퓨터없이 살기",
+                    "겨울에 에어컨",
+                    "아이스 아메리카노"];
+            let sample2 = [
+                    "후라이드치킨", 
+                    "짜장면",
+                    "평생 여름",
+                    "콜라없이 햄버거먹기", 
+                    "평생 핸드폰없이 살기",
+                    "여름에 히터",
+                    "뜨거운 아메리카노"];
+            let aList = [];
+            let bList = [];
+        아래는 철수와 영희 가 데이트 1주년을 기념하여 벨런스게임을하기로했다.
+        sample1과 sample2중 한개를 선택한다. 
+        선택은 매번 랜덤으로 한다. 
+        철수의 선택은 aList 에 sample1 이면1 , saple2면 2를 저장한다. 
+        영희의 선택은 bList 에 sample1 이면1 , saple2면 2를 저장한다. 
+        철수와 영희가 서로 같은 선택을 한개수도 출력하시오. 
+    */ 
+    /* 
+        2,1,1,2,1,2,2
+        1,2,1,1,1,1,1
+        2
+    */
+   
+    let sample1 = [
+            "양념치킨", 
+            "짬뽕",
+            "평생 겨울",
+            "무없이 치킨먹기",
+            "평생 컴퓨터없이 살기",
+            "겨울에 에어컨",
+            "아이스 아메리카노"];
+    let sample2 = [
+            "후라이드치킨", 
+            "짜장면",
+            "평생 여름",
+            "콜라없이 햄버거먹기", 
+            "평생 핸드폰없이 살기",
+            "여름에 히터",
+            "뜨거운 아메리카노"];
+    let aList = [];
+    let bList = [];
+    let count = 0;
+
+    for(let i = 0; i< sample1.length; i++){
+        let r1 = Math.floor(Math.random() * 2) + 1;
+        let r2 = Math.floor(Math.random() * 2) + 1;
+        if(r1 == 1){
+            aList.push(1);
+        }else if(r1 == 2){
+            aList.push(2);
+        }
+        if(r2 == 1){
+            bList.push(1);
+        }else if(r2 == 2){
+            bList.push(2);
+        }
+    }
+
+    for(let i = 0; i < aList.length; i++){
+        if(aList[i] == bList[i]){
+            count += 1;
+        }
+    }
+
+    document.write(aList + "<br/>");
+    document.write(bList + "<br/>");
+    document.write(count + "<br/>");
+
+
+</script>
