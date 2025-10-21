@@ -1,0 +1,49 @@
+<script>
+    /*
+        [여러 명의 학생 정보 삭제] 
+        let studentLists = [
+            {"number" : 1001, "name" : "이민수", "gender" : "남" , "korScore" : 10, "mathScore" : 20},
+            {"number" : 1002, "name" : "이영희", "gender" : "여" , "korScore" : 70, "mathScore" : 30},
+            {"number" : 1003, "name" : "김민정", "gender" : "여" , "korScore" : 64, "mathScore" : 65},
+            {"number" : 1004, "name" : "이철민", "gender" : "남" , "korScore" : 13, "mathScore" : 87},
+            {"number" : 1005, "name" : "오만석", "gender" : "남" , "korScore" : 49, "mathScore" : 80},
+            {"number" : 1006, "name" : "최이슬", "gender" : "여" , "korScore" : 14, "mathScore" : 90},
+        ];  
+        - 성별이 "남"인 학생의 정보를 모든 배열에서 삭제한 후, 나머지 학생들의 데이터를 출력합니다.
+    */ 
+
+    /*
+        [출력예시]
+        1002 이영희 여 70 30
+        1003 김민정 여 64 65
+        1006 최이슬 여 14 90
+    */ 
+
+	let studentLists = [
+		{"number" : 1001, "name" : "이민수", "gender" : "남" , "korScore" : 10, "mathScore" : 20},
+		{"number" : 1002, "name" : "이영희", "gender" : "여" , "korScore" : 70, "mathScore" : 30},
+		{"number" : 1003, "name" : "김민정", "gender" : "여" , "korScore" : 64, "mathScore" : 65},
+		{"number" : 1004, "name" : "이철민", "gender" : "남" , "korScore" : 13, "mathScore" : 87},
+		{"number" : 1005, "name" : "오만석", "gender" : "남" , "korScore" : 49, "mathScore" : 80},
+		{"number" : 1006, "name" : "최이슬", "gender" : "여" , "korScore" : 14, "mathScore" : 90},
+	];   
+    
+    let delLists  = [];
+  
+    for(let i = 0; i < studentLists.length; i++) {
+        let tf = studentLists[i]["gender"] == "남"
+        if(!tf) {
+            delLists.push(studentLists[i]);
+        } 
+    }
+
+    studentLists = delLists;
+  
+    for(let i = 0; i < studentLists.length; i++) {
+        document.write(studentLists[i]["number"], " ");
+        document.write(studentLists[i]["name"], " ");
+        document.write(studentLists[i]["gender"], " ");
+        document.write(studentLists[i]["korScore"], " ");
+        document.write(studentLists[i]["mathScore"], "<br>");
+    }
+</script>

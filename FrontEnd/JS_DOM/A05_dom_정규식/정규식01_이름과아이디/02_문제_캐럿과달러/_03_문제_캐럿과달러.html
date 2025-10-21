@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*  
+            아래 결과를 예상하고, 실행하시오.
+        */
+        let exp = /^b/;
+        
+        let value = "ab";
+        let check = exp.test(value);
+        document.write(check + "<br>");             
+
+        value = "abcd";
+        check = exp.test(value);
+        document.write(check + "<br>");             
+
+        value = "baacd";
+        check = exp.test(value);
+        document.write(check + "<br>");             
+
+        value = "acbdb";
+        check = exp.test(value);
+        document.write(check + "<br>");             
+
+    </script>
+</body>
+</html>

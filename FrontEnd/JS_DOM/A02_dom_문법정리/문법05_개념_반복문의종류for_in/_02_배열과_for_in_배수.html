@@ -1,0 +1,31 @@
+<script>
+    /*
+        [배열과 배수]
+        - let aList = [10, 20, 30, 40, 50];
+        - aList에서 4의 배수인 요소를 모두 출력하시오.
+    */
+
+    /*
+        [출력예시]
+        20 40
+    */
+    
+    let aList = [10, 20, 30, 40, 50];
+
+     for (let index in aList){
+         let tf = aList[index] % 4 == 0;
+        if(tf) {
+            document.write(aList[index], " ");
+        }
+
+    }
+
+    document.writeln("<hr>");
+
+    for(let i = 0; i < aList.length; i++){
+        let tf = aList[i] % 4 == 0;
+        if(tf) {
+            document.write(aList[i], " ");
+        }
+    }
+</script>

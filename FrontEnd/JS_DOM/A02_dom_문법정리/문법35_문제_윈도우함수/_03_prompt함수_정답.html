@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window객체</title>
+</head>
+<body>
+
+    <script>
+        /*
+            [문제]
+            "당신의 연령은?" 의 질문과 함께 입력창이 나타난다.
+
+            (1) 숫자를 입력하면 나이가 출력된다.
+            (2) 문자를 입력하면 "잘못 입력했습니다." 를 출력한다. 
+               
+        */
+        let age = prompt("당신의 연령은?");
+    
+        // isNaN함수 : 문자이면 true를 반환한다.
+        if(isNaN(age) == false) {
+            alert(`당신의 나이는 ${age}세 이군요!`); 
+        } else {
+            alert("잘못 입력했습니다.");       
+        }
+
+       
+    </script>
+    
+</body>
+</html>

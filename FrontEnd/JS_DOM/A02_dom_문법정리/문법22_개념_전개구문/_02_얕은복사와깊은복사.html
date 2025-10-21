@@ -1,0 +1,22 @@
+<script>
+    
+    let arr = [10, 20, 30];
+    let temp = arr; // 얕은복사 
+
+    temp[1] = 100;
+    document.writeln(arr);
+
+    document.writeln("<hr>");
+
+    let arr2 = [40, 50, 60];
+    let temp2 = [];
+    for(let i = 0; i < arr2.length; i++){
+        temp2.push(arr2[i]); // 깊은복사
+    }
+    
+    temp2[1] = 200;
+
+    document.writeln(arr2);
+    
+
+</script>

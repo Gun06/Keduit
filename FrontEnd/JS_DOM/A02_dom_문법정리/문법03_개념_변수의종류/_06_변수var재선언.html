@@ -1,0 +1,29 @@
+<script>
+
+
+    /*
+        var 는 let 과 다르게 재선언이 가능하다. 
+        반면 let 과 const 는 재선언이 불가능하다. 
+        그리하여 변수명 중복같은 오류가 발생하지않는다. 
+    */
+    /*
+        [결론]
+        상황에 맞게 var let const 를 사용하면된다. 
+        오류를 최소화하는 방법은 const 로 모든변수를 사용한후 
+        값을 변경해야하는 변수들만 let으로 변경하면 
+        오류를 최소한으로 할수있다. 
+    */
+
+    
+    var name1 = 'Mike';
+    document.write(name1); // Mike
+    var name1 = 'Jane'
+    document.write(name1); // Jane
+
+    let name2 = 'Kane';
+    // let name2 = 'Simon'; 
+
+    const name3 = 'Jone';
+    //const name3 = 'Pike';    
+
+</script>

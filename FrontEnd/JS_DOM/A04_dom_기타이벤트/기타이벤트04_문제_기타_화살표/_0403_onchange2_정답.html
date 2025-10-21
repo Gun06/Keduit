@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <!--
+        [문제]
+        선택한 항목이 표시되도록 만드시오.
+    -->
+
+    <h4>과목을 선택하세요.</h4>
+    <select id="mySelect">
+        <option value="none">과목</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="javascript">JavaScript</option>
+    </select>
+
+    <p id="selected">선택한 과목 : </p>
+
+    <script>
+        let $element = document.querySelector("#mySelect");
+        $element.addEventListener("change", () => {
+            let value = document.querySelector("#mySelect").value;
+
+            document.querySelector("#selected").innerText = "선택한 과목 : " + value;
+        });
+
+
+    </script>
+
+</body>
+</html>

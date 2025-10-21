@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--
+        [문제]
+        키를 누를때는 빨간색 땔때는 초록색으로 배경을 변경하시오.
+    -->   
+
+    <input type="text" id="myInput">
+
+    <script>
+        let $element = document.querySelector("#myInput");
+
+        $element.addEventListener("keydown", () => {
+            document.querySelector("#myInput").style.backgroundColor = "red";
+        });
+
+        $element.addEventListener("keyup", () => {
+            document.querySelector("#myInput").style.backgroundColor = "green";
+        });
+
+        
+        
+        
+    </script>
+
+</body>
+</html>

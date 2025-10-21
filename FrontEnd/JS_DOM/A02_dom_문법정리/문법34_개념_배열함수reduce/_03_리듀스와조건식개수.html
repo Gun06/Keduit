@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+      /*
+        개수는 total + a 대신 count + 1을 사용한다. 
+      */
+    
+      let scoreList = [100, 40, 2, 75, 9];
+      let countAll = scoreList.reduce( (count, a) => {
+        if(a >= 60){
+          return count + 1;
+        }else{
+          return count;
+        }
+      }, 0);
+      document.writeln(countAll);
+    </script>
+  </body>
+</html>

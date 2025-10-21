@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+     
+
+      var text =
+        '{ "employees" : [' +
+        '{ "firstName":"John" , "lastName":"Doe" },' +
+        '{ "firstName":"Anna" , "lastName":"Smith" },' +
+        '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+
+      let obj = JSON.parse(text); //문자열 형태의 JSON을 Object 객체로 변환
+      
+      let employeesList = obj.employees;
+
+      for(let i = 0; i < employeesList.length; i++){
+          document.writeln(employeesList[i].firstName , " ");
+          document.writeln(employeesList[i].lastName , "<br>");
+      }
+
+    </script>
+  </body>
+</html>

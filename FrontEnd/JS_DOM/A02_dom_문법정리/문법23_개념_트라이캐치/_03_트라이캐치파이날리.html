@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+      /*
+          [트라이캐치파이날리]
+          트라이캐치문에 옵션으로 finally 를 하나 더사용할수있다. 
+          이곳은 에러가 발생하든 안발생하든 동작하는곳으로 
+          코드가 잘동작하고있는지 확인할때 사용하면좋다. 
+
+          [문법]
+            try {
+            } catch (error) {
+             
+            }finally{
+            
+            }
+
+      */
+
+      try{
+
+      }catch(error){
+
+      }finally{
+          document.writeln("에러가 나든지 안나든지 동작함1." , "<br>");
+      }
+
+      try {
+          testtest();
+      } catch (error) { 
+        console.log(error); // 에러가 무엇인지 알려준다.
+      }finally{
+        document.writeln("에러가 나든지 안나든지 동작함2.");
+      }
+
+     
+    </script>
+  </body>
+</html>

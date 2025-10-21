@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        /*    
+            [문제]
+            아래데이터를 "data" 키로 localStorage 에 저장하시오.
+        */
+        let userList = [
+          { id: 1, name: "Jone" },
+          { id: 2, name: "Mike" },
+        ];
+
+   
+        let data = JSON.stringify(userList); // 문자열로 저장해야되서 변환해준다. 
+
+        localStorage.setItem("data", data); 
+
+        document.writeln("로컬에저장");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<script>
+    /*
+        1초 뒤에 "헬로1"
+        3초 뒤에 "헬로2"
+        6초 뒤에 "헬로3" 을출력하시오.
+    */
+
+    const promise1 = () => new Promise(resolve => setTimeout(() => resolve("헬로1"), 1000));
+    const promise2 = () => new Promise(resolve => setTimeout(() => resolve("헬로2"), 2000));
+    const promise3 = () => new Promise(resolve => setTimeout(() => resolve("헬로3"), 3000));
+
+    promise1().then(result => {
+        document.writeln(result) // promise1 은 1초뒤에 실행됨
+        return promise2();
+    }).then(result => {
+        document.writeln(result) // promise1이 끝나고 2초뒤에 promise2가 시작한다. 즉, 3초뒤에 수행됨 (1 + 2) => 3
+        return promise3();
+    }).then(result => {
+        document.writeln(result) // promise2이 끝나고 3초뒤에 promise3가 시작한다. 즉, 3초뒤에 수행됨 (1 + 2 + 3) => 6
+    });
+</script>

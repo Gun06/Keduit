@@ -1,0 +1,47 @@
+<script>
+
+    /*
+        forEach 는 배열에서 반복문을 바로 연결해서 쓰는방법으로 
+
+        (1) 값만 꺼낼수도있고,
+
+        (2) 값 과 인덱스를 꺼낼수도있고,
+
+        (3) 값과 인덱스와 배열을 꺼낼수도 있다. 
+
+        [구조]
+            (1) 배열.forEach(  화살표함수 );
+            (2) 배열.forEach(  () => {} );
+    */
+
+    /*  
+        [주의]
+        for of 나 for in 과는 다르다. 
+        forEach는 함수이다.
+        [예시]
+            for(let v of arr){}
+            for(let i in arr){}
+            arr.forEach( () => {} );
+    */
+
+    let arr = [10, 20, 30];
+    arr.forEach((value) => {
+        document.write(value + " ");
+    });
+
+    document.write("<hr>");
+
+    arr.forEach((value, index) => {
+        document.write(value + " " + index + "<br>");
+    });
+
+    document.write("<hr>");
+
+    arr.forEach((value, index, array) =>{
+        document.write(value + " " + index + " " + array + "<br>");  
+    });
+
+    document.write("<hr>");
+
+
+</script>

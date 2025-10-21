@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onclick</title>
+</head>
+<body>
+    <!--
+        [결론]
+        1. 일반 함수에서 this는 자기 자신
+        2. addEventListener에서 this는 자기 자신
+        3. 익명 함수에서 this는 자기 자신
+        4. 화살표 함수에서의 this는 window클래스이고,
+           자기 자신은 event.target
+    -->
+    <button id="btn">버튼</button>
+
+    <script>
+        let $btn = document.querySelector("#btn");
+        $btn.addEventListener("click", () => {
+            // class 선택자로 가져오기
+            let a = document.querySelector("#btn");
+            console.log(a);
+            console.log("---------");
+
+            // 화살표함수 안에서의 this는 윈도우클래스를 의미한다.
+            console.log(this);
+            // 때문에 this대신 event.target으로 나 자신을 찾을 수 있다.
+            console.log(event.target);
+        });
+    </script>
+
+</body>
+</html>

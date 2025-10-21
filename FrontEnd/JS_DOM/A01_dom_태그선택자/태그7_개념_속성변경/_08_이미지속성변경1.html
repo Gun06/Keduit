@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sub {
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">간식 종류</h1>
+
+
+    <table border="1">
+        <tr>
+            <td>
+                <img src="images/snack1.jpg" id="main" width="200px" height="200px">
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        // 메인 상품 이미지 가져오기
+        let mainImg = document.querySelector("#main");
+
+        mainImg.src = "images/snack2.jpg";
+        // mainImg.setAttribute("src", "images/snack2.jpg");
+    </script>
+
+</body>
+</html>

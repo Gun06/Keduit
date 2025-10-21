@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>객체 생성</title>
+</head>
+<body>
+	<script>
+		/*
+			[객체 사용]
+			obj1["num"] 또는 obj1.num 으로 사용가능
+		*/
+
+
+		// 객체 선언(1)
+		let obj1 = { num : 1, string : "a", boolean : true} ;	
+		document.write(obj1.num + "<br>");
+		document.write(obj1.string + "<br>");
+		document.write(obj1.boolean + "<br>");
+		
+		// 객체 선언(2)
+ 		let obj2 = new Object(); // 빈객체 
+		obj2["num"] = 1;
+		obj2["string"] = "a";
+		obj2["boolean"] = true;
+		document.write(obj2.num + "<br>");
+		document.write(obj2.string + "<br>");
+		document.write(obj2.boolean + "<br>");
+
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,44 @@
+<script>
+
+    /*
+        [어싱크 어웨이트]
+        프로미스의 then 을 조금더 편하게 사용하기위해서 나온 문법이다.
+        둘다 똑같은 역활을 하므로 둘중 아무거나 사용해도된다. 
+        마찬가지로 추후 리엑트 에서 사용한다. 
+
+        [1] 선언은 똑같다. 
+         const promise1 = () => new Promise(resolve => setTimeout(() => resolve(1), 1000));
+
+        [1-1] 기존모습 
+         promise1().then(result => { 
+            document.writeln(result);
+        });
+
+
+        [1-2] then 이 아래와 같이 사용할수 있다. 
+        async function runPromises() {
+            const result1 = await promise1();  // 1초 후 실행
+            document.writeln(result1);
+        }
+        runPromises();
+    */
+
+    const promise1 = () => new Promise(resolve => setTimeout(() => resolve(1), 1000));
+
+    async function runPromises() {
+        const result1 = await promise1();  
+        document.writeln(result1);
+    }
+
+    runPromises();
+
+    /*
+        let  promise1 = () => new Promise(resolve => setTimeout(() => resolve("헬로"), 1000));
+
+
+        promise1().then(result => { 
+            document.writeln(result);
+        });
+    */
+
+</script>

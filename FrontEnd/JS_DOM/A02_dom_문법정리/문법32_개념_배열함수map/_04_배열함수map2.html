@@ -1,0 +1,28 @@
+<script>
+    /*
+        [문제]
+        let aList = [10, 43, 26, 12, 52];
+        aList의 각 요소를 일의 자리에서 반올림한 후, 수정된 aList 전체를 출력하시오.
+    */
+
+    /*
+        [출력예시]
+        10,43,26,12,52
+        10,40,30,10,50
+    */
+
+    let aList = [10, 43, 26, 12, 52];
+    document.write(aList, "<br>");
+
+    let test = aList.map( (a) => {
+        let _10 = parseInt(a  / 10);
+        let _1 = a % 10;
+        if(_1 >= 5) {
+            _10 += 1;
+        }
+        return _10 * 10;
+    } );
+
+    
+    document.write(test);
+</script>

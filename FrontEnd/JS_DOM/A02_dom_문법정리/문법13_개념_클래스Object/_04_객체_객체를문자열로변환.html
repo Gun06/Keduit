@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+          객체배열을 다시 객체로 감싼다음 문자열로 변환할수있다.
+      */
+
+      let data = {
+        employees: [
+          { firstName: "John", lastName: "Doe" },
+          { firstName: "Anna", lastName: "Smith" },
+          { firstName: "Peter", lastName: "Jones" },
+        ],
+      };
+
+      let stringValue = JSON.stringify(data); //객체를 문자열로 전환
+      document.writeln(stringValue);
+     
+    </script>
+  </body>
+</html>

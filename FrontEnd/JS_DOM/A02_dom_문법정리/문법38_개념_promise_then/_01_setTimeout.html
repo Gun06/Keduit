@@ -1,0 +1,27 @@
+<script>
+
+    /*  
+        [셋타임아웃]
+            비동기 함수로 특정함수를 몇초후에 실행할수있다. 
+            1번에는 실행할 함수를 넣고 , 2번엔 지체시간을 넣는다.
+            단, 지체시간은 밀리세컨드로  1000 이 1초이다. 
+            즉 2초는 2000 , 0.5초는 500이된다. 
+            
+
+    */
+
+    /*
+        setTimeout( 1 , 2);
+        setTimeout( 함수 , 지체시간);
+        setTimeout( () => 함수() , 밀리세컨);
+        setTimeout( () => resolve(1) , 1000);
+    */
+    setTimeout(() => resolve(1), 1000);
+    setTimeout(() => resolve(2), 2000);
+    setTimeout(() => resolve(3), 3000)
+
+
+    function resolve(num){
+        document.writeln(num);
+    }
+</script>

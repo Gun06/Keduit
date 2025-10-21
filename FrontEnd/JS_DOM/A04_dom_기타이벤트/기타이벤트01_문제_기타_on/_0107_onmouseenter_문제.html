@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onclick</title>
+</head>
+<body>
+	<style>
+		#my_div {
+			background: red;
+			height: 300px;
+			width: 1000px;
+		}
+	</style>
+
+	<!--
+		[문제]
+		마우스가 사각형에 들어올때 나갈때를 감지하는 코드를 작성하시오.
+	-->
+
+	<div id='my_div' onmouseenter="mouseEnterEvent()" onmouseleave="mouseLeaveEvent()">
+	</div>
+	<input id='clearbtn' type='button' value='clear' onclick="clickEvent()">
+	<div id='result'>
+	</div>
+
+	
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>value</title>
+</head>
+<body>
+    <form>
+        아이디 : <input type="text">
+        <input type="submit" onclick="checkValue()">
+    </form>
+
+    <script>
+        /*
+            버튼 비활성으로 변경해서 아래와 같이 활용할 수도 있다.
+        */
+
+        function checkValue(){		
+            event.target.disabled = true;
+            alert("함수가호출되었습니다.");
+        }
+    </script>
+    
+</body>
+</html>

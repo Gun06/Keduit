@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sub {
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">간식 종류</h1>
+    <p>아래 작은그림을 클릭하시오.</p>
+
+
+    <table border="1">
+        <tr>
+            <td colspan="2">
+                <img src="images/snack1.jpg" class="sub" >
+                <img src="images/snack2.jpg" class="sub">
+                <img src="images/snack3.jpg" class="sub">
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        // 작은 상품 이미지 가져오기
+        let subImgs = document.querySelectorAll(".sub");
+
+        // 이벤트 적용하기
+        for(let i=0; i<subImgs.length; i++) {
+            subImgs[i].addEventListener("click", changeImg);
+        }
+        
+        function changeImg() {
+            console.log(this);
+        }
+    </script>
+
+</body>
+</html>

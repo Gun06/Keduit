@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let personList = [
+        {
+          name: "이민정",
+          city: "서울",
+        },
+        {
+          name: "김철민",
+          city: "대구",
+        },
+        {
+          name: "이국민",
+          city: "제주",
+        },
+        {
+          name: "심호정",
+          city: "서울",
+        },
+      ];
+
+      let pass = personList.filter( (person) => {
+        return person.city == "서울";
+      });
+
+       for(let i = 0; i < pass.length; i++) {
+        document.write(pass[i]["name"], " ");
+        document.write(pass[i]["city"], "<br>");
+    }
+
+    </script>
+  </body>
+</html>

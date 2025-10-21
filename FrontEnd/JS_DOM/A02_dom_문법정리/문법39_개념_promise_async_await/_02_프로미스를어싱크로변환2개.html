@@ -1,0 +1,16 @@
+<script>
+
+    const promise1 = () => new Promise(resolve => setTimeout(() => resolve(1), 1000));
+    const promise2 = () => new Promise(resolve => setTimeout(() => resolve(2), 2000));
+
+    async function runPromises() {
+        const result1 = await promise1();  // 1초 후 실행
+        document.writeln(result1);
+
+        const result2 = await promise2();  // 그 뒤 2초 후 실행 (총 3초)
+        document.writeln(result2);
+
+    }
+
+    runPromises();
+</script>

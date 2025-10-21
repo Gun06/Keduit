@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+          [Map 클래스]
+          사실상 객체와 비슷한 클래스이다. 
+
+          (1) 값추가        => set( key , value); 
+          (2) 사이즈        => size
+          (3) 값가져오기    => get( key );
+          (4) 키확인        => has( key );
+          (5) 한개삭제      => delete(key);
+          (6) 전부삭제      => clear();
+      */
+
+      let userMap = new Map();
+      userMap.set("name", "홍길동");
+      userMap.set("email", "abc@email.com");
+      userMap.set("phone", "000-0000-0000");
+      let n = userMap.size; // 3
+      document.writeln(n, "<br>");
+      let a = userMap.get("name"); 
+      let b = userMap.get("email");
+      let c = userMap.get("phone"); 
+
+      document.writeln(a);
+      document.writeln(b);
+      document.writeln(c);
+      document.writeln("<br>");
+
+      let d = userMap.has("name"); //true
+      document.writeln(d , "<br>");
+
+      userMap.delete("name");  // key 로 삭제 
+      let n2 = userMap.size; 
+      document.writeln(n2, "<br>");
+
+      userMap.clear(); //저장되어 있는 모든 데이터가 삭제 됨.
+      let n3= userMap.size; 
+      document.writeln(n3, "<br>");
+    </script>
+  </body>
+</html>

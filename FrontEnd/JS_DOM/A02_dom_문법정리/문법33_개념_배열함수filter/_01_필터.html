@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        /*
+            [filter]
+
+            기본적으로 맵과 사용법이 똑같다
+            갯수가 변하는 경우 사용한다. 
+
+            [정리]
+            삭제의 역활을 한다고 생각하면된다. 
+        */
+
+        let testArray = [0,1,2,3,4,5];
+        let test = testArray.filter((c) => { return c <= 2; }); // [0, 1, 2]
+        document.writeln(test);
+
+    </script>
+  </body>
+</html>

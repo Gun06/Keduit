@@ -1,0 +1,38 @@
+<script>
+    /*
+        [문제]
+        let aList = [2, 4, 6, 5, 10, 9, 15, 7, 12, 13];
+        aList의 각 요소에 대해,
+        30의 약수이거나 20의 약수이면 숫자를 그대로 출력하고,
+        그렇지 않은 경우에는 "x"를 출력하시오.
+    */
+
+    /*
+        [출력예시]
+        2 4 6 5 10 x 15 x x x 
+    */
+
+    let aList = [2, 4, 6, 5, 10, 9, 15, 7, 12, 13];
+
+     for (let index in aList){
+        let a = aList[index];
+        let tf = 30 % a == 0 || 20 % a == 0;
+        if(tf) {
+            document.write(a, " ");
+        } else {
+            document.write("x ");
+        }
+    }
+
+    document.writeln("<hr>");
+
+    for(let i = 0; i < aList.length; i++) {
+        let a = aList[i];
+        let tf = 30 % a == 0 || 20 % a == 0;
+        if(tf) {
+            document.write(a, " ");
+        } else {
+            document.write("x ");
+        }
+    }
+</script>

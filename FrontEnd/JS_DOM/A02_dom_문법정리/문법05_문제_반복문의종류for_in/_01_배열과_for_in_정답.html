@@ -1,0 +1,35 @@
+<script>
+    /*
+        [문제]
+        let aList = [10, 43, 24, 12, 52];
+        aList의 각 요소에 대해,
+        3의 배수이면 숫자를 그대로 출력하고, 그렇지 않은 경우에는 "x"를 출력하시오.
+    */
+
+    /*
+        [출력예시]
+        x x 24 12 x
+    */
+
+    let aList = [10, 43, 24, 12, 52];
+
+    for (let index in aList){
+        let tf = aList[index] % 3 == 0;
+        if(tf) {
+            document.write(aList[index], " ");
+        } else {
+            document.write("x ");
+        }
+    }
+
+    document.writeln("<hr>");
+
+    for(let i = 0; i < aList.length; i++) {
+        let tf = aList[i] % 3 == 0;
+        if(tf) {
+            document.write(aList[i], " ");
+        } else {
+            document.write("x ");
+        }
+    }
+</script>

@@ -1,0 +1,37 @@
+<script>
+    /*
+        [문제]
+        let aList = [87, 24, 84, 50, 36, 35, 13, 56, 12, 48];
+        aList에서 일의 자리가 십의 자리의 두 배인 요소를 모두 출력하시오.
+    */
+
+    /*
+        [출력예시]
+        24 36 12 48
+    */
+
+    let aList = [87, 24, 84, 50, 36, 35, 13, 56, 12, 48];
+
+
+    for (let index in aList){
+        let a = aList[index];
+        let _10 = parseInt(a / 10);
+        let _1 = a % 10;
+        let tf = _10 * 2 == _1;
+        if(tf) {
+            document.write(a, " ");
+        }
+    }
+
+     document.writeln("<hr>");
+
+    for(let i = 0; i < aList.length; i++) {
+        let a = aList[i];
+        let _10 = parseInt(a / 10);
+        let _1 = a % 10;
+        let tf = _10 * 2 == _1;
+        if(tf) {
+            document.write(a, " ");
+        }
+    }
+</script>

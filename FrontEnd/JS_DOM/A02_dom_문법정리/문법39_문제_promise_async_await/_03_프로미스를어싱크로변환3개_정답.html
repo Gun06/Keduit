@@ -1,0 +1,25 @@
+<script>
+
+    /*
+        [문제]
+        1초 뒤에 "헬로1"
+        3초 뒤에 "헬로2"
+        6초 뒤에 "헬로3" 을출력하시오.
+    */
+    const promise1 = () => new Promise(resolve => setTimeout(() => resolve(1), 1000));
+    const promise2 = () => new Promise(resolve => setTimeout(() => resolve(2), 2000));
+    const promise3 = () => new Promise(resolve => setTimeout(() => resolve(3), 3000));
+
+    async function runPromises() {
+        const result1 = await promise1();  // 1초 후 실행
+        document.writeln(result1);
+
+        const result2 = await promise2();  // 그 뒤 2초 후 실행 (총 3초)
+        document.writeln(result2);
+
+        const result3 = await promise3();  // 그 뒤 3초 후 실행 (총 6초)
+        document.writeln(result3);
+    }
+
+    runPromises();
+</script>

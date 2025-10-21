@@ -1,0 +1,19 @@
+<script>
+
+    /*  
+        
+        [문제]
+        1초뒤에 1 2초뒤에 2 3초뒤에 3을 출력하시오.
+
+    */
+
+  
+    setTimeout(() => resolve(1), 1000);
+    setTimeout(() => resolve(2), 2000);
+    setTimeout(() => resolve(3), 3000)
+
+
+    function resolve(num){
+        document.writeln(num);
+    }
+</script>

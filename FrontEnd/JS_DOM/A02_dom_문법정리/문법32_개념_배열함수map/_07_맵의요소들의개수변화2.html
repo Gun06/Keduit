@@ -1,0 +1,27 @@
+<script>
+    
+
+    /*
+        [_07_맵과조건이있는리턴2]
+        
+        정리하면 map은 각요소들의 개수는 변하지않을때 사용한다. 
+
+        [결과]
+        10,43,26,12,52
+        10,0,26,12,0
+    */
+
+    let aList = [10, 43, 26, 12, 52];
+    document.write(aList, "<br>");
+
+    let test = aList.map((c) => {
+        if(c <= 30){
+            return c;
+        }else{
+            return 0;
+        }
+    }); 
+
+    document.writeln(test);
+
+</script>

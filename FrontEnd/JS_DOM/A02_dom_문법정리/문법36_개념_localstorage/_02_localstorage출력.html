@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      
+        let str = localStorage.getItem("data");
+
+        let dataList = JSON.parse(str); // 문자열이라 객체로 변환 
+       
+        for(let i = 0; i < dataList.length; i++){
+          document.writeln(dataList[i].id, " " ,dataList[i].name , "<br>");
+        }
+
+    </script>
+  </body>
+</html>

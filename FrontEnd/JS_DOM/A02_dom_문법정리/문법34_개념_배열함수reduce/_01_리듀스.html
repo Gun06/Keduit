@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+          [reduce 함수]
+          배열의 합을 구할때 사용한다. 
+
+          [구조]
+          
+          (1) 배열.reduce( 화살표함수); 
+       
+          (2) 배열.reduce( (a, b) => {} );
+          또한 기존의 map 과 filter 와는 다르게 a 만 넣는것이 아니라 a , b를 넣는다
+          a는 합을 누적하는 변수이다. b가 기존의 각각의 요소들이다. 
+
+      */
+
+      let scoreList = [100, 40, 2, 75, 9];
+      let sum = scoreList.reduce( (total, a) => {
+        return total + a;
+      });
+
+       document.writeln(sum);
+    </script>
+  </body>
+</html>

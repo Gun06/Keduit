@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        /*    
+            localStorage 에 데이터를 저장할때는 문자열로 변환해서 저장한다. 
+        */
+        let userList = [
+          { id: 1, name: "Jone" },
+          { id: 2, name: "Mike" },
+        ];
+
+   
+        let data = JSON.stringify(userList); // 문자열로 저장해야되니 변환해준다. 
+
+        localStorage.setItem("data", data); 
+
+        document.writeln("로컬에저장");
+    </script>
+  </body>
+</html>
