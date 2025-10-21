@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원관리</title>
+</head>
+<body>
+	
+    <%- include("00testHeader.ejs") %>
+
+
+	<div align="center">
+	
+		<h1>회원관리페이지</h1>
+		
+		<table border="1">
+			<tr>
+				<td align="right">				
+					
+				<%	if(log == null) { %>
+					<a href="joinForm">회원가입</a>
+					<a href="loginForm">로그인</a>
+					<a href="adminMain">ADMIN</a>	
+									
+				<%	} else { %>			
+					<a href="logout">로그아웃</a>
+					<a href="updateForm">회원정보수정</a>
+					<a href="deleteForm">회원탈퇴</a>
+					[<%=log%> 님 로그인중 ]
+					
+				<%	} %>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

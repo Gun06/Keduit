@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	
+	<div align="center">
+		<h1>관리자 페이지</h1>
+		<table border="1">
+			<tr>			
+				<td >										
+					<a href="/">초기화</a>
+				</td>
+				<%if(log != null) {%>
+					
+					<td >
+						<a href="adminLogoutPro">관리자 로그아웃</a>
+					</td>
+					<td>
+						<a href="adminUserList">회원관리</a>
+					</td>
+				
+				<%}else{ %>
+					<td>
+						<a href="index">회원페이지로 이동</a>
+					</td>
+					<td>
+						<a href="adminLoginForm">관리자 로그인</a>
+					</td>
+				<%} %>
+			</tr>
+		</table>		
+	</div>
+</body>
+</html>

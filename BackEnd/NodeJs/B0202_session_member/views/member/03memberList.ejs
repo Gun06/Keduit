@@ -1,0 +1,29 @@
+
+<%- include("01memberHeader.ejs") %>
+
+<div align="center">
+    <h1>회원전체정보</h1>
+    
+    <%if(memberDB.length > 0){ %>
+    
+        <table border="1">
+            <tr>
+                <td>번호</td>
+                <td>아이디</td>
+                <td>패스워드</td>
+                <td>이름</td>
+                <td>성별</td>
+            </tr>			
+            <% for(let i=0; i<memberDB.length; i++) { %>
+                <tr>
+                    <td><%= memberDB[i].memberNo %></td>
+                    <td><%= memberDB[i].memberId %></td>
+                    <td><%= memberDB[i].memberPw %></td>
+                    <td><%= memberDB[i].memberName %></td>
+                    <td><%= memberDB[i].memberGender %></td>
+                </tr>
+            <%}%>		
+        </table>
+        
+    <%} %>
+</div>

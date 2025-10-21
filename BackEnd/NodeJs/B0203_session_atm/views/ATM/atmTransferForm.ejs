@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include("atmHeaderTest.ejs") %>
+    <div align="center">
+        <h3>송금</h3>
+        <form action="/ATM/atmTransferPro">
+            <table border="1">   
+                <tr>
+                    <td>보내는 계좌번호</td>
+                    <td><input name="accountTrasfer"></td>
+                </tr>
+                <tr>
+                    <td>금액</td>
+                    <td><input type="number" name="transfer"></td>
+                </tr>
+                
+                <tr>
+                    <td colspan="2"><input type="submit" value="송금"></td>             
+                </tr>
+            </table>
+        </form>
+    </div>
+    
+</body>
+</html>

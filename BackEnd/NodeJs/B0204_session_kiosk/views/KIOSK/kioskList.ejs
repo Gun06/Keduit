@@ -1,0 +1,45 @@
+
+    <%- include("kioskHeaderTest.ejs") %>
+    <div align="center">
+        <h3>전체목록</h3>
+
+        <table border="1">
+			<tr align="center">	
+                <td>번호</td>
+				<td width="250px">이름</td>
+                <td width="250px">가격</td>
+				<td width="150px">재고수량</td>
+			</tr>	
+        
+        <% for(let i = 0; i < kioskTable.length; i++) {%>
+            <tr align="center">
+                <td><%= kioskTable[i].kioskNumber%></td>
+                <td><a href="/KIOSK/kioskItemInfo?index=<%=i%>"><%= kioskTable[i].kioskName %></a></td>
+                <td><%= kioskTable[i].kioskPrice %></td>
+                <td><%= kioskTable[i].kioskCount %></td>
+            </tr>
+        <%}%>
+        </table>
+
+        <h3>주문목록</h3>
+        <table border="1">
+            <tr align="center">	
+                <td>번호</td>
+				<td width="250px">이름</td>
+                <td width="250px">가격</td>
+				<td width="150px">주문가격</td>
+			</tr>	
+
+            <% for(let i = 0; i < orderTable.length; i++) {%>
+                <tr align="center">
+                    <td><%= i + 1%></td>
+                    <td><%= orderTable[i].orderName %></td>
+                    <td><%= orderTable[i].orderCount %></td>
+                    <td><%= orderTable[i].orderTotal %></td>
+                </tr>
+            <%}%>
+            <tr>
+                <td colspan="4" align="right">총합: <%=allTotal%></td>
+            </tr>
+        </table>
+    </div>

@@ -1,0 +1,37 @@
+
+<%- include("01boardHeader.ejs") %>
+
+<div align="center">
+
+    <h2>게시글 정보</h2>
+
+    <table border="1">
+        <tr>
+            <td>번호</td>
+            <td ><%= board.boardNo %></td>
+        </tr>
+        <tr>
+            <td>작성자</td>
+            <td><%= board.boardWriter  %></td>
+            
+        </tr>
+        <tr>
+            <td>조회수</td>
+            <td><%= board.boardReadCount  %></td>
+            
+        </tr>
+        <tr>
+            <td>제목</td>
+            <td >
+                <%= board.boardSubject  %>
+            </td>
+        </tr>
+        <tr>
+            <td>내용</td>
+            <td >
+                <textarea rows="10" cols="30" name="contents" readonly="readonly"><%= board.boardContent  %></textarea>
+            </td>
+        </tr>
+        
+    </table>
+</div>

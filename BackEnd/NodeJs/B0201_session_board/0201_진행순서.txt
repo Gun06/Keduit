@@ -1,0 +1,120 @@
+-------------------------------------------------------
+-- [0201_session_board]
+-------------------------------------------------------
+[1] 터미널 실행
+[2] npm install express 
+[3] npm install ejs
+[4] npm install express-session
+
+[5] 서버 실행 명령어
+    node myserver.js
+   
+[6] 크롬브라우저 > http://localhost:3100
+[7] ctrl + c (서버종료)
+-------------------------------------------------------
+
+// 세션은 브라우저를 끌때까지 지워지지 않는다. 
+// 임시 디비로 사용할예정 
+(1) session 설치 => npm install express-session
+
+// package.json 에서 아래와같이 확인 가능하다. 
+
+{
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-session": "^1.18.1"
+  }
+}
+
+-------------------------------------------------------
+(2) 세션 세팅 => 아래와 같이 한번세팅하면 변경할내용이 없으므로 그냥 기본으로 셋팅한다. 
+
+var session = require("express-session");
+app.use(session({							// session에는 옵션3가지를 설정해야줘야 한다. 
+	secret : "abcdefg",						// secret에는 아무 내용이나 작성해주고,
+	resave : false,							// 나머지는 false로 설정한다.
+	saveUninitialized : false
+}));
+
+-------------------------------------------------------
+
+(3) 세션 데이터 저장 방법 
+app.get("/" , (req, res) => {
+
+	// 샘플 데이터
+    var boardDB = [
+		{"boardNo" :  1, "boardWriter" : "qwer", "boardSubject" :  "제목1", "boardContent" :  "내용1", "boardReadCount" : 5},
+		{"boardNo" :  2, "boardWriter" : "asdf", "boardSubject" :  "제목2", "boardContent" :  "내용2", "boardReadCount" : 1},
+		{"boardNo" :  3, "boardWriter" : "qwer", "boardSubject" :  "제목3", "boardContent" :  "내용3", "boardReadCount" : 2},
+		{"boardNo" :  4, "boardWriter" : "qwer", "boardSubject" :  "제목4", "boardContent" :  "내용4", "boardReadCount" : 0},	
+	];
+
+	req.session.boardDB = boardDB;
+
+    res.redirect("index"); 
+});
+
+-----------------------------------------------------------
+req.session.boardDB = boardDB; // 세션에 저장하는 방법 
+-----------------------------------------------------------
+
+-------------------------------------------------------
+(4) 세션 데이터 찾는 방법 
+-------------------------------------------------------
+ app.get("/boardList", function(req, res){     
+
+        var boardDB = req.session.boardDB;      
+        console.log(boardDB);
+        var renderData = {	          
+            "boardDB" : boardDB,          
+        };
+        res.render("board/03boardList.ejs", renderData); 
+
+    });
+
+-----------------------------------------------------------
+  var boardDB = req.session.boardDB;  // 세션 데이터 찾는방법      
+  -----------------------------------------------------------
+
+--------------------------------------------------------------
+기존에는 get만 사용할수 있었다. 데이터를 숨기기 위해서는 post를 사용해야한다. 
+
+(5) post 셋팅 
+
+// 폼에서 post를 사용하기위함 
+app.use(express.urlencoded({ extended: true })); 
+app.use(express.json()); 
+
+--------------------------------------------------------------
+
+<form action="addBoardPro" method="post" >
+</form>
+
+----------------------------------------------------------------
+
+(6) post 가져오는방법  
+    [1] req.body.변수명 => post 방식
+    [2] req.query.변수명 => 기존 get 방식 
+
+------------------------------------------------------------------
+
+ app.post("/addBoardPro", function(req, res){
+        var boardDB = req.session.boardDB;
+        console.log(req.body);
+        var boardNo = req.body.no;
+        var boardWriter = req.body.writer;
+        var boardSubject = req.body.subject;
+        var boardContent = req.body.contents;
+        var board = {"boardNo" :  boardNo, "boardWriter" : boardWriter, "boardSubject" :  boardSubject, "boardContent" :  boardContent, "boardReadCount" : 0};
+        console.log(board);
+        boardDB.push(board);
+        res.redirect("boardList");
+    });    
+
+-----------------------------------------------------
+var boardNo = req.body.no;
+var boardWriter = req.body.writer;
+var boardSubject = req.body.subject;
+var boardContent = req.body.contents;
+-----------------------------------------------------

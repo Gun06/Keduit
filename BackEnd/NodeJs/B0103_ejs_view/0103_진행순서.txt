@@ -1,0 +1,33 @@
+-------------------------------------------------------
+-- [0103_ejs_view]
+-------------------------------------------------------
+[1] 터미널 실행
+[2] npm install express 
+[3] npm install ejs
+[4] 서버 실행 
+    node myserver.js
+   
+[5] 크롬브라우저 > http://localhost:3100
+[6] ctrl + c (서버종료)
+-------------------------------------------------------
+
+// (1) ejs 를 views 폴더로 이동시킨다.
+
+// # ejs 세팅(views)
+var ejs = require("ejs");
+
+// 여기가 변경되었다. 관리를 편리하게 하기위해 views 폴더를 생성한다
+app.set("views", __dirname + "/views");
+
+app.set("view engine", "ejs");
+app.engine("ejs", ejs.renderFile);
+
+
+// (2) 라우터 명령어 
+        [1] res.render("ejs파일명"); 
+        [2] res.redirect("라우터url")
+
+app.get("/", function(req, res){ 
+    
+    res.redirect("main");  // 라우터(url)로 이동
+});

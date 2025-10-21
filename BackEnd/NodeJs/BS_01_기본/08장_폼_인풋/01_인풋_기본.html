@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 부트스트랩 5.2.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>    
+    <!-- 부트스트랩 5.2.3 -->       
+</head>
+<body>
+
+    <!-- 
+        기본 인풋
+        (1) label 의 for 와 input의 id를 일치시키면 글자를 눌러도 인풋창에 불이들어온다.
+    -->
+    <div class="container">
+        <label for="email">이메일:</label>
+        <input type="email" id="email" style="width: 300px;">
+    </div>
+    
+    <hr>
+
+    <!-- 
+        부트스트랩 인풋 
+        (1) class="form-control" 이 추가된다. 클릭했을때 주변에 파란라인이 들어온다. 자동줄바꿈이된다.
+        (2) 가로폭은 직접 style="width: 300px; 사용해서 변경한다. 
+        (3) label 의 for 와 input의 id를 일치시키면 글자를 눌러도 인풋창에 불이들어온다.
+    -->
+    <div class="container">
+        <label for="email2">이메일:</label>
+        <input type="email" class="form-control" id="email2" style="width: 300px;">  
+    </div>
+  
+</body>
+</html>

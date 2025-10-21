@@ -1,0 +1,39 @@
+
+
+<%- include("01boardHeader.ejs") %>
+<div align="center">
+    <h1>전체게시글 <%= boardDB.length %>개</h1>
+
+    
+    <% if(boardDB.length > 0){ %>
+    
+        <table border="1">
+            <tr>
+                <td>번호</td>
+                <td>제목</td>
+                <td>작성자</td>
+                <td>조회수</td>
+                <td>삭제</td>
+                <td>수정</td>
+            </tr>
+        <%	for(let i = 0; i < boardDB.length; i++) {	%>
+            <tr>
+                <td><%= boardDB[i].boardNo %></td>		
+                <td>
+                    <a href="boardInfo?index=<%= i %>"><%= boardDB[i].boardSubject %></a>
+                </td>		
+                <td><%= boardDB[i].boardWriter %></td>	
+                <td align="center"><%= boardDB[i].boardReadCount %></td>	
+                <td>
+                    <button onclick="window.location.href='deleteBoardPro?index=<%= i %>'">삭제</button>
+                </td>	
+                <td>
+                    <button onclick="window.location.href='updateBoard?index=<%= i %>'">수정</button>
+                </td>	
+            </tr>
+        <%	} %>
+            
+        </table>
+    
+    <%} %>
+</div>

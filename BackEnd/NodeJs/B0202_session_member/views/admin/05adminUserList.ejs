@@ -1,0 +1,30 @@
+
+	
+<%- include("01adminHeader.ejs") %>
+
+	<div align="center">
+		<h1>관리자 페이지(회원 정보 확인하기)</h1>
+		<table border="1">
+			<tr>
+				<td>번호</td>
+				<td>아이디</td>
+				<td>패스워드</td>
+				<td>이름</td>
+				<td>성별</td>
+				<td>삭제</td>
+			</tr>
+			<% for(let i=0; i<memberDB.length; i++) { %>
+                <tr>
+                    <td><%= memberDB[i].memberNo %></td>
+                    <td><%= memberDB[i].memberId %></td>
+                    <td><%= memberDB[i].memberPw %></td>
+                    <td><%= memberDB[i].memberName %></td>
+                    <td><%= memberDB[i].memberGender %></td>
+					<td><input type="button" value="삭제" onclick="location.href='adminUserDeletePro?index=<%= i %>'"></td>
+                </tr>
+            <%}%>		
+	
+		</table>
+		
+		
+	</div>

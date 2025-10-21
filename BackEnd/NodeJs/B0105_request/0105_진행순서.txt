@@ -1,0 +1,45 @@
+-------------------------------------------------------
+-- [0105_request]
+-------------------------------------------------------
+[1] 터미널 실행
+[2] npm install express 
+[3] npm install ejs
+[4] 서버 실행 명령어
+    node myserver.js
+   
+[5] 크롬브라우저 > http://localhost:3100
+[6] ctrl + c (서버종료)
+-------------------------------------------------------
+
+[라우터 의 변경점]
+
+(1) 리퀘스트로 넘어온 데이터찾는법
+    req.query.변수명
+
+(2) 다음페이지로 정보전달 
+    (2-1) var renderData = { 키 : 벨류 };
+    (2-2) res.render("ejs파일명" , 전달할데이터를담은json); 
+
+-------------------------------------------------------------------
+
+ app.get("/aTagTest1Pro", function(req, res){ 
+        //console.log(req.query.x)
+        var renderData = {
+            "x" : req.query.x,
+        };
+        res.render("aTagTest/_0301_aTagTest1Pro.ejs" , renderData); 
+    });
+
+---------------------------------------------------------------------
+(1) 히든 데이터 : 눈에만 안보이지 똑같은 리퀘스트 데이터이다. 
+
+       <input type="hidden" value="1000" name="num1">
+----------------------------------------------------------------------
+
+    <form action="hiddenTestPro">
+       
+        <input type="hidden" value="1000" name="num1">
+        <input type="hidden" value="2000" name="num2">
+        
+        <input type="submit" value="입력완료">  
+      </form>
