@@ -1,0 +1,35 @@
+package A1410무한반복_개념연습;
+
+import java.util.Random;
+
+/*
+[문제]
+1부터 9 사이의 랜덤 숫자 2개를 저장한 후,
+두 숫자의 합이 반드시 10이 되도록 출력하시오.
+위조건이 3번 만족할때 까지 반복하시오.
+*/
+/*
+[출력예시]
+1 9
+4 6
+6 4
+*/
+public class A1410개념연습08 {
+	public static void main(String[] args) {
+		 boolean loop = true;
+		    int count = 0;
+		    Random ran = new Random();
+		    while(loop){
+		    	int a = ran.nextInt(9) + 1;
+		    	int b = ran.nextInt(9) + 1;
+		    	int total = a + b;
+		        if(total == 10){
+		        	System.out.println(a + " " + b);
+		            count += 1;
+		            if(count == 3){
+		                loop = false;
+		            }
+		        }
+		    }
+	}
+}

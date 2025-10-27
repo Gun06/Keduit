@@ -1,0 +1,26 @@
+package A0402변수와양수음수;
+/*
+
+	[변수와 양수음수]
+	양수는 0보다 크거나 같은 숫자를 말합니다.
+	양수의 경우 숫자 앞에 + 기호를 붙일 수 있지만, 일반적으로 생략할 수 있습니다.
+	예를 들어, +3과 3은 같은 의미입니다.
+	
+	음수는 0보다 작은 숫자를 말합니다.
+	음수의 경우 숫자 앞에 - 기호를 반드시 붙입니다.
+	예를 들어, -5는 음수를 나타내며, - 기호를 생략할 수 없습니다.
+
+ */
+public class A0402개념01_변수와양수음수 {
+	public static void main(String[] args) {
+		int a = +3;
+		System.out.println(a);
+		int b = 3;
+		System.out.println(b);
+		
+		int c = -5;
+		System.out.println(c);
+		int d = 5;
+		System.out.println(d);
+	}
+}

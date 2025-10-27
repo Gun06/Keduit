@@ -1,0 +1,54 @@
+package A2002리스트와데이터_개념연습;
+
+import java.util.Arrays;
+import java.util.Random;
+
+/*
+[문제]
+철수는 게임을 하고 있다. 
+monster배열은 게임의 적 4마리를 의미하고 
+숫자는 몬스터의 체력을 의미한다.
+
+철수의 공격력은 8이다.    
+
+armor 는 몬스터의 방어력을 의미한다.
+피격시 방어력만큼 감소된 대미지를 입는다. 
+
+몬스터 한개가 죽을때까지 반복하고 종료하시오.
+*/ 
+/* 
+[출력예시]
+2번 몬스터를 공격했다 [20, 6, 12, 6]
+0번 몬스터를 공격했다 [13, 6, 12, 6]
+2번 몬스터를 공격했다 [13, 6, 6, 6]
+3번 몬스터를 공격했다 [13, 6, 6, 1]
+1번 몬스터를 공격했다 [13, 0, 6, 1]
+1번 몬스터가 죽었습니다 
+*/
+
+
+public class A2002개념연습08 {
+	public static void main(String[] args) {
+		int[] monster = {20, 6, 18, 6};
+	    int[] armor = {1, 1, 2, 3};
+	    int power = 8;
+	    boolean gameover = false;
+	    Random ran = new Random();
+	    while(true){
+	    	int r = ran.nextInt(monster.length);
+	        int updatePower = power - armor[r];
+	        monster[r] -= updatePower;
+	        if(monster[r] <= 0){
+	            monster[r] = 0;      
+	            gameover = true;     
+	        }
+	        System.out.println(r + "번 몬스터를 공격했습니다 " + Arrays.toString(monster));
+	        if(gameover == true){
+	        	 System.out.println(r + "번 몬스터가 죽었습니다");        
+	            break;
+	        }
+
+	   
+	    }
+	}
+}

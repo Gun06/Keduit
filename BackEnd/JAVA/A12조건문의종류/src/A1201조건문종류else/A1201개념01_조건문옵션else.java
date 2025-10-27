@@ -1,0 +1,38 @@
+package A1201조건문종류else;
+
+/*
+	[조건문 옵션 else]
+	조건문 if의 옵션으로 else가 있습니다.
+	if의 조건이 거짓일 때 else가 동작하며, else는 단독으로 사용할 수 없습니다.
+	일반적으로 아래와 같이 경우의 수가 두 가지밖에 없을 때 사용합니다.
+	(1) 아이디가 맞거나 틀리다.
+	(2) 비밀번호가 맞거나 틀리다.
+	(3) 짝수이거나 홀수이다.
+	
+	[문법]
+	if(조건식) {
+	    조건식이 참(true)일 때 실행할 문장;
+	 } else {
+	    조건식이 거짓(false)일 때 실행할 문장;
+	 }
+ */
+
+public class A1201개념01_조건문옵션else {
+	public static void main(String[] args) {
+		
+		// if만 사용
+		if(false) {
+			System.out.println("x");
+		}
+		if(true) {
+			System.out.println("o");
+		}
+		
+		// else 사용
+		if(false) {
+			System.out.println("x");
+		} else {
+			System.out.println("o");
+		}
+	}
+}

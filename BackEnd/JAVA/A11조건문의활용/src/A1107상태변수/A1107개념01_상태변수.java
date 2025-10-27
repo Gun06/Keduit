@@ -1,0 +1,49 @@
+package A1107상태변수;
+
+import java.util.Random;
+
+/*
+	[상태 변수]
+	상태 변수란 값의 상태에 따라 결과가 달라지는 변수를 의미합니다.
+	보통 비교 연산자 == (같다)를 사용하여 조건을 확인할 때 활용됩니다.
+	
+	1부터 10 사이의 랜덤 숫자 두 개를 각각 a와 b에 저장합니다.  
+	1부터 2 사이의 랜덤 숫자를 변수 state에 저장합니다.  
+	state의 값이 1이면 a와 b를 더한 값을 출력하고,  
+	state의 값이 2이면 a와 b를 곱한 값을 출력합니다.
+ */
+
+/*
+	[출력예시]
+	9 6
+	1
+	15
+	[출력예시]
+	2 3
+	2
+	6
+ */
+
+public class A1107개념01_상태변수 {
+	public static void main(String[] args) {
+		
+		Random ran = new Random();
+		
+		int a = ran.nextInt(10) + 1;
+		int b = ran.nextInt(10) + 1;
+		System.out.println(a + " " + b);
+		
+		int state = ran.nextInt(2) + 1;
+		System.out.println(state);
+		
+		int c = 0;
+		if(state == 1) {
+			c = a + b; 
+		}
+		if(state == 2) {
+			c = a * b; 
+		}
+		System.out.println(c);
+		
+	}
+}

@@ -1,0 +1,21 @@
+package A0102출력문_개념연습;
+/*
+	[문제]
+	자바 출력문을 사용해, 아래와 같은 결과가 출력되도록 코드를 작성하시오.
+*/
+
+/*
+	[출력예시]
+	20
+	30
+	40
+	안녕하세요    
+*/
+public class A0102개념연습01 {
+	public static void main(String[] args) {
+			System.out.println(20);
+			System.out.println(30);
+			System.out.println(40);
+			System.out.println("안녕하세요");
+	}
+}

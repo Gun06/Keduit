@@ -1,0 +1,36 @@
+package A1002조건문과논리_개념연습;
+/*
+[문제]
+1부터 9 사이의 랜덤 숫자 3개를 저장한 후, 이 3개의 숫자를 출력하고, 
+세 숫자가 모두 같은지 여부를 확인하는 프로그램을 작성하시오.
+같으면 "o", 틀리면 "x"를 출력하시오.    
+*/
+
+import java.util.Random;
+
+/*
+[출력예시]
+9 5 4
+x    
+
+[출력예시]
+3 3 3 
+o
+*/
+public class A1002개념연습05 {
+	public static void main(String[] args) {
+		Random ran = new Random();
+		int r1 = ran.nextInt(9) + 1;
+		int r2 = ran.nextInt(9) + 1;
+		int r3 = ran.nextInt(9) + 1;
+		System.out.println(r1 + " " + r2 + " " + r3);
+		boolean a = r1 == r2 && r1 == r3;
+		    if(a) {
+		    	 System.out.println("o");
+		    }
+		    if(!a) {
+		    	 System.out.println("x");
+		    }
+		
+	}
+}

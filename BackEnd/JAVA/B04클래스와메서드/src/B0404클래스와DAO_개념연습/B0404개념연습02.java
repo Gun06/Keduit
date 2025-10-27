@@ -1,0 +1,37 @@
+package B0404클래스와DAO_개념연습;
+
+/*
+      int[] updateData = {5, 4, 3, 1, 1};
+      데이터는 수정해야되는 데이터이다
+      수량을 수정하고 총합을 수정하시오.
+ 	 	DAO를 만드시오.
+ */	
+
+/*
+	1001 500 3 1500
+	1002 1200 1 1200
+	1003 4300 3 12900
+	1004 2300 4 9200
+	1005 5000 2 10000
+ */
+
+
+public class B0404개념연습02 {
+	public static void main(String[] args) {
+		 int[][] arr = {
+	                {1001, 500, 3, 1500},
+	                {1002, 1200, 1 , 1200},
+	                {1003, 4300, 3, 12900},
+	                {1004, 2300, 4 , 9200},
+	                {1005, 5000, 2 , 10000},
+	                };
+
+	    ItemDAO itemDAO = new ItemDAO();
+	    itemDAO.setData(arr);
+	    
+	    int[] updateData = {5, 4, 3, 1, 1};
+	    itemDAO.getSolution(updateData);
+	    itemDAO.printList();
+		
+	}
+}

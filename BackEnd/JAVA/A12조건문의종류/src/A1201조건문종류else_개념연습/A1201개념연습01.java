@@ -1,0 +1,30 @@
+package A1201조건문종류else_개념연습;
+
+import java.util.Random;
+
+/*
+[문제]
+1부터 2 사이의 랜덤 숫자 2개를 뽑고,
+두 숫자가 같으면 "같다"를 출력하고,
+두 숫자가 다르면  "다르다"를 출력하시오.
+단, else를 사용하시오.
+*/
+/*
+[출력예시]
+2 2
+같다
+*/
+public class A1201개념연습01 {
+	public static void main(String[] args) {
+		Random ran = new Random();
+		int a = ran.nextInt(2) + 1;
+		int b = ran.nextInt(2) + 1;
+		System.out.println(a + " " + b);
+		
+	    if(a == b){
+	    	System.out.println("같다");
+	    }else{
+	    	System.out.println("다르다");
+	    }
+	}
+}

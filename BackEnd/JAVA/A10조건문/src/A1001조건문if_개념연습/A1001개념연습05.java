@@ -1,0 +1,34 @@
+package A1001조건문if_개념연습;
+
+import java.util.Random;
+
+/*
+[문제]
+영화관에서는 좌석 예매자에게 다음과 같은 이벤트 행사를 진행합니다.
+철수의 좌석 번호는 11번부터 55번까지의 랜덤 숫자입니다. 
+각 자리수가 서로 같으면 철수는 이벤트에 당첨됩니다.
+11에서 55사이의 랜덤숫자를 저장하고, 숫자를 출력하세요.
+좌석번호의 십의 자리와 일의 자리가 서로 같으면 "당첨" 을 출력하세요. 
+좌석번호의 십의 자리와 일의 자리가 서로 다르면 "꽝" 을 출력하세요.    
+*/
+
+/*
+[출력예시]
+20
+꽝    
+*/
+public class A1001개념연습05 {
+	public static void main(String[] args) {
+		Random ran = new Random();
+		 int a = ran.nextInt(45) + 11;
+		 System.out.println(a);
+		 int b = a / 10;
+		 int c = a % 10;
+		 if(a == b) {
+		        System.out.println("당첨");
+		    }
+		    if(a != b){
+		    	 System.out.println("꽝");
+		    }
+	}
+}

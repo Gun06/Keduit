@@ -1,0 +1,38 @@
+package A0505누적_개념연습;
+/*
+[문제]
+철수는 한 상자에 20개씩 들어있는 사탕 3상자를 선물로 받았습니다. 
+이 중 8개는 먹고, 친구인 민수가 사탕 12개를 추가로 주었습니다. 
+철수는 남은 사탕을 모두 모아 4개의 상자에 똑같이 나누어 담았습니다. 
+각 상자에 담긴 사탕의 수를 시간 순서대로 누적하여 결과를 출력하시오.        
+*/
+
+/*
+[출력예시]
+0
+60
+52
+64
+16       
+*/
+public class A0505개념연습02 {
+	public static void main(String[] args) {
+		int a = 0;
+	    int b = 20 * 3;
+	    int c = 8;
+	    int d = 12;
+	    int e = 4;
+	    System.out.println(a);
+	    a += b;
+	    System.out.println(a);
+
+	    a -= c;
+	    System.out.println(a);
+
+	    a += d;
+	    System.out.println(a);
+
+	    a = a / e;
+	    System.out.println(a);
+	}
+}

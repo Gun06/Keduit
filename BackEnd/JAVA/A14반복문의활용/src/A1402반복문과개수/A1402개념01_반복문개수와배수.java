@@ -1,0 +1,52 @@
+package A1402반복문과개수;
+
+/*
+	[반복문 개수와 배수]
+	1부터 5사이의 수 중에 짝수의 개수를 구하려고 합니다. 
+	이를 변수로 표현하면 다음과 같습니다.
+	
+	각 숫자가 짝수인지 확인하는 조건식을 사용하고, 짝수일 때마다 count 값을 1씩 증가시킵니다.  
+	결과적으로 2와 4에서 count 값이 증가하므로, 짝수의 개수는 2개임을 알 수 있습니다.
+ */
+
+public class A1402개념01_반복문개수와배수 {
+	public static void main(String[] args) {
+		
+		int count = 0;
+		
+		if(1 % 2 == 0) {
+			count += 1;
+		}
+		
+		if(2 % 2 == 0) {
+			count += 1;
+		}
+		
+		if(3 % 2 == 0) {
+			count += 1;
+		}
+		
+		if(4 % 2 == 0) {
+			count += 1;
+		}
+		
+		if(5 % 2 == 0) {
+			count += 1;
+		}
+		
+		System.out.println(count);
+		
+		// 이를 반복문을 활용해 간결하게 표현해보겠습니다.
+		count = 0;
+		
+		for(int i=1; i<=5; i++) {
+			boolean check = i % 2 == 0;
+			if(check) {
+				count += 1;
+			}
+		}
+		
+		System.out.println(count);
+		
+	}
+}

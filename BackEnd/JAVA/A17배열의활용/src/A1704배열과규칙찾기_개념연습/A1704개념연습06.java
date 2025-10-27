@@ -1,0 +1,37 @@
+package A1704배열과규칙찾기_개념연습;
+/*
+[문제] 
+	a의 값과 b의 값을 교차로 c에 추가하시오.
+	규칙은 아래와 같다.
+	
+	c = [10]     
+	c = [10,40]  
+	c = [10,40,20]
+	c = [10,40,20,50]
+	c = [10,40,20,50,30]
+	c = [10,40,20,50,30,60]
+
+*/
+/*
+	[정답]
+	c = [10,40,20,50,30,60]
+*/
+
+import java.util.Arrays;
+
+public class A1704개념연습06 {
+	public static void main(String[] args) {
+		int[] a = {10, 20, 30};
+		int[] b = {40, 50, 60};
+
+		int[] c = new int[6];
+		int index = 0;
+		for(int i = 0; i < a.length; i++){
+			c[index] = a[i];
+			index += 1;
+			c[index] = b[i];
+			index += 1;
+		}
+		System.out.println(Arrays.toString(c));
+	}
+}

@@ -1,0 +1,26 @@
+package A0505누적;
+
+/*
+	[누적]
+	변수 a에 처음으로 10을 저장합니다.
+	이후, 변수에 값을 누적하여 더할 때는 a = a + 3과 같이 작성할 수 있습니다.
+	예를 들어, a = a + 3을 실행하면, 기존 값 10에 3을 더해 13이 됩니다.
+	마찬가지로 a = a + 5를 실행하면 기존 값 13에 5를 더해 최종적으로 18이 됩니다.
+	
+	이처럼, 변수에 값을 점진적으로 더해 가는 것을 누적이라고 합니다.
+ */
+
+public class A0505개념01_누적 {
+	public static void main(String[] args) {
+		
+		int a = 10;
+		System.out.println(a);
+		
+		a = a + 3;
+		System.out.println(a);
+		
+		a = a + 5;
+		System.out.println(a);
+		
+	}
+}

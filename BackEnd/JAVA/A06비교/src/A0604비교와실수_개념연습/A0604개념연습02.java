@@ -1,0 +1,36 @@
+package A0604비교와실수_개념연습;
+/*
+[문제]
+철수는 학교 갈 때는 바로 가고, 집에 올 때는 학원에 들렀다가 집으로 돌아옵니다.
+
+집에서 학교까지의 거리: 1278.50m
+학교에서 학원까지의 거리: 832.70m
+학원에서 집까지의 거리: 1400.45m
+
+철수는 2일은 학원에 가고, 3일은 학원에 가지 않습니다. 
+학원에 가는 날 2일 동안의 총 거리와 학원에 가지 않는 날 3일 동안의 총 거리를 구한 후, 
+학원에 가는 날의 총 거리가 더 짧은지 확인하고, true 또는 false로 출력하시오. 
+*/
+
+/*
+[출력예시]
+7023.30
+7671.00
+true
+*/
+public class A0604개념연습02 {
+	public static void main(String[] args) {
+		double a = 1278.50;
+		double b = 832.70;
+		double c = 1400.45;
+		double d = (a + b + c) * 2;
+		double e = (a + a) * 3;
+		
+		System.out.println(String.format("%.2f", d));
+
+		System.out.println(String.format("%.2f", e));
+
+	    boolean f = d < e;
+		System.out.println(f);
+	}
+}

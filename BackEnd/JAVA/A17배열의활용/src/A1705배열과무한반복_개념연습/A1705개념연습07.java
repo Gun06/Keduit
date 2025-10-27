@@ -1,0 +1,50 @@
+package A1705배열과무한반복_개념연습;
+
+import java.util.Arrays;
+import java.util.Random;
+
+/*
+[문제]
+철수는 게임을 하고 있다. 
+monster배열은 게임의 적 4마리를 의미하고 
+숫자는 몬스터의 체력을 의미한다.
+
+철수의 공격력은 5이다.    
+총 다섯번을 반복하면서 
+랜덤으로 몬스터 중 하나를 선택해서 공격한다.
+전체 과정을 출력하시오.
+단 체력이 0미만으로 내려가면 0으로 변경한다. 
+몬스터 한 명이 죽으면 프로그램을 종료한다.
+*/ 
+/* 
+[출력예시]
+0번 몬스터를 공격했다 15,6,18,6
+0번 몬스터를 공격했다 10,6,18,6
+2번 몬스터를 공격했다 10,6,13,6
+1번 몬스터를 공격했다 10,1,13,6
+1번 몬스터를 공격했다 10,0,13,6
+1번 몬스터가 죽었습니다
+*/
+public class A1705개념연습07 {
+	public static void main(String[] args) {
+		 int[] monster = {20, 6, 18, 6};
+		    int power = 5;
+		    boolean gameover = false;
+		    Random ran = new Random();
+		    while(true){
+		    	int r = ran.nextInt(monster.length);
+		    			
+		        monster[r] -= power;
+		        if(monster[r] <= 0){
+		            monster[r] = 0;      
+		            gameover = true;     
+		        }
+		        System.out.println(r + "번 몬스터를 공격했다 " + Arrays.toString(monster));
+		        if(gameover == true){
+		        	System.out.println(r + "번 몬스터가 죽었습니다 ");
+		            break;
+		        }
+		   
+		    }
+	}
+}

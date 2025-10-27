@@ -1,0 +1,59 @@
+package A1408개별개수_개념연습;
+/*
+[문제]
+반복문을 사용하여 20부터 40까지 숫자를 출력하되, 
+해당 숫자에 대해 369 게임의 결과를 출력하시오.
+
+[조건]
+(1) 숫자에 3, 6, 9가 두 개 포함되면 '짝짝'을 출력합니다.
+(2) 숫자에 3, 6, 9가 한 개 포함되면 '짝'을 출력합니다.
+(3) 3, 6, 9가 없으면 숫자 자체를 출력합니다.
+ */
+ /*
+[출력예시]
+20
+21
+22
+짝
+24
+25
+짝
+27
+28
+짝
+짝
+짝
+짝
+짝짝
+짝
+짝
+짝짝
+짝
+짝
+짝짝
+40
+ */
+public class A1408개념연습02 {
+	public static void main(String[] args) {
+		for(int i = 20; i < 41; i++){
+	        int a = i / 10;
+	        int b = i % 10;
+	        int count = 0;
+	        if(a == 3 || a == 6 || a == 9){
+	            count += 1;
+	        }
+	        if(b == 3 || b == 6 || b == 9){
+	            count += 1;
+	        }
+	        if(count == 2){
+	        	System.out.println("짝짝");
+	        }
+	        else if(count == 1){
+	        	System.out.println("짝");
+	        }
+	        else if(count == 0){
+	        	System.out.println(i);
+	        }
+	    }
+	}
+}

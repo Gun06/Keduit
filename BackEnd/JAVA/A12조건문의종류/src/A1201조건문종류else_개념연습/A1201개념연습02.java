@@ -1,0 +1,28 @@
+package A1201조건문종류else_개념연습;
+
+import java.util.Random;
+
+/*
+[문제]
+1부터 100 사이의 랜덤 숫자를 저장합니다.
+해당 숫자가 4의 배수이면 "True"를 출력하고,
+4의 배수가 아니면 "False"를 출력하시오.
+단, else를 사용하시오.
+*/
+/*
+[출력예시]
+23
+false
+*/
+public class A1201개념연습02 {
+public static void main(String[] args) {
+		Random ran = new Random();
+		int a = ran.nextInt(101) + 1;
+		System.out.println(a);
+		if(a % 4 == 0){
+			System.out.println(true);
+		}else{
+			System.out.println(false);
+		}
+	}
+}

@@ -1,0 +1,30 @@
+package A0603비교와혼합계산_개념연습;
+/*
+[문제]
+다음은 비교 연산과 산술 연산이 혼합된 계산식입니다.
+아래 계산식의 결과가 true인지 false인지 예측하시오. 
+
+[보기]
+(6 - 3) * 2 > 9 / (1 + 2)
+6 / (3 - 1) < 5 - (3 + 3)
+2 * (3 - 6) == (6 - 3) / 3
+8 / (1 + 3) != (5 + 3) * 3
+(9 - 3) * 3 >= (8 + 1) / 3
+7 * (8 + 5) <= (3 + 7) / 2
+*/
+public class A0603개념연습03 {
+	public static void main(String[] args) {
+		boolean a = (6 - 3) * 2 > 9 / (1 + 2);
+		boolean b = 6 / (3 - 1) < 5 - (3 + 3);
+		boolean c = 2 * (3 - 6) == (6 - 3) / 3;
+		boolean d = 8 / (1 + 3) != (5 + 3) * 3;
+		boolean e = (9 - 3) * 3 >= (8 + 1) / 3;
+		boolean f = -7 * (8 + 5) <= (3 + 7) / 2;
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(c);
+		System.out.println(d);
+		System.out.println(e);
+		System.out.println(f);
+	}
+}
