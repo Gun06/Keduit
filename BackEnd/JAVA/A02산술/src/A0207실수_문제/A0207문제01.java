@@ -9,5 +9,6 @@ package A0207실수_문제;
  */
 public class A0207문제01 {
 	public static void main(String[] args) {
+		System.out.println(String.format("%.2f",165.5+160.8));
 	}
 }

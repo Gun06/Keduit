@@ -13,5 +13,12 @@ package A0205혼합계산_문제;
 	2 - -23 + 9 % 4
  */
 public class A0205문제05 {
-
+	public static void main(String[] args) {
+		System.out.println(3 + 15 - -5 * 6 );
+		System.out.println(4 - -5 + 28 * 6);
+		System.out.println(-8 + 7 + 3 / 33);
+		System.out.println(60 - -12 + 8 / 4);
+		System.out.println(6 + -7 - 28 % 5);
+		System.out.println(2 - -23 + 9 % 4);
+	}
 }

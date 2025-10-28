@@ -12,6 +12,9 @@ package A0202나누기와몫_문제;
  */
 public class A0202문제04 {
 	public static void main(String[] args) {
-		
+		System.out.println(750 / 9);
+		System.out.println(170 / 2); // 정답
+		System.out.println(230 / 3);
+		System.out.println(634 / 8);
 	}
 }

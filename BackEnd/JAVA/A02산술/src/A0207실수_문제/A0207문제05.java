@@ -10,5 +10,6 @@ package A0207실수_문제;
  */
 public class A0207문제05 {
 	public static void main(String[] args) {
+		System.out.println(String.format("%.2f", 1278.50 + 532.70 + 1110.45));
 	}
 }

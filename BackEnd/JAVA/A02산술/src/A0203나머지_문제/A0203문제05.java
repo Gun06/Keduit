@@ -12,7 +12,9 @@ package A0203나머지_문제;
 */
 public class A0203문제05 {
 	public static void main(String[] args) {
-				
-		
+		System.out.println(741 % 9);
+		System.out.println(172 % 7); 
+		System.out.println(233 % 4); // 정답
+		System.out.println(634 % 8);
 	}
 }

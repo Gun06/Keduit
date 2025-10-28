@@ -12,6 +12,9 @@ package A0204양수와음수_문제;
  */
 public class A0204문제01 {
 	public static void main(String[] args) {
-		
+		System.out.println(9 + -6);
+		System.out.println(-6 + 9);
+		System.out.println(-8 + 5);
+		System.out.println(5 + -8);
 	}
 }

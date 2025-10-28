@@ -12,6 +12,9 @@ package A0206소괄호_문제;
  */
 public class A0206문제04 {
 	public static void main(String[] args) {
-		
+		System.out.println(6 - (-5 + 4) - 7);
+		System.out.println(9 - 3 - (7 + -2));
+		System.out.println(8 - (-2 + 5) + 1);
+		System.out.println(8 + -2 - (8 + 3));
 	}
 }

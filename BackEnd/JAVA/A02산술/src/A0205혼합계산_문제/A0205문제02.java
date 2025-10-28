@@ -11,6 +11,8 @@ package A0205혼합계산_문제;
  */
 public class A0205문제02 {
 	public static void main(String[] args) {
-		
+		System.out.println(5 * 8 / 4);
+		System.out.println(6 * 6 / 3);
+		System.out.println( 9 * 4 / 4);
 	}
 }

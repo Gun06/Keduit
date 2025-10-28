@@ -11,7 +11,8 @@ package A0201산술연산자_문제;
 */
 public class A0201문제02정답 {
 	public static void main(String[] args) {
-					
-		
+		System.out.println(12 + 5);  // 정답
+		System.out.println(25 - 10);
+		System.out.println(8 * 2);
 	}
 }

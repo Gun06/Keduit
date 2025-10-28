@@ -9,5 +9,6 @@ package A0207실수_문제;
 */
 public class A0207문제03 {
 	public static void main(String[] args) {
+		System.out.println(String.format("%.1f", 23.3*8));
 	}
 }
