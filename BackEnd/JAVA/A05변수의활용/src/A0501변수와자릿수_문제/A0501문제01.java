@@ -13,6 +13,14 @@ package A0501변수와자릿수_문제;
 */
 public class A0501문제01 {
 	public static void main(String[] args) {
-		
+		int a = 7951;
+		int _1000 = a / 1000;
+		int _100 = a % 1000 / 100;
+		int _10 = a % 100 / 10;
+		int _1 = a % 10;
+		System.out.println(_1000);
+		System.out.println(_100);
+		System.out.println(_10);
+		System.out.println(_1);
 	}
 }

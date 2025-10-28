@@ -10,6 +10,9 @@ package A0501변수와자릿수_문제;
 */
 public class A0501문제03 {
 	public static void main(String[] args) {
-		
+		int a = 6453;
+		int _1000 = a / 1000;
+		int _1 = a % 10;
+		System.out.println(_1000 + _1);
 	}
 }

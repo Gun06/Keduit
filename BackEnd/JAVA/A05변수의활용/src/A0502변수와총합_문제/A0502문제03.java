@@ -10,6 +10,12 @@ package A0502변수와총합_문제;
 */
 public class A0502문제03 {
 	public static void main(String[] args) {
-		
+		int a = 5875;
+	    int b = a / 1000;
+	    int c = a % 1000 / 100;
+	    int d = a % 100 / 10;
+	    int e = a % 10;
+	    int f = b + c + d + e;
+	    System.out.println(f);
 	}
 }

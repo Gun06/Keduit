@@ -16,6 +16,13 @@ package A0502변수와총합_문제;
 */
 public class A0502문제05 {
 	public static void main(String[] args) {
-	    
+		int a = 1200;
+	    int b = 1100;
+	    int c = 1300;
+	    int d = a + b + c;
+	    int e = a + a;
+	    int f = d * 3 + e * 2;
+	    int g = f * 4;
+	    System.out.println(g);
 	}
 }

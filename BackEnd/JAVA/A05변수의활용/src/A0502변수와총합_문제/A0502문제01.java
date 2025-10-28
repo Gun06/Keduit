@@ -11,6 +11,12 @@ package A0502변수와총합_문제;
 */
 public class A0502문제01 {
 	public static void main(String[] args) {
-		
+		int a = 10;
+		int b = 87;
+	    int c = 53;
+	    int d = 65;
+	    int e = 49;
+	    int f = c + d + e;
+	    System.out.println(f);
 	}
 }

@@ -12,6 +12,13 @@ package A0503변수와평균_문제;
 
 public class A0503문제01 {
 	public static void main(String[] args) {
-		
+		double a = 10;
+		double b = 87;
+	    double c = 53;
+	    double d = 65;
+	    double e = 49;
+	    double f = (c + d + e) / 3;
+
+	   System.out.println(String.format("%.2f", f));
 	}
 }

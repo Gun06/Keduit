@@ -11,6 +11,12 @@ package A0503변수와평균_문제;
 */
 public class A0503문제04 {
 	public static void main(String[] args) {
-		
+		int a = 20;
+	    int b = 14;
+	    int c = 6;
+	    int d = a + b + c;
+	    int e = d % 3;
+
+	   System.out.println(e);
 	}
 }
