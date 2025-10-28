@@ -8,6 +8,6 @@ package A0303평균_문제;
  */
 public class A0303문제06 {
 	public static void main(String[] args) {
-		
+		System.out.println(String.format("%.2f", (575/100 + 575%100/10 + 575%10)/3.0));
 	}
 }

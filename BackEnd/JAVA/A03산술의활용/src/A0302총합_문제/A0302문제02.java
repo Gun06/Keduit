@@ -10,5 +10,6 @@ package A0302총합_문제;
  */
 public class A0302문제02 {
 	public static void main(String[] args) {
+		System.out.println(10 + 53 + 49);
 	}
 }	

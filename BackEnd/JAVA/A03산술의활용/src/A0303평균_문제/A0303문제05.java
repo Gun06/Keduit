@@ -9,6 +9,6 @@ package A0303평균_문제;
  */
 public class A0303문제05 {
 	public static void main(String[] args) {
-		
+		System.out.println((20 + 14 + 6) % 3);
 	}
 }

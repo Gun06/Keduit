@@ -11,6 +11,9 @@ package A0301자릿수_문제;
  */
 public class A0301문제01 {
 	public static void main(String[] args) {
-	
+		System.out.println(7951 / 1000);
+		System.out.println(7951 % 1000 / 100);
+		System.out.println(7951 % 100 / 10);
+		System.out.println(7951 % 10);
 	}
 }

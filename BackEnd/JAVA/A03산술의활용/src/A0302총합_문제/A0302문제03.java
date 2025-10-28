@@ -8,5 +8,6 @@ package A0302총합_문제;
  */
 public class A0302문제03 {
 	public static void main(String[] args) {
+		System.out.println(312 / 100 + 312 % 100 / 10 + 312 % 10);
 	}
 }
