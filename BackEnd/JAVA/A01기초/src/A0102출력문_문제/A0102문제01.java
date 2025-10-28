@@ -13,6 +13,9 @@ package A0102출력문_문제;
 */
 public class A0102문제01 {
 	public static void main(String[] args) {
-			
+		System.out.println(20);
+		System.out.println(30);
+		System.out.println(40);
+		System.out.println("안녕하세요");
 	}
 }
