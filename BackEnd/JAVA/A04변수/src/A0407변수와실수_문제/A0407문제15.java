@@ -13,7 +13,10 @@ package A0407변수와실수_문제;
 */
 public class A0407문제15 {
 	public static void main(String[] args) {
+		double a = 2300 * 2;
+		double b = 283 * 3.5;
+		double c = a + b;
 		
-		
+		System.out.println(String.format("%.2f", c));
 	}
 }

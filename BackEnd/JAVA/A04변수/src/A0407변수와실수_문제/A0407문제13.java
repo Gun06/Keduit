@@ -11,7 +11,9 @@ package A0407변수와실수_문제;
 */
 public class A0407문제13 {
 	public static void main(String[] args) {
+		double a = 4.0 / 9;
+		double b = a / 3;
 		
-		
+		System.out.println(String.format("%.2f", b));
 	}
 }

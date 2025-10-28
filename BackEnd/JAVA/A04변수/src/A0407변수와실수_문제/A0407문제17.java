@@ -10,7 +10,10 @@ package A0407변수와실수_문제;
 */
 public class A0407문제17 {
 	public static void main(String[] args) {
+		double a = 8.0 / 25;
+		double b = a / 15;
+		double c = b * 3.5;
 		
-		
+		System.out.println(String.format("%.2f", c));
 	}
 }

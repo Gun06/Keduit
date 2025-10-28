@@ -10,6 +10,9 @@ package A0404변수와나머지_문제;
 */
 public class A0404문제01 {
 	public static void main(String[] args) {
-		
+		int a = 23;
+		int b = 7;
+		int c = a % b;
+		System.out.println(c);
 	}
 }

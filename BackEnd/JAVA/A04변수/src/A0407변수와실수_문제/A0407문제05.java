@@ -12,6 +12,11 @@ package A0407변수와실수_문제;
 */
 public class A0407문제05 {
 	public static void main(String[] args) {
-		
+		double a = 1278.50;
+		double b = 532.70;
+		double c = 1110.45;
+		double d = a + b + c;
+
+	    System.out.println(String.format("%.2f", d));
 	}
 }

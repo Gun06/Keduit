@@ -15,6 +15,12 @@ package A0402변수와양수음수_문제;
 
 public class A0402문제08 {
 	public static void main(String[] args) {
+		int a = 24;
+		int b = -6;
+		int c = a / b;
+		System.out.println(c);
 		
+		int d = b / a;
+		System.out.println(d);
 	}
 }

@@ -14,6 +14,12 @@ package A0402변수와양수음수_문제;
  */
 public class A0402문제03 {
 	public static void main(String[] args) {
+		int a = -9;
+		int b = 12;
+		int c = a - b;
+		System.out.println(c);
 		
+		int d = b - a;
+		System.out.println(d);
 	}
 }

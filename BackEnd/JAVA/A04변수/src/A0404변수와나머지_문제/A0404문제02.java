@@ -10,6 +10,9 @@ package A0404변수와나머지_문제;
 */
 public class A0404문제02 {
 	public static void main(String[] args) {
-		
+		int a = 750;
+	    int b = 150;
+	    int c = a % b;
+	    System.out.println(c);
 	}
 }

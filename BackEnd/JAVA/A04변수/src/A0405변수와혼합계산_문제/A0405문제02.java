@@ -19,6 +19,27 @@ a - b % c + d
 
 public class A0405문제02 {
 	public static void main(String[] args) {
-		
+		int a = 5;
+		int b = 3;
+	    int c = 9;
+	    int d = 2;
+
+	    int e = a + b * c - d;
+	    System.out.println(e);
+
+	    e = a - b * c + d;
+	    System.out.println(e);
+
+	    e = a + b / c - d;
+	    System.out.println(e);
+
+	    e = a - b / c + d;
+	    System.out.println(e);
+
+	    e = a + b % c - d;
+	    System.out.println(e);
+
+	    e = a + b % c + d;
+	    System.out.println(e);
 	}
 }
