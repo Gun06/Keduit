@@ -14,6 +14,15 @@ package A0903논리와서술형_문제;
 
 public class A0903문제05 {
 	public static void main(String[] args) {
-	    
+		int a = 840 / 6;
+	    int b = a * 5;
+	    int c = a * 7;
+
+	    int d = 750 / 3;
+	    int e = d * 2;
+	    int f = d * 4;
+
+	    boolean g = b > e && c > f;
+	    System.out.println(g);
 	}
 }

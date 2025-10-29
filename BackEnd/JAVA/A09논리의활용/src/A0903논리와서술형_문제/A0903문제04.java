@@ -19,6 +19,16 @@ import java.util.Random;
 
 public class A0903문제04 {
 	public static void main(String[] args) {
-		
+		Random ran = new Random();
+		int a = 80;
+		int b = 87;
+		int c = a - b;
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(c);
+
+
+		boolean d = c == 7 || c == -7;
+		System.out.println(d);
 	}
 }

@@ -10,6 +10,8 @@ true
 */
 public class A0901문제01 {
 	public static void main(String[] args) {
-	    
+	    int a = 56;
+	    boolean b = a%4==0 || a%6==0;
+	    System.out.println(b);
 	}
 }

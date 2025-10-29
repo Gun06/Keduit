@@ -13,6 +13,12 @@ false
 */
 public class A0903문제06 {
 	public static void main(String[] args) {
-	    
+		int a = 99;
+	    int b = 49;
+	    int c = a + b;
+	    int d = c / 2;
+
+	    boolean e = d >= 60 && a >= 50 && b >= 50 ;   
+	    System.out.println(e);
 	}
 }

@@ -13,6 +13,9 @@ true
 */
 public class A0901문제03 {
 	public static void main(String[] args) {
-		
+		int a = 10;
+	    boolean b = a > 2;
+	    boolean c = !b;
+	    System.out.println(c);
 	}
 }

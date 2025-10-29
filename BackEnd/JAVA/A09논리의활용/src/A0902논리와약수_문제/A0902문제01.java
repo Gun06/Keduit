@@ -10,6 +10,8 @@ false
 */
 public class A0902문제01 {
 	public static void main(String[] args) {
-		
+		int a = 36;
+	    boolean b = a % 12 == 0 && 124 % a == 0;
+	    System.out.println(b);
 	}
 }

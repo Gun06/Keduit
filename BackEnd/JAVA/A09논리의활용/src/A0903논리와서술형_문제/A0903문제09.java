@@ -17,6 +17,15 @@ true
 */
 public class A0903문제09 {
 	public static void main(String[] args) {
+		Random ran = new Random();
+		int a = ran.nextInt(90) + 10;
+		System.out.println(a);
+		int b = a / 10;
+		int c = a % 10;
+		boolean d = b % 2 == 0 && c % 2 == 1;
+		boolean e = b % 2 == 1 && c % 2 == 0;
 		
+		boolean f = d || e;
+		System.out.println(f);
 	}
 }

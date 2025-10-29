@@ -10,6 +10,11 @@ true
 */
 public class A0902문제02 {
 	public static void main(String[] args) {
-	  
+		int a = 1234;
+		int b = a % 1000 / 100;
+		int c =a % 100 / 10;
+		boolean d = 24 % b == 0 || 24 % c == 0;
+		    
+		System.out.println(d);
 	}
 }

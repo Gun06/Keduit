@@ -17,6 +17,16 @@ true
 */
 public class A0903문제03 {
 	public static void main(String[] args) {
-		
+		Random ran = new Random();
+		int a = ran.nextInt(9) + 1;
+		int b = ran.nextInt(9) + 1;
+		int c = ran.nextInt(9) + 1;
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(c);
+
+
+		boolean d = a <= b && a <= c;
+		System.out.println(d);
 	}
 }
