@@ -17,6 +17,20 @@ package A0505누적_문제;
 */
 public class A0505문제01 {
 	public static void main(String[] args) {
-		
+		int a = 50;
+	    System.out.println(a);
+
+	    int b = 3 * 4;
+	    int c = 1 * 3;
+	    int d = 2 * 2;
+
+	    a = a + b;
+	    System.out.println(a);
+
+	    a = a + c;
+	    System.out.println(a);
+
+	    a = a - d;
+	    System.out.println(a);
 	}
 }

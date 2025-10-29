@@ -17,6 +17,24 @@ package A0506교환_문제;
 */
 public class A0506문제02 {
 	public static void main(String[] args) {
-		 
+		int a = 45;
+		int b = 65;
+	    int c = 75;
+	    int d = 80;
+
+	    int e = a;
+	    int f = b;
+	    int g = c;
+	    int h = d;
+
+	    a = h;
+	    b = e;
+	    c = f;
+	    d = g;
+
+	    System.out.println(a);
+	    System.out.println(b);
+	    System.out.println(c);
+	    System.out.println(d);
 	}
 }

@@ -21,7 +21,20 @@ package A0505누적_문제;
 */
 public class A0505문제03 {
 	public static void main(String[] args) {
+		double a = 50000;
+		double b = 12000 * 2;
+		double c = 12000 * 0.6;
+		double d = (c - 4000) * 2;
 		
-
+		System.out.println(a);
+		
+		a -= b;
+		System.out.println(a);
+		
+		a -= c;
+		System.out.println(a);
+		
+		a -= d;
+		System.out.println(a);
 	}
 }

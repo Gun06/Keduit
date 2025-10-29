@@ -18,12 +18,6 @@ import java.util.Random;
 */
 public class A0504문제01 {
 	public static void main(String[] args) {
-		Random rd = new Random();
-
-		int a = rd.nextInt(6) - 3;
-		int b = rd.nextInt(6) + 1;
-		int c = a + b;
-
-		System.out.println(c);
+		
 	}
 }
