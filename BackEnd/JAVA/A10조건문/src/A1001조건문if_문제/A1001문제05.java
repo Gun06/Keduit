@@ -19,6 +19,17 @@ import java.util.Random;
 */
 public class A1001문제05 {
 	public static void main(String[] args) {
-		
+		Random ran = new Random();
+		int a = ran.nextInt(45) + 11;
+		System.out.println(a);
+		 
+		int b = a / 10;
+		int c = a % 10;
+		if(a == b) {
+		    System.out.println("당첨");
+		}
+		if(a != b){
+		    System.out.println("꽝");
+		}
 	}
 }

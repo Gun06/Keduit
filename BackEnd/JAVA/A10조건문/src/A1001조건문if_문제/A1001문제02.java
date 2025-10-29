@@ -15,6 +15,15 @@ import java.util.Random;
 */
 public class A1001문제02 {
 	public static void main(String[] args) {
+		Random ran = new Random();
+		int a = ran.nextInt(2)+1;
+		System.out.println(a);
 		
+		if(a == 1) {
+	    	 System.out.println("앞");
+	    }
+	    if(a == 2) {
+	    	 System.out.println("뒤");
+	    }
 	}
 }
