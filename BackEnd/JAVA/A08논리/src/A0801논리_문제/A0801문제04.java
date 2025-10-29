@@ -10,6 +10,13 @@ true
 */
 public class A0801문제04 {
 	public static void main(String[] args) {
-	    
+		int a = 3640;
+	    int b = a / 1000;
+	    int c = a % 1000 / 100;
+	    int d = a % 100 / 10;
+	    int e = a % 10;
+
+	    boolean f = b > 5 || c > 5 || d > 5 || e > 5;
+	    System.out.println(f);
 	}
 }

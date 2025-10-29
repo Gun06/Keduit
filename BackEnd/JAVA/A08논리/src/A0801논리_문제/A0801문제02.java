@@ -12,6 +12,9 @@ false
 */
 public class A0801문제02 {
 	public static void main(String[] args) {
-		 
+		int a = 99;
+	    int b = 99;
+	    boolean c = a == 100 || b == 100;
+	    System.out.println(c);
 	}
 }

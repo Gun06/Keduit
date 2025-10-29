@@ -12,6 +12,8 @@ true
 */
 public class A0801문제01 {
 	public static void main(String[] args) {
-		
+		int a = 67;
+		boolean b = 60 <= a && a <= 100 ;
+		System.out.println(b);
 	}
 }
