@@ -11,6 +11,9 @@ package A0703배수_문제;
 */
 public class A0703문제07 {
 	public static void main(String[] args) {
-	   
+		int a = 3346;
+	    int b = a % 100 / 10;
+	    boolean c = b % 2 == 0;
+	    System.out.println(c);
 	}
 }

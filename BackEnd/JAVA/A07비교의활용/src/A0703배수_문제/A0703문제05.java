@@ -10,6 +10,11 @@ true
 */
 public class A0703문제05 {
 	public static void main(String[] args) {
+		int a = 3;
+		int b = 6;
 		
+		int n = a*b;
+		boolean N = n%2==0;
+		System.out.println(N);
 	}
 }

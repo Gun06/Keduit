@@ -17,7 +17,17 @@ import java.util.Random;
 */
 public class A0704문제05 {
 	public static void main(String[] args) {
-			
-
+		Random ran = new Random();
+		int r = ran.nextInt(9000)+1000;
+		
+		int a = r / 1000;
+	    int b = r % 1000 / 100;
+	    int c = r % 100 / 10;
+	    int d = r % 10;
+	    int e = a + b + c + d;
+	    boolean f = 150 % e == 0;
+	    System.out.println(r);
+	    System.out.println(e);
+	    System.out.println(f);
 	}
 }

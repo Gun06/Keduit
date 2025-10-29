@@ -10,6 +10,9 @@ false
 */
 public class A0703문제03 {
 	public static void main(String[] args) {
+		int a = 3340;
 		
+		boolean b = a%100/10%3 == 0;
+		System.out.println(b);
 	}
 }

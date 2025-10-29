@@ -14,6 +14,13 @@ true
 */
 public class A0702문제01 {
 	public static void main(String[] args) {
-		 
+		int a = 94 + 32 + 56;
+		int b = 87 + 65 + 30;
+	    double c = (double)a / 3;
+	    double d = (double)b / 3;
+	    boolean e = c == d;   
+	    System.out.println(c);
+	    System.out.println(d);
+	    System.out.println(e);
 	}
 }

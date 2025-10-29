@@ -10,6 +10,8 @@ false
 */
 public class A0704문제01 {
 	public static void main(String[] args) {
-		
+		int a = 3346;
+		boolean b =  45 % (a % 10) == 0;
+	    System.out.println(b);
 	}
 }

@@ -10,6 +10,8 @@ true
 */
 public class A0703문제04 {
 	public static void main(String[] args) {
-	   
+		int a = 3346;
+	    boolean b = a % 10 % 3 == 0;
+	    System.out.println(b);
 	}
 }

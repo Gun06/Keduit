@@ -11,6 +11,11 @@ false
 
 public class A0703문제10 {
 	public static void main(String[] args) {
-	   
+		int width = 3;
+	    int height = 6;
+	    int recArea  = width * height;
+
+	    boolean result = recArea % 2 != 0;
+	    System.out.println(result);
 	}
 }

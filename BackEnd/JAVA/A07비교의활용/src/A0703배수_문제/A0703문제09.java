@@ -16,7 +16,17 @@ true
 */
 public class A0703문제09 {
 	public static void main(String[] args) {
-		
+		Random ran = new Random();
+		int r = ran.nextInt(9000)+1000;
+		System.out.println(r);
 
+		int a = r / 1000;
+	    int b = r % 1000 / 100;
+	    int c = r % 100 / 10;
+	    int d = r % 10;
+	    int e = a + b + c + d;
+	    boolean f = e % 2 == 0;
+	    System.out.println(e);
+	    System.out.println(f);
 	}
 }

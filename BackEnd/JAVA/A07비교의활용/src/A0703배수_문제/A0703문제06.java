@@ -10,6 +10,14 @@ false
 */
 public class A0703문제06 {
 	public static void main(String[] args) {
-		
+		int a = 3;
+		int b = 6;
+	    int c = a * b;
+	    boolean d = c % 2 != 0;
+	    boolean e = c % 2 > 0;
+	    boolean f = c % 2 == 1;
+	    System.out.println(d);
+	    System.out.println(e);
+	    System.out.println(f);
 	}
 }

@@ -10,6 +10,9 @@ true
 */
 public class A0703문제01 {
 	public static void main(String[] args) {
-		  
+		  int a = 3346;
+		  int b = a/1000;
+		  boolean c = b%3 == 0;
+		  System.out.println(c);
 	}
 }
