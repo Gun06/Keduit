@@ -21,6 +21,23 @@ import java.util.Random;
 */
 public class A1002문제10 {
 	public static void main(String[] args) {
+		Random ran = new Random();
 		
+		int r = ran.nextInt(90) + 10;
+		System.out.println(r);
+		
+		int a = r / 10;
+		int b = r % 10;
+		
+		 boolean c = a % 2 == 0 && b % 2 == 0;
+		 boolean d = a % 2 == 1 && b % 2 == 1;
+		 boolean e = c || d;
+		 
+		 if(e) {
+		     System.out.println("o");
+		 }
+		 if(!e) {
+		     System.out.println("x");
+		 }
 	}
 }

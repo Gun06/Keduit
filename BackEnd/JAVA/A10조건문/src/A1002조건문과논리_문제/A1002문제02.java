@@ -21,6 +21,17 @@ import java.util.Random;
 
 public class A1002문제02 {
 	public static void main(String[] args) {
+		Random ran = new Random();
+		int r = ran.nextInt(91)+10;
+		System.out.println(r);
 		
+		boolean a = r%4==0;
+		boolean b = r%6==0;
+		
+		if(a&&b) {
+			System.out.println("O");
+		}
+		if(!a&&!b)
+			System.out.println("X");
 	}
 }

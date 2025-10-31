@@ -25,6 +25,22 @@ import java.util.Random;
 */
 public class A1002문제12 {
 	public static void main(String[] args) {
+		Random ran = new Random();
 		
+		int r1 = ran.nextInt(9)+1;
+		int r2 = ran.nextInt(9)+1;
+		System.out.println(r1);
+		System.out.println(r2);
+		
+		boolean a = r1 == r2+1;
+		boolean b = r2 == r1+1;
+		boolean c = a || b;
+		
+		if(c) {
+			System.out.println("연속");
+		}
+		if(!c) {
+			System.out.println("꽝");
+		}
 	}
 }

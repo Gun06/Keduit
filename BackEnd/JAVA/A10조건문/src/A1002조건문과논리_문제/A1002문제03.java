@@ -19,6 +19,18 @@ o
 */
 public class A1002문제03 {
 	public static void main(String[] args) {
-		
+		Random ran = new Random();
+		int r = ran.nextInt(10) + 1;
+
+		System.out.println(r);
+	    boolean a = 300 % r == 0;
+	    boolean b = 50 % r == 0;
+
+	    if(a || b) {
+	    	System.out.println("o");
+	    }
+	    if(!a && !b) {
+	    	System.out.println("x");
+	    }
 	}
 }

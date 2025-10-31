@@ -20,6 +20,22 @@ x
 */
 public class A1002문제09 {
 	public static void main(String[] args) {
+		Random ran = new Random();
+		int r = ran.nextInt(900) + 100;
+		System.out.println(r);
+		int a = r / 100;
+		int b = r % 100 / 10;
+		int c = r % 10;
 		
+		 boolean d =  a % 2 == 0 && b % 2 == 0 && c % 2 == 0;
+		 boolean e =  a >= 5 && b >= 5 && c >= 5;
+		 boolean f = d && e;
+
+		 if(f) {
+		    System.out.println("o");
+		 }
+		 if(!f) {
+		    System.out.println("x");
+		 }
 	}
 }

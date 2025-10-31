@@ -17,6 +17,24 @@ import java.util.Random;
 */
 public class A1002문제04 {
 	public static void main(String[] args) {
-		
+		Random ran = new Random();
+
+		int r = ran.nextInt(80001) + 10000;
+	    System.out.println(r);
+
+	    int a = r / 10000;
+	    int b = r % 10;
+	    System.out.println(a + " " + b);
+	    
+	    int c = a + b;
+	    System.out.println(c);
+	    
+	    boolean d = c % 2 == 0;
+	    if(d) {
+	        System.out.println("짝수");
+	    }
+	    if(!d) {
+	        System.out.println("홀수");
+	    }
 	}
 }

@@ -21,6 +21,23 @@ o
 */
 public class A1002문제07 {
 	public static void main(String[] args) {
-	
+		Random ran = new Random();
+		int r = ran.nextInt(900) + 100;
+		System.out.println(r);
+		int a = r / 100;
+		int b = r % 100 / 10;
+		int c = r % 10;
+		
+		 boolean d = a % 2 == 0;
+		 boolean e = b % 2 == 0;
+		 boolean f = c % 2 == 0;
+		 boolean g = d && e && f;
+		 
+		 if(g) {
+		    System.out.println("o");
+		 }
+		 if(!g) {
+		    System.out.println("x");
+		 }
 	}
 }

@@ -23,6 +23,19 @@ import java.util.Random;
 */
 public class A1002문제01 {
 	public static void main(String[] args) {
+		Random ran = new Random();
+		int r = ran.nextInt(26);
+		r = r * 4;
+		System.out.println(r);
 		
+		boolean a = 60<=r && r<= 100;
+		boolean b = r < 60 && r <= 100;
+
+	    if(a) {
+	    	System.out.println("합격");
+	    }
+	    if(b) {
+	    	System.out.println("불합격");
+	    }
 	}
 }

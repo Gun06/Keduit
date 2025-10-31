@@ -19,7 +19,18 @@ o
 */
 public class A1002문제05 {
 	public static void main(String[] args) {
-		
-		
+		Random ran = new Random();
+		int r1 = ran.nextInt(9) + 1;
+		int r2 = ran.nextInt(9) + 1;
+		int r3 = ran.nextInt(9) + 1;
+		System.out.println(r1 + " " + r2 + " " + r3);
+		boolean a = r1 == r2 && r1 == r3;
+		    
+		if(a) {
+			System.out.println("o");
+		}
+		if(!a) {
+			System.out.println("x");
+		}
 	}
 }
