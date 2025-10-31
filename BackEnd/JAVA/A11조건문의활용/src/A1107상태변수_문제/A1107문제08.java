@@ -19,6 +19,22 @@ import java.util.Random;
 */
 public class A1107문제08 {
 	public static void main(String[] args) {
+		Random ran = new Random();
 		
+		int state = ran.nextInt(5) + 1;
+		System.out.println(state);
+		
+	    if(state == 1) {
+	    	System.out.println("아메리카노");
+	    }
+	    if(state == 2) {
+	    	System.out.println("카페라떼");
+	    }
+	    if(state == 3) {
+	    	System.out.println("모카라떼");
+	    }
+	    if(state != 1 && state != 2 && state != 3){ 
+	    	System.out.println("주문취소");
+	    }
 	}
 }

@@ -22,6 +22,23 @@ import java.util.Random;
 */
 public class A1109문제03 {
 	public static void main(String[] args) {
-		
+		Random ran = new Random();
+		int r1 = ran.nextInt(101);
+		int r2 = ran.nextInt(101);
+		System.out.println(r1 + " " + r2);
+
+	    int a = r1 + r2;
+	    double b = (double)a / 2;
+	    System.out.println(b);
+	    boolean c = b >= 60;
+	    boolean d = r1 >= 50 && r2 >= 50;
+	    boolean e = c && d;
+
+	    if(e) {
+	    	System.out.println("합격");
+	    }
+	    if(!e) {
+	    	System.out.println("불합격");
+	    }
 	}
 }

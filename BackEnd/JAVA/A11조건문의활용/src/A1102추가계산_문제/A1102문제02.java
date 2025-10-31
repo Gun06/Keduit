@@ -25,6 +25,20 @@ import java.util.Random;
 */
 public class A1102문제02 {
 	public static void main(String[] args) {
-		
+		Random ran = new Random();
+		int a = 1000;
+		int b = 800;
+		int r1 = ran.nextInt(10) + 1;
+	    int r2 = ran.nextInt(10) + 1;
+		System.out.println(r1 + " " + r2);
+		int c = r1 + r2;
+		if(c >= 10) {
+	     	a = a - 100;
+			b = b - 100;
+		}
+		System.out.println(a);
+		System.out.println(b);
+		int d = a * r1 + b * r2;
+		System.out.println(d);
 	}
 }

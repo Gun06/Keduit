@@ -37,6 +37,50 @@ import java.util.Random;
 */
 public class A1110문제04 {
 	public static void main(String[] args) {
+		Random ran = new Random();
+		System.out.println("커피 메뉴");
+		System.out.println("1번 아메리카노 1000원");
+		System.out.println("2번 까페라떼 1500원");
+		System.out.println("3번 모카라떼 2000원");
+		int r1 = ran.nextInt(4) + 1;
+		System.out.println(r1);
+		int r2= ran.nextInt(17) + 8;
+		r2 = r2 * 100;
+		System.out.println(r2);
+		int a = r2;
 		
+		if(r1 == 1) {
+	        if(r2 >= 1000) {
+	            a = r2 - 1000;
+	            System.out.println("아메리카노를 주문합니다");
+	        }
+	        if(r2 < 1000) {
+	        	 System.out.println("금액이 부족합니다");
+	        }
+	    }
+
+	    if(r1 == 2) {
+	        if(r2 >= 1500) {
+	            a = r2 - 1500;
+	            System.out.println("까페라떼를 주문합니다");
+	        }
+	        if(r2 < 1500) {
+	        	System.out.println("금액이 부족합니다");
+	        }
+	    }
+
+	    if(r1 == 3) {
+	        if(r2 >= 2000) {
+	            a = r2 - 2000;
+	            System.out.println("모카라떼를 주문합니다");
+	        }
+	        if(r2 < 2000) {
+	        	System.out.println("금액이 부족합니다");
+	        }
+	    }        
+	    if(r1 == 4) {
+	    	System.out.println("잘못된 번호입니다");
+	    }
+	    System.out.println(a);
 	}
 }

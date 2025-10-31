@@ -18,6 +18,18 @@ import java.util.Random;
 */
 public class A1103문제01 {
 	public static void main(String[] args) {
+		Random ran = new Random();
+		int r = ran.nextInt(90)+10;
+		System.out.println(r);
 		
+		int a = r/10;
+		int b = r&10;
+		
+		if(b>=5) {
+			a = a + 1;
+		}
+		
+		int c = a * 10;
+		System.out.println(c);
 	}
 }

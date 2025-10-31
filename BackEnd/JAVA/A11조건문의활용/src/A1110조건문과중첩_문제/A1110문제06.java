@@ -15,6 +15,31 @@ import java.util.Random;
 */
 public class A1110문제06 {
 	public static void main(String[] args) {
+		Random ran = new Random();
 		
+		int r = ran.nextInt(900) + 100;
+		System.out.println(r);
+		int a = r / 100;
+		int b = r % 100 / 10;
+		int c = r % 10;
+		boolean d = a != 0 && b != 0 && c != 0;
+		if(d) {
+			int total = 0;
+			
+			if(20 % a != 0) {
+				total = total + a;
+			}
+			if(20 % b != 0) {
+				total = total + b;
+			}
+			if(20 % c != 0) {
+				total = total + c;
+			}
+			System.out.println(total);
+			
+		}
+		if(!d) {
+			System.out.println("0 이있습니다");
+		}
 	}
 }

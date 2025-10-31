@@ -15,6 +15,25 @@ package A1102추가계산_문제;
 */
 public class A1102문제04 {
 	public static void main(String[] args) {
-		
+		int a = 14;
+	    int b = 12;
+
+	    int c = 1500;
+	    int d = 1600;
+
+	    int e =  a / 4;
+	    int f = a % 4;
+	    if(f > 0) {
+	        e = e + 1;
+	    }
+
+	    int g = b / 5;
+	    int h = b % 5;
+	    if(h > 0) {
+	        g = g + 1;
+	    }
+
+	    int i = e * c + g * d;
+	    System.out.println(i);
 	}
 }

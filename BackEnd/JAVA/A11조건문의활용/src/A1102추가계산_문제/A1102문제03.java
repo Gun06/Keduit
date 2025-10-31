@@ -13,6 +13,17 @@ package A1102추가계산_문제;
 */
 public class A1102문제03 {
 	public static void main(String[] args) {
+		int a = 1500;
+		int b = 14;
 		
+		int c = b / 3;
+		int d = b % 3;
+		
+		if(d > 0) {
+	        c = c + 1;
+	    }
+
+	    int e = a * c;
+	    System.out.println(e);
 	}
 }

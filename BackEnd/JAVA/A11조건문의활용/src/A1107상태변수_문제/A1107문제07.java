@@ -17,6 +17,18 @@ import java.util.Random;
 */
 public class A1107문제07 {
 	public static void main(String[] args) {
-		
+		Random ran = new Random();
+		int state = ran.nextInt(3) + 1;
+		System.out.println(state);
+
+	    if(state == 1) {
+	        System.out.println(2);
+	    }
+	    if(state == 2) {
+	    	 System.out.println(5);
+	    }
+	    if(state == 3) {
+	    	 System.out.println(7);
+	    }
 	}
 }

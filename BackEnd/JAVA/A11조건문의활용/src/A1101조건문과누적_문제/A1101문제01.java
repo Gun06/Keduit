@@ -15,6 +15,25 @@ import java.util.Random;
 */
 public class A1101문제01 {
 	public static void main(String[] args) {
+		Random ran = new Random();
 		
+		int r = ran.nextInt(900) + 1;
+		System.out.println(r);
+
+		int a = r / 100;
+	    int b = r % 100 / 10;
+	    int c = r % 10;
+
+	    int total = 0;
+	    if(a < 5) {
+	        total = total + a;
+	    }
+	    if(b < 5) {
+	        total = total + b;
+	    }
+	    if(c < 5) {
+	        total = total + c;
+	    }
+	    System.out.println(total);
 	}
 }

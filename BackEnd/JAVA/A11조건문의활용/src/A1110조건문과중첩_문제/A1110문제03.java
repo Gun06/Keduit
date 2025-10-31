@@ -30,6 +30,21 @@ import java.util.Random;
 */
 public class A1110문제03 {
 	public static void main(String[] args) {
-		
+		Random ran = new Random();
+		int a = 0;
+		int r1 = ran.nextInt(6) + 1;
+		int r2 = ran.nextInt(6) + 1;
+		System.out.println(r1 + " " + r2);
+
+		a = r1 + r2;
+		if(r1 == r2) {
+			System.out.println("찬스!");
+			int r3 = ran.nextInt(6) + 1;
+			System.out.println(r3);
+			if(r3 % 2 == 0) {
+				a = a + r3;
+			}
+		}
+		System.out.println(a);
 	}
 }

@@ -15,7 +15,36 @@ import java.util.Random;
 */
 public class A1108문제02 {
 	public static void main(String[] args) {
+		Random ran = new Random();
+		int r = ran.nextInt(900) + 100;
+		System.out.println(r);
 		
+		int a = r / 100;
+		int b = r % 100 / 10;
+		int c = r %10;
 		
+		int count1 = 0;
+	    if(a == 3) {
+	        count1 = count1 + 1;
+	    }
+	    if(b == 3) {
+	        count1 = count1 + 1;
+	    }
+	    if(c == 3) {
+	        count1 = count1 + 1;
+	    }
+	    System.out.println(count1);
+
+	    int count2 = 0;
+	    if(a == 5) {
+	        count2 = count2 + 1;
+	    }
+	    if(b == 5) {
+	        count2 = count2 + 1;
+	    }
+	    if(c == 5) {
+	        count2 = count2 + 1;
+	    }    
+	    System.out.println(count2);
 	}
 }

@@ -29,6 +29,31 @@ c가 가깝다
 */
 public class A1104문제03 {
 	public static void main(String[] args) {
+		Random ran = new Random();
+		int a = ran.nextInt(9) + 1;
+		int b = 5;
+		int c = ran.nextInt(9) + 1;
+		System.out.println(b);
+		System.out.println(a + " " + c);
 		
+	    int d = b - a;
+	    if(d < 0) {
+	        d = -d;
+	    }
+	    int e = b - c;
+	    if(e < 0) {
+	        e = -e;
+	    }
+	    System.out.println(d + " " + e);
+
+	    if(d < e) {
+	    	System.out.println("a가 가깝다");
+	    }
+	    if(e < d) {
+	    	System.out.println("c가 가깝다");
+	    }
+	    if(d == e) {
+	    	System.out.println("서로 같다");
+	    }
 	}
 }

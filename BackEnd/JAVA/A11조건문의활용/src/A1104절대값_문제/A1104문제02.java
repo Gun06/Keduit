@@ -17,6 +17,17 @@ import java.util.Random;
 */
 public class A1104문제02 {
 	public static void main(String[] args) {
-		
+		Random ran = new Random();
+		int r1 = ran.nextInt(21);
+		r1 = r1 * 5;
+		int r2 = ran.nextInt(21);
+		r2 = r2 * 5;
+		System.out.println(r1 + " " + r2);
+		int a = r1 - r2;
+		System.out.println(a);
+	    if(a < 0) {
+	        a = -a;
+	        System.out.println(a);
+	    }
 	}
 }

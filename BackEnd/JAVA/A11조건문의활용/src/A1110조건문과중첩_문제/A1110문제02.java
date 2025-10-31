@@ -31,6 +31,27 @@ import java.util.Random;
 */
 public class A1110문제02 {
 	public static void main(String[] args) {
-		
+		Random ran = new Random();
+		int a = 10;
+		int b = ran.nextInt(10) + 1;
+		int c = ran.nextInt(2) + 1;
+		System.out.println(b + " " + c);
+		 
+		if(c == 1) {
+	        a = a + b;
+	        if(b % 2 == 0) {
+	            a = a + b;
+	        }
+	    }
+	    if(c == 2) {
+	        a = a - b;
+	        if(b % 2 == 0) {
+	            a = a - b;
+	        }
+	        if(a < 0) {
+	            a = 0;
+	        }
+	    }
+	    System.out.println(a);
 	}
 }

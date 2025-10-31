@@ -21,6 +21,29 @@ import java.util.Random;
 */
 public class A1108문제04 {
 	public static void main(String[] args) {
-		
+		Random ran = new Random();
+		int r = ran.nextInt(99) + 1;
+		System.out.println(r);
+
+	    int a = r / 10;
+	    int b = r % 10;
+
+	    int count = 0;
+	    if(a == 3 || a == 6 || a == 9) {
+	        count = count + 1;
+	    }
+	    if(b == 3 || b == 6 || b == 9) {
+	        count = count + 1;
+	    }
+
+	    if(count == 2) {
+	    	System.out.println("짝짝");
+	    }
+	    if(count == 1) {
+	    	System.out.println("짝");
+	    }
+	    if(count == 0) {
+	    	System.out.println(r);
+	    }
 	}
 }

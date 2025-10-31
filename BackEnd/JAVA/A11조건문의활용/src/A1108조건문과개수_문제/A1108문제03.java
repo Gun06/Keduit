@@ -27,6 +27,35 @@ import java.util.Random;
 */
 public class A1108문제03 {
 	public static void main(String[] args) {
+		Random ran = new Random();
+		int r = ran.nextInt(900) + 100;
+		System.out.println(r);
 		
+		int a = r / 100;
+		int b = r % 100 / 10;
+		int c = r %10;
+		
+		int count = 0;
+	    if(a % 2 == 0) {
+	        count = count + 1;
+	    }
+	    if(b % 2 == 0) {
+	        count = count + 1;
+	    }
+	    if(c % 2 == 0) {
+	        count = count + 1;
+	    }
+	    
+	    int d = 0;
+	    if(count == 3) {
+	        d = a + b + c;
+	    }
+	    if(count == 0) {
+	        d = a - b - c;
+	    }
+	    if(0 < count && count < 3) {
+	        d = a * b * c;
+	    }
+	    System.out.println(d);
 	}
 }

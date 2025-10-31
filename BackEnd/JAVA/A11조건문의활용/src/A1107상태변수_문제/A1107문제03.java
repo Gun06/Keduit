@@ -23,6 +23,19 @@ import java.util.Random;
 */
 public class A1107문제03 {
 	public static void main(String[] args) {
+		Random ran = new Random();
+		int r1 = ran.nextInt(5) + 1;
+		int r2 = ran.nextInt(5) + 6;
+		System.out.println(r1 + " " + r2);
 		
+		int state = ran.nextInt(2) + 1;
+		System.out.println(state);
+			
+	    if(state == 1) {
+	    	System.out.println(r1 + " " + r2);
+	    }
+	    if(state == 2) {
+	    	System.out.println(r2 + " " + r1);
+	    }
 	}
 }

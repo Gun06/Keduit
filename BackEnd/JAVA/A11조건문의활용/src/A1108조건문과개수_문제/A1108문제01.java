@@ -14,6 +14,24 @@ import java.util.Random;
 */
 public class A1108문제01 {
 	public static void main(String[] args) {
+		Random ran = new Random();
+		int r = ran.nextInt(900) + 100;
+		System.out.println(r);
 		
+		int a = r / 100;
+		int b = r % 100 / 10;
+		int c = r %10;
+		
+		int count = 0;
+	    if(a == 5 || a == 8) {
+	        count = count + 1;
+	    }
+	    if(b == 5 || b == 8) {
+	        count = count + 1;
+	    }
+	    if(c == 5 || c == 8) {
+	        count = count + 1;
+	    }
+	    System.out.println(count);
 	}
 }

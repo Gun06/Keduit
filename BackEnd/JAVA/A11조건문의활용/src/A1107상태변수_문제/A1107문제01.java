@@ -30,6 +30,21 @@ c의 값이 2이면, 철수는 계단 아래로 b만큼 이동합니다.
 */
 public class A1107문제01 {
 	public static void main(String[] args) {
-		
+		Random ran = new Random();
+		int a = 50;
+	    System.out.println(a);
+	    
+	    int b = ran.nextInt(10) + 1;
+	    int c = ran.nextInt(2) + 1;
+	    System.out.println(b + " " + c);
+
+	    
+	    if(c == 1) {
+	        a = a + b;
+	    }
+	    if(c == 2) {
+	        a = a - b;
+	    }
+	    System.out.println(a);
 	}
 }

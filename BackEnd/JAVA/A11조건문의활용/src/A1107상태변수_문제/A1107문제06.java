@@ -23,6 +23,29 @@ import java.util.Random;
 */
 public class A1107문제06 {
 	public static void main(String[] args) {
-		
+		int x = 5;
+	    int y = 5;
+	    System.out.println(x + " " + y);
+
+	    Random ran = new Random();
+	    int state = ran.nextInt(4) + 1;
+	    System.out.println(state);
+	    
+	    int r = ran.nextInt(10) + 1;
+	    System.out.println(r);
+
+	    if(state == 1) {
+	        x = x + r;
+	    }
+	    if(state == 2) {
+	        x = x - r;
+	    }
+	    if(state == 3) {
+	        y = y - r;
+	    }
+	    if(state == 4) {
+	        y = y + r;
+	    }
+	    System.out.println(x + " " + y);
 	}
 }

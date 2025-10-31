@@ -20,6 +20,15 @@ import java.util.Random;
 */
 public class A1102문제01 {
 	public static void main(String[] args) {
-		
+		Random ran = new Random();
+		int r1 = ran.nextInt(2) + 1;
+		int r2 = ran.nextInt(2) + 1;
+		System.out.println(r1 + " " + r2);
+			
+	    int a = r1 + r2;
+	    if(r1 == r2) {
+	        a = a + 6;
+	    }
+	    System.out.println(a);
 	}
 }

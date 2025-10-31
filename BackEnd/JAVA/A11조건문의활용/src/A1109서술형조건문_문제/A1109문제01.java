@@ -26,7 +26,25 @@ import java.util.Random;
 */
 public class A1109문제01 {
 	public static void main(String[] args) {
-	
-		
+		Random ran = new Random();
+		int r1 = ran.nextInt(101);
+		int r2 = ran.nextInt(101);
+		System.out.println(r1 + " " + r2);
+
+	    int a = r1 + r2;
+	    double b = (double)a / 2;
+	    System.out.println(b);
+
+	    boolean c = r1 == 100 || r2 == 100;
+	    boolean d = b >= 80;
+
+	    if(c || d) {
+	    	System.out.println("장학생");
+	    	
+	    }
+	    
+	    if(!c && !d) {
+	    	System.out.println("꽝");
+	    }
 	}
 }

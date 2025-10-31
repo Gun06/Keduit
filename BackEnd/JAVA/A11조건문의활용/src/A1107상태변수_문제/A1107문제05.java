@@ -18,6 +18,64 @@ player2 보
 */
 public class A1107문제05 {
 	public static void main(String[] args) {
+		Random ran = new Random();
+		int player1 = ran.nextInt(3) + 1;
+		int player2 = ran.nextInt(3) + 1;
 		
+		if(player1 == 1) {
+	    	System.out.println("player1 가위");
+	    }
+	    if(player1 == 2) {
+	    	System.out.println("player1 바위");
+	    }
+	    if(player1 == 3) {
+	    	System.out.println("player1 보");
+	    }
+	    
+	    if(player2 == 1) {
+	    	System.out.println("player2 가위");
+	    }
+	    if(player2 == 2) {
+	    	System.out.println("player2 바위");
+	    }
+	    if(player2 == 3) {
+	    	System.out.println("player2 보");
+	    }    
+	    
+	    int win = 0;
+
+	    if(player1 == player2) {
+	        win = 1;
+	    }
+
+	    if(player1 == 1 && player2 == 2) {
+	        win = 2;
+	    }
+	    if(player1 == 2 && player2 == 3) {
+	        win = 2;
+	    }
+	    if(player1 == 3 && player2 == 1) {
+	        win = 2;
+	    }
+
+	    if(player1 == 1 && player2 == 3) {
+	        win = 3;
+	    }
+	    if(player1 == 2 && player2 == 1) {
+	        win = 3;
+	    }
+	    if(player1 == 3 && player2 == 2) {
+	        win = 3;
+	    }
+
+	    if(win == 1) {
+	    	System.out.println("비김");
+	    }
+	    if(win == 2) {
+	    	System.out.println("승리");
+	    }
+	    if(win == 3) {
+	    	System.out.println("패배");
+	    }
 	}
 }

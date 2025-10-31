@@ -14,6 +14,36 @@ import java.util.Random;
 */
 public class A1105문제01 {
 	public static void main(String[] args) {
+		Random ran = new Random();
+		int r1= ran.nextInt(1000) + 1;
+		int r2= ran.nextInt(1000) + 1;
+		int r3= ran.nextInt(1000) + 1;
+		int r4= ran.nextInt(1000) + 1;
+		int r5= ran.nextInt(1000) + 1;
+		System.out.println(r1 + " " + r2 + " " + r3 + " " + r4 + " " + r5);
 		
+	    int a = r1 % 100 / 10;
+	    int b = r2 % 100 / 10;
+	    int c = r3 % 100 / 10;
+	    int d = r4 % 100 / 10;
+	    int e = r5 % 100 / 10;
+
+	    int max = 0;
+	    if(max < a) {
+	        max = a;
+	    }
+	    if(max < b) {
+	        max = b;
+	    }
+	    if(max < c) {
+	        max = c;
+	    }
+	    if(max < d) {
+	        max = d;
+	    }
+	    if(max < e) {
+	        max = e;
+	    }    
+	    System.out.println(max);
 	}
 }
