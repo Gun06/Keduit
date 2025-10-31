@@ -16,6 +16,13 @@ false
 */
 public class A1201문제02 {
 public static void main(String[] args) {
-		
+	Random ran = new Random();
+	int a = ran.nextInt(101) + 1;
+	System.out.println(a);
+	if(a % 4 == 0){
+		System.out.println(true);
+	}else{
+		System.out.println(false);
+	}
 	}
 }

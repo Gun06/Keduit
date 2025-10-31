@@ -16,6 +16,15 @@ o
 */
 public class A1201문제11 {
 public static void main(String[] args) {
-		
+		Random ran = new Random();
+		int a = ran.nextInt(10) + 1;
+		System.out.println(a);
+		boolean b = 300 % a == 0;
+	    boolean c = 50 % a == 0;
+	    if(b || c){
+	    	System.out.println("o");
+	    }else{
+	    	System.out.println("x");
+	    }
 	}
 }

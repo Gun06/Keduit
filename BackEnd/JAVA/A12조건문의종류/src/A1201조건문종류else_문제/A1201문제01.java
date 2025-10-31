@@ -16,6 +16,15 @@ import java.util.Random;
 */
 public class A1201문제01 {
 	public static void main(String[] args) {
+		Random ran = new Random();
+		int a = ran.nextInt(2) + 1;
+		int b = ran.nextInt(2) + 1;
+		System.out.println(a + " " + b);
 		
+	    if(a == b){
+	    	System.out.println("같다");
+	    }else{
+	    	System.out.println("다르다");
+	    }
 	}
 }

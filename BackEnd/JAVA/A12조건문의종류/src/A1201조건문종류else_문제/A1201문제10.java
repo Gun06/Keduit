@@ -16,6 +16,14 @@ import java.util.Random;
 */
 public class A1201문제10 {
 	public static void main(String[] args) {
-		
+		Random ran = new Random();
+		int a = ran.nextInt(20) + 1;
+		a = a * 5;
+		System.out.println(a);
+	    if(a >= 60 && a <= 100){
+	    	System.out.println("합격");
+	    }else{
+	    	System.out.println("불합격");
+	    }
 	}
 }

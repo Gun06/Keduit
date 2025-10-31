@@ -17,6 +17,17 @@ package A1201조건문종류else_문제;
 */
 public class A1201문제18 {
 	public static void main(String[] args) {
-	 	
+		int a = 333;
+	 	System.out.println(a);
+	 	int b = a / 100;
+	 	int c = a % 100 / 10;
+	 	int d = a % 10;
+
+	    boolean check = b == c && c == d;
+	    if(check){
+	    	System.out.println("당첨");
+	    }else{
+	    	System.out.println("꽝");
+	    }
 	}
 }

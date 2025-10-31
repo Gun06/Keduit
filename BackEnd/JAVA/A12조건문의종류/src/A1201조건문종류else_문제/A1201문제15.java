@@ -18,6 +18,17 @@ package A1201조건문종류else_문제;
 */
 public class A1201문제15 {
 	public static void main(String[] args) {
-	 	
+		int a = 868;
+	 	System.out.println(a);
+	    int b = a / 100;
+	    int c = a % 100 / 10;
+	    int d = a % 10;
+
+	    boolean check = b % 2 == 0 && b >= 5 && c % 2 == 0 && c >= 5 && d % 2 == 0 && d >= 5;
+	    if(check){
+	    	System.out.println("통과");
+	    }else{
+	    	System.out.println("실패");
+	    }
 	}
 }

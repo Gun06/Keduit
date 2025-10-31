@@ -19,6 +19,16 @@ false
 */
 public class A1201문제06 {
 public static void main(String[] args) {
-		
+	Random ran = new Random();
+	int a = ran.nextInt(9) + 1;
+	int b = ran.nextInt(9) + 1;
+	int c = ran.nextInt(9) + 1;
+	System.out.println(a + " " + b + " " + c);
+    boolean d = a >= b && a >= c;
+    if (d){
+    	System.out.println(true);
+    }else{
+    	System.out.println(false);
+    }
 	}
 }

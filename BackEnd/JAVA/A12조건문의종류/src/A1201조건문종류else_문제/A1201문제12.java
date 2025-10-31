@@ -21,6 +21,18 @@ import java.util.Random;
 */
 public class A1201문제12 {
 	public static void main(String[] args) {
-		
+		Random ran = new Random();
+		int a = ran.nextInt(900) + 100;
+		System.out.println(a);
+		int b = a / 100;
+		int c = a % 100 / 10;
+		int d = a % 10;
+
+	    boolean e = b == 5 || c == 5 || d == 5;
+	    if(e){
+	    	System.out.println("통과");
+	    }else{
+	    	System.out.println("실패");
+	    }
 	}
 }

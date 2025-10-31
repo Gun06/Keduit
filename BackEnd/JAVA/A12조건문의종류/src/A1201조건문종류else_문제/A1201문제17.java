@@ -24,6 +24,17 @@ import java.util.Random;
 */
 public class A1201문제17 {
 	public static void main(String[] args) {
-		
+		Random ran = new Random();
+		int a = ran.nextInt(90001) + 10000;
+		int b = a / 10000;
+		int c = a % 10;
+		System.out.println(b + " " + c);
+		int d = b + c;
+	    boolean e = d % 2 == 0;
+	    if(e){
+	    	System.out.println("짝수");
+	    }else{
+	    	System.out.println("홀수");
+	    }
 	}
 }

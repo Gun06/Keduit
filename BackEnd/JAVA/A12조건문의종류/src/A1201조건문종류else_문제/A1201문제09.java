@@ -28,6 +28,18 @@ import java.util.Random;
 */
 public class A1201문제09 {
 	public static void main(String[] args) {
-		
+		Random ran = new Random();
+		int a = ran.nextInt(101);
+		int b = ran.nextInt(101);
+		System.out.println(a + " " + b);
+		int total = a + b;
+		double avg = (double)total / 2;
+	    boolean c = a == 100 || b == 100;
+	    boolean d = avg >= 80;
+	    if (c && d){
+	    	System.out.println("장학생");
+	    }else{
+	    	System.out.println("꽝");
+	    }
 	}
 }

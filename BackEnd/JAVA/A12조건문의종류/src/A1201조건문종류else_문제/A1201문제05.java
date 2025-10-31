@@ -18,6 +18,15 @@ import java.util.Random;
 */
 public class A1201문제05 {
 public static void main(String[] args) {
-		
+	Random ran = new Random();
+	int a = ran.nextInt(2) + 1;
+	System.out.println(a);
+    int b = 0;
+    if(a == 1){
+        b = 3;
+    }else{
+        b = 7;
+    }
+    System.out.println(b);
 	}
 }
