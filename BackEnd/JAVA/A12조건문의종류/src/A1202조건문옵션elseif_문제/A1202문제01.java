@@ -21,6 +21,20 @@ y = 5
 */
 public class A1202문제01 {
 	public static void main(String[] args) {
-		
+		Random ran = new Random();
+		int r = ran.nextInt(4) + 1;
+	    int x = 5;
+	    int y = 5;
+	    
+	    if(r == 1){
+	        x = x + 1;
+	    }else if(r == 2){
+	        x = x - 1;
+	    }else if(r == 3){
+	        y = y - 1;
+	    }else if(r == 4){
+	        y = y + 1;
+	    }
+	    System.out.println(x + " " + y);
 	}
 }

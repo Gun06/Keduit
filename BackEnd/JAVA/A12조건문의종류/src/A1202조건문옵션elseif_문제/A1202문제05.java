@@ -25,7 +25,19 @@ import java.util.Random;
 */
 public class A1202문제05 {
 	public static void main(String[] args) {
+		Random ran = new Random();
+		int a= ran.nextInt(2) + 1;
+		int b = ran.nextInt(2) + 1;
+		System.out.println(a +" " +  b);
 		
-
+	    boolean check1 = a % 2 == 1;
+	    boolean check2 = b % 2 == 1;
+	    if(check1 && check2){
+	    	System.out.println("1등");
+	    }else if(!check1 && !check2){
+	    	System.out.println("2등");
+	    }else{
+	    	System.out.println("꽝");
+	    }
 	}
 }

@@ -21,6 +21,24 @@ import java.util.Random;
 */
 public class A1202문제02 {
 	public static void main(String[] args) {
-		
+		Random ran = new Random();
+		int a = ran.nextInt(10) + 1;
+		int b = ran.nextInt(10) + 1;
+		int c = ran.nextInt(3) + 1;
+		System.out.println(a + " " + b + " " + c);
+	    int d = 0;
+	    if(c == 1){
+	        d = a + b;
+	    }else if(c == 2){
+	        d = a - b;
+	        if(d < 0){
+	            d = -d;
+	        }
+	    }else if(c == 3){
+	        d = a * b;
+	    }else{
+	        d = a / b;
+	    }
+	    System.out.println(d);
 	}
 }

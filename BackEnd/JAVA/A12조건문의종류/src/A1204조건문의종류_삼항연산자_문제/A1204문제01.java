@@ -15,7 +15,14 @@ import java.util.Random;
 
 public class A1204문제01 {
 	public static void main(String[] args) {
+		int a = 0;
+		boolean result = false;
 		
-	   
+		Random ran = new Random();
+		a = ran.nextInt(2) + 1;
+		System.out.println(a);
+		
+		result = a == 1 ? true : false;
+		System.out.println(result);
 	}
 }

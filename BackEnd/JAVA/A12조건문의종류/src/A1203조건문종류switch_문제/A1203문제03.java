@@ -20,7 +20,30 @@ import java.util.Random;
 */
 public class A1203문제03 {
 	public static void main(String[] args) {
+		Random ran = new Random();
 		
+		int a = 50;
+		int b = 0;
+		int c = 0;
 		
+		b = ran.nextInt(10) + 1;
+		c = ran.nextInt(2) + 1;
+
+	    switch(c){
+	        case 1 : 
+	            a = a + b;
+	            if(b % 2 == 0){
+	                a = a + b;
+	            }
+	            break;
+	        case 2:
+	            a = a - b;
+	            if(b % 2 == 0){
+	                a = a - b;
+	            }
+	            break;
+	    }
+
+	    System.out.println(a + " " + b + " " + c);
 	}
 }

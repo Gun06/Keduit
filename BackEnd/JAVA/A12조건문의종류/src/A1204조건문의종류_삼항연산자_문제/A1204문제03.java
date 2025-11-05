@@ -10,8 +10,27 @@ import java.util.Random;
 */
 public class A1204문제03 {
 	public static void main(String[] args) {
+		Random ran = new Random();
 		
+		int score1 = 0;
+		int score2 = 0;
+		int total = 0;
+		double avg = 0;
+		boolean a = false;
+		boolean result = false;
 		
-		
+		score1 = ran.nextInt(101);
+		score2 = ran.nextInt(101);
+		System.out.println(score1 + ", " + score2);
+
+		total = score1 + score2;
+		avg = total / 2.0;
+		System.out.println(avg);
+
+		a = avg >= 60 && score1 >= 50 && score2 >= 50;
+
+		result = a ? true : false;
+
+		System.out.println(result);
 	}
 }

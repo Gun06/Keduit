@@ -48,6 +48,44 @@ import java.util.Random;
 */
 public class A1202문제08 {
 	public static void main(String[] args) {
-	 	
+		System.out.println("커피 메뉴");
+	    System.out.println("1번 아메리카노 1000원");
+	    System.out.println("2번 까페라떼 1500원");
+	    System.out.println("3번 모카라떼 2000원");
+	    
+	    Random ran = new Random();
+	    int a = ran.nextInt(4) + 1;
+	    int b = ran.nextInt(17) + 8;
+	    b = b * 100;
+	    System.out.println(a );
+	    System.out.println(b );
+	    
+	    if(a == 1){
+	        if(b < 1000){
+	            System.out.println("금액이 부족합니다");
+	        }else if(b >= 1000){
+	            System.out.println("아메리카노를 주문합니다");
+	            b = b - 1000;
+	        }
+
+	    }else if(a == 2){
+	        if(b < 1500){
+	            System.out.println("금액이 부족합니다");
+	        }else if(b >= 1500){
+	            System.out.println("까페라떼를 주문합니다");
+	            b = b - 1500;
+	        }
+
+	    }else if(a == 3){
+	        if(b < 2000){
+	            System.out.println("금액이 부족합니다");
+	        }else if(b >= 2000){
+	            System.out.println("모카라떼를 주문합니다");
+	            b = b - 2000;
+	        }
+	    }else{
+	        System.out.println("잘못된 번호입니다");
+	    }
+	    System.out.println(b);
 	}
 }

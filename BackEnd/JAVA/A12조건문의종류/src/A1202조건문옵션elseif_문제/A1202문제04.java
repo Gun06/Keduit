@@ -18,7 +18,17 @@ import java.util.Random;
 */
 public class A1202문제04 {
 	public static void main(String[] args) {
-	
+		Random ran = new Random();
+		int a= ran.nextInt(10) + 1;
+		int b = ran.nextInt(10) + 1;
+		System.out.println(a +" " +  b);
 		
+	    if(a > b){
+	    	System.out.println(a +" " +  b);
+	    }else if(a < b){
+	    	System.out.println(b +" " +  b);
+	    }else{
+	    	System.out.println(a +" " +  b);
+	    }
 	}
 }

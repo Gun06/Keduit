@@ -28,6 +28,26 @@ import java.util.Random;
 */
 public class A1202문제07 {
 	public static void main(String[] args) {
+		Random ran = new Random();
+		int a = ran.nextInt(99) + 1;
+		System.out.println(a);
 		
+		int b = a / 10;
+		int c = a % 10;
+		int count = 0;
+	
+	    if(b == 3 || b == 6 || b == 9){
+	        count = count + 1;
+	    } 
+	    if(c == 3 || c == 6 || c == 9){
+	        count = count + 1;
+	    }
+	    if(count == 2){
+	    	System.out.println("짝짝");
+	    }else if(count == 1){
+	    	System.out.println("짝");
+	    }else{
+	    	System.out.println(a);
+	    }
 	}
 }

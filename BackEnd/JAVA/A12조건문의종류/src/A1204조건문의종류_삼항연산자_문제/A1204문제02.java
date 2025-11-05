@@ -16,8 +16,25 @@ import java.util.Random;
 */
 public class A1204문제02 {
 	public static void main(String[] args) {
+		int a = 0;
+		int b = 0;
+		int c = 0;
+		int d = 0;
+		boolean e = false;
+		boolean result = false;
 		
+		Random ran = new Random();
+		a = ran.nextInt(900) + 100;
+		System.out.println(a);
 		
-		
+		b = a / 100;
+		c = a % 100 / 10;
+		d = a % 10;
+		System.out.println(a);
+
+		e = b == c && c == d && d == b;
+
+		result = e ? true : false;
+		System.out.println(result);
 	}
 }

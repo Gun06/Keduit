@@ -30,6 +30,28 @@ c가 가깝다
 */
 public class A1202문제06 {
 	public static void main(String[] args) {
-		
+		Random ran = new Random();
+		int a= ran.nextInt(9) + 1;
+		int b = 5;
+		int c = ran.nextInt(9) + 1;
+		System.out.println(a +" " +  b + " " + c);
+
+	    a = a - b;
+	    c = c - b;
+	    
+	    if(a < 0){
+	        a = -a;
+	    }
+	    if(c < 0){
+	        c = -c;
+	    }
+
+	    if(a < c){
+	    	System.out.println("a가 가깝다");
+	    }else if(c < a){
+	    	System.out.println("c가 가깝다");
+	    }else{
+	    	System.out.println("같다");
+	    }
 	}
 }

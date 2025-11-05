@@ -20,8 +20,33 @@ import java.util.Random;
 */
 public class A1204문제04 {
 	public static void main(String[] args) {
+		Random ran = new Random();
 		
+		int a = 0;
+		int b = 0;
 		
+		int c = 0;
+		double d = 0;
 		
+		boolean e = false;
+		boolean f = false;
+		boolean g = false;
+		boolean result = false;
+		
+		a = ran.nextInt(101);
+		b = ran.nextInt(101);
+
+		c = a + b;
+		d = c / 2.0;
+
+		e = a == 100 || b == 100;
+		f = d >= 80;
+		
+		System.out.println(a + " " + b + " " + c + " " + d);
+		
+		g = e || f;
+
+		result = g ? true : false;
+		System.out.println(result);
 	}
 }

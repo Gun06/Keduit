@@ -20,6 +20,17 @@ import java.util.Random;
 */
 public class A1202문제03 {
 	public static void main(String[] args) {
+		Random ran = new Random();
+		int a= ran.nextInt(10) + 1;
+		int b = ran.nextInt(10) + 1;
+		System.out.println(a +" " +  b);
 		
+	    if(a > b){
+	    	System.out.println(a);
+	    }else if(a == b){
+	    	System.out.println("같다");
+	    }else{
+	    	System.out.println(b);
+	    }
 	}
 }

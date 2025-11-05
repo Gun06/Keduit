@@ -16,9 +16,23 @@ import java.util.Random;
 */
 public class A1203문제02 {
 	public static void main(String[] args) {
+		Random ran = new Random();
+		
+		int a = 0;
+		int b = 0;
+		int c = 0;
+		
+		a = ran.nextInt(5) + 1;
+		b = ran.nextInt(5) + 6;
+		c = ran.nextInt(2) + 1;
 
-	   
-		
-		
+	    switch(c){
+	        case 1 : 
+	            System.out.println(a + " " + b);
+	            break;
+	        case 2:
+	            System.out.println(b + " " + a);
+	            break;
+	    }
 	}
 }

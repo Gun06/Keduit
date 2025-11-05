@@ -9,7 +9,15 @@ import java.util.Random;
 */
 public class A1204문제05 {
 	public static void main(String[] args) {
+		Random ran = new Random();
 		
-		
+		 int a = 0;
+		 int b = 0;
+		 
+		 a = ran.nextInt(2) + 1;
+		 System.out.println(a);
+
+	     b = a == 1 ? 3 : 7;
+	     System.out.println(b);	
 	}
 }
