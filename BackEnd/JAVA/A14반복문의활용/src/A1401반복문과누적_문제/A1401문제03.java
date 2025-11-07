@@ -11,7 +11,7 @@ package A1401반복문과누적_문제;
 */
 public class A1401문제03 {
 	public static void main(String[] args) {
-		int total = 0;
+int total = 0;
 	    for(int i = 1; i < 2001; i++){
 	        boolean check1 = 2000 % i == 0;
 	        if(check1){
@@ -20,6 +20,11 @@ public class A1401문제03 {
 	                total += i;
 	                System.out.print(i + " ");
 	            }
+	        }
+	    }
+	    System.out.println();
+	    System.out.println(total);
+	}
 	        }
 	    }
 	    System.out.println();

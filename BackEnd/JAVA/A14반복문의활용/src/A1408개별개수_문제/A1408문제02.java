@@ -35,6 +35,25 @@ package A1408개별개수_문제;
  */
 public class A1408문제02 {
 	public static void main(String[] args) {
-		
+for(int i = 20; i < 41; i++){
+	        int a = i / 10;
+	        int b = i % 10;
+	        int count = 0;
+	        if(a == 3 || a == 6 || a == 9){
+	            count += 1;
+	        }
+	        if(b == 3 || b == 6 || b == 9){
+	            count += 1;
+	        }
+	        if(count == 2){
+	        	System.out.println("짝짝");
+	        }
+	        else if(count == 1){
+	        	System.out.println("짝");
+	        }
+	        else if(count == 0){
+	        	System.out.println(i);
+	        }
+	    }
 	}
 }

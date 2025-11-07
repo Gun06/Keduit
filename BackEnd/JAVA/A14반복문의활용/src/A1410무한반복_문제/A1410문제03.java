@@ -9,6 +9,23 @@ package A1410무한반복_문제;
 */
 public class A1410문제03 {
 	public static void main(String[] args) {
-		
+int num = 13;
+	    int count = 0;
+	    int a = 0;
+	    int b = 0;
+	    int i = num;
+	    boolean loop = true;
+	    while(loop){
+	        count += 1;
+	        if(count == 4){
+	            a = i;
+	        }
+	        if(count == 6){
+	            b = i;
+	            loop = false;
+	        }
+	        i += num;
+	    }
+	    System.out.println(b - a);
 	}
 }

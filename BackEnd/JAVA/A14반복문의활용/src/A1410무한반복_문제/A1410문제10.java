@@ -14,6 +14,19 @@ import java.util.Random;
 */
 public class A1410문제10 {
 	public static void main(String[] args) {
-		
+Random ran = new Random();
+		boolean loop = true;
+	    while(loop){
+	    	int r1 = ran.nextInt(10) + 1;
+	    	int r2 = ran.nextInt(10) + 1;
+	    	int r3 = ran.nextInt(10) + 1;
+	       
+	        int total = r1 + r2 + r3;
+	        boolean check = r1 != r2 && r1 != r3;
+	        if(total == 20 && check){
+	        	System.out.println(r1 + " " + r2 + " " + r3);
+	            loop = false;
+	        }
+	    }
 	}
 }

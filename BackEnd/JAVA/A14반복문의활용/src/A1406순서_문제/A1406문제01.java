@@ -11,6 +11,22 @@ package A1406순서_문제;
 */
 public class A1406문제01 {
 	public static void main(String[] args) {
-		 
+int num = 120;
+		    int count = 0;
+		    int find = 0;
+		    for(int i = 1; i < 121; i++){
+		        if(num % i == 0){
+		        	System.out.print(i + " ");
+		            int a = i % 10;
+		            if(a == 4){
+		                count += 1;
+		                if(count == 2){
+		                    find = i;
+		                }
+		            }
+		        }
+		    }
+		    System.out.println();
+		    System.out.println(find);
 	}
 }

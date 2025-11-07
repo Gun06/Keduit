@@ -12,6 +12,18 @@ package A1402반복문과개수_문제;
 */
 public class A1402문제03 {
 	public static void main(String[] args) {
-		
+int count = 0;
+	    int num = 2000;
+	    for(int i = 1; i< 2001; i++){
+	        int a = i % 1000 / 100;
+	        boolean check1 = a == 4;
+	        boolean check2 = num % i == 0;
+	        if(check1 && check2){
+	        	System.out.print(i + " ");
+	            count += 1;
+	        }
+	    }
+	    System.out.println();
+	    System.out.println(count);
 	}
 }

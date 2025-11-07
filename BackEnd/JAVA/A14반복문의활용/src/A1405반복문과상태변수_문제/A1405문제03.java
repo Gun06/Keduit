@@ -26,6 +26,22 @@ x는 좌우(동서)를, y는 상하(남북)를 뜻합니다.
 */
 public class A1405문제03 {
 	public static void main(String[] args) {
-		 
+int x = 5;
+		    int y = 5;
+		    System.out.println(x + " " + y);
+		    Random ran = new Random();
+		    for(int i = 0; i < 5; i++){
+		    	int r = ran.nextInt(4) + 1;
+		        if(r == 1){
+		            x = x + 1;
+		        }else if(r == 2){
+		            x = x - 1;
+		        }else if(r == 3){
+		            y = y - 1;
+		        }else if(r == 4){
+		            y = y + 1;
+		        }
+		        System.out.println(x + " " + y + " " + r);
+		    }
 	}
 }

@@ -11,12 +11,16 @@ package A1401반복문과누적_문제;
 */
 public class A1401문제01 {
 	public static void main(String[] args) {
-		 int total = 0;
+int total = 0;
 		    for(int i = 1; i < 31; i++){
 		        if(30 % i == 0){
 		        	System.out.print(i + " ");
 		            total += 1;
 		        }
+		    }
+		    System.out.println();
+		    System.out.println(total);
+	}
 		    }
 		    System.out.println();
 		    System.out.println(total);

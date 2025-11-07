@@ -24,6 +24,22 @@ import java.util.Random;
 */
 public class A1402문제16 {
 	public static void main(String[] args) {
-		
+Random ran = new Random();
+		int count = 0;
+	    for(int i = 0; i < 3;  i++){
+	    	int r = ran.nextInt(9) + 1;
+	    	System.out.print(r + " ");
+	        if(r % 2 == 1){
+	            count += 1;
+	        }
+	    }
+	    System.out.println();
+	    if(count == 3){
+	    	System.out.println("1등");
+	    }else if(count == 0){
+	    	System.out.println("2등");
+	    }else{
+	    	System.out.println("꽝");
+	    }
 	}
 }

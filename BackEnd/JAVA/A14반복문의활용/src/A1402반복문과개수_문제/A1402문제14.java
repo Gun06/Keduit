@@ -20,6 +20,23 @@ import java.util.Random;
 */
 public class A1402문제14 {
 	public static void main(String[] args) {
-		
+Random ran = new Random();
+		int r = ran.nextInt(191) + 10;
+		System.out.println(r);
+		int count = 0;
+	    for(int i = 1; i < r + 1; i++){
+	        boolean check1 = r % i == 0;
+	        boolean check2 = i % 2 == 1;
+	        if(check1 && check2){
+	        	System.out.print(i + " ");
+	            count += 1;
+	        }
+	    }
+	    System.out.println();
+	    if(count == 4){
+	    	System.out.println("당첨");
+	    }else{
+	    	System.out.println("당첨");
+	    }
 	}
 }

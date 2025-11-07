@@ -14,6 +14,11 @@ package A1409규칙찾기_문제;
 */
 public class A1409문제02 {
 	public static void main(String[] args) {
-		
+int total = 0;
+	    for(int i = 0; i < 7; i++){
+	        total += i;
+	        System.out.println(i + " " + total);
+	       
+	    }
 	}
 }

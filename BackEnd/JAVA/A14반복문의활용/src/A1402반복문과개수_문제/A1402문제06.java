@@ -12,6 +12,17 @@ package A1402반복문과개수_문제;
 */
 public class A1402문제06 {
 	public static void main(String[] args) {
-		
+int count = 0;
+	    for(int i = 1000; i < 2001; i++){
+	        int a = i % 1000 / 100;
+	        boolean check1 = i % 16 == 0;
+	        boolean check2 = a == 7;
+	        if(check1 && check2){
+	        	System.out.print(i + " ");
+	            count += 1;
+	        }
+	    }
+	    System.out.println();
+	    System.out.println(count);
 	}
 }

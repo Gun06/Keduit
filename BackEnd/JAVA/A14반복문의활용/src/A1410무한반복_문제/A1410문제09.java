@@ -26,6 +26,22 @@ me는 com의 숫자를 맞출 때까지 계속해서 랜덤으로 숫자를 뽑�
 */
 public class A1410문제09 {
 	public static void main(String[] args) {
-		
+Random ran = new Random();
+		int com = ran.nextInt(20) + 1;
+	    boolean loop = true;
+	    while(loop){
+	    	int me = ran.nextInt(20) + 1;
+	    	System.out.println(com + " " + me);
+	        if(me > com){
+	        	System.out.println("크다");
+	        }
+	        if(me < com){
+	        	System.out.println("작다");
+	        }
+	        if(me == com){
+	        	System.out.println("정답");
+	            loop = false;
+	        }
+	    }
 	}
 }

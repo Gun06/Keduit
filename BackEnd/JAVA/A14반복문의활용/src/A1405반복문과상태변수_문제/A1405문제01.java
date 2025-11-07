@@ -27,6 +27,23 @@ x=2 y=-3 r=3
 */
 public class A1405문제01 {
 	public static void main(String[] args) {
-		 
+int x = 0;
+		    int y = 0;
+		    System.out.println("x=" + x + " y=" + y );
+		    Random ran = new Random(); 
+		    		
+		    for(int i = 0; i < 5; i++){
+		        int r = ran.nextInt(4) + 1;
+		        if(r == 1){
+		            y += 1;
+		        }else if(r == 2){
+		            x += 1;
+		        }else if(r == 3){
+		            y -= 1;
+		        }else if(r == 4){
+		            x -= 1;
+		        }
+		        System.out.println("x=" + x + " y=" + y + " r=" + r  );
+		    }
 	}
 }

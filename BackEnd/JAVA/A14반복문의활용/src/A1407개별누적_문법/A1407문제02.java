@@ -16,6 +16,19 @@ package A1407개별누적_문법;
 */
 public class A1407문제02 {
 	public static void main(String[] args) {
-		  
+for(int i = 10; i < 91; i++){
+		        int a = i / 10;
+		        int b = i % 10;
+		        boolean check1 = a % 3 == 0 && b % 4 == 0;
+		        boolean check2 = a != 0 && b != 0;
+		        int total = a + b;
+		        boolean check3 = total % 2 == 0;
+		        if(check1 && check2 && !check3){
+		        	System.out.println(i + " o");
+		        }
+		        if(check1 && check2 && check3){
+		        	System.out.println(i + " x");
+		        }
+		    }
 	}
 }

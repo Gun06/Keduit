@@ -12,7 +12,7 @@ package A1401반복문과누적_문제;
 */
 public class A1401문제09 {
 	public static void main(String[] args) {
-		int total = 0;
+int total = 0;
 	    for(int i = 10; i < 100; i++){
 	        int a = i / 10;
 	        int b = i % 10;
@@ -22,6 +22,10 @@ public class A1401문제09 {
 	        	System.out.print(i + " ");
 	            total += i;
 	        }
+	    }
+	    System.out.println();
+	    System.out.println(total);
+	}
 	    }
 	    System.out.println();
 	    System.out.println(total);

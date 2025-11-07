@@ -17,6 +17,12 @@ package A1409규칙찾기_문제;
 */
 public class A1409문제06 {
 	public static void main(String[] args) {
-	    
+int a = 30;
+	    int count = 2;
+	    for(int i = 0; i < 10; i++){
+	        System.out.println(i + " " + a);
+	        a -= count;
+	        count += 2;
+	    }
 	}
 }

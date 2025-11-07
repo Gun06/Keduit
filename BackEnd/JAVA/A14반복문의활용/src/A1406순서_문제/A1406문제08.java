@@ -11,6 +11,24 @@ package A1406순서_문제;
 */
 public class A1406문제08 {
 	public static void main(String[] args) {
-		
+int num1 = 75;
+	    int num2 = 20;
+	    int count = 0;
+	    int i2 = num1;
+	    int find = 0;
+	    for(int i = 1; i < num1 + 1; i++){
+	        if(num1 % i2 == 0){
+	        	System.out.print(i2 + " ");
+	            if(i2 < num2){
+	                count += 1;
+	                if(count == 2){
+	                    find = i2;
+	                }
+	            }
+	        }
+	        i2 -= 1;
+	    }
+	    System.out.println();
+	    System.out.println(find);
 	}
 }

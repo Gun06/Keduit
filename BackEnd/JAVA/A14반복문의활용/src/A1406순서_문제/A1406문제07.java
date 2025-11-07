@@ -11,6 +11,25 @@ package A1406순서_문제;
 */
 public class A1406문제07 {
 	public static void main(String[] args) {
-		
+int num = 100;
+		    int count = 0;
+		    int a = 0;
+		    int b = 0;
+		    int i2 = num;
+		    for(int i = 1; i < num + 1; i++){
+		        if(num % i2 == 0){
+		        	System.out.print(i2 + " ");
+		            count += 1;
+		            if(count == 2){
+		                a = i2;
+		            }
+		            if(count == 5){
+		                b = i2;
+		            }
+		        }
+		        i2 -= 1;
+		    }
+		    System.out.println();
+		    System.out.println(a - b);
 	}
 }

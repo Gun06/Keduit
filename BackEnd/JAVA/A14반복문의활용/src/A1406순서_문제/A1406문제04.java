@@ -11,6 +11,22 @@ package A1406순서_문제;
 */
 public class A1406문제04 {
 	public static void main(String[] args) {
-		
+int num = 100;
+	    int total= 0;
+	    int count = 0;
+	    for(int i = 1; i < 101; i++){
+	        if(num % i == 0){
+	        	System.out.print(i + " ");
+	            count += 1;
+	            if(count == 1){
+	                total += i;
+	            }
+	            if(count == 2){
+	                total += i;
+	            }
+	        }
+	    }
+	    System.out.println();
+	    System.out.println(total);
 	}
 }

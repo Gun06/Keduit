@@ -11,6 +11,14 @@ package A1402반복문과개수_문제;
  */
 public class A1402문제04 {
 	public static void main(String[] args) {
-		
+int count = 0;
+	    for(int i = 100; i < 151; i++){
+	        if(i % 8 == 0){
+	        	System.out.print(i + " ");
+	            count += 1;
+	        }
+	    }
+	    System.out.println();
+	    System.out.println(count);
 	}
 }

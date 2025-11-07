@@ -11,6 +11,21 @@ package A1406순서_문제;
 */
 public class A1406문제06 {
 	public static void main(String[] args) {
-		
+int num = 852;
+	    int count = 0;
+	    int i2 = num;
+	    int find = 0;
+	    for(int i = 1; i < num + 1; i++){
+	        if(num % i2 == 0){
+	        	System.out.print(i2 + " ");
+	            count += 1;
+	            if(count == 5){
+	                find = i2;
+	            }
+	        }
+	        i2 -= 1;
+	    }
+	    System.out.println();
+	    System.out.println(find);
 	}
 }

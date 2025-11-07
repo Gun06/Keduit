@@ -12,6 +12,11 @@ package A1409규칙찾기_문제;
 */
 public class A1409문제01 {
 	public static void main(String[] args) {
-		
+for(int i = 0; i < 5; i++){
+			 	int a = i;
+			 	int b = i * 2;
+			 	int c = i * 2 + 1;
+			 	System.out.println(a + " " + b + " " + c);
+		    }
 	}
 }

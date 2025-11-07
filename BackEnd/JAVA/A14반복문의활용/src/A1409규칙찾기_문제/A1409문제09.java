@@ -11,6 +11,14 @@ package A1409규칙찾기_문제;
 */
 public class A1409문제09 {
 	public static void main(String[] args) {
-		
+int count = 0;
+		    for(int i = 1; i < 10; i++){
+		    	System.out.print(i + " ");
+		        count += 1;
+		        if(count == 3){
+		        	System.out.println();
+		            count = 0;
+		        }
+		    }
 	}
 }

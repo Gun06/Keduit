@@ -17,6 +17,10 @@ package A1409규칙찾기_문제;
 */
 public class A1409문제03 {
 	public static void main(String[] args) {
-		 
+int total = 30;
+		    for(int i = 0; i < 10; i++){
+		        total -= i;
+		        System.out.println(i + " " + total);
+		    }
 	}
 }

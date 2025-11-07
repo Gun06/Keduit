@@ -28,6 +28,25 @@ dir이 1이면 동쪽으로, 2면 서쪽으로, 3이면 남쪽으로, 4면 북�
  */
 public class A1405문제04 {
 	public static void main(String[] args) {
-		 
+int x = 5;
+		   int y = 5;
+		   System.out.println(x + " " + y);
+		   Random ran = new Random();
+		   for(int i = 0; i < 5; i++){
+			   int dir = ran.nextInt(4) + 1;
+			   int speed = ran.nextInt(10) + 1;
+		        
+		        if(dir == 1){
+		            x = x + speed;
+		        }else if(dir == 2){
+		            x = x - speed;
+		        }else if(dir == 3){
+		            y = y - speed;
+		        }else if(dir == 4){
+		            y = y + speed;
+		        }
+		        System.out.println(x + " " + y + " " + dir + " " + speed);
+		     
+		    }
 	}
 }

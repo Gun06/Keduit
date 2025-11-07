@@ -22,6 +22,20 @@ package A1408개별개수_문제;
 */
 public class A1408문제03 {
 	public static void main(String[] args) {
-		 
+int totalCount = 0;
+		    for(int i = 40; i < 51; i++){
+		        int count = 0;
+		        int a = i / 10;
+		        int b = i % 10;
+		        if(a == 4 || a == 8){
+		            count += 1;
+		        }
+		        if(b == 4 || b == 8){
+		            count += 1;
+		        }
+		        System.out.println(i + " " + count);
+		        totalCount += count;
+		    }
+		    System.out.println(totalCount);
 	}
 }

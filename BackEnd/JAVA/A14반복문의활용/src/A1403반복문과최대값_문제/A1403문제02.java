@@ -28,6 +28,28 @@ import java.util.Random;
 */
 public class A1403문제02 {
 	public static void main(String[] args) {
-		
+int max = 0;
+		    int maxNumber = 1;
+		    int total = 0;
+		    Random ran = new Random();
+		    for(int i = 1; i < 6; i++){
+		    	int r = ran.nextInt(101);
+		        if(r >= 60){
+		        	System.out.println(i + "번" + r + "점" + "[합격]");
+		        }else{
+		        	System.out.println(i + "번" + r + "점" + "[불합격]");
+		        }
+		        total += r;
+		        
+		        if(max < r){
+		            max = r;
+		            maxNumber = i;
+		        }
+		    }
+		    
+		    System.out.println(total);
+		    double avg = (double)total / 5;
+		    System.out.println(avg);
+		    System.out.println("1등:" + maxNumber + "번" + max + "점");
 	}
 }

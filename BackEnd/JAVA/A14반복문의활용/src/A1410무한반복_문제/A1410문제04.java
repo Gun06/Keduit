@@ -9,6 +9,20 @@ package A1410무한반복_문제;
 */
 public class A1410문제04 {
 	public static void main(String[] args) {
-
+int num1 = 9;
+	    int num2 = 100;
+	    int i = num1;
+	    int count = 0;
+	    boolean loop = true;
+	    while(loop){
+	        if(i > num2){
+	            count += 1;
+	            if(count == 4){
+	            	System.out.println(i);
+	                loop = false;
+	            }
+	        }
+	        i += num1;
+	    }
 	}
 }

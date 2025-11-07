@@ -17,6 +17,13 @@ package A1409규칙찾기_문제;
 */
 public class A1409문제05 {
 	public static void main(String[] args) {
-		
+int a = 1;
+	    for(int i = 0; i < 10; i++){
+	    	System.out.println(i + " " + a);
+	        a += 1;
+	        if(a == 4){
+	            a = 1;
+	        }
+	    }
 	}
 }

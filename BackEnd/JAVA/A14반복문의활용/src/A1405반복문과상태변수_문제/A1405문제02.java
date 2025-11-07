@@ -29,6 +29,22 @@ c가 2이면, 철수는 b만큼 계단 아래로 이동합니다.
 */
 public class A1405문제02 {
 	public static void main(String[] args) {
-		  
+int a = 10;
+		  System.out.println(a);
+		  Random ran = new Random();
+		    for(int i = 0; i < 5; i++){
+		    	int b = ran.nextInt(10) + 1;
+		    	int c = ran.nextInt(2) + 1;
+		        
+		        if(c == 1){
+		            a = a + b;
+		        }else if(c == 2){
+		            a = a - b;
+		        }
+		        if(a < 0){
+		            a = 0;
+		        }
+		        System.out.println(a + " " + b + " " + c );
+		    }
 	}
 }

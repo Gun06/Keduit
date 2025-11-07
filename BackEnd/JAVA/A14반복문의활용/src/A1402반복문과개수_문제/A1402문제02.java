@@ -11,6 +11,15 @@ package A1402반복문과개수_문제;
 */
 public class A1402문제02 {
 	public static void main(String[] args) {
-		
+int count = 0;
+	    int num = 18;
+	    for(int i = 1; i < 19; i++){
+	        if(num % i == 0 && i % 2 == 0){
+	        	System.out.print(i + " ");
+	            count += 1;
+	        }
+	    }
+	    System.out.println();
+	    System.out.println(count);
 	}
 }

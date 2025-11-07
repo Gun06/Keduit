@@ -13,6 +13,17 @@ import java.util.Random;
 */
 public class A1410문제07 {
 	public static void main(String[] args) {
-		
+boolean loop = true;
+		  Random ran = new Random();
+		    while(loop){
+		    	int a = ran.nextInt(9) + 1;
+		    	int b = ran.nextInt(9) + 1;
+		    	int total = a + b;
+		    	
+		        if(total == 10){
+		        	System.out.println(a + " " + b);
+		            loop = false;
+		        }
+		    }
 	}
 }

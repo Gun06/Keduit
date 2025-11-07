@@ -20,6 +20,17 @@ import java.util.Random;
 */
 public class A1402문제13 {
 	public static void main(String[] args) {
-		
+Random ran = new Random();
+		int r = ran.nextInt(91) + 10;
+		System.out.println(r);
+	    int count = 0;
+	    for(int i = 1; i < r + 1; i++){
+	        if(r % i == 0){
+	        	System.out.print(i + " ");
+	            count += 1;
+	        }
+	    }
+	    System.out.println();
+	    System.out.println(count);
 	}
 }

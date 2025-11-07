@@ -14,6 +14,20 @@ import java.util.Random;
 */
 public class A1403문제01 {
 	public static void main(String[] args) {
-		
+		Random ran = new Random();
+		int max = 1;
+		for (int i = 0; i < 10; i++) {
+			int r = ran.nextInt(100) + 1;
+			System.out.print(r + " ");
+
+			boolean a = r % 3 != 0;
+			if (a) {
+				if (max < r) {
+					max = r;
+				}
+			}
+		}
+		System.out.println();
+		System.out.println(max);
 	}
 }

@@ -9,6 +9,19 @@ package A1410무한반복_문제;
 */
 public class A1410문제01 {
 	public static void main(String[] args) {
-		
+int num = 28;
+	    int count = 0;
+	    int i = num;
+	    boolean loop = true;
+	    while(loop){
+	        if(i >= 500){
+	            count += 1;
+	            if(count == 1){
+	            	System.out.println(i);
+	                loop = false;
+	            }
+	        }
+	        i += num;
+	    }
 	}
 }

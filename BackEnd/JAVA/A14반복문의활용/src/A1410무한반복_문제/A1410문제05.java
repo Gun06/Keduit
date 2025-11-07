@@ -10,6 +10,23 @@ package A1410무한반복_문제;
 */
 public class A1410문제05 {
 	public static void main(String[] args) {
-		 
+int num1 = 8;
+		    int num2 = 500;
+		    int i = num1;
+		    int count = 0;
+		    boolean loop = true;
+		    while(loop){
+		        if(i > num2){
+		            int a = i % 10;
+		            if(a == 6){
+		            	System.out.print(i + " ");
+		                count += 1;
+		                if(count == 4){
+		                    loop = false;
+		                }
+		            }
+		        }
+		        i += num1;
+		    }
 	}
 }

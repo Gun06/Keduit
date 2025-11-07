@@ -25,6 +25,16 @@ import java.util.Random;
 */
 public class A1402문제15 {
 	public static void main(String[] args) {
-		
+Random ran = new Random();
+		int count = 0;
+	    for(int i = 0; i < 10; i++){
+	    	int r1 = ran.nextInt(6) + 1;
+	    	int r2 = ran.nextInt(6) + 1;
+	    	System.out.println(r1 + " " + r2);
+	        if(r1 == r2){
+	            count += 1;
+	        }
+	    }
+	    System.out.println(count);
 	}
 }
