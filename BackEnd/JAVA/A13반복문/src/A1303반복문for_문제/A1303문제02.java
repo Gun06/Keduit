@@ -13,6 +13,8 @@ for문을 사용하여 1부터 5까지 숫자와 그 숫자의 두배를 출력�
 */
 public class A1303문제02 {
 public static void main(String[] args) {
-	 	
+	 	for(int i = 1; i<6; i++) {
+	 		System.out.println(i + " " + i*2);
+	 	}
 	}
 }

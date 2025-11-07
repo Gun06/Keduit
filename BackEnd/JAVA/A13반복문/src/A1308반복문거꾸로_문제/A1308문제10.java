@@ -21,7 +21,18 @@ package A1308반복문거꾸로_문제;
 */
 public class A1308문제10 {
 public static void main(String[] args) {
-		
+		int num = 20;
+	    for(int i = 10; i < 21; i++){
+	        boolean check1 = num < 12;
+	        boolean check2 = num > 18;
+	        if(check1 || check2){
+	        	System.out.println(num + " " + num * 3);
+	        }
+	        if(!check1 && !check2){
+	        	System.out.println(num + " " + num);
+	        }
+	        num -= 1;
+	    }
     
 	}
 }

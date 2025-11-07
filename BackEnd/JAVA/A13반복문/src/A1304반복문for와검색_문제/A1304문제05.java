@@ -20,6 +20,19 @@ package A1304반복문for와검색_문제;
 */
 public class A1304문제05 {
 public static void main(String[] args) {
-		
+		for(int i=1; i<11; i++) {
+			boolean check1 = i < 3;
+	        boolean check2 = i >= 3 && i <= 7;
+	        boolean check3 = i > 7; 
+	        if(check1){
+	        	System.out.println(i + " " + i * 3);
+	        }
+	        if(check2){
+	        	System.out.println(i + " " + i );
+	        }
+	        if(check3){
+	        	System.out.println(i + " " + i * 3);
+	        }
+		}
 	}
 }

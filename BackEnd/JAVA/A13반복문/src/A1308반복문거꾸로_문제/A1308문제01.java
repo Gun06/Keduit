@@ -8,7 +8,14 @@ package A1308반복문거꾸로_문제;
 12 11 10 9 8 7 6 5 
 */
 public class A1308문제01 {
-public static void main(String[] args) {
-		
+	public static void main(String[] args) {
+		int i = 5;
+	    int num = 12;
+	    while(i <= 12){
+	    	System.out.print(num + " ");
+	        i += 1;
+	        num -= 1;
+	
+	    }
 	}
 }

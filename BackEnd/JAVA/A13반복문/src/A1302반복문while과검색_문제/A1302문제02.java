@@ -22,6 +22,16 @@ package A1302반복문while과검색_문제;
 
 public class A1302문제02 {
 public static void main(String[] args) {
-		
+	int i = 1;
+    while(i <= 10){
+        boolean check = 1 <= i && i <= 5;
+        if(check){
+        	System.out.println(i + " o");
+        }
+        if(!check){
+        	System.out.println(i + " x");
+        }
+        i = i + 1;
+    }
 	}
 }

@@ -9,6 +9,10 @@ package A1301반복문while_문제;
 */
 public class A1301문제01 {
 	public static void main(String[] args) {
-		
+		int i = 5;
+		while(i<=12) {
+			System.out.println(i + " ");
+			i += 1;
+		}
 	}
 }

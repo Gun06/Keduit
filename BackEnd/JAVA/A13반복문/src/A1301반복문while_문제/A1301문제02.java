@@ -14,6 +14,10 @@ package A1301반복문while_문제;
 */
 public class A1301문제02 {
 public static void main(String[] args) {
-	 	
+	 	int i = 1;
+	 	while(i <=5 ) {
+	 		System.out.println(i + " " + 2*i);
+	 		i += 1;
+	 	}
 	}
 }

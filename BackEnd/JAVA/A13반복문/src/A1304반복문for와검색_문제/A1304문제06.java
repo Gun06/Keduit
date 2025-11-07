@@ -22,6 +22,14 @@ import java.util.Random;
 */
 public class A1304문제06 {
 public static void main(String[] args) {
-		
+		Random ran = new Random();
+		for(int i=1; i<6; i++) {
+			int r = ran.nextInt(101);
+			if(r >= 60){
+	        	System.out.println(i + "번" + r + "점" + "[합격]");
+	        }else{
+	        	System.out.println(i + "번" + r + "점" + "[불합격]");
+	        }
+		}
 	}
 }

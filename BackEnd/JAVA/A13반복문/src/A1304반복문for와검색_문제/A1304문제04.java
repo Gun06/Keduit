@@ -16,6 +16,15 @@ package A1304반복문for와검색_문제;
 */
 public class A1304문제04 {
 public static void main(String[] args) {
-		
+		for(int i = 1; i<=5; i ++) {
+			boolean check1 = i == 1 || i == 5;
+	        boolean check2 = 2 <= i && i <= 4;
+	        if(check1){
+	        	System.out.println(i + " " + i);
+	        }
+	        if(check2){
+	        	System.out.println(i + " " + i * 2);
+	        }
+		}
 	}
 }

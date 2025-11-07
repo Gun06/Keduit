@@ -12,6 +12,16 @@ x x 3 4 5 6 7 8 x x
 */
 public class A1302문제01 {
 public static void main(String[] args) {
-	 	
+	int i = 1;
+    while(i <= 10){
+        boolean check = 8 < i || i < 3;
+        if(check){
+        	System.out.print("x ");
+        }
+        if(!check){
+        	System.out.print(i + " ");
+        }
+        i = i + 1;
+    }
 	}
 }

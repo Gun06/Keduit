@@ -11,6 +11,15 @@ package A1306반복문과배수_문제;
 */
 public class A1306문제01 {
 public static void main(String[] args) {
-		
-	}
+	for(int i = 1; i < 11; i++){
+        boolean check1 = i % 2 == 1;
+        boolean check2 = i % 2 != 1;
+        if(check1){
+        	System.out.print(i + " ");
+        }
+        if(check2){
+        	System.out.print("x ");
+        }
+    }
+}
 }

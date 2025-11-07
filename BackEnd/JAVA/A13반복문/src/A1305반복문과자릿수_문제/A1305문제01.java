@@ -10,6 +10,12 @@ package A1305반복문과자릿수_문제;
 */
 public class A1305문제01 {
 public static void main(String[] args) {
-	   
+	for(int i = 10; i < 100; i++){
+        int a = i / 10;
+        int b = i % 10;
+        if(a > 8 && b > 5){
+           System.out.print(i + " ");
+        }
+    }
 	}
 }

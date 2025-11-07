@@ -12,6 +12,14 @@ package A1306반복문과배수_문제;
  */
 public class A1306문제03 {
 public static void main(String[] args) {
-		 
+	 for(int i = 1; i < 16; i++){
+	        boolean check = i < 5 || i > 10 || i % 3 == 0;
+	        if(check){
+	        	System.out.print(i + " ");
+	        }
+	        if(!check){
+	        	System.out.print("x ");
+	        }
+	    }
 	}
 }

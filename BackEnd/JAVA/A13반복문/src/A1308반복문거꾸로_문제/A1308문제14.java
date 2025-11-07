@@ -11,6 +11,16 @@ package A1308반복문거꾸로_문제;
 */
 public class A1308문제14 {
 public static void main(String[] args) {
-		
+		int num = 15;
+		for(int i = 1; i < 16; i++){
+			boolean check = 30 % num == 0 || 20 % num == 0;
+			if(check){
+				System.out.print(num + " ");
+			}
+			if(!check){
+				System.out.print("x ");
+			}
+			num -= 1;
+		}
 	}
 }

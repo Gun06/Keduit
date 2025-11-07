@@ -16,6 +16,17 @@ package A1302반복문while과검색_문제;
 */
 public class A1302문제03 {
 public static void main(String[] args) {
-		
+	int i = 1;
+    while(i <= 5){
+        boolean check1 = i == 1 || i == 5;
+        boolean check2 = 2 <= i && i <= 4;
+        if(check1){
+        	System.out.println(i + " " + i);
+        }
+        if(check2){
+        	System.out.println(i + " " + i * 2);
+        }
+        i = i + 1;
+    }
 	}
 }

@@ -11,6 +11,14 @@ package A1307반복문과약수_문제;
 */
 public class A1307문제02 {
 public static void main(String[] args) {
-		
-	}
+	for(int i = 1; i < 16; i++){
+        boolean check = 30 % i == 0 || 20 % i == 0;
+        if(check){
+        	System.out.print(i + " ");
+        }
+        if(!check){
+        	System.out.print("x ");
+        }
+    }
+}
 }

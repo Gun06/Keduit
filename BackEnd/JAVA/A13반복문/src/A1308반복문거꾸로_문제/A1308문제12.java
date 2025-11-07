@@ -11,6 +11,17 @@ x x x x x x 9 x x 6 x x x x x
 */
 public class A1308문제12 {
 public static void main(String[] args) {
-		
+		int num = 15;
+	    for(int i = 1; i  < 16; i++){
+	        boolean check = num <= 5 || num >= 10 || num % 3 != 0;
+	        if(check){
+	        	System.out.print("x ");
+	        }
+	        if(!check){
+	        	System.out.print(num + " ");
+	        }
+	        num -= 1;
+	    }
+    
 	}
 }

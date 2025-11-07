@@ -11,6 +11,16 @@ x x x x x 10 x x x x x 4 x 2 x
 */
 public class A1308문제13 {
 public static void main(String[] args) {
-		
+		int num = 15;
+	    for(int i = 1; i < 16; i++){
+	        boolean check = num % 2 == 0 && 20 % num == 0;
+	        if(check){
+	        	System.out.print(num + " ");
+	        }
+	        if(!check){
+	        	System.out.print("x ");
+	        }
+	        num -= 1;
+	    }
 	}
 }

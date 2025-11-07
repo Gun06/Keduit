@@ -10,6 +10,13 @@ package A1305반복문과자릿수_문제;
 */
 public class A1305문제04 {
 public static void main(String[] args) {
-	 	
-	}
+ 	for(int i = 130; i < 171; i++){
+        int a = i / 100;
+        int b = i % 100 / 10;
+        int c = i % 10;
+        if(a == 5 || b == 5 || c == 5){
+            System.out.print(i + " ");
+        }
+    }
+}
 }

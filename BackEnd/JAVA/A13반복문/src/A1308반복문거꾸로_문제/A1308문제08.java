@@ -21,8 +21,20 @@ package A1308반복문거꾸로_문제;
 10 x  
 */
 public class A1308문제08 {
-public static void main(String[] args) {
-		
+
+	public static void main(String[] args) {
+		int num = 20;
+	    for(int i = 10; i < 21; i++){
+	        boolean check1 = num >= 15 && num <= 20;
+	        boolean check2 = num >= 10 && num <= 14;
+	        if(check1){
+	        	System.out.println(num + " o");
+	        }
+	        if(check2){
+	        	System.out.println(num + " x");
+	        }
+	        num -= 1;
+	    }
     
 	}
 }

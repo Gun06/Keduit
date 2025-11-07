@@ -11,6 +11,16 @@ x 9 x 7 x 5 x 3 x 1
 */
 public class A1308문제11 {
 public static void main(String[] args) {
-		
+		int num = 10;
+	    for(int i = 1; i < 11; i++){
+	        boolean check = num % 2== 1;
+	        if(check){
+	        	System.out.print(num + " ");
+	        }
+	        if(!check){
+	        	System.out.print("x ");
+	        }
+	        num -= 1;
+	    }
 	}
 }

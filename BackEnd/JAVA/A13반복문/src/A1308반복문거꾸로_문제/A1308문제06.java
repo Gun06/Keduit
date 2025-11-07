@@ -9,6 +9,10 @@ for문을 사용하여 28부터 17까지 거꾸로 출력하시오.
 */
 public class A1308문제06 {
 public static void main(String[] args) {
-		
-	}
+	int num = 28;
+    for(int i = 17; i < 29; i++){
+    	System.out.print(num + " ");
+        num -= 1;
+    }
+}
 }

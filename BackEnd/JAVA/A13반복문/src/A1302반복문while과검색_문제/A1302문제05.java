@@ -12,6 +12,16 @@ package A1302반복문while과검색_문제;
 */
 public class A1302문제05 {
 public static void main(String[] args) {
-		
-	}
+	int i = 1;
+    while(i <= 10){
+        boolean check = 3 < i && i < 9;
+        if(check){
+        	System.out.print("x ");
+        }
+        if(!check){
+        	System.out.print(i + " ");
+        }
+        i = i + 1;
+    }
+}
 }

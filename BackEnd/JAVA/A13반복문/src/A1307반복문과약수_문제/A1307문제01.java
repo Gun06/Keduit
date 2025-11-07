@@ -11,6 +11,14 @@ x 2 x 4 x x x x x 10 x x x x x
 */
 public class A1307문제01 {
 public static void main(String[] args) {
-		
-	}
+	for(int i = 1; i < 16;  i++){
+        boolean check = i % 2 == 0 && 20 % i == 0;
+        if(check){
+        	System.out.print(i + " ");
+        }
+        if(!check){
+        	System.out.print("x ");
+        }
+    }
+}
 }

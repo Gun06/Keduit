@@ -15,6 +15,13 @@ package A1308반복문거꾸로_문제;
 */
 public class A1308문제02 {
 public static void main(String[] args) {
-		
+	int i = 15;
+	int num = 20;
+	while(i <= 20){
+		System.out.println(num + " " + num * 2);
+		num -= 1;
+		i += 1;
 	}
+
+}
 }

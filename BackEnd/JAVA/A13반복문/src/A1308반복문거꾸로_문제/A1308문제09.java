@@ -21,6 +21,18 @@ package A1308반복문거꾸로_문제;
 */
 public class A1308문제09 {
 public static void main(String[] args) {
-		
+		int num = 20;
+	    for(int i = 10; i < 21; i++){
+	
+	        boolean check = num >= 12 && num <= 15;
+	
+	        if(check){
+	        	System.out.println(num + " " + num  * 2);
+	        }
+	        if(!check){
+	        	System.out.println(num + " " + num  );
+	        }
+	        num -= 1;
+	    }
 	}
 }

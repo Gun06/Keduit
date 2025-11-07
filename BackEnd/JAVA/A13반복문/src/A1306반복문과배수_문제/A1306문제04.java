@@ -15,7 +15,14 @@ package A1306반복문과배수_문제;
 */
 
 public class A1306문제04 {
-public static void main(String[] args) {
-	  	
+	public static void main(String[] args) {
+	  	for(int i = 1; i < 151; i++){
+	        boolean check1 = i >= 50 && i <= 100 && i % 8 == 0;
+	        boolean check2 = i < 50 && i % 7 == 0;
+	        boolean check3 = i > 100 && i % 7 == 0;
+	        if(check1 || check2 || check3){
+	        	System.out.print(i + " ");
+	        }
+	    }
 	}
 }

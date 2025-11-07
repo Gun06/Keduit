@@ -12,6 +12,14 @@ package A1304반복문for와검색_문제;
 */
 public class A1304문제01 {
 public static void main(String[] args) {
-		
+		for(int i=1; i<=10; i++) {
+			boolean check = 4<i && i<8;
+			if(check) {
+				System.out.println("X");
+			}
+			if(!check) {
+				System.out.println(i + " ");
+			}
+		}
 	}
 }

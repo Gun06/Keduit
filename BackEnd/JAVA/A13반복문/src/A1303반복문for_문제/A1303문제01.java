@@ -9,6 +9,8 @@ for문을 사용하여 5부터 12까지 출력하시오.
 */
 public class A1303문제01 {
 public static void main(String[] args) {
-	 	
+	 	for(int i = 5; i < 13; i ++) {
+	 		System.out.println(i + " ");
+	 	}
 	}
 }

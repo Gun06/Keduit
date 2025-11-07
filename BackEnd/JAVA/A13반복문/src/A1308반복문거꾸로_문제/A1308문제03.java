@@ -22,6 +22,17 @@ package A1308반복문거꾸로_문제;
 */
 public class A1308문제03 {
 public static void main(String[] args) {
-		 
-	}
+	 int i = 20;
+	    while(i >= 10){
+	        boolean check1 = i >= 15 && i <= 20;
+	        boolean check2 = i >= 10 && i <= 14;
+	        if(check1){
+	        	System.out.println(i + " o");
+	        }
+	        if(check2){
+	        	System.out.println(i + " x");
+	        }
+	        i -= 1;
+	    }
+}
 }

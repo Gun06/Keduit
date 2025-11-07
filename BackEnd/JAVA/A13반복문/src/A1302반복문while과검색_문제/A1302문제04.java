@@ -20,6 +20,21 @@ package A1302반복문while과검색_문제;
 */
 public class A1302문제04 {
 public static void main(String[] args) {
-		
-	}
+	int i = 1;
+    while(i <= 10){
+        boolean check1 = i < 3;
+        boolean check2 = i >= 3 && i <= 7;
+        boolean check3 = i > 7;
+        if(check1){
+        	System.out.println(i + " " + i * 3);
+        }
+        if(check2){
+        	System.out.println(i + " " + i);
+        }
+        if(check3){
+        	System.out.println(i + " " + i * 3);
+        }
+        i = i + 1;
+    }
+}
 }

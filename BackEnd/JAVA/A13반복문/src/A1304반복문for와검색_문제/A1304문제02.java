@@ -12,6 +12,14 @@ x x 3 4 5 6 7 8 x x
 */
 public class A1304문제02 {
 public static void main(String[] args) {
-		
+		for(int i = 1; i < 10; i ++) {
+			boolean check = 8 < i || i < 3;
+	        if(check){
+	        	System.out.print("x ");
+	        }
+	        if(!check){
+	        	System.out.print(i + " ");
+	        }
+		}
 	}
 }

@@ -21,6 +21,14 @@ package A1304반복문for와검색_문제;
 */
 public class A1304문제03 {
 public static void main(String[] args) {
-		
+		for (int i=1; i<=10; i++) {
+			boolean check = 1 <= i && i <= 5;
+	        if(check){
+	        	System.out.println(i + " o");
+	        }
+	        if(!check){
+	        	System.out.println(i + " x");
+	        }
+		}
 	}
 }
