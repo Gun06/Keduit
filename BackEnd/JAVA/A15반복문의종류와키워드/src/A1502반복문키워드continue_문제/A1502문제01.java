@@ -19,6 +19,20 @@ import java.util.Random;
 */
 public class A1502문제01 {
 	public static void main(String[] args) {
-		
+Random ran = new Random();
+		int count = 0;
+	    while(true){
+	    	int r = ran.nextInt(90) + 10;
+	    	int a = r / 10;
+	    	int b = r % 10;
+	        if(a != b){
+	            continue;
+	        }
+	        System.out.println(r);
+	        count += 1;
+	        if(count == 5){
+	            break;
+	        }
+	    }
 	}
 }

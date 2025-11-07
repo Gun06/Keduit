@@ -18,6 +18,18 @@ import java.util.Random;
 */
 public class A1502문제02 {
 	public static void main(String[] args) {
-		
+Random ran = new Random();
+		int count = 0;
+	    while(true){
+	    	int r = ran.nextInt(90) + 10;
+	        if(r % 2 != 0){
+	            continue;
+	        }
+	        System.out.println(r);
+	        count += 1;
+	        if(count == 5){
+	            break;
+	        }
+	    }
 	}
 }

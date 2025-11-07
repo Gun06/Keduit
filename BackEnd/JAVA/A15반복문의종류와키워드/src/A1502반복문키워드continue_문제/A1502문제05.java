@@ -19,6 +19,20 @@ import java.util.Random;
 */
 public class A1502문제05 {
 	public static void main(String[] args) {
-		
+Random ran = new Random();
+		 int count = 0;
+		    while(true){
+		    	int r1 = ran.nextInt(10) + 1;
+		        if(r1 > 5){
+		        	System.out.print("x ");
+		        }else{
+		            count += 1;
+		            System.out.print(r1 + " ");
+		        }
+		        if(count != 10){
+		            continue;
+		        }
+		        break;
+		    }
 	}
 }

@@ -14,6 +14,17 @@ import java.util.Random;
 */
 public class A1501문제07 {
 	public static void main(String[] args) {
-		
+int a = 1;
+		System.out.print(a + " ");
+		Random ran = new Random();
+	    while(true){
+	    	int r = ran.nextInt(100) + 1;
+	    	System.out.print(r + " ");
+	        if(a >= r){
+	            break;
+	        }else{
+	            a = r;
+	        }
+	    }
 	}
 }

@@ -11,6 +11,23 @@ package A1501반복문키워드break_문제;
 */
 public class A1501문제06 {
 	public static void main(String[] args) {
-		
+int num1 = 9;
+	    int num2 = 100;
+	    int i = num1;
+	    int count = 0;
+	    boolean loop = true;
+	    while(loop){
+	        if(i > num2){
+	        	int a = i % 100 / 10;
+	            if(a == 5){
+	                count += 1;
+	                if(count == 4){
+	                	System.out.println(i);
+	                    break;
+	                }
+	            }
+	        }
+	        i += num1;
+	    }
 	}
 }

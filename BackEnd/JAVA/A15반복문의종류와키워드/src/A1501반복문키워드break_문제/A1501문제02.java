@@ -10,6 +10,15 @@ package A1501반복문키워드break_문제;
 */
 public class A1501문제02 {
 	public static void main(String[] args) {
-		
+int num = 9;
+	    int i = num;
+	    while(true){
+	    	int a = i % 100 / 10;
+	        if(a == 6){
+	        	System.out.println(i);
+	            break;
+	        }
+	        i += num;
+	    }
 	}
 }

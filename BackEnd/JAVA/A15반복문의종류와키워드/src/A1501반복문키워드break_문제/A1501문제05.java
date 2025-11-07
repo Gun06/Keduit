@@ -11,7 +11,22 @@ package A1501반복문키워드break_문제;
 */
 public class A1501문제05 {
 	public static void main(String[] args) {
-		
-	    
+int num1 = 8;
+	    int num2 = 500;
+	    int i = num1;
+	    int count = 0;
+	    while(true){
+	        if(i > num2){
+	            int a = i % 10;
+	            if(a == 6){
+	            	System.out.print(i + " ");
+	                count += 1;
+	                if(count == 4){
+	                    break;
+	                }
+	            }
+	        }
+	        i += num1;
+	    }
 	}
 }

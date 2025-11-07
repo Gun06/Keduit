@@ -2,8 +2,7 @@ package A1503반복문종류dowhile_문제;
 
 public class A1503문제04 {
 	public static void main(String[] args) {
-		
-	    /*
+/*
 				[문제] 
 					아래 조건을 참고해서  정답과 똑같이 출력하시오.
 					
@@ -24,7 +23,18 @@ public class A1503문제04 {
 					30			
 		*/
 		
-		
-		
+		int i = 1;
+		do {
+			if(i < 3 || 7 < i){
+				System.out.println(i * 3);
+				
+			}
+			if(3 <= i && i <= 7){
+				System.out.println(i);
+			}
+			
+			i += 1;
+			
+		} while ( i <= 10 );
 	}
 }

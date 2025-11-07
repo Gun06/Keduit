@@ -10,6 +10,19 @@ package A1501반복문키워드break_문제;
 */
 public class A1501문제04 {
 	public static void main(String[] args) {
-		 
+int num1 = 9;
+		    int num2 = 100;
+		    int i = num1;
+		    int count = 0;
+		    while(true){
+		        if(i > num2){
+		            count += 1;
+		            if(count == 4){
+		            	System.out.println(i);
+		                break;
+		            }
+		        }
+		        i += num1;
+		    }
 	}
 }

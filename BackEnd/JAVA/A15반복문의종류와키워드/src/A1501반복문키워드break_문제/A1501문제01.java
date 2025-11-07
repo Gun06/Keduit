@@ -10,6 +10,14 @@ package A1501반복문키워드break_문제;
 */
 public class A1501문제01 {
 	public static void main(String[] args) {
-		
+int num = 28;
+	    int i = num;
+	    while(true){
+	        if(i >= 500){
+	        	System.out.println(i);
+	            break;
+	        }
+	        i += num;
+	    }
 	}
 }

@@ -2,8 +2,7 @@ package A1503반복문종류dowhile_문제;
 
 public class A1503문제01 {
 	public static void main(String[] args) {
-		
-	    /*
+/*
 			[문제] 
 				아래 조건을 참고해서  정답과 똑같이 출력하시오.
 				
@@ -18,6 +17,5 @@ public class A1503문제01 {
 				8
 				5
 		*/
-
 	}
 }

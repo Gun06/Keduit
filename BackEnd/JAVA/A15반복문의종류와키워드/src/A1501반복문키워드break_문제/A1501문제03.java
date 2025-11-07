@@ -10,6 +10,23 @@ package A1501반복문키워드break_문제;
 */
 public class A1501문제03 {
 	public static void main(String[] args) {
-		
+int num = 13;
+	    int count = 0;
+	    int a = 0;
+	    int b = 0;
+	    int i = num;
+
+	    while(true){
+	        count += 1;
+	        if(count == 4){
+	            a = i;
+	        }
+	        if(count == 6){
+	            b = i;
+	            break;
+	        }
+	        i += num;
+	    }
+	    System.out.println(b - a);
 	}
 }

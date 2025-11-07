@@ -14,6 +14,17 @@ import java.util.Random;
 */
 public class A1502문제04 {
 	public static void main(String[] args) {
-		
+Random ran = new Random();
+		 while(true){
+			 int r1 = ran.nextInt(9) + 1;
+			 int r2 = ran.nextInt(9) + 1;
+			 int total = r1 + r2;
+		        
+		        if(total != 10){
+		            continue;
+		        }
+		        System.out.println(r1 + " " + r2);
+		        break;
+		    }
 	}
 }

@@ -15,6 +15,18 @@ import java.util.Random;
 */
 public class A1501문제09 {
 	public static void main(String[] args) {
-		
+Random ran= new Random();
+		while(true){
+			int r1 = ran.nextInt(10) + 1;
+			int r2 = ran.nextInt(10) + 1;
+			int r3 = ran.nextInt(10) + 1;
+			int total = r1 + r2 + r3;
+	 
+	        boolean check = r1 != r2 && r2 != r3 && r3 != r1;
+	        if(total == 20 && check){
+	        	System.out.println(r1 + " " + r2 + " " + r3);
+	            break;
+	        }
+	    }
 	}
 }
