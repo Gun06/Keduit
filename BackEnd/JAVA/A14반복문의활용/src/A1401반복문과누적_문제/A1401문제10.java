@@ -1,4 +1,5 @@
 package A1401반복문과누적_문제;
+
 /*
 [문제]
 반복문을 사용하여 100부터 150까지의 숫자 중,
@@ -12,23 +13,20 @@ package A1401반복문과누적_문제;
 */
 public class A1401문제10 {
 	public static void main(String[] args) {
-int total = 0;
-	    for(int i = 100; i < 151; i++){
-	        int a = i / 100;
-	        int b = i % 100 / 10;
-	        int c = i % 10;
-	        boolean check1 = a == 5 || b == 5 || c == 5;
-	        boolean check2 = i % 6 == 0;
-	        if(check1 && check2){
-	        	System.out.print(i + " ");
-	            total += i;
-	        }
-	    }
-	    System.out.println();
-	    System.out.println(total);
-	}
-	    }
-	    System.out.println();
-	    System.out.println(total);
+		int total = 0;
+		for (int i = 100; i < 151; i++) {
+			int a = i / 100;
+			int b = i % 100 / 10;
+			int c = i % 10;
+			boolean check1 = a == 5 || b == 5 || c == 5;
+			boolean check2 = i % 6 == 0;
+			if (check1 && check2) {
+				System.out.print(i + " ");
+				total += i;
+			}
+		}
+		System.out.println();
+		System.out.println(total);
+
 	}
 }

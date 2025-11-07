@@ -24,27 +24,19 @@ import java.util.Random;
 */
 public class A1401문제11 {
 	public static void main(String[] args) {
-Random ran = new Random();
-		 int total = 0;
-	    for(int i = 1; i < 6; i++){
-	    	int r = ran.nextInt(101);
-	        if(r >= 60){
-	        	System.out.println(i + "번" + r + "점" + "[합격]");
-	        }else{
-	        	System.out.println(i + "번" + r + "점" + "[불합격]");
-	        }
-	        total += r;
-	    }
-	    System.out.println(total);
-	    double avg = (double)total / 5;
-	    System.out.println(avg);
-	}else{
-	        	System.out.println(i + "번" + r + "점" + "[불합격]");
-	        }
-	        total += r;
-	    }
-	    System.out.println(total);
-	    double avg = (double)total / 5;
-	    System.out.println(avg);
+		Random ran = new Random();
+		int total = 0;
+		for (int i = 1; i < 6; i++) {
+			int r = ran.nextInt(101);
+			if (r >= 60) {
+				System.out.println(i + "번" + r + "점" + "[합격]");
+			} else {
+				System.out.println(i + "번" + r + "점" + "[불합격]");
+			}
+			total += r;
+		}
+		System.out.println(total);
+		double avg = (double) total / 5;
+		System.out.println(avg);
 	}
 }

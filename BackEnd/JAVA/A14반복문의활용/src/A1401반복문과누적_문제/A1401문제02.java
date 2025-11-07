@@ -1,4 +1,5 @@
 package A1401반복문과누적_문제;
+
 /*
 [문제]
 반복문을 사용하여 18의 약수를 구한 뒤,
@@ -11,19 +12,16 @@ package A1401반복문과누적_문제;
 */
 public class A1401문제02 {
 	public static void main(String[] args) {
-int total = 0;
-	    for(int i = 1; i < 19; i++){
-	        boolean check = 18 % i == 0 && i % 2 == 0;   
-	        if(check){
-	        	System.out.print(i + " ");
-	            total += i;
-	        }
-	    }
-	    System.out.println();
-	    System.out.println(total);
-	}
-	    }
-	    System.out.println();
-	    System.out.println(total);
+		int total = 0;
+		for (int i = 1; i < 19; i++) {
+			boolean check = 18 % i == 0 && i % 2 == 0;
+			if (check) {
+				System.out.print(i + " ");
+				total += i;
+			}
+		}
+		System.out.println();
+		System.out.println(total);
+
 	}
 }

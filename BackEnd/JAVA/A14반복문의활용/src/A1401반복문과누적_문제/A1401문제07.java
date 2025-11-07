@@ -1,4 +1,5 @@
 package A1401반복문과누적_문제;
+
 /*
 [문제]
 반복문을 사용하여 10부터 99까지의 숫자 중,
@@ -11,22 +12,19 @@ package A1401반복문과누적_문제;
 */
 public class A1401문제07 {
 	public static void main(String[] args) {
-int total = 0;
-		    for(int i = 10; i < 100; i++){
-		        int a = i / 10;
-		        int b = i % 10;
-		        boolean check1 = a * 2 == b;
-		        boolean check2 = a % 2 == 1;
-		        if(check1 && check2){
-		        	System.out.print(i + " ");
-		            total += i;
-		        }
-		    }
-		    System.out.println();
-		    System.out.println(total);
-	}
-		    }
-		    System.out.println();
-		    System.out.println(total);
+		int total = 0;
+		for (int i = 10; i < 100; i++) {
+			int a = i / 10;
+			int b = i % 10;
+			boolean check1 = a * 2 == b;
+			boolean check2 = a % 2 == 1;
+			if (check1 && check2) {
+				System.out.print(i + " ");
+				total += i;
+			}
+		}
+		System.out.println();
+		System.out.println(total);
+
 	}
 }
