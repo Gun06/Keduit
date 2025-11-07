@@ -12,6 +12,18 @@ package A1401반복문과누적_문제;
 */
 public class A1401문제08 {
 	public static void main(String[] args) {
-		
+		int total = 0;
+	    for(int i = 10; i < 51; i++){
+	        int a = i / 10;
+	        int b = i % 10;
+	        boolean check1 = a % 2 == 0 && b % 2 == 1;
+	        boolean check2 = i % 3 == 0;
+	        if(check1 && check2){
+	        	System.out.print(i + " ");
+	            total += i;
+	        }
+	    }
+	    System.out.println();
+	    System.out.println(total);
 	}
 }
