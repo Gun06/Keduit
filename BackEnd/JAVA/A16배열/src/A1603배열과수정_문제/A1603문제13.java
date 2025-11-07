@@ -16,5 +16,17 @@ numberList에서 각 값을 자릿수별로 분리한 후,
 */
 public class A1603문제13 {
 	public static void main(String[] args) {
+int[] numberList = {10, 43, 24, 22, 52};
+		System.out.println(Arrays.toString(numberList));
+	    for(int i = 0; i < numberList.length; i++){
+	        int a = numberList[i] / 10;
+	        int b = numberList[i] % 10;
+	        if(a > b){
+	            numberList[i] = a;
+	        }else if(b > a){
+	            numberList[i] = b;
+	        }
+	    }
+	    System.out.println(Arrays.toString(numberList));
 	}
 }

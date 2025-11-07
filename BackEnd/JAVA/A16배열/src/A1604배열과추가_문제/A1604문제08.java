@@ -16,6 +16,28 @@ aList와 bList를 출력하시오.
 */
 public class A1604문제08 {
 	public static void main(String[] args) {
-		
+int[] aList = new int[10];
+	    int[] bList = new int[10];
+	    Random ran = new Random();
+	    for(int i = 0; i < 10; i++){
+	    	int r = ran.nextInt(50) + 50;
+	    	aList[i] = r;
+	    }
+	    int index = 0;
+	    for(int i = 0; i < aList.length; i++){
+	        int a = aList[i] / 10;
+	        int b = aList[i] % 10;
+	        boolean c = a % 2 == 0;
+	        boolean d = b % 2 == 1;
+	        if(c && d){
+	        	bList[index] = aList[i];
+	        	index += 1;
+	        }
+	    }
+	    
+	    System.out.println(Arrays.toString(aList));
+	    for(int i = 0; i < index; i++) {
+	    	System.out.print(bList[i] + " ");
+	    }
 	}
 }

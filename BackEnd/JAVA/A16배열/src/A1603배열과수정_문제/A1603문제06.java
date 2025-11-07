@@ -14,6 +14,13 @@ numberList에서 십의 자리를 전부 제거한 일의 자리의값으로 변
  */
 public class A1603문제06 {
 	public static void main(String[] args) {
-		 
+int[] numberList = {2, 13, 42, 10, 1, 36, 4, 14};
+		  System.out.println(Arrays.toString(numberList) );
+		    for(int i = 0; i < numberList.length; i++){
+		        if(numberList[i] >= 10){
+		            numberList[i] = numberList[i] % 10;
+		        }
+		    }
+		    System.out.println(Arrays.toString(numberList) );
 	}
 }

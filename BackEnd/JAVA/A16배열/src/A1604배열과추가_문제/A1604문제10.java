@@ -15,6 +15,26 @@ aList의 값들 중에서 일의자리에서 반올림한수를 bList에 추가�
 */
 public class A1604문제10 {
 	public static void main(String[] args) {
-		
+int[] aList = new int[10];
+	    int[] bList = new int[10];
+	    Random ran = new Random();
+	    for(int i = 0; i < 10; i++){
+	    	int r = ran.nextInt(90) + 10;
+	    	aList[i] = r;
+	    }
+	    int index = 0;
+	    for(int i = 0; i < aList.length; i++){
+	        int a = aList[i] / 10;
+	        int b = aList[i] % 10;
+	        if(b >= 5){
+	            a += 1;
+	        }
+	        bList[index] = a *10;
+	        index += 1;
+	    }
+	    System.out.println(Arrays.toString(aList));
+	    for(int i = 0; i < index; i++) {
+	    	System.out.print(bList[i] + " ");
+	    }
 	}
 }

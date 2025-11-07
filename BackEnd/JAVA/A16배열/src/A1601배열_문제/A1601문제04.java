@@ -10,6 +10,7 @@ numberList의 길이를 출력하시오.
 */
 public class A1601문제04 {
 	public static void main(String[] args) {
-		
+int[] numberList = {10, 20, 30, 40};
+		 System.out.println(numberList.length);
 	}
 }

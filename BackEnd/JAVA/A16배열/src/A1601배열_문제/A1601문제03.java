@@ -12,6 +12,9 @@ numberList 리스트 범위 안에서 랜덤으로 인덱스를 선택하고,
 */
 public class A1601문제03 {
 	public static void main(String[] args) {
-		
+int[] numberList = {10, 20, 30, 40};
+		 Random ran = new Random();
+		 int r = ran.nextInt(4);
+		 System.out.println(r + " " + numberList[r]);
 	}
 }

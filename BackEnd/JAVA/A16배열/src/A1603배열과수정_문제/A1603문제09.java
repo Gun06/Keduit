@@ -14,6 +14,15 @@ numberList에서 일의 자리가 5보다 크고, 십의 자리가 8보다 작�
 */
 public class A1603문제09 {
 	public static void main(String[] args) {
-		
+int[] numberList = {13, 80, 90, 39, 59, 56, 53, 25, 46, 99};
+		 System.out.println(Arrays.toString(numberList));
+		    for(int i = 0; i < numberList.length; i++){
+		        int a = numberList[i] / 10;
+		        int b = numberList[i] % 10;
+		        if(a < 8 && b > 5){
+		            numberList[i] = -numberList[i];
+		        }
+		    }
+		    System.out.println(Arrays.toString(numberList));
 	}
 }

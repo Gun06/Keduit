@@ -17,6 +17,14 @@ numberList에서
 */
 public class A1603문제15 {
 	public static void main(String[] args) {
-		 
+int[] numberList = {645, 229, 345, 314, 508, 385, 852, 641, 685, 435};
+		 System.out.println(Arrays.toString(numberList));
+		    for(int i = 0; i < numberList.length; i++){
+		        int a = numberList[i] / 100;
+		        int b = numberList[i] % 100 / 10;
+		        int c = numberList[i] % 10;
+		        numberList[i] = c * 100 + a * 10 + b;
+		    }
+		    System.out.println(Arrays.toString(numberList));
 	}
 }

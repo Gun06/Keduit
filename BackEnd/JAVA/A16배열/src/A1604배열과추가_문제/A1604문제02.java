@@ -16,6 +16,18 @@ import java.util.Random;
 */
 public class A1604문제02 {
 	public static void main(String[] args) {
-		
+Random ran = new Random();
+		int r = ran.nextInt(8) + 1;
+		System.out.println(r);
+
+	    int[] numberList = new int[10];
+	    for(int i = 0; i < 10; i++){
+	        if(i < r){
+	        	numberList[i] = r;
+	        }else{
+	        	numberList[i] = 0;
+	        }
+	    }
+	    System.out.println(Arrays.toString(numberList));
 	}
 }

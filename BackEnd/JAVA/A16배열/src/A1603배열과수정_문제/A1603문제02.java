@@ -15,6 +15,13 @@ import java.util.Random;
 */
 public class A1603문제02 {
 	public static void main(String[] args) {
-		
+Random ran= new Random();
+		  int[] numberList = {9, 42, 24, 11, 51};
+		  int r = ran.nextInt(numberList.length);
+		  System.out.println(r);
+		    if(numberList[r] % 2 == 1){
+		        numberList[r] += 1;
+		    }
+		    System.out.println(Arrays.toString(numberList));
 	}
 }

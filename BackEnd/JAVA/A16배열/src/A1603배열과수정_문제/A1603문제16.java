@@ -13,6 +13,20 @@ import java.util.Arrays;
 */
 public class A1603문제16 {
 	public static void main(String[] args) {
-		 
+int[] numberList = {131, 113, 128, 180, 134, 104};
+		    for(int i = 0; i < numberList.length; i++){
+		        int a = numberList[i];
+		        int b = a / 100;
+		        int c = a % 100 / 10;
+		        int d = a % 10;
+		        if(c != 0) {
+		        	boolean e = 20 % c == 0;
+		        	if(e){
+		        		numberList[i] = d * 100 + c * 10 + b;
+		        	}
+		        	
+		        }
+		    }
+		    System.out.println(Arrays.toString(numberList));
 	}
 }

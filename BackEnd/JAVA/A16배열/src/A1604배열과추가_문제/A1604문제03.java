@@ -15,6 +15,23 @@ aList의 값들 중 짝수만 bList에 추가하고, aList와 bList 모두 출�
 */
 public class A1604문제03 {
 	public static void main(String[] args) {
-		
+int[] aList = new int[10];
+		int[] bList = new int[10];
+	    Random ran = new Random();
+		for(int i = 0; i < 10; i++){
+			int r = ran.nextInt(10) + 1;
+			aList[i] = r;
+	    }
+		int index = 0;
+	    for(int i = 0; i < aList.length; i++){
+	        if(aList[i] % 2 == 0){
+	        	bList[index] = aList[i];
+	        	index+= 1;
+	        }
+	    }
+	    System.out.println(Arrays.toString(aList));
+	    for(int i = 0; i < index; i++) {
+	    	System.out.print(bList[i] + " ");
+	    }
 	}
 }

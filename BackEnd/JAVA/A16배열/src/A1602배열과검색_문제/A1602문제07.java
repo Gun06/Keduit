@@ -10,6 +10,15 @@ numberList의 각 요소가 30의 약수이거나 20의 약수일 때에는 해�
 */
 public class A1602문제07 {
 	public static void main(String[] args) {
-		 
+int[] numberList = {2, 4, 6, 5, 10, 9, 15, 7, 12, 13};
+		    for(int i = 0; i < numberList.length; i++){
+		        int a = numberList[i];
+		        boolean check = 30 % a == 0 || 20 % a == 0;
+		        if(check){
+		        	System.out.print(a + " ");
+		        }else{
+		        	System.out.print("x ");
+		        }
+		    }
 	}
 }

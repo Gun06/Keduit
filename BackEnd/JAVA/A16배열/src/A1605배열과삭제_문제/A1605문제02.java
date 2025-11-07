@@ -16,6 +16,22 @@ numList에 랜덤숫자1~100을 5개 저장한후, 출력한다.
 */
 public class A1605문제02 {
 	public static void main(String[] args) {
-		
+int[] scoreList = new int[5];
+	    Random ran = new Random();
+		for(int i = 0; i < scoreList.length; i++){
+			int r = ran.nextInt(100) + 1;
+			scoreList[i] = r;
+	    }
+		System.out.println(Arrays.toString(scoreList));
+	    int index = 0;
+		for(int i= 0; i < scoreList.length; i++) {    	
+	    	if(scoreList[i] >= 60) {
+	    		scoreList[index] = scoreList[i];
+	    		index += 1;
+	    	}
+	    }
+		for(int i = 0; i < index; i++) {
+	    	System.out.print(scoreList[i] + " ");
+	    }
 	}
 }

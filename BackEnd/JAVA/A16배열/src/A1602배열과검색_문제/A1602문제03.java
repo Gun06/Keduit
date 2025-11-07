@@ -10,6 +10,14 @@ numberList의 각 요소가 홀수일 경우 해당 숫자를 출력하고,
 */
 public class A1602문제03 {
 	public static void main(String[] args) {
-		
+int[] numberList = {9, 2, 3, 5, 10, 8, 4, 7, 6, 1};
+	    for(int i = 0; i < numberList.length; i++){
+	        boolean check = numberList[i] % 2 == 1;
+	        if(check){
+	        	System.out.print(numberList[i] + " ");
+	        }else{
+	        	System.out.print("x ");
+	        }
+	    }
 	}
 }

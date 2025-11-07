@@ -13,6 +13,11 @@ numberList에서 모든 십의자리를 제거해서 수정하시오.
 */
 public class A1603문제04 {
 	public static void main(String[] args) {
-	   
+int[] numberList = {10, 43, 24, 12, 52};
+	    System.out.println(Arrays.toString(numberList) );
+	    for(int i = 0; i < numberList.length; i++){
+	        numberList[i] = numberList[i] % 10;
+	    }
+	    System.out.println(Arrays.toString(numberList) );
 	}
 }

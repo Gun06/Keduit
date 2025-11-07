@@ -16,6 +16,20 @@ import java.util.Random;
 */
 public class A1605문제01 {
 	public static void main(String[] args) {
-		
+int[] aList = {10, 20, 30, 40, 50, 60};
+	System.out.println(Arrays.toString(aList));
+	Random ran = new Random();
+	int r = ran.nextInt(100) + 1;
+	System.out.println(r);
+    int index = 0;
+    for(int i = 0; i <aList.length; i++) {
+    	if(aList[i] <= r){
+    		aList[index]= aList[i];
+    		index += 1;
+    	}
+    }
+    for(int i = 0; i < index; i++) {
+    	System.out.print(aList[i] + " ");
+    }
 	}
 }

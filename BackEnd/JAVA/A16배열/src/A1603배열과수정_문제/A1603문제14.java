@@ -14,6 +14,19 @@ numberList에서 각 값을 자릿수별로 분리한 후, 각 자릿수의 곱�
 */
 public class A1603문제14 {
 	public static void main(String[] args) {
-		
+int[] numberList = {10, 33, 23, 13, 52};
+		  System.out.println(Arrays.toString(numberList));
+		    for(int i = 0; i < numberList.length; i++){
+		        int a = numberList[i] / 10;
+		        int b = numberList[i] % 10;
+		        int c = a * b;
+		        boolean check = c % 2 == 1;
+		        if(check){
+		            numberList[i] = 1;
+		        }else{
+		            numberList[i] = 2;
+		        }
+		    }
+		    System.out.println(Arrays.toString(numberList));
 	}
 }

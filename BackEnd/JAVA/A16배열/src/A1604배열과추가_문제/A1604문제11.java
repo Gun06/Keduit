@@ -14,6 +14,20 @@ import java.util.Random;
 */
 public class A1604문제11 {
 	public static void main(String[] args) {
-		
+Random ran = new Random();
+		int r = ran.nextInt(91) + 10;
+		System.out.println(r);
+		    int[] aList = new int[1000];
+		    int index = 0;
+		    for(int i = 1; i < r + 1; i++){
+		        if(r % i == 0){
+		            aList[index] = i;
+		            index += 1;
+		        }
+		    }
+		    
+		    for(int i = 0; i < index; i++) {
+		    	System.out.print(aList[i] + " ");
+		    }
 	}
 }

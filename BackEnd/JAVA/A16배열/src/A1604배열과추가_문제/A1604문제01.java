@@ -13,6 +13,20 @@ import java.util.Random;
 */
 public class A1604문제01 {
 	public static void main(String[] args) {
+Random ran = new Random();
+		int[] arr = new int[1000];		
+		int index = 0;
 		
+		int r = ran.nextInt(5) + 1;
+		System.out.println(r);
+		
+		for(int i = 0; i < r; i++) {
+			arr[index] = r;
+			index += 1;
+		}
+		
+		for(int i = 0; i < index; i++) {
+			System.out.print(arr[i] + " ");
+		}
 	}
 }

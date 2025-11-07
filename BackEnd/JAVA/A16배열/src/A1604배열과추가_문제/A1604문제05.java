@@ -16,6 +16,27 @@ aList의 값들 중에서 일의 자리가 십의 자리의 두 배인 숫자만
 */
 public class A1604문제05 {
 	public static void main(String[] args) {
-		
+int[] aList = new int[10];
+		    int[] bList = new int[10];
+		    Random ran = new Random();
+		    for(int i = 0; i < 10; i++){
+		        int r = ran.nextInt(90) + 10;
+		        aList[i] = r;
+		    }
+		    int index = 0;
+		    for(int i = 0; i < 10; i++){
+		    	int a = aList[i] / 10;
+		    	int b = aList[i] % 10;
+		    	boolean c = b == a * 2;
+		    	
+		        if(c){
+		        	bList[index] = aList[i];
+		        	index += 1;
+		        }
+		    }
+		    System.out.println(Arrays.toString(aList));
+		    for(int i = 0; i < index; i++) {
+		    	System.out.print(bList[i] + " ");
+		    }
 	}
 }

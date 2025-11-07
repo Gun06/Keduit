@@ -15,6 +15,26 @@ aList의 값들 중에서 일의 자리가 십의 자리보다 큰 수만 bList�
 */
 public class A1604문제04 {
 	public static void main(String[] args) {
-		
+int[] aList = new int[10];
+	    int[] bList = new int[10];
+	    Random ran = new Random();
+	    for(int i = 0; i < 10; i++){
+	    	int r = ran.nextInt(201) + 100;
+	    	aList[i] = r;
+	    }
+	    System.out.println(Arrays.toString(aList));
+	    int index = 0;
+	    for(int i = 0; i < aList.length; i++){
+	    	int a = aList[i] % 100 / 10;
+	    	int b = aList[i] % 10;
+	        boolean c = b > a;
+	        if(c){
+	        	bList[index] = aList[i];
+	        	index += 1;
+	        }
+	    }
+	    for(int i = 0; i < index; i++) {
+	    	System.out.print(bList[i] + " ");
+	    }
 	}
 }

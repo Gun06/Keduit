@@ -15,6 +15,22 @@ bList에 aList의 값들 중 홀수만 추가한 후, 두 리스트 전체를 �
 */
 public class A1604문제09 {
 	public static void main(String[] args) {
-		
+int[] aList = new int[5];
+	    int[] bList = new int[5];
+	    Random ran = new Random();
+	    for(int i = 0; i < 5; i++){
+	    	int r = ran.nextInt(100) + 1;
+	    	aList[i] = r;
+	    }
+	    int index = 0;
+	    for(int i = 0; i < aList.length; i++){
+	        if(aList[i] % 2 == 1){
+	           bList[index] = aList[i];
+	        }
+	    }
+	    System.out.println(Arrays.toString(aList));
+	    for(int i = 0; i < index; i++) {
+	    	System.out.print(bList[i] + " ");
+	    }
 	}
 }

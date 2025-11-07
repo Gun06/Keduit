@@ -16,6 +16,28 @@ aList의 값들 중에서 각 자리 숫자 중에서 숫자 5가 포함된 숫�
 */
 public class A1604문제06 {
 	public static void main(String[] args) {
-		
+int[] aList = new int[10];
+	    int[] bList = new int[10];
+	    Random ran = new Random(); 
+	    		
+	    for(int i = 0; i < 10; i++){
+	        int r = ran.nextInt(41) + 130;
+	        aList[i] = r;
+	    }
+	    int index = 0;
+	    for(int i = 0; i < aList.length; i++){
+	        int a = aList[i] / 100;
+	        int b = aList[i] % 100 / 10;
+	        int c = aList[i] % 10;
+	        boolean d = a == 5 || b == 5 || c == 5;
+	        if(d){
+	        	bList[index] = aList[i];
+	        	index += 1;
+	        }
+	    }
+	    System.out.println(Arrays.toString(aList));
+	    for(int i = 0; i < index; i++) {
+	    	System.out.print(bList[i] + " ");
+	    }
 	}
 }

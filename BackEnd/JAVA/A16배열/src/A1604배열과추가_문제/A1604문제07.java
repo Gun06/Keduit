@@ -13,6 +13,28 @@ aList의 값들 중에서 3, 6, 9가 포함되지 않은 짝수만 bList에 추�
 */
 public class A1604문제07 {
 	public static void main(String[] args) {
-		
+int[] aList = new int[50];
+	    int[] bList = new int[50];
+	    int num = 50;
+	    for(int i = 0; i < 50;  i++){
+	        aList[i] = num;
+	        num -= 1;
+	    }
+	    int index = 0;
+	    for(int i = 0; i < aList.length; i++){
+	        int a = aList[i] / 10;
+	        int b = aList[i] % 10;
+	        if(aList[i] % 2 == 0){
+	            boolean c = a != 3 && a != 6 && a != 9;
+	            boolean d = b != 3 && b != 6 && b != 9;
+	            if(c && d){
+	            	bList[index] = aList[i];
+	            	index += 1;
+	            }
+	        }
+	    }
+	    for(int i = 0; i < index; i++) {
+	    	System.out.print(bList[i] + " ");
+	    }
 	}
 }

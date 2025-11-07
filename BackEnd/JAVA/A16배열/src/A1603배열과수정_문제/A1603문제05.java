@@ -14,6 +14,16 @@ numberList에서 일의 자리가 5이상은 10을 더하고 일의 자리를 0�
 */
 public class A1603문제05 {
 	public static void main(String[] args) {
-		 
+int[] numberList = {10, 43, 26, 12, 52};
+		 System.out.println(Arrays.toString(numberList) );
+		    for(int i = 0; i < numberList.length; i++){
+		        int a = numberList[i] % 10;
+		        int b = numberList[i] / 10;
+		        if(a >= 5){
+		            b += 1;
+		        }
+		        numberList[i] = b * 10;
+		    }
+		    System.out.println(Arrays.toString(numberList) );
 	}
 }

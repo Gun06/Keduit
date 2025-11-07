@@ -10,6 +10,15 @@ x x 24 12 x
 */
 public class A1602문제02 {
 	public static void main(String[] args) {
-		
+int[] numberList = {10, 43, 24, 12, 52};
+	    for(int i = 0; i < numberList.length; i++){
+	        boolean check1 = numberList[i] % 3 == 0;
+	        boolean check2 = numberList[i] % 3 == 1;
+	        if(check1){
+	        	System.out.print(numberList[i] + " ");
+	        }else{
+	        	System.out.print("x ");
+	        }
+	    }
 	}
 }

@@ -10,6 +10,18 @@ numberList에서 백의 자리는 3의 배수, 십의 자리는 4의 배수, 일
 */
 public class A1602문제18 {
 	public static void main(String[] args) {
-		
+int[]  numberList = {645, 229, 345, 314, 508, 385, 852, 641, 685, 435};
+
+	    for(int i = 0; i < numberList.length; i++){
+	        int a = numberList[i];
+	        int a1 = a / 100;
+	        int a2 = a % 100 / 10;
+	        int a3 = a % 10;
+	        boolean check1 = a1 != 0 && a2 != 0 && a3 != 0;
+	        boolean check2 = a1 % 3 == 0 && a2 % 4 == 0 && a3 % 5 == 0;
+	        if(check1 && check2){
+	        	System.out.print(a + " ");
+	        }
+	    }
 	}
 }

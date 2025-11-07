@@ -16,6 +16,13 @@ import java.util.Random;
 */
 public class A1603문제03 {
 	public static void main(String[] args) {
-		
+Random ran = new Random();
+		int[] numberList = {10, 43, 24, 12, 52};
+		 int r = ran.nextInt(numberList.length);
+		 System.out.println(Arrays.toString(numberList));
+		 System.out.println(r);
+		    int a = numberList[r] / 10;
+		    numberList[r] = a * 10;
+		    System.out.println(Arrays.toString(numberList));
 	}
 }

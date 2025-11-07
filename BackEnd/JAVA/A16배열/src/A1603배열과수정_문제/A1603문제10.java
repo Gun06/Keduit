@@ -14,6 +14,13 @@ numberList에서 각 값을 자릿수별로 분리한 후,
 */
 public class A1603문제10 {
 	public static void main(String[] args) {
-		
+int[] numberList = {10, 43, 24, 12, 52};
+		 System.out.println(Arrays.toString(numberList));
+		    for(int i = 0; i < numberList.length; i++){
+		        int a = numberList[i] / 10;
+		        int b = numberList[i] % 10;
+		        numberList[i] = a + b;
+		    }
+		    System.out.println(Arrays.toString(numberList));
 	}
 }

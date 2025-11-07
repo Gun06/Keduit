@@ -9,6 +9,9 @@ numberList의 값을 전체 출력하되, 각 값을 가로로 나열하여 출�
 */
 public class A1601문제01 {
 	public static void main(String[] args) {
-		
+int[] numberList = {10, 20, 30, 40};
+	    for(int i = 0; i < numberList.length; i++){
+	    	System.out.print(numberList[i] + " ");
+	    }
 	}
 }

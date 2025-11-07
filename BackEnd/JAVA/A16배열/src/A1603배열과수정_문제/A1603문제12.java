@@ -14,6 +14,16 @@ numberList에서 각 자리 중 숫자 5가 포함된 숫자를 찾아,
 */
 public class A1603문제12 {
 	public static void main(String[] args) {
-		
+int[] numberList = {153, 151, 143, 160, 134, 130, 154, 146, 164, 135};
+		System.out.println(Arrays.toString(numberList));
+	    for(int i = 0; i < numberList.length; i++){
+	        int a = numberList[i] / 10;
+	        int b = numberList[i] % 100 / 10;
+	        int c = numberList[i] % 10;
+	        if(a == 5 || b == 5 || c == 5){
+	            numberList[i] =  0;
+	        }
+	    }
+		System.out.println(Arrays.toString(numberList));
 	}
 }

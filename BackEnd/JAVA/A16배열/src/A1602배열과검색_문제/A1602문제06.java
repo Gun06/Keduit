@@ -14,6 +14,17 @@ numberList의 각 요소에 대해 다음 조건을 만족하는 값을 출력�
 */
 public class A1602문제06 {
 	public static void main(String[] args) {
-		
+int[] numberList = {35, 101, 42, 58, 98, 92, 72, 31, 3, 8};
+		    for(int i = 0; i < numberList.length; i++){
+		        int a = numberList[i];
+		        boolean check1 = a >= 50 && a <= 100 && a % 8 == 0;
+		        boolean check2 = a < 50 && a % 7 == 0;
+		        boolean  check3 = a > 100 && a % 7 == 0;
+		        if(check1 || check2 || check3){
+		            System.out.print(a + " ");
+		        }else{
+		        	System.out.print("x ");
+		        }
+		    }
 	}
 }

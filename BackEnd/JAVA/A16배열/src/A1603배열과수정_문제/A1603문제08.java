@@ -18,6 +18,18 @@ numberList에서 각각의 숫자를 랜덤숫자와 비교한후,
 */
 public class A1603문제08 {
 	public static void main(String[] args) {
-		
+int[] numberList = {10, 83, 24, 62, 52};
+		System.out.println(Arrays.toString(numberList));
+		Random ran = new Random();
+		int r= ran.nextInt(9) + 1;
+	    r = r * 10;
+	    System.out.println(r);
+
+	    for(int i = 0; i < numberList.length; i++){
+	        if(numberList[i] > r){
+	            numberList[i] = numberList[i] % 10;
+	        }
+	    }
+	    System.out.println(Arrays.toString(numberList));
 	}
 }

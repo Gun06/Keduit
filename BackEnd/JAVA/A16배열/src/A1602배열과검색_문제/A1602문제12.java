@@ -10,6 +10,16 @@ numberList의 각 요소 중, 십의 자리 또는 일의 자리에
 */
 public class A1602문제12 {
 	public static void main(String[] args) {
-		
+int[] numberList = {153, 151, 143, 160, 134, 130, 154, 146, 164, 135};
+		    for(int i = 0; i < numberList.length; i++){
+		        int a = numberList[i];
+		        int a1 = a / 100;
+		        int a2 = a % 100 / 10;
+		        int a3 = a % 10;
+		        boolean check = a1 == 5 || a2 == 5 || a3 == 5;
+		        if(check){
+		        	System.out.print(a + " ");
+		        }
+		    }
 	}
 }

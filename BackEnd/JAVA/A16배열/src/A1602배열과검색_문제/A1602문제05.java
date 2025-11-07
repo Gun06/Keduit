@@ -10,6 +10,16 @@ numberList의 각 요소가 5보다 크고 10보다 작으며 3의 배수일 경
  */
 public class A1602문제05 {
 	public static void main(String[] args) {
-		
+int[] numberList = {10, 5, 4, 6, 15, 8, 14, 9, 12, 11};
+
+	    for(int i = 0; i < numberList.length; i++){
+	        int a = numberList[i];
+	        boolean check = a > 5 && a < 10 && a % 3 == 0;
+	        if(check){
+	        	System.out.print("x ");
+	        }else{
+	        	System.out.print(a + " ");
+	        }
+	    }
 	}
 }
